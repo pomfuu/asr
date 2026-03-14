@@ -407,37 +407,6 @@
     Achievement Cabang = 1 + ((Target − Actual) / Target)</div>
   </div>
 
-  <div style="margin-top:1.5rem">
-    <h3 style="font-size:1.05rem;font-weight:700;color:var(--blue-dark);margin-bottom:.8rem">⚙️ Tim ASR Development (Nasional)</h3>
-    <div class="ov-grid">
-      <div class="ov-card">
-        <div class="icon">🔬</div>
-        <h4>Account Solution Analyst, Cyber &amp; Development</h4>
-        <ul>
-          <li>QA &amp; QC</li><li>Solution Center (Sharing Loss)</li><li>Pendampingan Cabang</li>
-          <li>Kembangkan sistem &amp; prosedur</li><li>Kumpulkan info konsumen raib</li>
-        </ul>
-      </div>
-      <div class="ov-card">
-        <div class="icon">🤝</div>
-        <h4>Account Solution Vendor &amp; Support</h4>
-        <ul>
-          <li>Monitoring PKS BHJP</li><li>Rekap penanganan DAS Internal &amp; Eksternal</li>
-          <li>Monitoring VA di MAS</li><li>Report aging mati &amp; hidup harian</li>
-        </ul>
-      </div>
-      <div class="ov-card">
-        <div class="icon">⚡</div>
-        <h4>Account Solution Task Force &amp; Recovery</h4>
-        <ul>
-          <li>Monitoring MPP &amp; rekap pencapaian cabang</li>
-          <li>Hitung insentif tarikan</li>
-          <li>Setting kode POS di MAS tiap awal bulan</li>
-          <li>Analisis penetapan kelas cabang</li>
-        </ul>
-      </div>
-    </div>
-  </div>
 
   <div style="margin-top:1.5rem">
     <h3 style="font-size:1.05rem;font-weight:700;color:var(--blue-dark);margin-bottom:.8rem">🗂️ Area &amp; Nama AASH (Area Account Solution Head)</h3>
@@ -711,11 +680,34 @@
         </div>
         <div class="info-card">
           <h4>Daily Activity FAC Mobil</h4>
-          <div class="flow-steps">
-            <div class="flow-step"><div class="num">1</div><p><b>Pra Kunjungan:</b> Tentukan <b>RKH</b> (Rencana Kerja Harian), analisa kasus &amp; aging hidup/mati</p></div>
-            <div class="flow-step"><div class="num">2</div><p><b>Kunjungan:</b> Datangi semua alamat RKH, validasi keberadaan unit &amp; konsumen, check-in MAS</p></div>
-            <div class="flow-step"><div class="num">3</div><p><b>Analisa:</b> Tentukan jenis kasus, berikan solusi terbaik, konfirmasi PTP atau bayar</p></div>
-            <div class="flow-step"><div class="num">4</div><p><b>Pasca Kunjungan:</b> Input hasil di MAS (<b>wajib ≥5 kata</b>), review dengan Korwil, monitoring PTP</p></div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem;margin-top:.6rem">
+            <div style="background:#f0f7ff;border-radius:10px;padding:.8rem 1rem;border-top:3px solid #1a4fa0">
+              <div style="font-size:.8rem;font-weight:700;color:#1a4fa0;margin-bottom:.5rem">1️⃣ Pra Kunjungan</div>
+              <ul style="font-size:.8rem;color:#444;padding-left:1rem;line-height:1.65;margin:0">
+                <li>Menentukan RKH Konsumen</li>
+                <li>Analisa hasil kasus sebelumnya</li>
+              </ul>
+            </div>
+            <div style="background:#fff7ed;border-radius:10px;padding:.8rem 1rem;border-top:3px solid #e07800">
+              <div style="font-size:.8rem;font-weight:700;color:#e07800;margin-bottom:.5rem">2️⃣ Kunjungan</div>
+              <ul style="font-size:.8rem;color:#444;padding-left:1rem;line-height:1.65;margin:0">
+                <li>Melakukan kunjungan ke alamat RKH</li>
+                <li>Validasi keberadaan unit, alamat &amp; konsumen</li>
+                <li>Check in aplikasi MAS</li>
+                <li>Memberikan solusi terkait keterlambatan</li>
+                <li>Memastikan pembayaran atau janji bayar</li>
+                <li>Melakukan dokumentasi pembayaran</li>
+              </ul>
+            </div>
+            <div style="background:#f0fff4;border-radius:10px;padding:.8rem 1rem;border-top:3px solid #1a8a4a">
+              <div style="font-size:.8rem;font-weight:700;color:#1a8a4a;margin-bottom:.5rem">3️⃣ Pasca Kunjungan</div>
+              <ul style="font-size:.8rem;color:#444;padding-left:1rem;line-height:1.65;margin:0">
+                <li>Analisa keterlambatan</li>
+                <li>Melakukan input hasil kunjungan di MAS <b>(wajib ≥5 kata)</b></li>
+                <li>Review hasil kunjungan dengan Korwil</li>
+                <li>Monitoring janji bayar konsumen</li>
+              </ul>
+            </div>
           </div>
         </div>
         <div class="info-card">
@@ -927,14 +919,101 @@
         </div>
         <div class="info-card">
           <h4>Pilihan Penyelesaian PAC Mobil</h4>
-          <ul>
-            <li>✅ <b>Pelancaran</b>: bayar seluruh tunggakan</li>
-            <li>✅ <b>Pelunasan</b>: lunas semua kewajiban (+ denda, bunga)</li>
-            <li>✅ <b>Penarikan unit</b>: tarik kendaraan → proses lelang</li>
-            <li>✅ <b>Prepayment</b>: bayar parsial, minimal keluar dari bucket NPL</li>
-            <li>✅ <b>Relaksasi angsuran</b>: perpanjang tenor (max 4 tahun) / libur bayar</li>
+          <p style="font-size:.8rem;color:var(--gray-text);margin-bottom:.6rem">Tidak semua pilihan dapat diberikan ke semua konsumen — wajib analisa terlebih dahulu sebelum memutuskan solusi yang tepat.</p>
+          <div class="flow-steps">
+            <div class="flow-step"><div class="num">a</div><p><b>Pelancaran</b> — Konsumen membayar <b>seluruh hutang yang tertunggak</b>. Setelah pelancaran, status kembali ke current/lancar.</p></div>
+            <div class="flow-step"><div class="num">b</div><p><b>Pelunasan</b> — Konsumen membayar <b>lunas seluruh tanggungan</b> di BCAF: utang pokok, bunga berjalan, denda, dan biaya lainnya.</p></div>
+            <div class="flow-step"><div class="num">c</div><p><b>Penarikan Mobil</b> — Mengamankan <b>unit fidusia BCAF</b> yang berada di tangan konsumen, kemudian dilakukan proses lelang.</p></div>
+            <div class="flow-step"><div class="num">d</div><p><b>Prepayment</b> — Konsumen membayar <b>parsial</b> dari jumlah tunggakannya, minimal cukup untuk keluar dari bucket NPL.</p></div>
+          </div>
+        </div>
+        <div class="info-card">
+          <h4>🔄 Relaksasi Angsuran (Restrukturisasi)</h4>
+          <p style="font-size:.8rem;color:var(--gray-text);margin-bottom:.6rem">Program BCAF untuk meringankan beban konsumen — tersedia 3 pilihan mekanisme:</p>
+          <div class="flow-steps">
+            <div class="flow-step"><div class="num">a</div><p><b>Perpanjang Tenor</b> — Memberikan tenor lebih lama sehingga angsuran per bulan lebih kecil. <span style="color:#c00;font-weight:600">Syarat: hanya untuk konsumen yang mengambil tenor 1–4 tahun (paket reguler).</span></p></div>
+            <div class="flow-step"><div class="num">b</div><p><b>Libur Bayar</b> — Memberikan jeda/libur pembayaran kepada konsumen dalam jangka waktu tertentu.</p></div>
+            <div class="flow-step"><div class="num">c</div><p><b>Pembayaran Bunga Dulu</b> — Konsumen membayar bunga terlebih dahulu, baru utang pokok — sehingga angsuran di awal lebih ringan.</p></div>
+          </div>
+          <div style="background:#fff7ed;border-radius:8px;padding:.7rem .9rem;margin-top:.6rem;font-size:.8rem">
+            <b style="color:#e07800">⚠️ Syarat pengajuan Relaksasi:</b>
+            <ul style="margin:.4rem 0 0;padding-left:1.2rem;line-height:1.7">
+              <li>Tenor sebelumnya <b>tidak lebih dari 4 tahun</b> (paket reguler)</li>
+              <li>Tidak sedang mengajukan pembiayaan <b>mobil listrik</b></li>
+              <li>Telah membayar angsuran minimal <b>1 tahun</b></li>
+            </ul>
+          </div>
+        </div>
+        <div class="info-card">
+          <h4>🎁 Program Amnesti Denda</h4>
+          <p style="font-size:.84rem;line-height:1.7">Program BCAF yang memberikan <b>keringanan denda sebesar 50%</b> bagi konsumen yang melakukan pembayaran <em>current</em> atau lancar.</p>
+          <ul style="font-size:.82rem;line-height:1.7;margin-top:.4rem">
+            <li>Konsumen <b>tidak perlu langsung melunasi sisa denda</b> — cukup bayar tunggakan angsurannya</li>
+            <li>Berlaku hanya untuk konsumen dengan <b>OVD &gt;31 hari</b></li>
+            <li style="color:#c00;font-weight:600">⏳ Program berlaku s/d akhir Desember 2025</li>
           </ul>
-          <p style="font-size:.79rem;color:var(--gray-text);margin-top:.5rem">Program Amnesti Denda: diskon 50% denda bagi yang bayar current — berlaku s/d akhir Des 2025, min OVD &gt;31</p>
+        </div>
+        <div class="info-card">
+          <h4>📄 Bedah Dossier</h4>
+          <p style="font-size:.84rem;line-height:1.7">Teknik pelacakan PAC dengan menggali informasi tambahan dari <b>dokumen kredit nasabah</b> di <b>DMS (Document Management System)</b>. Dilakukan dengan meneliti satu per satu dokumen kredit konsumen, misalnya:</p>
+          <ul style="font-size:.82rem;line-height:1.7;margin-top:.4rem">
+            <li>Alamat tertera di <b>BPKB</b></li>
+            <li>Dokumen data pekerjaan konsumen</li>
+            <li>Data anggota keluarga dari <b>KK</b></li>
+            <li>Referensi dan kontak darurat yang dicantumkan saat pengajuan kredit</li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h4>⚖️ Perbedaan Pendekatan FAC vs PAC</h4>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-top:.5rem">
+            <div style="background:#fff7ed;border-radius:8px;padding:.8rem 1rem;border-top:3px solid #e07800">
+              <div style="font-size:.8rem;font-weight:700;color:#e07800;margin-bottom:.4rem">🚗 FAC (10–90 hari)</div>
+              <ul style="font-size:.8rem;color:#444;padding-left:1rem;line-height:1.65;margin:0">
+                <li>Fokus utama: <b>kunjungan &amp; bertemu konsumen</b></li>
+                <li>Tagih angsuran, konfirmasi PTP, berikan solusi</li>
+                <li>Konsumen biasanya masih dapat ditemui</li>
+              </ul>
+            </div>
+            <div style="background:#fef0f0;border-radius:8px;padding:.8rem 1rem;border-top:3px solid #c00">
+              <div style="font-size:.8rem;font-weight:700;color:#c00;margin-bottom:.4rem">🔍 PAC (91+ hari)</div>
+              <ul style="font-size:.8rem;color:#444;padding-left:1rem;line-height:1.65;margin:0">
+                <li>Fokus utama: <b>kunjungan &amp; pelacakan</b> keberadaan konsumen &amp; unit</li>
+                <li>Konsumen sering sudah sulit ditemui — perlu skip tracing</li>
+                <li>Target lebih kecil: min <b>3 kasus/bulan</b> (kasus sudah berat)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="info-card">
+          <h4>📸 Memo-memo Penyimpangan FAC/PAC</h4>
+          <p style="font-size:.8rem;color:var(--gray-text);margin-bottom:.8rem">Contoh memo penyimpangan yang berlaku untuk FAC &amp; PAC — sumber: Materi OJT 2</p>
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:.8rem">
+            <div style="text-align:center">
+              <div style="font-size:.75rem;font-weight:700;color:#1a4fa0;margin-bottom:.3rem">Penyimpangan Geotagging</div>
+              <img src="img/memo-geotagging.png" alt="Memo Geotagging" style="width:100%;border-radius:8px;border:1px solid #dde8ff;cursor:pointer" onclick="window.open(this.src)">
+              <div style="font-size:.72rem;color:var(--gray-text);margin-top:.3rem">Diam &gt;2 jam di 1 lokasi saat jam kerja</div>
+            </div>
+            <div style="text-align:center">
+              <div style="font-size:.75rem;font-weight:700;color:#1a4fa0;margin-bottom:.3rem">Penyimpangan Deviasi</div>
+              <img src="img/memo-deviasi.png" alt="Memo Deviasi" style="width:100%;border-radius:8px;border:1px solid #dde8ff;cursor:pointer" onclick="window.open(this.src)">
+              <div style="font-size:.72rem;color:var(--gray-text);margin-top:.3rem">Input di lokasi berbeda dari MAS (&gt;3 km)</div>
+            </div>
+            <div style="text-align:center">
+              <div style="font-size:.75rem;font-weight:700;color:#1a4fa0;margin-bottom:.3rem">Beda Ceklist BAST</div>
+              <img src="img/memo-beda-ceklist.png" alt="Memo Beda Ceklist BAST" style="width:100%;border-radius:8px;border:1px solid #dde8ff;cursor:pointer" onclick="window.open(this.src)">
+              <div style="font-size:.72rem;color:var(--gray-text);margin-top:.3rem">Ceklist BAST berbeda saat cek pool</div>
+            </div>
+            <div style="text-align:center">
+              <div style="font-size:.75rem;font-weight:700;color:#1a4fa0;margin-bottom:.3rem">Remarks Kosong / &lt;5 Kata</div>
+              <img src="img/memo-remarks.png" alt="Memo Remarks" style="width:100%;border-radius:8px;border:1px solid #dde8ff;cursor:pointer" onclick="window.open(this.src)">
+              <div style="font-size:.72rem;color:var(--gray-text);margin-top:.3rem">Input MAS remarks tidak memadai</div>
+            </div>
+            <div style="text-align:center">
+              <div style="font-size:.75rem;font-weight:700;color:#1a4fa0;margin-bottom:.3rem">Remarks Copy Paste</div>
+              <img src="img/memo-copypaste.png" alt="Memo Copy Paste" style="width:100%;border-radius:8px;border:1px solid #dde8ff;cursor:pointer" onclick="window.open(this.src)">
+              <div style="font-size:.72rem;color:var(--gray-text);margin-top:.3rem">Remarks identik / copy dari kunjungan lain</div>
+            </div>
+          </div>
         </div>
       </div>
       <!-- PAC MOTOR -->
@@ -1142,7 +1221,7 @@
             <li><span class="sk-ref" onclick="gotoDoc('kewenangan-recovery-div')">Division Head</span>: Bpk. Juliater Pane</li>
             <li><span class="sk-ref" onclick="gotoDoc('kewenangan-account-solu')">Deputy Director</span>: Bpk. Tomi Djoko</li>
             <li>BOD: Bpk. Herwandi</li>
-            <li>"Mengetahui": ARH, Regional Head, Analyst Cyber, Dev. Head</li>
+            <li>"Mengetahui": ARH, Regional Head</li>
           </ul>
           <br>
           <p style="font-size:.8rem">Semua WO wajib melalui rekomendasi audit. WO dengan note (tanpa rekomendasi audit) sudah tidak ada.</p>
@@ -1469,15 +1548,19 @@
 
     <div class="ov-card">
       <div class="ov-icon">🔄</div>
-      <h3>Alur Sharing Loss (6 Langkah)</h3>
-      <ol style="font-size:.85rem;margin:.5rem 0;padding-left:1.2rem;line-height:1.7">
-        <li>CMS / collector menemukan kasus sulit</li>
-        <li>Input data ke sistem Solcen</li>
-        <li>Tim Solcen analisa & verifikasi data debitur</li>
-        <li>Sharing ke grup WA Task Force</li>
-        <li>AASH / ARH kirim form konfirmasi tindak lanjut</li>
-        <li>Pencerdasan: coaching, edukasi, atau eskalasi</li>
+      <h3>Alur Sharing Loss di Task Force</h3>
+      <ol style="font-size:.85rem;margin:.5rem 0;padding-left:1.2rem;line-height:1.8">
+        <li>Cabang ajukan sharing loss ke PIC Task Force Solcen — sertakan: data konsumen, data unit, data angsuran, kronologis, &amp; upaya penanganan sebelumnya</li>
+        <li>PIC isi form analisis — cocokkan data cabang dengan data di Financore, hitung biaya kompensasi yang masih memungkinkan</li>
+        <li>PIC verifikasi via telepon ke konsumen, nego kompensasi (biasanya senilai ±1 angsuran) agar lebih rendah dari pengajuan awal</li>
+        <li>Setelah deal tercapai — buat &amp; naikkan memo ke atasan</li>
+        <li>Cabang tarik unit dari konsumen, serahkan seluruh berkas ke Task Force</li>
+        <li>Unit diproses lelang / OLX Autos, kompensasi diberikan ke konsumen</li>
       </ol>
+      <div style="margin-top:.8rem">
+        <div style="font-size:.78rem;font-weight:700;color:#1a4fa0;margin-bottom:.5rem">📸 Foto Alur Sharing Loss (Materi OJT 2)</div>
+        <img src="img/sharing-loss-alur.png" alt="Alur Sharing Loss Task Force" style="width:100%;max-width:700px;border-radius:10px;border:1px solid #dde8ff;display:block;cursor:pointer" onclick="window.open(this.src)">
+      </div>
     </div>
 
     <div class="ov-card">
@@ -1494,20 +1577,43 @@
     </div>
 
     <div class="ov-card">
+      <div class="ov-icon">🔄</div>
+      <h3>Alur Monitoring QA Task Force</h3>
+      <div class="flow-steps" style="margin-top:.5rem">
+        <div class="flow-step"><div class="num">1</div><p>Tarik data report dari <b>CMS</b> (Collection Management System)</p></div>
+        <div class="flow-step"><div class="num">2</div><p>Analisa data — identifikasi temuan geotagging, deviasi, RKH, dan kualitas remarks</p></div>
+        <div class="flow-step"><div class="num">3</div><p>Kirim hasil temuan ke <b>grup area</b> masing-masing</p></div>
+        <div class="flow-step"><div class="num">4</div><p><b>AASH / ARH</b> yang cabangnya terkena temuan mengisi <b>Form Konfirmasi</b> dan melaporkan tindak lanjut</p></div>
+      </div>
+      <div style="background:#f0f7ff;border-radius:8px;padding:.7rem .9rem;margin-top:.7rem">
+        <div style="font-size:.8rem;font-weight:700;color:#1a4fa0;margin-bottom:.5rem">📋 Isi Form Konfirmasi QA</div>
+        <table style="font-size:.8rem;width:100%;border-collapse:collapse">
+          <tr style="background:#dde8ff"><th style="padding:.3rem .5rem;text-align:left">Field</th><th style="padding:.3rem .5rem;text-align:left">Keterangan</th></tr>
+          <tr><td style="padding:.28rem .5rem;font-weight:600">Tanggal</td><td style="padding:.28rem .5rem">Tanggal kejadian / temuan</td></tr>
+          <tr style="background:#f0f5ff"><td style="padding:.28rem .5rem;font-weight:600">Nama FAC / PAC / ARO</td><td style="padding:.28rem .5rem">Nama collector yang terkena temuan</td></tr>
+          <tr><td style="padding:.28rem .5rem;font-weight:600">Indikasi Kasus</td><td style="padding:.28rem .5rem">Jenis penyimpangan yang ditemukan</td></tr>
+          <tr style="background:#f0f5ff"><td style="padding:.28rem .5rem;font-weight:600">Hasil Konfirmasi</td><td style="padding:.28rem .5rem">Penjelasan / klarifikasi dari cabang</td></tr>
+          <tr><td style="padding:.28rem .5rem;font-weight:600">Bukti Konfirmasi</td><td style="padding:.28rem .5rem">Screenshot / dokumen pendukung</td></tr>
+          <tr style="background:#f0f5ff"><td style="padding:.28rem .5rem;font-weight:600">Regional</td><td style="padding:.28rem .5rem">Region cabang yang bersangkutan</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="ov-card">
       <div class="ov-icon">🔍</div>
       <h3>Temuan Monitoring FAC / PAC</h3>
       <table style="font-size:.82rem;width:100%;border-collapse:collapse;margin-top:.5rem">
         <thead><tr style="background:var(--blue-main);color:#fff">
           <th style="padding:.35rem .5rem;text-align:left">Indikator</th>
-          <th style="padding:.35rem .5rem;text-align:center">Standar</th>
+          <th style="padding:.35rem .5rem;text-align:left">Ketentuan / Standar</th>
         </tr></thead>
         <tbody>
-          <tr style="background:#f0f5ff"><td style="padding:.3rem .5rem">Geotagging kunjungan</td><td style="padding:.3rem .5rem;text-align:center">Maks 2 jam di lokasi</td></tr>
-          <tr><td style="padding:.3rem .5rem">Deviasi jarak</td><td style="padding:.3rem .5rem;text-align:center">Maks 3 km dari alamat</td></tr>
-          <tr style="background:#f0f5ff"><td style="padding:.3rem .5rem">RKH terisi</td><td style="padding:.3rem .5rem;text-align:center">100% hari kerja</td></tr>
-          <tr><td style="padding:.3rem .5rem">Min kunjungan/hari</td><td style="padding:.3rem .5rem;text-align:center">≥ 3 akun per hari</td></tr>
-          <tr style="background:#f0f5ff"><td style="padding:.3rem .5rem">MCS UNV / PTP</td><td style="padding:.3rem .5rem;text-align:center">30% / 30%</td></tr>
-          <tr><td style="padding:.3rem .5rem">Distribusi SP</td><td style="padding:.3rem .5rem;text-align:center">100% terkirim</td></tr>
+          <tr style="background:#f0f5ff"><td style="padding:.3rem .5rem">Geotagging — diam di 1 titik</td><td style="padding:.3rem .5rem">Maks <b>2 jam</b> di lokasi yang sama saat jam kerja</td></tr>
+          <tr><td style="padding:.3rem .5rem">Geotagging — PAC di kantor</td><td style="padding:.3rem .5rem">Maks <b>3 jam</b> di kantor (lebih dari itu = penyimpangan)</td></tr>
+          <tr style="background:#f0f5ff"><td style="padding:.3rem .5rem">Deviasi jarak inputan MAS</td><td style="padding:.3rem .5rem">Maks <b>3 km</b> dari alamat konsumen di MAS</td></tr>
+          <tr><td style="padding:.3rem .5rem">RKH terisi</td><td style="padding:.3rem .5rem"><b>100%</b> — harus selesai setiap hari kerja</td></tr>
+          <tr style="background:#f0f5ff"><td style="padding:.3rem .5rem">Min kunjungan PAC/hari</td><td style="padding:.3rem .5rem">Wajib input minimal <b>3 kunjungan/hari</b> di MAS</td></tr>
+          <tr><td style="padding:.3rem .5rem">Distribusi SP</td><td style="padding:.3rem .5rem"><b>100%</b> terkirim sesuai ketentuan</td></tr>
         </tbody>
       </table>
     </div>
@@ -1557,131 +1663,184 @@
 <div class="section">
   <div class="st">
     <h2>🏢 AS Support</h2>
-    <p>Fungsi pendukung operasional Area ASR: reporting, analisis, kelas cabang, dan administrasi bulanan</p>
+    <p>Tugas-tugas rutin AS Support dalam operasional harian, bulanan, dan administrasi cabang ASR</p>
   </div>
   <div class="ov-grid">
 
+    <!-- 1. Report Pergerakan Angka -->
     <div class="ov-card">
-      <div class="ov-icon">📅</div>
-      <h3>Jadwal Report Aging</h3>
-      <p style="font-size:.85rem;margin-bottom:.5rem"><strong>Report Aging Mati</strong> — dikirim setiap pagi (sebelum jam 09:00)</p>
-      <p style="font-size:.85rem;margin-bottom:.5rem"><strong>Report Aging Hidup</strong> — dikirim 3× sehari:</p>
-      <ul style="font-size:.85rem;margin:.3rem 0;padding-left:1.2rem">
-        <li>Jam 09:00</li>
-        <li>Jam 13:00</li>
-        <li>Jam 17:30</li>
+      <div class="ov-icon">📊</div>
+      <h3>Report Pergerakan Angka (Aging)</h3>
+      <p style="font-size:.83rem;color:#555;margin:.3rem 0 .5rem">Salah satu tugas rutin harian AS Support adalah melakukan report pergerakan angka:</p>
+      <ul style="font-size:.85rem;margin:.3rem 0;padding-left:1.2rem;line-height:1.8">
+        <li><strong>Report Aging Mati</strong> — dilakukan setiap pagi</li>
+        <li><strong>Report Aging Hidup</strong> — dilakukan <strong>3× sehari</strong>:
+          <ul style="margin:.2rem 0;padding-left:1rem">
+            <li>Jam 09:00</li>
+            <li>Jam 13:00</li>
+            <li>Jam 17:30 (set 6 sore)</li>
+          </ul>
+        </li>
       </ul>
-      <p style="font-size:.83rem;color:#666;margin-top:.5rem">Dikirim ke grup Area ASH &amp; seluruh cabang di wilayah</p>
     </div>
 
+    <!-- 2. Memo Promosi -->
     <div class="ov-card">
       <div class="ov-icon">📝</div>
-      <h3>Alur Memo Promosi</h3>
-      <ol style="font-size:.85rem;margin:.5rem 0;padding-left:1.2rem;line-height:1.8">
-        <li>AASH mengajukan permohonan promosi ke Analyst</li>
-        <li>Analyst koordinasi HR → cek SLIK &amp; SPST</li>
-        <li>Memo ditandatangani pejabat berwenang &amp; diteruskan ke HR</li>
+      <h3>Pemrosesan Memo Promosi</h3>
+      <p style="font-size:.83rem;color:#555;margin:.3rem 0 .5rem">AS Support memproses memo promosi karyawan dengan alur:</p>
+      <ol style="font-size:.85rem;margin:.3rem 0;padding-left:1.2rem;line-height:1.9">
+        <li>AASH melakukan pengajuan kepada Analyst</li>
+        <li>Analyst meneruskan ke HR → cek <strong>SLIK</strong> &amp; <strong>SPST</strong> (Surat Peringatan &amp; Surat Teguran)</li>
+        <li>Analyst membuat memo promosi → di-TTD pejabat terkait (<strong>AASH, DH, BOD</strong>)</li>
       </ol>
-      <p style="font-size:.83rem;color:#666;margin-top:.4rem">SLIK = Sistem Layanan Informasi Keuangan · SPST = Surat Pernyataan Sehat Tidak</p>
     </div>
 
+    <!-- 3. Insentif Tarikan -->
     <div class="ov-card">
       <div class="ov-icon">💰</div>
-      <h3>Insentif Tarikan &amp; Cutoff</h3>
-      <ul style="font-size:.85rem;margin:.5rem 0;padding-left:1.2rem;line-height:1.7">
-        <li>Data tarikan masuk <strong>maks tgl 7 jam 14:00</strong></li>
-        <li>Insentif cair pada <strong>tgl 25 bulan berikutnya</strong></li>
-        <li>Status <em>paid</em> harus sebelum tgl 7 jam 14:00</li>
-        <li>Keterlambatan data = tidak terhitung bulan berjalan</li>
+      <h3>Perhitungan Insentif Tarikan</h3>
+      <p style="font-size:.82rem;color:#555;margin:.3rem 0 .4rem">Dihitung AS Support untuk tarikan internal per bulan berjalan.</p>
+
+      <p style="font-size:.83rem;font-weight:600;margin:.5rem 0 .2rem">📅 Cutoff Data</p>
+      <ul style="font-size:.84rem;margin:.2rem 0 .5rem;padding-left:1.2rem;line-height:1.7">
+        <li>Data tarikan masuk <strong>maks tgl 7 jam 14:00</strong> bulan berjalan → cair tgl <strong>25 bulan yang sama</strong></li>
+        <li>Jika melewati tgl 7 → wajib buat <strong>Memo Penyimpangan Keterlambatan Pencairan Tarikan</strong> → insentif cair bulan berikutnya</li>
+      </ul>
+
+      <p style="font-size:.83rem;font-weight:600;margin:.5rem 0 .2rem">💵 Besaran Insentif per Unit</p>
+      <table style="width:100%;font-size:.82rem;border-collapse:collapse;margin:.2rem 0 .5rem">
+        <tr style="background:#f0f7ff"><td style="padding:.28rem .5rem;border:1px solid #dde3f0"><strong>FAC / PAC</strong></td><td style="padding:.28rem .5rem;border:1px solid #dde3f0;text-align:right">Rp 2.150.000</td></tr>
+        <tr><td style="padding:.28rem .5rem;border:1px solid #dde3f0">Korwil</td><td style="padding:.28rem .5rem;border:1px solid #dde3f0;text-align:right">Rp 430.000</td></tr>
+        <tr style="background:#f0f7ff"><td style="padding:.28rem .5rem;border:1px solid #dde3f0">BASH</td><td style="padding:.28rem .5rem;border:1px solid #dde3f0;text-align:right">Rp 240.000</td></tr>
+        <tr><td style="padding:.28rem .5rem;border:1px solid #dde3f0">AASH</td><td style="padding:.28rem .5rem;border:1px solid #dde3f0;text-align:right">Rp 180.000</td></tr>
+        <tr style="background:#fff8e1"><td style="padding:.28rem .5rem;border:1px solid #dde3f0"><strong>TOTAL</strong></td><td style="padding:.28rem .5rem;border:1px solid #dde3f0;text-align:right"><strong>Rp 3.000.000</strong></td></tr>
+      </table>
+
+      <p style="font-size:.83rem;font-weight:600;margin:.5rem 0 .2rem">📊 Rumus A × B (Insentif × Achievement Cabang)</p>
+      <ul style="font-size:.84rem;margin:.2rem 0;padding-left:1.2rem;line-height:1.7">
+        <li>Achievement &lt;50% → ×<strong>0,5</strong> (nilai minimal)</li>
+        <li>Achievement &gt;100% → ×<strong>1</strong> (nilai maksimal)</li>
+        <li>Contoh: Ach. 90% → Rp 2.150.000 × 90% = <strong>Rp 1.935.000</strong></li>
       </ul>
     </div>
 
+    <!-- 4. Reporting Bulanan / Closing -->
     <div class="ov-card">
       <div class="ov-icon">📆</div>
-      <h3>MOM &amp; EOM Closing</h3>
-      <ul style="font-size:.85rem;margin:.5rem 0;padding-left:1.2rem;line-height:1.7">
-        <li><strong>MOM</strong> (Middle of Month): closing pertengahan bulan → review progress target</li>
-        <li><strong>EOM</strong> (End of Month): closing akhir bulan → tutup buku resmi</li>
-        <li>Report H+1 dikirim paling lambat hari kerja berikutnya setelah closing</li>
-        <li>Report tutup buku mencakup: realisasi vs target, outstanding, flow rate, success rate</li>
+      <h3>Reporting Bulanan (MOM &amp; EOM)</h3>
+      <p style="font-size:.83rem;color:#555;margin:.3rem 0 .5rem">Closing terbagi menjadi 2 periode:</p>
+      <ul style="font-size:.85rem;margin:.3rem 0;padding-left:1.2rem;line-height:1.8">
+        <li><strong>MOM</strong> (Mid of Month): awal bulan — tgl 15</li>
+        <li><strong>EOM</strong> (End of Month): tgl 16 — akhir bulan</li>
+        <li>Report dilakukan setiap <strong>H+1 closing</strong></li>
       </ul>
     </div>
 
+    <!-- 5. Setting Kode POS -->
     <div class="ov-card">
       <div class="ov-icon">🗺️</div>
-      <h3>Setting Kode POS MAS</h3>
-      <ul style="font-size:.85rem;margin:.5rem 0;padding-left:1.2rem;line-height:1.7">
-        <li>Dilakukan di <strong>awal bulan</strong> sebelum operasional berjalan</li>
-        <li>Kode POS MAS digunakan untuk pemetaan wilayah kerja collector</li>
-        <li>Perubahan kode POS harus melalui persetujuan AASH</li>
-        <li>Berkaitan langsung dengan laporan deviasi jarak kunjungan</li>
+      <h3>Setting Kode POS di MAS</h3>
+      <p style="font-size:.83rem;color:#555;margin:.3rem 0 .5rem">Dilakukan <strong>setiap awal bulan</strong> untuk update penugasan FAC dan PAC di masing-masing kode POS.</p>
+      <ul style="font-size:.85rem;margin:.3rem 0;padding-left:1.2rem;line-height:1.8">
+        <li>Setiap kode POS memiliki <strong>amount dan account</strong> → insentif menjadi <strong>hak milik PIC</strong> yang terdaftar</li>
+        <li>Jika tidak di-setting → insentif otomatis menjadi <strong>hak milik PIC lama</strong></li>
       </ul>
     </div>
 
+    <!-- 6. Kelas Cabang -->
     <div class="ov-card">
       <div class="ov-icon">🏆</div>
-      <h3>Kelas Cabang (Grading)</h3>
-      <p style="font-size:.84rem;margin-bottom:.4rem"><strong>4 Parameter Penilaian:</strong></p>
-      <ul style="font-size:.83rem;margin:.3rem 0 .6rem;padding-left:1.2rem">
-        <li>Outstanding (NPL/NPF portofolio)</li>
-        <li>Success Rate</li>
-        <li>Flow Rate</li>
-        <li>Kepatuhan operasional (RKH, geotagging, SP)</li>
-      </ul>
+      <h3>Parameter Kelas Cabang ASR (Grading)</h3>
+      <p style="font-size:.83rem;font-weight:600;margin:.3rem 0 .3rem">4 Parameter Penilaian:</p>
+      <table style="width:100%;font-size:.82rem;border-collapse:collapse;margin:.2rem 0 .6rem">
+        <thead><tr style="background:var(--blue-main);color:#fff">
+          <th style="padding:.3rem .4rem">Parameter</th><th style="padding:.3rem .4rem;text-align:right">Bobot</th>
+        </tr></thead>
+        <tbody>
+          <tr style="background:#f0f7ff"><td style="padding:.28rem .5rem;border:1px solid #dde3f0">Jumlah account TMA cabang</td><td style="padding:.28rem .5rem;border:1px solid #dde3f0;text-align:right">25%</td></tr>
+          <tr><td style="padding:.28rem .5rem;border:1px solid #dde3f0">Jumlah account OVD 1–9 hari</td><td style="padding:.28rem .5rem;border:1px solid #dde3f0;text-align:right">20%</td></tr>
+          <tr style="background:#f0f7ff"><td style="padding:.28rem .5rem;border:1px solid #dde3f0">Jumlah account OVD 10–30 hari</td><td style="padding:.28rem .5rem;border:1px solid #dde3f0;text-align:right">25%</td></tr>
+          <tr><td style="padding:.28rem .5rem;border:1px solid #dde3f0">Jumlah account OVD &gt;30 hari</td><td style="padding:.28rem .5rem;border:1px solid #dde3f0;text-align:right">30%</td></tr>
+        </tbody>
+      </table>
+      <p style="font-size:.83rem;font-weight:600;margin:.4rem 0 .3rem">Hasil Grading Kelas Cabang:</p>
       <table style="font-size:.82rem;width:100%;border-collapse:collapse">
         <thead><tr style="background:var(--blue-main);color:#fff">
-          <th style="padding:.3rem .4rem">Kelas</th><th style="padding:.3rem .4rem">Predikat</th>
+          <th style="padding:.3rem .4rem">Kelas</th><th style="padding:.3rem .4rem">Nilai Akhir</th>
         </tr></thead>
         <tbody>
-          <tr style="background:#e8f5e9"><td style="padding:.25rem .4rem;text-align:center"><strong>A</strong></td><td style="padding:.25rem .4rem">Excellent</td></tr>
-          <tr><td style="padding:.25rem .4rem;text-align:center"><strong>B</strong></td><td style="padding:.25rem .4rem">Good</td></tr>
-          <tr style="background:#fff3e0"><td style="padding:.25rem .4rem;text-align:center"><strong>C</strong></td><td style="padding:.25rem .4rem">Needs Improvement</td></tr>
-          <tr style="background:#ffeaea"><td style="padding:.25rem .4rem;text-align:center"><strong>D</strong></td><td style="padding:.25rem .4rem">Poor</td></tr>
+          <tr style="background:#e8f5e9"><td style="padding:.25rem .5rem;text-align:center"><strong>A</strong></td><td style="padding:.25rem .5rem">&gt; 4,75 – 5</td></tr>
+          <tr><td style="padding:.25rem .5rem;text-align:center"><strong>B</strong></td><td style="padding:.25rem .5rem">&gt; 2,75 – 4,75</td></tr>
+          <tr style="background:#fff3e0"><td style="padding:.25rem .5rem;text-align:center"><strong>C</strong></td><td style="padding:.25rem .5rem">&gt; 1 – 2,75</td></tr>
+          <tr style="background:#ffeaea"><td style="padding:.25rem .5rem;text-align:center"><strong>D</strong></td><td style="padding:.25rem .5rem">&lt; 1</td></tr>
         </tbody>
       </table>
     </div>
 
-    <div class="ov-card">
-      <div class="ov-icon">🎯</div>
-      <h3>Zonasi Risiko</h3>
-      <table style="font-size:.82rem;width:100%;border-collapse:collapse;margin-top:.4rem">
-        <thead><tr style="background:var(--blue-main);color:#fff">
-          <th style="padding:.3rem .5rem">Zona</th><th style="padding:.3rem .5rem">Risiko</th><th style="padding:.3rem .5rem">Tindakan</th>
-        </tr></thead>
-        <tbody>
-          <tr style="background:#e8f5e9"><td style="padding:.3rem .5rem;text-align:center">🟢 Hijau</td><td style="padding:.3rem .5rem">Rendah</td><td style="padding:.3rem .5rem">Monitor rutin</td></tr>
-          <tr style="background:#fffde7"><td style="padding:.3rem .5rem;text-align:center">🟡 Kuning</td><td style="padding:.3rem .5rem">Sedang</td><td style="padding:.3rem .5rem">Intensifikasi</td></tr>
-          <tr style="background:#ffeaea"><td style="padding:.3rem .5rem;text-align:center">🔴 Merah</td><td style="padding:.3rem .5rem">Tinggi</td><td style="padding:.3rem .5rpm">Task Force</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="ov-card">
-      <div class="ov-icon">📉</div>
-      <h3>Report Deviasi Jarak &amp; MPP</h3>
-      <p style="font-size:.84rem;margin-bottom:.4rem"><strong>Report Deviasi Jarak:</strong></p>
-      <ul style="font-size:.83rem;margin:.2rem 0 .6rem;padding-left:1.2rem">
-        <li>Rekap collector yang kunjungan &gt; 3 km dari alamat debitur</li>
-        <li>Dikirim ke AASH &amp; kepala cabang tiap hari</li>
-        <li>Dasar coaching &amp; evaluasi kinerja lapangan</li>
-      </ul>
-      <p style="font-size:.84rem;margin-bottom:.4rem"><strong>Analisis MPP (Man Power Planning):</strong></p>
-      <ul style="font-size:.83rem;margin:.2rem 0;padding-left:1.2rem">
-        <li>Analisis kebutuhan SDM vs portofolio aktif</li>
-        <li>Dasar pemecahan / penggabungan cabang</li>
-        <li>Review berkala setiap kuartal atau saat terjadi perubahan signifikan</li>
-      </ul>
-    </div>
-
+    <!-- 7. Pemecahan Cabang -->
     <div class="ov-card">
       <div class="ov-icon">🏗️</div>
-      <h3>Pemecahan &amp; Penggabungan Cabang</h3>
-      <ul style="font-size:.85rem;margin:.5rem 0;padding-left:1.2rem;line-height:1.7">
-        <li>Pemecahan cabang dilakukan jika portofolio sudah terlalu besar untuk 1 tim</li>
-        <li>Penggabungan jika portofolio terlalu kecil (efisiensi SDM)</li>
-        <li>Perlu analisis MPP &amp; persetujuan Area AASH &amp; Regional ASDH</li>
-        <li>Kode cabang baru didaftarkan ke sistem MAS setelah disetujui</li>
-        <li>Semua collector diremap ulang sesuai wilayah baru</li>
+      <h3>Pemecahan Cabang</h3>
+      <p style="font-size:.83rem;color:#555;margin:.3rem 0 .5rem">Dilakukan dengan beberapa pertimbangan, contohnya memecah cabang <strong>Used Car</strong> dan <strong>non-Used Car</strong>.</p>
+      <ul style="font-size:.85rem;margin:.3rem 0;padding-left:1.2rem;line-height:1.8">
+        <li>Jika TMA salah satu produk <strong>tidak mencapai 30%</strong> dari total → diajukan perubahan secara <strong>bertahap</strong></li>
+        <li>Perubahan dari penanganan <strong>per produk</strong> menjadi penanganan <strong>per wilayah</strong></li>
+      </ul>
+    </div>
+
+    <!-- 8. Rekomendasi Zonasi -->
+    <div class="ov-card">
+      <div class="ov-icon">🎯</div>
+      <h3>Rekomendasi Zonasi</h3>
+      <p style="font-size:.83rem;color:#555;margin:.3rem 0 .4rem">Dibuat berdasarkan histori realisasi, tunggakan, dan kolektibilitas. Data diambil dari rentang <strong>28 bulan</strong> → dimasukkan ke Excel (sudah ada rumusnya).</p>
+      <p style="font-size:.83rem;font-weight:600;margin:.4rem 0 .2rem">Parameter penilaian:</p>
+      <ul style="font-size:.83rem;margin:.2rem 0 .5rem;padding-left:1.2rem;line-height:1.7">
+        <li>Pernah menunggak &gt;60 hari</li>
+        <li>Pernah menunggak &gt;90 hari</li>
+        <li>Tarikan non-WO</li>
+        <li>Account di WO</li>
+        <li>WO ter-recovery</li>
+        <li>Poin kategori kasus</li>
+      </ul>
+      <p style="font-size:.83rem;font-weight:600;margin:.4rem 0 .2rem">Hasil score zona:</p>
+      <table style="font-size:.82rem;width:100%;border-collapse:collapse">
+        <tr style="background:#e8f5e9"><td style="padding:.28rem .5rem;border:1px solid #dde3f0">🟢 <strong>Hijau</strong></td><td style="padding:.28rem .5rem;border:1px solid #dde3f0">Poin &lt; 3</td></tr>
+        <tr style="background:#fffde7"><td style="padding:.28rem .5rem;border:1px solid #dde3f0">🟡 <strong>Kuning</strong></td><td style="padding:.28rem .5rem;border:1px solid #dde3f0">Poin 3–5</td></tr>
+        <tr style="background:#ffeaea"><td style="padding:.28rem .5rem;border:1px solid #dde3f0">🔴 <strong>Merah</strong></td><td style="padding:.28rem .5rem;border:1px solid #dde3f0">Poin 5</td></tr>
+      </table>
+    </div>
+
+    <!-- 9. Report Tutup Buku -->
+    <div class="ov-card">
+      <div class="ov-icon">📒</div>
+      <h3>Report Tutup Buku</h3>
+      <p style="font-size:.83rem;color:#555;margin:.3rem 0 .5rem">Dilakukan di <strong>tiap awal bulan</strong>:</p>
+      <ul style="font-size:.85rem;margin:.3rem 0;padding-left:1.2rem;line-height:1.8">
+        <li>Membuat list konsumen yang menjadi <strong>NPL</strong></li>
+        <li>Mengklasifikasikan <strong>layak WO atau tidak</strong> di Excel menggunakan rumus</li>
+      </ul>
+    </div>
+
+    <!-- 10. Report Deviasi Jarak -->
+    <div class="ov-card">
+      <div class="ov-icon">📉</div>
+      <h3>Report Deviasi Jarak</h3>
+      <p style="font-size:.83rem;color:#555;margin:.3rem 0 .5rem">Dibuat berdasarkan titik lokasi inputan vs lokasi yang seharusnya di MAS.</p>
+      <ul style="font-size:.85rem;margin:.3rem 0;padding-left:1.2rem;line-height:1.8">
+        <li>Dikelompokkan dalam deviasi <strong>&gt;2 km s/d 10 km</strong></li>
+        <li>Dikirimkan ke <strong>pak Iril</strong></li>
+      </ul>
+    </div>
+
+    <!-- 11. Analisis MPP -->
+    <div class="ov-card">
+      <div class="ov-icon">👥</div>
+      <h3>Analisis MPP (Man Power Planning)</h3>
+      <p style="font-size:.83rem;color:#555;margin:.3rem 0 .5rem">Mengatur berapa SDM yang diperlukan untuk setiap cabang.</p>
+      <ul style="font-size:.85rem;margin:.3rem 0;padding-left:1.2rem;line-height:1.8">
+        <li>Mempertimbangkan <strong>budget HR</strong> dan <strong>beban dari cabang</strong></li>
+        <li>Beberapa cabang tidak memiliki PAC karena TMA-nya tidak terlalu besar → masih bisa dihandle FAC dengan wilayah kelolaan yang tidak terlalu besar</li>
       </ul>
     </div>
 
@@ -2000,20 +2159,22 @@ pojkData.forEach(p => {
 });
 
 // Memos accordion
+const IMG = (src) => `<img src="img/${src}" style="margin-top:.7rem;width:100%;border-radius:8px;border:1px solid #ddd;display:block">`;
+const IMG2 = (a, b) => `<div style="display:flex;gap:.5rem;margin-top:.7rem"><img src="img/${a}" style="width:50%;border-radius:8px;border:1px solid #ddd;object-fit:contain"><img src="img/${b}" style="width:50%;border-radius:8px;border:1px solid #ddd;object-fit:contain"></div>`;
 const memos = [
-  { t:'Penyimpangan Geotagging', b:'Diajukan ketika FAC/PAC berdiam &gt;2 jam di satu titik saat jam kerja, berkumpul di 1 titik &gt;2 jam, atau PAC di kantor &gt;3 jam (Recovery: ARO tidak bergerak &gt;2 jam, di kantor &gt;4 jam).' },
-  { t:'Penyimpangan Deviasi', b:'Diajukan ketika FAC/PAC melakukan inputan di lokasi yang berbeda (&gt;3 km) dari lokasi yang tercatat di MAS.' },
-  { t:'Penyimpangan Beda Ceklist BAST', b:'Diajukan ketika ceklist BAST FAC/PAC memiliki perbedaan saat dilakukan pengecekan oleh petugas pool.' },
-  { t:'Penyimpangan Remarks (Kosong / &lt;5 kata / Copy Paste)', b:'Remarks di MAS kosong = memo. Kurang dari 5 kata = memo. Copy-paste dari kunjungan berbeda = memo. Wajib ada remarks informatif di setiap kunjungan.' },
-  { t:'Pelunasan Khusus', b:'Diajukan ketika konsumen minta pelunasan khusus (biasanya lebih kecil dari OSPOH tersisa). Butuh <b>approval 2 BOD</b>. Dokumen: surat permohonan debitur, KTP, memo data konsumen &amp; dasar pengajuan.' },
-  { t:'Waive Denda', b:'Diajukan untuk keringanan denda keterlambatan. Dokumen: data konsumen &amp; kendaraan, data pinjaman, kronologis, analisa ASR. Kewenangan: <span class="sk-ref" onclick="gotoDoc(\'ketentuan-waive-denda\')">ASDH ≤35%, NASDD ≤50%, BOD ≥50%</span>.' },
-  { t:'Reversal Dana', b:'Diajukan ketika konsumen masih terkena autodebet padahal unit telah diamankan. Dokumen: surat permohonan konsumen, KTP, form permohonan penyelesaian kelebihan dana.' },
-  { t:'Pinjam Pakai BAST', b:'Dikeluarkan ketika cabang ingin menggunakan BAST dari cabang lain karena unit berada di luar jangkauan cabang asal — namun SK/ST tetap dari cabang asal.' },
-  { t:'Percepatan Penanganan (Cetak SK OVD &lt;90 hari)', b:'Dikeluarkan untuk <span class="sk-ref" onclick="gotoDoc(\'ketentuan-penarikan\')">cetak SK walaupun OVD konsumen belum &gt;90 hari</span>. Memerlukan <b>approval hingga BOD</b>.' },
-  { t:'Tunda Aset / Hold Aset', b:'Dikeluarkan ketika unit tidak bisa dilelang: konsumen ingin tebus, ada LP, masalah ormas. <span class="sk-ref" onclick="gotoDoc(\'kewenangan-recovery-div\')"><b>OVD &lt;90 hr di pool: approval DD. OVD &gt;90 hr di pool: approval BOD.</b></span>' },
-  { t:'Derek', b:'Diajukan untuk reimburse biaya derek kendaraan tarikan yang perlu didrek ke pool.' },
-  { t:'Pengeluaran Kendaraan Tarikan', b:'Dikeluarkan untuk mengeluarkan kendaraan tarikan dari pool — biasanya saat konsumen melakukan penebusan.' },
-  { t:'Bantuan Penanganan (Antar Cabang)', b:'Dikeluarkan ketika ingin meminta bantuan cabang lain di luar area (misal JABO 1 minta ke JABO 3). BAST &amp; SK keluar dari cabang yang diminta. <b>Approval 2 AASH &amp; 2 DH Region masing-masing.</b>' },
+  { t:'Penyimpangan Geotagging', b:'Diajukan ketika FAC/PAC berdiam &gt;2 jam di satu titik saat jam kerja, berkumpul di 1 titik &gt;2 jam, atau PAC di kantor &gt;3 jam (Recovery: ARO tidak bergerak &gt;2 jam, di kantor &gt;4 jam).'+IMG('memo-geotagging.png') },
+  { t:'Penyimpangan Deviasi', b:'Diajukan ketika FAC/PAC melakukan inputan di lokasi yang berbeda (&gt;3 km) dari lokasi yang tercatat di MAS.'+IMG('memo-deviasi.png') },
+  { t:'Penyimpangan Beda Ceklist BAST', b:'Diajukan ketika ceklist BAST FAC/PAC memiliki perbedaan saat dilakukan pengecekan oleh petugas pool.'+IMG('memo-beda-ceklist.png') },
+  { t:'Penyimpangan Remarks (Kosong / &lt;5 kata / Copy Paste)', b:'Remarks di MAS kosong = memo. Kurang dari 5 kata = memo. Copy-paste dari kunjungan berbeda = memo. Wajib ada remarks informatif di setiap kunjungan.'+IMG2('memo-remarks.png','memo-remarks-lt5.png') },
+  { t:'Pelunasan Khusus', b:'Diajukan ketika konsumen minta pelunasan khusus (biasanya lebih kecil dari OSPOH tersisa). Butuh <b>approval 2 BOD</b>. Dokumen: surat permohonan debitur, KTP, memo data konsumen &amp; dasar pengajuan.'+IMG('memo-pelunasan-khusus.png') },
+  { t:'Waive Denda', b:'Diajukan untuk keringanan denda keterlambatan. Dokumen: data konsumen &amp; kendaraan, data pinjaman, kronologis, analisa ASR. Kewenangan: <span class="sk-ref" onclick="gotoDoc(\'ketentuan-waive-denda\')">ASDH ≤35%, NASDD ≤50%, BOD ≥50%</span>.'+IMG2('memo-waive-denda-1.png','memo-waive-denda-2.png') },
+  { t:'Reversal Dana', b:'Diajukan ketika konsumen masih terkena autodebet padahal unit telah diamankan. Dokumen: surat permohonan konsumen, KTP, form permohonan penyelesaian kelebihan dana.'+IMG('memo-reversal-dana.png') },
+  { t:'Pinjam Pakai BAST', b:'Dikeluarkan ketika cabang ingin menggunakan BAST dari cabang lain karena unit berada di luar jangkauan cabang asal — namun SK/ST tetap dari cabang asal.'+IMG2('memo-pinjam-pakai-bast-1.png','memo-pinjam-pakai-bast-2.png') },
+  { t:'Percepatan Penanganan (Cetak SK OVD &lt;90 hari)', b:'Dikeluarkan untuk <span class="sk-ref" onclick="gotoDoc(\'ketentuan-penarikan\')">cetak SK walaupun OVD konsumen belum &gt;90 hari</span>. Memerlukan <b>approval hingga BOD</b>.'+IMG('memo-percepatan.png') },
+  { t:'Tunda Aset / Hold Aset', b:'Dikeluarkan ketika unit tidak bisa dilelang: konsumen ingin tebus, ada LP, masalah ormas. <span class="sk-ref" onclick="gotoDoc(\'kewenangan-recovery-div\')"><b>OVD &lt;90 hr di pool: approval DD. OVD &gt;90 hr di pool: approval BOD.</b></span>'+IMG('memo-tunda-aset.png') },
+  { t:'Derek', b:'Diajukan untuk reimburse biaya derek kendaraan tarikan yang perlu didrek ke pool.'+IMG2('memo-derek-1.png','memo-derek-2.png') },
+  { t:'Pengeluaran Kendaraan Tarikan', b:'Dikeluarkan untuk mengeluarkan kendaraan tarikan dari pool — biasanya saat konsumen melakukan penebusan.'+IMG('memo-pengeluaran-kendaraan.png') },
+  { t:'Bantuan Penanganan (Antar Cabang)', b:'Dikeluarkan ketika ingin meminta bantuan cabang lain di luar area (misal JABO 1 minta ke JABO 3). BAST &amp; SK keluar dari cabang yang diminta. <b>Approval 2 AASH &amp; 2 DH Region masing-masing.</b>'+IMG('memo-bantuan-penanganan.png') },
   { t:'Penyimpangan Keterlambatan Pencairan Tarikan', b:'Diajukan ketika data tarikan masuk <span class="sk-ref" onclick="gotoDoc(\'penetapan-tanggal-cut-o\')">setelah tanggal 7 jam 14:00. Insentif baru bisa cair di tanggal 25 bulan berikutnya</span>.' },
   { t:'Sharing Loss', b:'Diajukan ketika ingin memberikan kompensasi dana kepada konsumen saat penarikan unit. Alur: cabang ajukan ke Task Force → verifikasi → buat memo → tarik unit → serahkan berkas → pencairan dana. Dokumen: ST, BAST, Surat Pernyataan Debitur, Memo approval.' },
 ];
