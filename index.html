@@ -317,17 +317,17 @@
   <div class="logo">BCA<span>Finance</span> · ASR</div>
   <ul class="nav-links">
     <li><a href="#overview">Overview</a></li>
+    <li><a href="#konsep">Konsep</a></li>
     <li><a href="#journey">Flow</a></li>
     <li><a href="#timeline">Timeline</a></li>
     <li><a href="#resolution">Penyelesaian</a></li>
     <li><a href="#cases">15 Kasus</a></li>
-    <li><a href="#skse">SK/SE</a></li>
-    <li><a href="#pojk">POJK</a></li>
     <li><a href="#incentive">Insentif</a></li>
     <li><a href="#memos">Memo</a></li>
-    <li><a href="#konsep">Konsep</a></li>
     <li><a href="#taskforce">Task Force</a></li>
     <li><a href="#assupport">AS Support</a></li>
+    <li><a href="#skse">SK/SE</a></li>
+    <li><a href="#pojk">POJK</a></li>
   </ul>
 </nav>
 
@@ -467,7 +467,110 @@
 </div>
 </div>
 
-<!-- JOURNEY FLOW -->
+
+<div id="konsep" class="section-alt">
+<div class="section">
+  <div class="st">
+    <h2>📖 Konsep &amp; Terminologi ASR</h2>
+    <p>Istilah-istilah penting yang digunakan dalam kegiatan operasional ASR sehari-hari</p>
+  </div>
+  <div class="ov-grid">
+    <div class="ov-card">
+      <div class="icon">🔄</div>
+      <h4>Roll Back</h4>
+      <p>Konsumen yang menunggak kembali ke bucket sebelumnya. Contoh: konsumen OVD 80 hari hanya membayar 1 angsuran → OVD menjadi 50 hari → kembali dari FAC 3 ke FAC 2.</p>
+    </div>
+    <div class="ov-card gold">
+      <div class="icon">📉</div>
+      <h4>Flow Rate</h4>
+      <p>Aliran konsumen yang berpindah ke bucket selanjutnya akibat tidak membayar. Contoh: konsumen OVD 60 hari tidak bayar → OVD menjadi 61 → berpindah dari FAC 2 ke FAC 3.</p>
+    </div>
+    <div class="ov-card green">
+      <div class="icon">🏆</div>
+      <h4>Success Rate</h4>
+      <p>Perbandingan antara account yang berhasil diselesaikan dengan seluruh beban di bucket pada periode tertentu.</p>
+    </div>
+    <div class="ov-card">
+      <div class="icon">🌅</div>
+      <h4>Aging Hidup vs Aging Mati</h4>
+      <ul>
+        <li><b>Aging Hidup</b>: OVD konsumen di hari tersebut. Contoh: tgl 20 Nov, konsumen OVD 23 hr → berada di FAC 1 (10–30 hr).</li>
+        <li><b>Aging Mati</b>: Proyeksi OVD di akhir bulan. Contoh: tgl 20 Nov, OVD 23 hr → di tgl 30 Nov akan menjadi OVD 33 hr → keluar dari FAC 1 (aging mati).</li>
+      </ul>
+    </div>
+    <div class="ov-card red">
+      <div class="icon">🎯</div>
+      <h4>Target ASR vs Marketing</h4>
+      <p>Target Marketing = jumlah yang harus <b>terjual/direalisasikan</b>. Target ASR = jumlah amount yang <b>boleh menunggak</b>. Contoh: jika target ASR Rp 10M dan total menunggak Rp 40M → ASR harus berhasil menagih Rp 30M.</p>
+    </div>
+    <div class="ov-card">
+      <div class="icon">📅</div>
+      <h4>MOM &amp; EOM</h4>
+      <ul>
+        <li><b>MOM</b> (Mid of Month): Periode awal bulan → tgl 15</li>
+        <li><b>EOM</b> (End of Month): Periode tgl 16 → akhir bulan</li>
+        <li>Report KPI dilakukan H+1 setelah closing masing-masing periode</li>
+      </ul>
+    </div>
+    <div class="ov-card gold">
+      <div class="icon">🏢</div>
+      <h4>Kelas Cabang ASR</h4>
+      <p><b>4 Parameter grading:</b></p>
+      <ul>
+        <li>Jumlah account TMA cabang — bobot <b>25%</b></li>
+        <li>Jumlah account OVD 1–9 hari — bobot <b>20%</b></li>
+        <li>Jumlah account OVD 10–30 hari — bobot <b>25%</b></li>
+        <li>Jumlah account OVD &gt;30 hari — bobot <b>30%</b></li>
+      </ul>
+      <p style="margin-top:.4rem;font-size:.82rem"><b>Grade:</b> A (&gt;4.75–5) | B (&gt;2.75–4.75) | C (&gt;1–2.75) | D (&lt;1)</p>
+    </div>
+    <div class="ov-card green">
+      <div class="icon">🗺️</div>
+      <h4>Zonasi Risiko Konsumen</h4>
+      <p>Dibuat AS Support berdasarkan histori realisasi 28 bulan, tunggakan &amp; kolektibilitas:</p>
+      <ul>
+        <li>🟢 <b>Hijau</b>: Poin &lt; 3</li>
+        <li>🟡 <b>Kuning</b>: Poin 3–5</li>
+        <li>🔴 <b>Merah</b>: Poin &gt; 5</li>
+      </ul>
+      <p style="margin-top:.3rem;font-size:.8rem">Parameter: pernah OVD &gt;60/90 hr, tarikan non-WO, account WO, WO ter-recovery, poin kategori kasus</p>
+    </div>
+    <div class="ov-card">
+      <div class="icon">📊</div>
+      <h4>NPL &amp; NPF</h4>
+      <ul>
+        <li><b>NPL</b> (Non-Performing Loan): Total account menunggak OVD &gt;30 hari / Total TMA × 100%</li>
+        <li><b>NPF</b> (Non-Performing Financing): Total account menunggak OVD &gt;90 hari / Total TMA × 100%</li>
+      </ul>
+      <p style="margin-top:.3rem;font-size:.8rem">NPF digunakan sebagai patokan aturan DP minimal di POJK No. 35/2018</p>
+    </div>
+    <div class="ov-card red">
+      <div class="icon">🔤</div>
+      <h4>Perbedaan Treatment FAC 1/2/3</h4>
+      <ul>
+        <li><b>FAC 1</b> (10–30 hr): Ingatkan konsumen agar segera bayar — pendekatan <em>lunak</em></li>
+        <li><b>FAC 2</b> (31–60 hr): Tegaskan ada potensi unit akan diamankan jika belum bayar</li>
+        <li><b>FAC 3</b> (61–90 hr): Peringatan urusan kepolisian + surat somasi — pendekatan <em>tegas</em></li>
+      </ul>
+    </div>
+    <div class="ov-card gold">
+      <div class="icon">📜</div>
+      <h4>Surat Tugas vs Surat Kuasa</h4>
+      <ul>
+        <li><b>Surat Tugas (ST)</b>: Pengamanan oleh pihak <em>internal</em> BCAF. Bisa dikeluarkan kapanpun oleh BASH. Berlaku <b>7 hari</b>, perpanjang max 2×.</li>
+        <li><b>Surat Kuasa (SK)</b>: Pengamanan oleh pihak <em>eksternal</em> (BHJP). Hanya jika OVD &gt;90 hr, atau memo percepatan (approval BOD). Berlaku <b>7 hr (AS) / 14 hr (Recovery)</b>, perpanjang max 2×. Jika sudah 2× dan gagal → rolling ke BHJP lain.</li>
+      </ul>
+    </div>
+    <div class="ov-card">
+      <div class="icon">📝</div>
+      <h4>BAST (Berita Acara Serah Terima)</h4>
+      <p>Bukti serah terima kendaraan saat pengamanan unit. Masa berlaku <b>1 hari</b> (mempertimbangkan jarak lokasi pengamanan ke pool). Jika &gt;1 hari → wajib buat <b>memo penyimpangan kronologis pool</b>.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+
 <div id="journey" class="section-alt">
 <div class="section">
   <div class="st">
@@ -1242,7 +1345,7 @@
 </div>
 </div>
 
-<!-- TIMELINE -->
+
 <div id="timeline">
 <div class="section">
   <div class="st"><h2>📅 Cerita Lengkap: Konsumen Nunggak</h2><p>Dari hari pertama nunggak sampai penyelesaian akhir</p></div>
@@ -1299,110 +1402,7 @@
 </div>
 </div>
 
-<!-- KONSEP -->
-<div id="konsep" class="section-alt">
-<div class="section">
-  <div class="st">
-    <h2>📖 Konsep &amp; Terminologi ASR</h2>
-    <p>Istilah-istilah penting yang digunakan dalam kegiatan operasional ASR sehari-hari</p>
-  </div>
-  <div class="ov-grid">
-    <div class="ov-card">
-      <div class="icon">🔄</div>
-      <h4>Roll Back</h4>
-      <p>Konsumen yang menunggak kembali ke bucket sebelumnya. Contoh: konsumen OVD 80 hari hanya membayar 1 angsuran → OVD menjadi 50 hari → kembali dari FAC 3 ke FAC 2.</p>
-    </div>
-    <div class="ov-card gold">
-      <div class="icon">📉</div>
-      <h4>Flow Rate</h4>
-      <p>Aliran konsumen yang berpindah ke bucket selanjutnya akibat tidak membayar. Contoh: konsumen OVD 60 hari tidak bayar → OVD menjadi 61 → berpindah dari FAC 2 ke FAC 3.</p>
-    </div>
-    <div class="ov-card green">
-      <div class="icon">🏆</div>
-      <h4>Success Rate</h4>
-      <p>Perbandingan antara account yang berhasil diselesaikan dengan seluruh beban di bucket pada periode tertentu.</p>
-    </div>
-    <div class="ov-card">
-      <div class="icon">🌅</div>
-      <h4>Aging Hidup vs Aging Mati</h4>
-      <ul>
-        <li><b>Aging Hidup</b>: OVD konsumen di hari tersebut. Contoh: tgl 20 Nov, konsumen OVD 23 hr → berada di FAC 1 (10–30 hr).</li>
-        <li><b>Aging Mati</b>: Proyeksi OVD di akhir bulan. Contoh: tgl 20 Nov, OVD 23 hr → di tgl 30 Nov akan menjadi OVD 33 hr → keluar dari FAC 1 (aging mati).</li>
-      </ul>
-    </div>
-    <div class="ov-card red">
-      <div class="icon">🎯</div>
-      <h4>Target ASR vs Marketing</h4>
-      <p>Target Marketing = jumlah yang harus <b>terjual/direalisasikan</b>. Target ASR = jumlah amount yang <b>boleh menunggak</b>. Contoh: jika target ASR Rp 10M dan total menunggak Rp 40M → ASR harus berhasil menagih Rp 30M.</p>
-    </div>
-    <div class="ov-card">
-      <div class="icon">📅</div>
-      <h4>MOM &amp; EOM</h4>
-      <ul>
-        <li><b>MOM</b> (Mid of Month): Periode awal bulan → tgl 15</li>
-        <li><b>EOM</b> (End of Month): Periode tgl 16 → akhir bulan</li>
-        <li>Report KPI dilakukan H+1 setelah closing masing-masing periode</li>
-      </ul>
-    </div>
-    <div class="ov-card gold">
-      <div class="icon">🏢</div>
-      <h4>Kelas Cabang ASR</h4>
-      <p><b>4 Parameter grading:</b></p>
-      <ul>
-        <li>Jumlah account TMA cabang — bobot <b>25%</b></li>
-        <li>Jumlah account OVD 1–9 hari — bobot <b>20%</b></li>
-        <li>Jumlah account OVD 10–30 hari — bobot <b>25%</b></li>
-        <li>Jumlah account OVD &gt;30 hari — bobot <b>30%</b></li>
-      </ul>
-      <p style="margin-top:.4rem;font-size:.82rem"><b>Grade:</b> A (&gt;4.75–5) | B (&gt;2.75–4.75) | C (&gt;1–2.75) | D (&lt;1)</p>
-    </div>
-    <div class="ov-card green">
-      <div class="icon">🗺️</div>
-      <h4>Zonasi Risiko Konsumen</h4>
-      <p>Dibuat AS Support berdasarkan histori realisasi 28 bulan, tunggakan &amp; kolektibilitas:</p>
-      <ul>
-        <li>🟢 <b>Hijau</b>: Poin &lt; 3</li>
-        <li>🟡 <b>Kuning</b>: Poin 3–5</li>
-        <li>🔴 <b>Merah</b>: Poin &gt; 5</li>
-      </ul>
-      <p style="margin-top:.3rem;font-size:.8rem">Parameter: pernah OVD &gt;60/90 hr, tarikan non-WO, account WO, WO ter-recovery, poin kategori kasus</p>
-    </div>
-    <div class="ov-card">
-      <div class="icon">📊</div>
-      <h4>NPL &amp; NPF</h4>
-      <ul>
-        <li><b>NPL</b> (Non-Performing Loan): Total account menunggak OVD &gt;30 hari / Total TMA × 100%</li>
-        <li><b>NPF</b> (Non-Performing Financing): Total account menunggak OVD &gt;90 hari / Total TMA × 100%</li>
-      </ul>
-      <p style="margin-top:.3rem;font-size:.8rem">NPF digunakan sebagai patokan aturan DP minimal di POJK No. 35/2018</p>
-    </div>
-    <div class="ov-card red">
-      <div class="icon">🔤</div>
-      <h4>Perbedaan Treatment FAC 1/2/3</h4>
-      <ul>
-        <li><b>FAC 1</b> (10–30 hr): Ingatkan konsumen agar segera bayar — pendekatan <em>lunak</em></li>
-        <li><b>FAC 2</b> (31–60 hr): Tegaskan ada potensi unit akan diamankan jika belum bayar</li>
-        <li><b>FAC 3</b> (61–90 hr): Peringatan urusan kepolisian + surat somasi — pendekatan <em>tegas</em></li>
-      </ul>
-    </div>
-    <div class="ov-card gold">
-      <div class="icon">📜</div>
-      <h4>Surat Tugas vs Surat Kuasa</h4>
-      <ul>
-        <li><b>Surat Tugas (ST)</b>: Pengamanan oleh pihak <em>internal</em> BCAF. Bisa dikeluarkan kapanpun oleh BASH. Berlaku <b>7 hari</b>, perpanjang max 2×.</li>
-        <li><b>Surat Kuasa (SK)</b>: Pengamanan oleh pihak <em>eksternal</em> (BHJP). Hanya jika OVD &gt;90 hr, atau memo percepatan (approval BOD). Berlaku <b>7 hr (AS) / 14 hr (Recovery)</b>, perpanjang max 2×. Jika sudah 2× dan gagal → rolling ke BHJP lain.</li>
-      </ul>
-    </div>
-    <div class="ov-card">
-      <div class="icon">📝</div>
-      <h4>BAST (Berita Acara Serah Terima)</h4>
-      <p>Bukti serah terima kendaraan saat pengamanan unit. Masa berlaku <b>1 hari</b> (mempertimbangkan jarak lokasi pengamanan ke pool). Jika &gt;1 hari → wajib buat <b>memo penyimpangan kronologis pool</b>.</p>
-    </div>
-  </div>
-</div>
-</div>
 
-<!-- RESOLUTION -->
 <div id="resolution" class="section-alt">
 <div class="section">
   <div class="st"><h2>✅ Pilihan Penyelesaian Kasus</h2><p>Solusi yang bisa ditawarkan kepada konsumen di setiap tahap</p></div>
@@ -1424,7 +1424,7 @@
 </div>
 </div>
 
-<!-- 15 KASUS -->
+
 <div id="cases">
 <div class="section">
   <div class="st"><h2>⚠️ 15 Jenis Kasus ASR</h2><p>Klik kartu untuk detail keterangan</p></div>
@@ -1432,60 +1432,7 @@
 </div>
 </div>
 
-<!-- SK SE GALLERY -->
-<div id="skse" class="section-alt">
-<div class="section">
-  <div class="st">
-    <h2>📑 Galeri Dokumen SK &amp; SE</h2>
-    <p>Semua Surat Keputusan, Surat Edaran, Memo, dan Instruksi Kerja ASR — klik gambar untuk memperbesar</p>
-    <p style="font-size:.82rem;margin-top:.4rem"><span style="display:inline-block;background:rgba(45,198,83,.15);border-radius:5px;padding:.2rem .7rem;color:#1a7a3c;font-weight:600">💡 Teks hijau bergaris bawah</span> di seluruh halaman = informasi berasal dari SK/SE resmi. Klik untuk langsung ke dokumen sumbernya.</p>
-  </div>
-  <div class="filter-tabs" id="filterTabs">
-    <button class="ftab active" onclick="filterDocs('all',this)">Semua <span id="countAll"></span></button>
-    <button class="ftab" onclick="filterDocs('SK',this)">Surat Keputusan <span id="countSK"></span></button>
-    <button class="ftab" onclick="filterDocs('SE',this)">Surat Edaran <span id="countSE"></span></button>
-    <button class="ftab" onclick="filterDocs('Memo',this)">Memo <span id="countMemo"></span></button>
-    <button class="ftab" onclick="filterDocs('Instruksi Kerja',this)">Instruksi Kerja <span id="countIK"></span></button>
-    <span class="doc-count" id="docCountLabel"></span>
-  </div>
-  <div class="doc-gallery" id="docGallery"></div>
-</div>
-</div>
 
-<!-- POJK -->
-<div id="pojk">
-<div class="section">
-  <div class="st">
-    <h2>⚖️ Landasan Hukum &amp; POJK</h2>
-    <p>"Kitab Suci Leasing" — 5 peraturan yang wajib dipahami. Klik untuk buka detail.</p>
-  </div>
-  <div class="pojk-grid" id="pojkGrid"></div>
-</div>
-</div>
-
-<!-- DOKUMEN -->
-<div id="docs" class="section-alt">
-<div class="section">
-  <div class="st"><h2>📁 Dokumen Wajib Penagihan</h2><p>Dokumen yang wajib dibawa saat penagihan dan pengamanan unit</p></div>
-  <div style="overflow-x:auto;border-radius:var(--r);box-shadow:var(--shadow)">
-    <table class="doc-table">
-      <thead><tr><th>Dokumen</th><th>Singkatan</th><th>Fungsi</th><th>Jenis</th><th>Masa Berlaku</th></tr></thead>
-      <tbody>
-        <tr><td><b>Surat Tugas</b></td><td>ST</td><td>Pengamanan unit fidusia oleh pihak <b>internal</b> BCAF</td><td><span class="badge-pill int">Internal</span></td><td><span class="sk-ref" onclick="gotoDoc('ketentuan-penarikan')">7 hari, perpanjang 2×</span></td></tr>
-        <tr><td><b>Surat Kuasa</b></td><td>SK</td><td>Pengamanan unit oleh <b>BHJP eksternal</b>. <span class="sk-ref" onclick="gotoDoc('ketentuan-penarikan')">OVD &gt;90 hr</span> atau memo percepatan (approval BOD)</td><td><span class="badge-pill ext">Eksternal</span></td><td><span class="sk-ref" onclick="gotoDoc('ketentuan-penarikan')">7 hr (AS) / 14 hr (Recovery), perpanjang 2×</span></td></tr>
-        <tr><td><b>Berita Acara Serah Terima</b></td><td>BAST</td><td>Bukti serah terima kendaraan antara konsumen dan FAC/PAC. <span class="sk-ref" onclick="gotoDoc('penerimaan-kend')">Beda ceklist = memo penyimpangan</span></td><td><span class="badge-pill both">Keduanya</span></td><td><span class="sk-ref" onclick="gotoDoc('penerimaan-kend')"><b>1 hari</b> (lebih dari 1 hr wajib memo penyimpangan kronologis pool)</span></td></tr>
-        <tr><td><b>Sertifikat Fidusia</b></td><td>SK Fidusia</td><td>Bukti hukum bahwa kendaraan adalah jaminan fidusia milik BCAF. Kekuatan setara putusan pengadilan</td><td><span class="badge-pill both">Keduanya</span></td><td>Sesuai kontrak pembiayaan</td></tr>
-        <tr><td><b>Tabel Angsuran</b></td><td>—</td><td>Rincian jadwal angsuran dan sisa kewajiban konsumen</td><td><span class="badge-pill both">Keduanya</span></td><td>—</td></tr>
-        <tr><td><b>Sertifikat Profesi Penagihan Indonesia</b></td><td>SPPI</td><td>Sertifikasi wajib bagi petugas penagihan/penarikan (termasuk BHJP eksternal)</td><td><span class="badge-pill both">Keduanya</span></td><td>Sesuai ketentuan OJK/POJK 35</td></tr>
-        <tr><td><b>Perjanjian Pembiayaan Kredit</b></td><td>PPK</td><td>Kontrak perjanjian kredit antara konsumen dan BCAF</td><td><span class="badge-pill both">Keduanya</span></td><td>Sesuai kontrak</td></tr>
-        <tr><td><b>Bukti Somasi</b></td><td>—</td><td>Wajib dilampirkan saat pengajuan pendampingan kepolisian (PERKAP 8/2011) — harus sudah kirim 2×</td><td><span class="badge-pill ext">Eksternal</span></td><td>—</td></tr>
-      </tbody>
-    </table>
-  </div>
-</div>
-</div>
-
-<!-- INCENTIVE -->
 <div id="incentive">
 <div class="section">
   <div class="st"><h2>💰 Insentif Tarikan Unit</h2><p>Pembagian insentif per unit kendaraan yang berhasil ditarik (internal)</p></div>
@@ -1511,7 +1458,7 @@
 </div>
 </div>
 
-<!-- MEMOS -->
+
 <div id="memos" class="section-alt">
 <div class="section">
   <div class="st"><h2>📝 Memo-Memo di ASR</h2><p>Klik untuk melihat kapan memo digunakan dan dokumen yang diperlukan</p></div>
@@ -1519,7 +1466,7 @@
 </div>
 </div>
 
-<!-- TASK FORCE -->
+
 <div id="taskforce" class="section">
 <div class="section">
   <div class="st">
@@ -1658,7 +1605,7 @@
 </div>
 </div>
 
-<!-- AS SUPPORT -->
+
 <div id="assupport" class="section-alt">
 <div class="section">
   <div class="st">
@@ -1847,6 +1794,61 @@
   </div>
 </div>
 </div>
+
+
+<div id="skse" class="section-alt">
+<div class="section">
+  <div class="st">
+    <h2>📑 Galeri Dokumen SK &amp; SE</h2>
+    <p>Semua Surat Keputusan, Surat Edaran, Memo, dan Instruksi Kerja ASR — klik gambar untuk memperbesar</p>
+    <p style="font-size:.82rem;margin-top:.4rem"><span style="display:inline-block;background:rgba(45,198,83,.15);border-radius:5px;padding:.2rem .7rem;color:#1a7a3c;font-weight:600">💡 Teks hijau bergaris bawah</span> di seluruh halaman = informasi berasal dari SK/SE resmi. Klik untuk langsung ke dokumen sumbernya.</p>
+  </div>
+  <div class="filter-tabs" id="filterTabs">
+    <button class="ftab active" onclick="filterDocs('all',this)">Semua <span id="countAll"></span></button>
+    <button class="ftab" onclick="filterDocs('SK',this)">Surat Keputusan <span id="countSK"></span></button>
+    <button class="ftab" onclick="filterDocs('SE',this)">Surat Edaran <span id="countSE"></span></button>
+    <button class="ftab" onclick="filterDocs('Memo',this)">Memo <span id="countMemo"></span></button>
+    <button class="ftab" onclick="filterDocs('Instruksi Kerja',this)">Instruksi Kerja <span id="countIK"></span></button>
+    <span class="doc-count" id="docCountLabel"></span>
+  </div>
+  <div class="doc-gallery" id="docGallery"></div>
+</div>
+</div>
+
+
+<div id="pojk">
+<div class="section">
+  <div class="st">
+    <h2>⚖️ Landasan Hukum &amp; POJK</h2>
+    <p>"Kitab Suci Leasing" — 5 peraturan yang wajib dipahami. Klik untuk buka detail.</p>
+  </div>
+  <div class="pojk-grid" id="pojkGrid"></div>
+</div>
+</div>
+
+
+<div id="docs" class="section-alt">
+<div class="section">
+  <div class="st"><h2>📁 Dokumen Wajib Penagihan</h2><p>Dokumen yang wajib dibawa saat penagihan dan pengamanan unit</p></div>
+  <div style="overflow-x:auto;border-radius:var(--r);box-shadow:var(--shadow)">
+    <table class="doc-table">
+      <thead><tr><th>Dokumen</th><th>Singkatan</th><th>Fungsi</th><th>Jenis</th><th>Masa Berlaku</th></tr></thead>
+      <tbody>
+        <tr><td><b>Surat Tugas</b></td><td>ST</td><td>Pengamanan unit fidusia oleh pihak <b>internal</b> BCAF</td><td><span class="badge-pill int">Internal</span></td><td><span class="sk-ref" onclick="gotoDoc('ketentuan-penarikan')">7 hari, perpanjang 2×</span></td></tr>
+        <tr><td><b>Surat Kuasa</b></td><td>SK</td><td>Pengamanan unit oleh <b>BHJP eksternal</b>. <span class="sk-ref" onclick="gotoDoc('ketentuan-penarikan')">OVD &gt;90 hr</span> atau memo percepatan (approval BOD)</td><td><span class="badge-pill ext">Eksternal</span></td><td><span class="sk-ref" onclick="gotoDoc('ketentuan-penarikan')">7 hr (AS) / 14 hr (Recovery), perpanjang 2×</span></td></tr>
+        <tr><td><b>Berita Acara Serah Terima</b></td><td>BAST</td><td>Bukti serah terima kendaraan antara konsumen dan FAC/PAC. <span class="sk-ref" onclick="gotoDoc('penerimaan-kend')">Beda ceklist = memo penyimpangan</span></td><td><span class="badge-pill both">Keduanya</span></td><td><span class="sk-ref" onclick="gotoDoc('penerimaan-kend')"><b>1 hari</b> (lebih dari 1 hr wajib memo penyimpangan kronologis pool)</span></td></tr>
+        <tr><td><b>Sertifikat Fidusia</b></td><td>SK Fidusia</td><td>Bukti hukum bahwa kendaraan adalah jaminan fidusia milik BCAF. Kekuatan setara putusan pengadilan</td><td><span class="badge-pill both">Keduanya</span></td><td>Sesuai kontrak pembiayaan</td></tr>
+        <tr><td><b>Tabel Angsuran</b></td><td>—</td><td>Rincian jadwal angsuran dan sisa kewajiban konsumen</td><td><span class="badge-pill both">Keduanya</span></td><td>—</td></tr>
+        <tr><td><b>Sertifikat Profesi Penagihan Indonesia</b></td><td>SPPI</td><td>Sertifikasi wajib bagi petugas penagihan/penarikan (termasuk BHJP eksternal)</td><td><span class="badge-pill both">Keduanya</span></td><td>Sesuai ketentuan OJK/POJK 35</td></tr>
+        <tr><td><b>Perjanjian Pembiayaan Kredit</b></td><td>PPK</td><td>Kontrak perjanjian kredit antara konsumen dan BCAF</td><td><span class="badge-pill both">Keduanya</span></td><td>Sesuai kontrak</td></tr>
+        <tr><td><b>Bukti Somasi</b></td><td>—</td><td>Wajib dilampirkan saat pengajuan pendampingan kepolisian (PERKAP 8/2011) — harus sudah kirim 2×</td><td><span class="badge-pill ext">Eksternal</span></td><td>—</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>
+
+
 
 <!-- FOOTER -->
 <footer>
