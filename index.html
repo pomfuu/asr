@@ -2507,8 +2507,10 @@ body { position: relative; }
   let db = null;
   let comments = {};          // {id: {text, author, x, y, createdAt}}
   let pendingX = 0, pendingY = 0;   // posisi double-click (pageX, pageY)
+  let pendingXPct = 0, pendingYPct = 0; // posisi relatif (0-1) untuk responsivitas
   let openBubbleId = null;
   let commentMode = false;
+  let reopenTimeout = null;  // track setTimeout untuk mencegah double bubble
 
   // ── Restore author name ─────────────────────────────────────
   const savedAuthor = localStorage.getItem(STORAGE_KEY_AUTHOR) || '';
@@ -2575,13 +2577,13 @@ body { position: relative; }
   // ── Add comment ──────────────────────────────────────────────
   async function addComment(x, y, text, author) {
     const id = 'cmt_' + Date.now() + '_' + Math.random().toString(36).slice(2,6);
-    const data = { id, x, y, text: text.trim(), author: author.trim() || 'Anonymous',
+    const data = { id, x, y, xPct: pendingXPct, yPct: pendingYPct, text: text.trim(), author: author.trim() || 'Anonymous',
                    createdAt: Date.now() };
     showLoading(true);
     if (db) {
       try {
         await db.collection(COLLECTION).doc(id).set({
-          x, y, text: data.text, author: data.author,
+          x, y, xPct: pendingXPct, yPct: pendingYPct, text: data.text, author: data.author,
           createdAt: firebase.firestore.FieldValue.serverTimestamp()
         });
       } catch(e) {
@@ -2629,17 +2631,16 @@ body { position: relative; }
 
   // ── Render all pins ──────────────────────────────────────────
   function renderAllPins() {
-    // Tutup bubble yang terbuka sebelum re-render
     const wasOpen = openBubbleId;
+    clearTimeout(reopenTimeout);   // batalkan reopen timeout sebelumnya agar tidak double bubble
     layer.innerHTML = '';
+    openBubbleId = null;           // reset state segera
     Object.values(comments).forEach((c, i) => {
       createPin(c, i + 1);
     });
-    // Re-open bubble jika masih ada
     if (wasOpen && comments[wasOpen]) {
-      setTimeout(() => openBubble(wasOpen), 50);
+      reopenTimeout = setTimeout(() => openBubble(wasOpen), 80);
     }
-    // Update counter
     const count = Object.keys(comments).length;
     totalBadge.textContent = count;
   }
@@ -2649,8 +2650,16 @@ body { position: relative; }
     pin.className = 'cmt-pin';
     pin.dataset.id = c.id;
     pin.textContent = num;
-    pin.style.left = c.x + 'px';
-    pin.style.top  = c.y + 'px';
+    // Gunakan koordinat persentase jika tersedia (responsif antar device)
+    if (c.xPct !== undefined && c.yPct !== undefined) {
+      const sw = Math.max(document.body.scrollWidth, document.documentElement.scrollWidth);
+      const sh = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
+      pin.style.left = (c.xPct * sw) + 'px';
+      pin.style.top  = (c.yPct * sh) + 'px';
+    } else {
+      pin.style.left = c.x + 'px';
+      pin.style.top  = c.y + 'px';
+    }
     if (c.id === openBubbleId) pin.classList.add('open');
     pin.addEventListener('click', e => { e.stopPropagation(); toggleBubble(c.id, pin); });
     layer.appendChild(pin);
@@ -2668,6 +2677,11 @@ body { position: relative; }
 
   function openBubble(id, pinEl) {
     const c = comments[id]; if (!c) return;
+
+    // Hapus bubble lama dengan ID sama untuk mencegah duplikat
+    const existingBubble = document.getElementById('cmt-bubble-' + id);
+    if (existingBubble) existingBubble.remove();
+
     openBubbleId = id;
 
     // Update pin style
@@ -2696,10 +2710,25 @@ body { position: relative; }
       </div>
     `;
 
-    // Posisi bubble: kanan/bawah pin, tapi tidak keluar layar
-    const pLeft = c.x, pTop = c.y;
-    bubble.style.left = (pLeft + 16) + 'px';
-    bubble.style.top  = (pTop - 60) + 'px';
+    // Posisi bubble viewport-aware berdasarkan posisi pin yang sudah ter-render
+    {
+      const pinNode = layer.querySelector(`[data-id="${id}"]`);
+      const vpW = window.innerWidth;
+      const scrollX = window.scrollX || window.pageXOffset;
+      const scrollY = window.scrollY || window.pageYOffset;
+      let bLeft, bTop;
+      if (pinNode) {
+        const rect = pinNode.getBoundingClientRect();
+        bLeft = rect.left + scrollX + 18;
+        bTop  = rect.top  + scrollY - 55;
+        if (rect.left + 18 + 296 > vpW - 8) bLeft = rect.left + scrollX - 296 - 10;
+      } else {
+        bLeft = (c.xPct !== undefined ? c.xPct * document.documentElement.scrollWidth : c.x) + 18;
+        bTop  = (c.yPct !== undefined ? c.yPct * document.documentElement.scrollHeight : c.y) - 55;
+      }
+      bubble.style.left = Math.max(8, bLeft) + 'px';
+      bubble.style.top  = Math.max(8, bTop)  + 'px';
+    }
 
     layer.appendChild(bubble);
 
@@ -2720,8 +2749,11 @@ body { position: relative; }
   }
 
   function startEdit(id) {
-    const bodyEl   = document.getElementById('cmt-body-' + id);
-    const actionsEl = document.getElementById('cmt-actions-' + id);
+    // Cari elemen relatif terhadap bubble-nya bukan document-wide (cegah salah element jika ada duplikat)
+    const bubble = document.getElementById('cmt-bubble-' + id);
+    if (!bubble) return;
+    const bodyEl   = bubble.querySelector('#cmt-body-' + id);
+    const actionsEl = bubble.querySelector('#cmt-actions-' + id);
     if (!bodyEl || !actionsEl) return;
 
     const original = comments[id].text;
@@ -2758,7 +2790,9 @@ body { position: relative; }
   }
 
   function confirmDelete(id) {
-    const actionsEl = document.getElementById('cmt-actions-' + id);
+    const bubble = document.getElementById('cmt-bubble-' + id);
+    if (!bubble) return;
+    const actionsEl = bubble.querySelector('#cmt-actions-' + id);
     if (!actionsEl) return;
     actionsEl.innerHTML = `
       <span style="font-size:.78rem;color:#E63946;font-weight:600;">Hapus comment ini?</span>
@@ -2818,6 +2852,11 @@ body { position: relative; }
   // ── Input popup ──────────────────────────────────────────────
   function showInputAt(pageX, pageY, clientX, clientY) {
     pendingX = pageX; pendingY = pageY;
+    // Simpan posisi sebagai persentase untuk responsivitas
+    const sw = Math.max(document.body.scrollWidth, document.documentElement.scrollWidth);
+    const sh = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
+    pendingXPct = sw > 0 ? pageX / sw : 0;
+    pendingYPct = sh > 0 ? pageY / sh : 0;
 
     // Posisi popup (viewport-aware)
     const vpW = window.innerWidth, vpH = window.innerHeight;
@@ -2917,6 +2956,9 @@ body { position: relative; }
       .replace(/&/g,'&amp;').replace(/</g,'&lt;')
       .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
   }
+
+  // ── Reposition pins on resize (responsivitas) ───────────────────
+  window.addEventListener('resize', () => { if (Object.keys(comments).length) renderAllPins(); });
 
   // ── Init ──────────────────────────────────────────────────────
   initFirebase();
