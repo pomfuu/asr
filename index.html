@@ -2616,6 +2616,7 @@ body { position: relative; }
     /* Klik di dalam bubble */
     const bubble = e.target.closest('.cmt-bubble');
     if (!bubble) return;
+    e.stopPropagation(); /* ← CRITICAL: cegah event bubble ke document (akan closeBubble karena detached element) */
     const id = bubble.dataset.cmtid;
 
     if (e.target.closest('.cmt-bubble-close'))   { closeBubble(); return; }
@@ -2854,12 +2855,14 @@ body { position: relative; }
 
   /* ── Klik di luar → tutup ──────────────────────── */
   document.addEventListener('click', e => {
-    if (inputWrap.classList.contains('show') && !inputWrap.contains(e.target))
-      hideInput();
-    if (openBubbleId
-        && !e.target.closest('#cmt-layer')
-        && !e.target.closest('#cmt-panel'))
-      closeBubble();
+    /* Gunakan composedPath() agar tidak gagal saat e.target sudah detached dari DOM */
+    const path     = e.composedPath ? e.composedPath() : [];
+    const inLayer  = path.some(el => el && el.id === 'cmt-layer');
+    const inPanel  = path.some(el => el && el.id === 'cmt-panel');
+    const inInput  = path.some(el => el && el.id === 'cmt-input-wrap');
+
+    if (inputWrap.classList.contains('show') && !inInput) hideInput();
+    if (openBubbleId && !inLayer && !inPanel) closeBubble();
   });
 
   /* ── Panel toggle ────────────────────────────────── */
