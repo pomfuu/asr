@@ -2214,21 +2214,22 @@ body { position: relative; }
 /* ── Pin ───────────────────────────────────────────────────── */
 .cmt-pin {
   position: absolute; pointer-events: all;
-  width: 28px; height: 28px;
-  border-radius: 50% 50% 50% 2px;
+  height: 26px; min-width: 26px; max-width: 130px;
+  border-radius: 13px 13px 13px 2px;
   transform: translate(-50%, -100%);
-  display: flex; align-items: center; justify-content: center;
-  font-size: .68rem; font-weight: 800; color: #fff;
-  cursor: pointer; user-select: none;
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 0 9px;
+  font-size: .7rem; font-weight: 700; color: #fff;
+  cursor: grab; user-select: none;
   background: #0050C8;
   box-shadow: 0 3px 10px rgba(0,80,200,.5);
   border: 2px solid #fff;
   transition: transform .15s, box-shadow .15s;
   z-index: 10101;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
-.cmt-pin:hover { transform: translate(-50%,-100%) scale(1.18); }
+.cmt-pin:hover { transform: translate(-50%,-100%) scale(1.1); }
 .cmt-pin.open  { background: #2DC653; box-shadow: 0 3px 10px rgba(45,198,83,.5); }
-.cmt-pin { cursor: grab; }
 .cmt-pin.dragging {
   cursor: grabbing !important;
   transform: translate(-50%,-100%) scale(1.35) !important;
@@ -2245,7 +2246,7 @@ body { position: relative; }
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 8px 32px rgba(0,48,135,.22);
-  width: 340px;
+  width: 370px;
   font-family: 'Segoe UI', sans-serif;
   z-index: 10200;           /* di atas segalanya termasuk lightbox (9999) */
   border: 1px solid #dce4f5;
@@ -2258,28 +2259,40 @@ body { position: relative; }
 }
 .cmt-bubble-head {
   background:#003087; color:#fff;
-  padding:.5rem .8rem;
+  padding:.45rem .8rem;
   display:flex; align-items:center; gap:.4rem;
-  font-size:.78rem; font-weight:700;
+  font-size:.82rem; font-weight:700;
 }
-.cmt-bubble-author { flex:1; }
-.cmt-bubble-time   { font-size:.65rem; opacity:.6; }
+.cmt-bubble-title { flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.cmt-bubble-meta  {
+  padding:.28rem .8rem; font-size:.7rem; color:#6B7280;
+  background:#f9fbff; border-bottom:1px solid #edf0f8;
+}
+.cmt-title-edit {
+  flex:1; min-width:0; background:rgba(255,255,255,.15);
+  border:none; border-bottom:2px solid rgba(255,255,255,.5);
+  color:#fff; font-size:.82rem; font-weight:700;
+  outline:none; padding:.1rem .3rem;
+  font-family:inherit; border-radius:3px;
+}
+.cmt-title-edit:focus { background:rgba(255,255,255,.28); }
 .cmt-bubble-close  {
   background:none; border:none; color:#fff;
   cursor:pointer; font-size:1rem; padding:0;
-  opacity:.7; margin-left:.3rem;
+  opacity:.7; margin-left:.3rem; flex-shrink:0;
 }
 .cmt-bubble-close:hover { opacity:1; }
 .cmt-bubble-body {
   padding:.75rem .8rem;
   font-size:.87rem; color:#1a2340; line-height:1.5;
   word-break:break-word; min-height:44px;
-  white-space: pre-wrap;   /* jaga newline & spasi */
+  max-height:220px; overflow-y:auto;
   outline:none;
 }
 .cmt-bubble-body[contenteditable="true"] {
   background:#f4f6fb;
   outline:2px solid #0050C8;
+  white-space: pre-wrap;
 }
 .cmt-bubble-actions {
   display:flex; gap:.35rem; flex-wrap:wrap;
@@ -2314,7 +2327,7 @@ body { position: relative; }
 #cmt-input-box {
   background:#fff; border-radius:12px;
   box-shadow:0 10px 40px rgba(0,48,135,.22);
-  overflow:hidden; width:340px;
+  overflow:hidden; width:420px;
   font-family:'Segoe UI',sans-serif;
   border:1px solid #dce4f5;
   animation:cmtPop .18s ease;
@@ -2323,6 +2336,14 @@ body { position: relative; }
   background:#003087; color:#fff;
   padding:.55rem 1rem; font-size:.82rem; font-weight:700;
 }
+#cmt-title-input {
+  display:block; width:100%; box-sizing:border-box;
+  border:none; border-bottom:1px solid #edf0f8;
+  padding:.5rem 1rem; font-size:.9rem; font-weight:700;
+  font-family:inherit; color:#003087;
+  outline:none; background:#f0f4ff;
+}
+#cmt-title-input::placeholder { color:#9ca3af; font-weight:400; }
 #cmt-author-input {
   display:block; width:100%; box-sizing:border-box;
   border:none; border-bottom:1px solid #edf0f8;
@@ -2332,10 +2353,15 @@ body { position: relative; }
 }
 #cmt-text-input {
   display:block; width:100%; box-sizing:border-box;
-  resize:none; border:none;
+  border:none;
   padding:.65rem 1rem; font-size:.86rem;
   font-family:inherit; color:#1a2340;
-  outline:none; line-height:1.5; min-height:100px;
+  outline:none; line-height:1.5;
+  min-height:160px; max-height:320px; overflow-y:auto;
+}
+#cmt-text-input:empty::before {
+  content: attr(data-placeholder);
+  color:#9ca3af; pointer-events:none; display:block;
 }
 #cmt-input-actions {
   display:flex; gap:.5rem;
@@ -2442,8 +2468,10 @@ body { position: relative; }
 <div id="cmt-input-wrap">
   <div id="cmt-input-box">
     <div id="cmt-input-header">💬 Tambah Komentar</div>
+    <input  id="cmt-title-input"  placeholder="Judul komentar…" maxlength="60" autocomplete="off">
     <input  id="cmt-author-input" placeholder="Nama kamu…" maxlength="40" autocomplete="off">
-    <textarea id="cmt-text-input" placeholder="Tulis komentar… (Enter = baris baru, Ctrl+Enter = simpan)" maxlength="500"></textarea>
+    <div id="cmt-text-input" contenteditable="true"
+         data-placeholder="Tulis komentar… (Enter = baris baru, Ctrl+Enter = simpan, Ctrl+B/I/U = format)"></div>
     <div id="cmt-input-actions">
       <button id="cmt-cancel-btn">Batal</button>
       <button id="cmt-submit-btn">Simpan 💾</button>
@@ -2490,6 +2518,7 @@ body { position: relative; }
   /* ── DOM refs ──────────────────────────────────── */
   const layer       = document.getElementById('cmt-layer');
   const inputWrap   = document.getElementById('cmt-input-wrap');
+  const titleInput  = document.getElementById('cmt-title-input');
   const authorInput = document.getElementById('cmt-author-input');
   const textInput   = document.getElementById('cmt-text-input');
   const submitBtn   = document.getElementById('cmt-submit-btn');
@@ -2510,6 +2539,7 @@ body { position: relative; }
   let pendingXPct   = 0, pendingYPct = 0;
   let pendingPanelId = null;  /* panel context saat double-click */
   let pendingVmId    = null;  /* vm-panel context saat double-click */
+  let pendingTitle   = '';    /* judul komentar baru */
   let openBubbleId  = null;
   let reopenTimer      = null;
   let dragJustHappened = false;  /* cegah klik setelah drag */
@@ -2575,15 +2605,18 @@ body { position: relative; }
   })();
 
   /* ── Firestore CRUD ────────────────────────────── */
-  async function addComment(x, y, xPct, yPct, text, author, panelId, vmId) {
+  async function addComment(x, y, xPct, yPct, text, author, panelId, vmId, title, isHtml) {
     const id   = 'c' + Date.now().toString(36) + Math.random().toString(36).slice(2, 5);
-    const data = { id, x, y, xPct, yPct, text, author, createdAt: Date.now(), panelId: panelId || null, vmId: vmId || null };
+    const data = { id, x, y, xPct, yPct, text, author, createdAt: Date.now(),
+      panelId: panelId || null, vmId: vmId || null,
+      title: title || '', isHtml: !!isHtml };
     loading(true);
     if (db) {
       try {
         await db.collection(COLLECTION).doc(id).set({
           x, y, xPct, yPct, text, author,
           panelId: panelId || null, vmId: vmId || null,
+          title: title || '', isHtml: !!isHtml,
           createdAt: firebase.firestore.FieldValue.serverTimestamp()
         });
       } catch (e) { comments[id] = data; renderPins(); renderPanel(); saveLocal(); }
@@ -2593,20 +2626,20 @@ body { position: relative; }
     loading(false);
   }
 
-  async function updateComment(id, newText) {
+  async function updateComment(id, newText, newTitle, isHtml) {
     loading(true);
     if (db) {
       try {
         await db.collection(COLLECTION).doc(id).update({
-          text: newText,
+          text: newText, title: newTitle || '', isHtml: !!isHtml,
           updatedAt: firebase.firestore.FieldValue.serverTimestamp()
         });
       } catch (e) {
-        if (comments[id]) comments[id].text = newText;
+        if (comments[id]) { comments[id].text = newText; comments[id].title = newTitle || ''; comments[id].isHtml = !!isHtml; }
         renderPins(); renderPanel(); saveLocal();
       }
     } else {
-      if (comments[id]) comments[id].text = newText;
+      if (comments[id]) { comments[id].text = newText; comments[id].title = newTitle || ''; comments[id].isHtml = !!isHtml; }
       renderPins(); renderPanel(); saveLocal();
     }
     loading(false);
@@ -2658,7 +2691,7 @@ body { position: relative; }
       const pin = document.createElement('div');
       pin.className  = 'cmt-pin';
       pin.dataset.id = c.id;
-      pin.textContent = visible;
+      pin.textContent = c.title || String(visible);
       const pos = pinPos(c);
       pin.style.left = pos.left + 'px';
       pin.style.top  = pos.top  + 'px';
@@ -2812,11 +2845,11 @@ body { position: relative; }
 
     b.innerHTML =
       '<div class="cmt-bubble-head">'
-      + '<span class="cmt-bubble-author">👤 ' + esc(c.author) + '</span>'
-      + '<span class="cmt-bubble-time">' + tStr + '</span>'
+      + '<span class="cmt-bubble-title">' + esc(c.title || 'Komentar') + '</span>'
       + '<button class="cmt-bubble-close" title="Tutup">✕</button>'
       + '</div>'
-      + '<div class="cmt-bubble-body">' + display(c.text) + '</div>'
+      + '<div class="cmt-bubble-meta">👤 ' + esc(c.author) + ' · ' + tStr + '</div>'
+      + '<div class="cmt-bubble-body">' + displayComment(c) + '</div>'
       + '<div class="cmt-bubble-actions">'
       + '<button class="cmt-btn cmt-btn-edit" data-act="edit">✏️ Edit</button>'
       + '<button class="cmt-btn cmt-btn-del"  data-act="del">🗑️ Hapus</button>'
@@ -2858,40 +2891,70 @@ body { position: relative; }
 
   /* ── Edit ──────────────────────────────────────── */
   function startEdit(id, bubble) {
+    const head    = bubble.querySelector('.cmt-bubble-head');
     const body    = bubble.querySelector('.cmt-bubble-body');
     const actions = bubble.querySelector('.cmt-bubble-actions');
-    if (!body || !actions) return;
-    bubble.dataset.orig = body.innerText || body.textContent;
+    if (!head || !body || !actions) return;
+
+    const curTitle = (bubble.querySelector('.cmt-bubble-title') || {}).textContent || '';
+    bubble.dataset.origTitle = curTitle;
+    bubble.dataset.origHtml  = body.innerHTML;
+
+    /* Ganti title span dengan input */
+    head.innerHTML =
+      '<input class="cmt-title-edit" value="' + esc(curTitle) + '" maxlength="60" placeholder="Judul…">'
+      + '<button class="cmt-bubble-close" title="Tutup">✕</button>';
+    const te = head.querySelector('.cmt-title-edit');
+    if (te) { te.focus(); te.select(); }
+
     body.contentEditable = 'true';
-    body.focus();
-    /* Kursor ke akhir */
     try {
       const r = document.createRange();
       r.selectNodeContents(body); r.collapse(false);
-      const sel = window.getSelection();
-      sel.removeAllRanges(); sel.addRange(r);
+      const sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
     } catch (_) {}
+
+    /* Ctrl+B/I/U di dalam body saat edit */
+    body.onkeydown = ev => {
+      if (ev.ctrlKey || ev.metaKey) {
+        if (ev.key.toLowerCase() === 'b') { ev.preventDefault(); document.execCommand('bold'); }
+        if (ev.key.toLowerCase() === 'i') { ev.preventDefault(); document.execCommand('italic'); }
+        if (ev.key.toLowerCase() === 'u') { ev.preventDefault(); document.execCommand('underline'); }
+      }
+    };
+
     actions.innerHTML =
       '<button class="cmt-btn cmt-btn-save" data-act="save">💾 Simpan</button>'
       + '<button class="cmt-btn cmt-btn-cancel" data-act="cancel">Batal</button>';
   }
 
   function saveEdit(id, bubble) {
+    const head = bubble.querySelector('.cmt-bubble-head');
     const body = bubble.querySelector('.cmt-bubble-body');
     if (!body) return;
-    const newText = (body.innerText || body.textContent || '').trim();
-    if (!newText) return;
+    const newTitle = (head && head.querySelector('.cmt-title-edit'))
+      ? head.querySelector('.cmt-title-edit').value.trim()
+      : (bubble.dataset.origTitle || (comments[id] && comments[id].title) || '');
+    const newHtml  = sanitizeHtml(body.innerHTML);
+    if (!(body.innerText || body.textContent || '').trim()) return;
     body.contentEditable = 'false';
-    updateComment(id, newText);
+    body.onkeydown = null;
+    updateComment(id, newHtml, newTitle, true);
   }
 
   function cancelEdit(id, bubble) {
+    const head    = bubble.querySelector('.cmt-bubble-head');
     const body    = bubble.querySelector('.cmt-bubble-body');
     const actions = bubble.querySelector('.cmt-bubble-actions');
-    if (!body || !actions) return;
-    body.innerHTML = display(bubble.dataset.orig || (comments[id] && comments[id].text) || '');
+    if (!head || !body || !actions) return;
+    const origTitle = bubble.dataset.origTitle || (comments[id] && comments[id].title) || 'Komentar';
+    head.innerHTML =
+      '<span class="cmt-bubble-title">' + esc(origTitle) + '</span>'
+      + '<button class="cmt-bubble-close" title="Tutup">✕</button>';
+    body.innerHTML = bubble.dataset.origHtml || displayComment(comments[id]);
     body.contentEditable = 'false';
-    actions.innerHTML  =
+    body.onkeydown = null;
+    actions.innerHTML =
       '<button class="cmt-btn cmt-btn-edit" data-act="edit">✏️ Edit</button>'
       + '<button class="cmt-btn cmt-btn-del" data-act="del">🗑️ Hapus</button>';
   }
@@ -2940,9 +3003,10 @@ body { position: relative; }
         : new Date();
       const d = document.createElement('div');
       d.className = 'cmt-panel-item';
+      const preview = c.isHtml ? htmlToText(c.text) : (c.text || '');
       d.innerHTML =
-        '<div class="cmt-panel-item-author">#' + (i+1) + ' — ' + esc(c.author) + '</div>'
-        + '<div class="cmt-panel-item-text">' + esc(c.text) + '</div>'
+        '<div class="cmt-panel-item-author">' + esc(c.title || ('Komentar #' + (i+1))) + ' — ' + esc(c.author) + '</div>'
+        + '<div class="cmt-panel-item-text">' + esc(preview) + '</div>'
         + '<div class="cmt-panel-item-time">'
         + ts.toLocaleDateString('id-ID', { day:'2-digit', month:'short', year:'2-digit' })
         + '</div>';
@@ -2998,13 +3062,15 @@ body { position: relative; }
     inputWrap.style.left = L + 'px';
     inputWrap.style.top  = T + 'px';
     inputWrap.classList.add('show');
-    textInput.value = '';
-    textInput.focus();
+    titleInput.value = '';
+    textInput.innerHTML = '';
+    titleInput.focus();
   }
 
   function hideInput() {
     inputWrap.classList.remove('show');
-    textInput.value = '';
+    titleInput.value = '';
+    textInput.innerHTML = '';
   }
 
   /* ── Double-click → tambah komentar ─────────────── */
@@ -3018,18 +3084,34 @@ body { position: relative; }
 
   /* ── Submit ──────────────────────────────────────── */
   submitBtn.addEventListener('click', async () => {
-    const text   = textInput.value.trim();
-    const author = authorInput.value.trim() || 'Anonymous';
-    if (!text) { textInput.style.outline = '2px solid red'; textInput.focus(); return; }
-    textInput.style.outline = '';
+    const titleVal = titleInput.value.trim();
+    const bodyText = (textInput.innerText || textInput.textContent || '').trim();
+    const html     = sanitizeHtml(textInput.innerHTML);
+    const author   = authorInput.value.trim() || 'Anonymous';
+    if (!titleVal) { titleInput.style.outline = '2px solid red'; titleInput.focus(); return; }
+    if (!bodyText) { textInput.style.outline = '2px solid red'; textInput.focus(); return; }
+    titleInput.style.outline = '';
+    textInput.style.outline  = '';
     if (authorInput.value.trim()) localStorage.setItem(KEY_AUTHOR, authorInput.value.trim());
     hideInput();
-    await addComment(pendingX, pendingY, pendingXPct, pendingYPct, text, author, pendingPanelId, pendingVmId);
+    await addComment(pendingX, pendingY, pendingXPct, pendingYPct, html, author,
+      pendingPanelId, pendingVmId, titleVal, true);
   });
 
   textInput.addEventListener('keydown', e => {
-    if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) { e.preventDefault(); submitBtn.click(); }
-    if (e.key === 'Escape') hideInput();
+    if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) { e.preventDefault(); submitBtn.click(); return; }
+    if (e.key === 'Enter') {
+      /* Enter biasa = baris baru pakai <br> agar hasil bersih */
+      e.preventDefault();
+      document.execCommand('insertHTML', false, '<br>');
+      return;
+    }
+    if (e.key === 'Escape') { hideInput(); return; }
+    if (e.ctrlKey || e.metaKey) {
+      if (e.key.toLowerCase() === 'b') { e.preventDefault(); document.execCommand('bold'); }
+      if (e.key.toLowerCase() === 'i') { e.preventDefault(); document.execCommand('italic'); }
+      if (e.key.toLowerCase() === 'u') { e.preventDefault(); document.execCommand('underline'); }
+    }
     textInput.style.outline = '';
   });
 
@@ -3073,8 +3155,42 @@ body { position: relative; }
       .replace(/&/g,'&amp;').replace(/</g,'&lt;')
       .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
   }
-  /* Tampilkan teks dengan newline preserved */
-  function display(s) { return esc(s).replace(/\n/g, '<br>'); }
+
+  /* Sanitize contenteditable HTML — hanya izinkan b/strong/i/em/u/br */
+  function sanitizeHtml(html) {
+    const ALLOWED = new Set(['B','STRONG','I','EM','U','BR']);
+    const BLOCK   = new Set(['DIV','P','LI','H1','H2','H3','H4','BLOCKQUOTE']);
+    const tmp = document.createElement('div');
+    tmp.innerHTML = html;
+    function clean(node) {
+      for (let i = node.childNodes.length - 1; i >= 0; i--) {
+        const ch = node.childNodes[i];
+        if (ch.nodeType === 3) continue;
+        if (ALLOWED.has(ch.tagName)) { clean(ch); continue; }
+        const frag = document.createDocumentFragment();
+        clean(ch);
+        [...ch.childNodes].forEach(c => frag.appendChild(c));
+        if (BLOCK.has(ch.tagName)) frag.appendChild(document.createElement('br'));
+        node.replaceChild(frag, ch);
+      }
+    }
+    clean(tmp);
+    while (tmp.firstChild && tmp.firstChild.nodeName === 'BR') tmp.removeChild(tmp.firstChild);
+    while (tmp.lastChild  && tmp.lastChild.nodeName  === 'BR') tmp.removeChild(tmp.lastChild);
+    return tmp.innerHTML;
+  }
+
+  /* Tampilkan isi komentar (HTML atau plain text lama) */
+  function displayComment(c) {
+    if (c && c.isHtml) return c.text || '';
+    return esc((c && c.text) || '').replace(/\n/g, '<br>');
+  }
+  /* Ambil teks polos dari HTML (untuk preview panel) */
+  function htmlToText(html) {
+    const t = document.createElement('div'); t.innerHTML = html;
+    return t.textContent || t.innerText || '';
+  }
+  function display(s) { return esc(s).replace(/\n/g, '<br>'); } /* backward compat */
   function loading(on) { loadingEl.style.display = on ? 'block' : 'none'; }
 
   /* ── Init ────────────────────────────────────────── */
