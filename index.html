@@ -317,17 +317,17 @@
   <div class="logo">BCA<span>Finance</span> · ASR</div>
   <ul class="nav-links">
     <li><a href="#overview">Overview</a></li>
-    <li><a href="#konsep">Konsep</a></li>
     <li><a href="#journey">Flow</a></li>
     <li><a href="#timeline">Timeline</a></li>
     <li><a href="#resolution">Penyelesaian</a></li>
     <li><a href="#cases">15 Kasus</a></li>
-    <li><a href="#incentive">Insentif</a></li>
-    <li><a href="#memos">Memo</a></li>
-    <li><a href="#taskforce">Task Force</a></li>
-    <li><a href="#assupport">AS Support</a></li>
     <li><a href="#skse">SK/SE</a></li>
     <li><a href="#pojk">POJK</a></li>
+    <li><a href="#incentive">Insentif</a></li>
+    <li><a href="#memos">Memo</a></li>
+    <li><a href="#konsep">Konsep</a></li>
+    <li><a href="#taskforce">Task Force</a></li>
+    <li><a href="#assupport">AS Support</a></li>
   </ul>
 </nav>
 
@@ -407,6 +407,37 @@
     Achievement Cabang = 1 + ((Target − Actual) / Target)</div>
   </div>
 
+  <div style="margin-top:1.5rem">
+    <h3 style="font-size:1.05rem;font-weight:700;color:var(--blue-dark);margin-bottom:.8rem">⚙️ Tim ASR Development (Nasional)</h3>
+    <div class="ov-grid">
+      <div class="ov-card">
+        <div class="icon">🔬</div>
+        <h4>Account Solution Analyst, Cyber &amp; Development</h4>
+        <ul>
+          <li>QA &amp; QC</li><li>Solution Center (Sharing Loss)</li><li>Pendampingan Cabang</li>
+          <li>Kembangkan sistem &amp; prosedur</li><li>Kumpulkan info konsumen raib</li>
+        </ul>
+      </div>
+      <div class="ov-card">
+        <div class="icon">🤝</div>
+        <h4>Account Solution Vendor &amp; Support</h4>
+        <ul>
+          <li>Monitoring PKS BHJP</li><li>Rekap penanganan DAS Internal &amp; Eksternal</li>
+          <li>Monitoring VA di MAS</li><li>Report aging mati &amp; hidup harian</li>
+        </ul>
+      </div>
+      <div class="ov-card">
+        <div class="icon">⚡</div>
+        <h4>Account Solution Task Force &amp; Recovery</h4>
+        <ul>
+          <li>Monitoring MPP &amp; rekap pencapaian cabang</li>
+          <li>Hitung insentif tarikan</li>
+          <li>Setting kode POS di MAS tiap awal bulan</li>
+          <li>Analisis penetapan kelas cabang</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
   <div style="margin-top:1.5rem">
     <h3 style="font-size:1.05rem;font-weight:700;color:var(--blue-dark);margin-bottom:.8rem">🗂️ Area &amp; Nama AASH (Area Account Solution Head)</h3>
@@ -467,110 +498,7 @@
 </div>
 </div>
 
-
-<div id="konsep" class="section-alt">
-<div class="section">
-  <div class="st">
-    <h2>📖 Konsep &amp; Terminologi ASR</h2>
-    <p>Istilah-istilah penting yang digunakan dalam kegiatan operasional ASR sehari-hari</p>
-  </div>
-  <div class="ov-grid">
-    <div class="ov-card">
-      <div class="icon">🔄</div>
-      <h4>Roll Back</h4>
-      <p>Konsumen yang menunggak kembali ke bucket sebelumnya. Contoh: konsumen OVD 80 hari hanya membayar 1 angsuran → OVD menjadi 50 hari → kembali dari FAC 3 ke FAC 2.</p>
-    </div>
-    <div class="ov-card gold">
-      <div class="icon">📉</div>
-      <h4>Flow Rate</h4>
-      <p>Aliran konsumen yang berpindah ke bucket selanjutnya akibat tidak membayar. Contoh: konsumen OVD 60 hari tidak bayar → OVD menjadi 61 → berpindah dari FAC 2 ke FAC 3.</p>
-    </div>
-    <div class="ov-card green">
-      <div class="icon">🏆</div>
-      <h4>Success Rate</h4>
-      <p>Perbandingan antara account yang berhasil diselesaikan dengan seluruh beban di bucket pada periode tertentu.</p>
-    </div>
-    <div class="ov-card">
-      <div class="icon">🌅</div>
-      <h4>Aging Hidup vs Aging Mati</h4>
-      <ul>
-        <li><b>Aging Hidup</b>: OVD konsumen di hari tersebut. Contoh: tgl 20 Nov, konsumen OVD 23 hr → berada di FAC 1 (10–30 hr).</li>
-        <li><b>Aging Mati</b>: Proyeksi OVD di akhir bulan. Contoh: tgl 20 Nov, OVD 23 hr → di tgl 30 Nov akan menjadi OVD 33 hr → keluar dari FAC 1 (aging mati).</li>
-      </ul>
-    </div>
-    <div class="ov-card red">
-      <div class="icon">🎯</div>
-      <h4>Target ASR vs Marketing</h4>
-      <p>Target Marketing = jumlah yang harus <b>terjual/direalisasikan</b>. Target ASR = jumlah amount yang <b>boleh menunggak</b>. Contoh: jika target ASR Rp 10M dan total menunggak Rp 40M → ASR harus berhasil menagih Rp 30M.</p>
-    </div>
-    <div class="ov-card">
-      <div class="icon">📅</div>
-      <h4>MOM &amp; EOM</h4>
-      <ul>
-        <li><b>MOM</b> (Mid of Month): Periode awal bulan → tgl 15</li>
-        <li><b>EOM</b> (End of Month): Periode tgl 16 → akhir bulan</li>
-        <li>Report KPI dilakukan H+1 setelah closing masing-masing periode</li>
-      </ul>
-    </div>
-    <div class="ov-card gold">
-      <div class="icon">🏢</div>
-      <h4>Kelas Cabang ASR</h4>
-      <p><b>4 Parameter grading:</b></p>
-      <ul>
-        <li>Jumlah account TMA cabang — bobot <b>25%</b></li>
-        <li>Jumlah account OVD 1–9 hari — bobot <b>20%</b></li>
-        <li>Jumlah account OVD 10–30 hari — bobot <b>25%</b></li>
-        <li>Jumlah account OVD &gt;30 hari — bobot <b>30%</b></li>
-      </ul>
-      <p style="margin-top:.4rem;font-size:.82rem"><b>Grade:</b> A (&gt;4.75–5) | B (&gt;2.75–4.75) | C (&gt;1–2.75) | D (&lt;1)</p>
-    </div>
-    <div class="ov-card green">
-      <div class="icon">🗺️</div>
-      <h4>Zonasi Risiko Konsumen</h4>
-      <p>Dibuat AS Support berdasarkan histori realisasi 28 bulan, tunggakan &amp; kolektibilitas:</p>
-      <ul>
-        <li>🟢 <b>Hijau</b>: Poin &lt; 3</li>
-        <li>🟡 <b>Kuning</b>: Poin 3–5</li>
-        <li>🔴 <b>Merah</b>: Poin &gt; 5</li>
-      </ul>
-      <p style="margin-top:.3rem;font-size:.8rem">Parameter: pernah OVD &gt;60/90 hr, tarikan non-WO, account WO, WO ter-recovery, poin kategori kasus</p>
-    </div>
-    <div class="ov-card">
-      <div class="icon">📊</div>
-      <h4>NPL &amp; NPF</h4>
-      <ul>
-        <li><b>NPL</b> (Non-Performing Loan): Total account menunggak OVD &gt;30 hari / Total TMA × 100%</li>
-        <li><b>NPF</b> (Non-Performing Financing): Total account menunggak OVD &gt;90 hari / Total TMA × 100%</li>
-      </ul>
-      <p style="margin-top:.3rem;font-size:.8rem">NPF digunakan sebagai patokan aturan DP minimal di POJK No. 35/2018</p>
-    </div>
-    <div class="ov-card red">
-      <div class="icon">🔤</div>
-      <h4>Perbedaan Treatment FAC 1/2/3</h4>
-      <ul>
-        <li><b>FAC 1</b> (10–30 hr): Ingatkan konsumen agar segera bayar — pendekatan <em>lunak</em></li>
-        <li><b>FAC 2</b> (31–60 hr): Tegaskan ada potensi unit akan diamankan jika belum bayar</li>
-        <li><b>FAC 3</b> (61–90 hr): Peringatan urusan kepolisian + surat somasi — pendekatan <em>tegas</em></li>
-      </ul>
-    </div>
-    <div class="ov-card gold">
-      <div class="icon">📜</div>
-      <h4>Surat Tugas vs Surat Kuasa</h4>
-      <ul>
-        <li><b>Surat Tugas (ST)</b>: Pengamanan oleh pihak <em>internal</em> BCAF. Bisa dikeluarkan kapanpun oleh BASH. Berlaku <b>7 hari</b>, perpanjang max 2×.</li>
-        <li><b>Surat Kuasa (SK)</b>: Pengamanan oleh pihak <em>eksternal</em> (BHJP). Hanya jika OVD &gt;90 hr, atau memo percepatan (approval BOD). Berlaku <b>7 hr (AS) / 14 hr (Recovery)</b>, perpanjang max 2×. Jika sudah 2× dan gagal → rolling ke BHJP lain.</li>
-      </ul>
-    </div>
-    <div class="ov-card">
-      <div class="icon">📝</div>
-      <h4>BAST (Berita Acara Serah Terima)</h4>
-      <p>Bukti serah terima kendaraan saat pengamanan unit. Masa berlaku <b>1 hari</b> (mempertimbangkan jarak lokasi pengamanan ke pool). Jika &gt;1 hari → wajib buat <b>memo penyimpangan kronologis pool</b>.</p>
-    </div>
-  </div>
-</div>
-</div>
-
-
+<!-- JOURNEY FLOW -->
 <div id="journey" class="section-alt">
 <div class="section">
   <div class="st">
@@ -621,8 +549,8 @@
         <div class="info-card">
           <h4>Overdue Range</h4>
           <ul>
-            <li>Produk <b>CS</b> (Consumer): OVD <span class="sk-ref" onclick="gotoDoc('bucket-penanganan')"><b>1–9 hari</b></span></li>
-            <li>Produk <b>KKB</b>: OVD <span class="sk-ref" onclick="gotoDoc('ketentuan-penanganan-desk')"><b>1–30 hari</b></span></li>
+            <li>Produk <b>CS</b> (Consumer): OVD <span class="sk-ref" onclick="gotoDoc('bucket-penanganan')"><b>2–9 hari</b></span></li>
+            <li>Produk <b>KKB</b>: OVD <span class="sk-ref" onclick="gotoDoc('ketentuan-penanganan-desk')"><b>2–30 hari</b></span></li>
             <li>Bucket khusus &gt;90 hari: program diskon denda (sisa angsuran &gt;10–30% → diskon 70%; &lt;10% → diskon 80%)</li>
           </ul>
         </div>
@@ -1324,7 +1252,7 @@
             <li><span class="sk-ref" onclick="gotoDoc('kewenangan-recovery-div')">Division Head</span>: Bpk. Juliater Pane</li>
             <li><span class="sk-ref" onclick="gotoDoc('kewenangan-account-solu')">Deputy Director</span>: Bpk. Tomi Djoko</li>
             <li>BOD: Bpk. Herwandi</li>
-            <li>"Mengetahui": ARH, Regional Head</li>
+            <li>"Mengetahui": ARH, Regional Head, Analyst Cyber, Dev. Head</li>
           </ul>
           <br>
           <p style="font-size:.8rem">Semua WO wajib melalui rekomendasi audit. WO dengan note (tanpa rekomendasi audit) sudah tidak ada.</p>
@@ -1345,7 +1273,7 @@
 </div>
 </div>
 
-
+<!-- TIMELINE -->
 <div id="timeline">
 <div class="section">
   <div class="st"><h2>📅 Cerita Lengkap: Konsumen Nunggak</h2><p>Dari hari pertama nunggak sampai penyelesaian akhir</p></div>
@@ -1402,7 +1330,110 @@
 </div>
 </div>
 
+<!-- KONSEP -->
+<div id="konsep" class="section-alt">
+<div class="section">
+  <div class="st">
+    <h2>📖 Konsep &amp; Terminologi ASR</h2>
+    <p>Istilah-istilah penting yang digunakan dalam kegiatan operasional ASR sehari-hari</p>
+  </div>
+  <div class="ov-grid">
+    <div class="ov-card">
+      <div class="icon">🔄</div>
+      <h4>Roll Back</h4>
+      <p>Konsumen yang menunggak kembali ke bucket sebelumnya. Contoh: konsumen OVD 80 hari hanya membayar 1 angsuran → OVD menjadi 50 hari → kembali dari FAC 3 ke FAC 2.</p>
+    </div>
+    <div class="ov-card gold">
+      <div class="icon">📉</div>
+      <h4>Flow Rate</h4>
+      <p>Aliran konsumen yang berpindah ke bucket selanjutnya akibat tidak membayar. Contoh: konsumen OVD 60 hari tidak bayar → OVD menjadi 61 → berpindah dari FAC 2 ke FAC 3.</p>
+    </div>
+    <div class="ov-card green">
+      <div class="icon">🏆</div>
+      <h4>Success Rate</h4>
+      <p>Perbandingan antara account yang berhasil diselesaikan dengan seluruh beban di bucket pada periode tertentu.</p>
+    </div>
+    <div class="ov-card">
+      <div class="icon">🌅</div>
+      <h4>Aging Hidup vs Aging Mati</h4>
+      <ul>
+        <li><b>Aging Hidup</b>: OVD konsumen di hari tersebut. Contoh: tgl 20 Nov, konsumen OVD 23 hr → berada di FAC 1 (10–30 hr).</li>
+        <li><b>Aging Mati</b>: Proyeksi OVD di akhir bulan. Contoh: tgl 20 Nov, OVD 23 hr → di tgl 30 Nov akan menjadi OVD 33 hr → keluar dari FAC 1 (aging mati).</li>
+      </ul>
+    </div>
+    <div class="ov-card red">
+      <div class="icon">🎯</div>
+      <h4>Target ASR vs Marketing</h4>
+      <p>Target Marketing = jumlah yang harus <b>terjual/direalisasikan</b>. Target ASR = jumlah amount yang <b>boleh menunggak</b>. Contoh: jika target ASR Rp 10M dan total menunggak Rp 40M → ASR harus berhasil menagih Rp 30M.</p>
+    </div>
+    <div class="ov-card">
+      <div class="icon">📅</div>
+      <h4>MOM &amp; EOM</h4>
+      <ul>
+        <li><b>MOM</b> (Mid of Month): Periode awal bulan → tgl 15</li>
+        <li><b>EOM</b> (End of Month): Periode tgl 16 → akhir bulan</li>
+        <li>Report KPI dilakukan H+1 setelah closing masing-masing periode</li>
+      </ul>
+    </div>
+    <div class="ov-card gold">
+      <div class="icon">🏢</div>
+      <h4>Kelas Cabang ASR</h4>
+      <p><b>4 Parameter grading:</b></p>
+      <ul>
+        <li>Jumlah account TMA cabang — bobot <b>25%</b></li>
+        <li>Jumlah account OVD 1–9 hari — bobot <b>20%</b></li>
+        <li>Jumlah account OVD 10–30 hari — bobot <b>25%</b></li>
+        <li>Jumlah account OVD &gt;30 hari — bobot <b>30%</b></li>
+      </ul>
+      <p style="margin-top:.4rem;font-size:.82rem"><b>Grade:</b> A (&gt;4.75–5) | B (&gt;2.75–4.75) | C (&gt;1–2.75) | D (&lt;1)</p>
+    </div>
+    <div class="ov-card green">
+      <div class="icon">🗺️</div>
+      <h4>Zonasi Risiko Konsumen</h4>
+      <p>Dibuat AS Support berdasarkan histori realisasi 28 bulan, tunggakan &amp; kolektibilitas:</p>
+      <ul>
+        <li>🟢 <b>Hijau</b>: Poin &lt; 3</li>
+        <li>🟡 <b>Kuning</b>: Poin 3–5</li>
+        <li>🔴 <b>Merah</b>: Poin &gt; 5</li>
+      </ul>
+      <p style="margin-top:.3rem;font-size:.8rem">Parameter: pernah OVD &gt;60/90 hr, tarikan non-WO, account WO, WO ter-recovery, poin kategori kasus</p>
+    </div>
+    <div class="ov-card">
+      <div class="icon">📊</div>
+      <h4>NPL &amp; NPF</h4>
+      <ul>
+        <li><b>NPL</b> (Non-Performing Loan): Total account menunggak OVD &gt;30 hari / Total TMA × 100%</li>
+        <li><b>NPF</b> (Non-Performing Financing): Total account menunggak OVD &gt;90 hari / Total TMA × 100%</li>
+      </ul>
+      <p style="margin-top:.3rem;font-size:.8rem">NPF digunakan sebagai patokan aturan DP minimal di POJK No. 35/2018</p>
+    </div>
+    <div class="ov-card red">
+      <div class="icon">🔤</div>
+      <h4>Perbedaan Treatment FAC 1/2/3</h4>
+      <ul>
+        <li><b>FAC 1</b> (10–30 hr): Ingatkan konsumen agar segera bayar — pendekatan <em>lunak</em></li>
+        <li><b>FAC 2</b> (31–60 hr): Tegaskan ada potensi unit akan diamankan jika belum bayar</li>
+        <li><b>FAC 3</b> (61–90 hr): Peringatan urusan kepolisian + surat somasi — pendekatan <em>tegas</em></li>
+      </ul>
+    </div>
+    <div class="ov-card gold">
+      <div class="icon">📜</div>
+      <h4>Surat Tugas vs Surat Kuasa</h4>
+      <ul>
+        <li><b>Surat Tugas (ST)</b>: Pengamanan oleh pihak <em>internal</em> BCAF. Bisa dikeluarkan kapanpun oleh BASH. Berlaku <b>7 hari</b>, perpanjang max 2×.</li>
+        <li><b>Surat Kuasa (SK)</b>: Pengamanan oleh pihak <em>eksternal</em> (BHJP). Hanya jika OVD &gt;90 hr, atau memo percepatan (approval BOD). Berlaku <b>7 hr (AS) / 14 hr (Recovery)</b>, perpanjang max 2×. Jika sudah 2× dan gagal → rolling ke BHJP lain.</li>
+      </ul>
+    </div>
+    <div class="ov-card">
+      <div class="icon">📝</div>
+      <h4>BAST (Berita Acara Serah Terima)</h4>
+      <p>Bukti serah terima kendaraan saat pengamanan unit. Masa berlaku <b>1 hari</b> (mempertimbangkan jarak lokasi pengamanan ke pool). Jika &gt;1 hari → wajib buat <b>memo penyimpangan kronologis pool</b>.</p>
+    </div>
+  </div>
+</div>
+</div>
 
+<!-- RESOLUTION -->
 <div id="resolution" class="section-alt">
 <div class="section">
   <div class="st"><h2>✅ Pilihan Penyelesaian Kasus</h2><p>Solusi yang bisa ditawarkan kepada konsumen di setiap tahap</p></div>
@@ -1424,7 +1455,7 @@
 </div>
 </div>
 
-
+<!-- 15 KASUS -->
 <div id="cases">
 <div class="section">
   <div class="st"><h2>⚠️ 15 Jenis Kasus ASR</h2><p>Klik kartu untuk detail keterangan</p></div>
@@ -1432,7 +1463,60 @@
 </div>
 </div>
 
+<!-- SK SE GALLERY -->
+<div id="skse" class="section-alt">
+<div class="section">
+  <div class="st">
+    <h2>📑 Galeri Dokumen SK &amp; SE</h2>
+    <p>Semua Surat Keputusan, Surat Edaran, Memo, dan Instruksi Kerja ASR — klik gambar untuk memperbesar</p>
+    <p style="font-size:.82rem;margin-top:.4rem"><span style="display:inline-block;background:rgba(45,198,83,.15);border-radius:5px;padding:.2rem .7rem;color:#1a7a3c;font-weight:600">💡 Teks hijau bergaris bawah</span> di seluruh halaman = informasi berasal dari SK/SE resmi. Klik untuk langsung ke dokumen sumbernya.</p>
+  </div>
+  <div class="filter-tabs" id="filterTabs">
+    <button class="ftab active" onclick="filterDocs('all',this)">Semua <span id="countAll"></span></button>
+    <button class="ftab" onclick="filterDocs('SK',this)">Surat Keputusan <span id="countSK"></span></button>
+    <button class="ftab" onclick="filterDocs('SE',this)">Surat Edaran <span id="countSE"></span></button>
+    <button class="ftab" onclick="filterDocs('Memo',this)">Memo <span id="countMemo"></span></button>
+    <button class="ftab" onclick="filterDocs('Instruksi Kerja',this)">Instruksi Kerja <span id="countIK"></span></button>
+    <span class="doc-count" id="docCountLabel"></span>
+  </div>
+  <div class="doc-gallery" id="docGallery"></div>
+</div>
+</div>
 
+<!-- POJK -->
+<div id="pojk">
+<div class="section">
+  <div class="st">
+    <h2>⚖️ Landasan Hukum &amp; POJK</h2>
+    <p>"Kitab Suci Leasing" — 5 peraturan yang wajib dipahami. Klik untuk buka detail.</p>
+  </div>
+  <div class="pojk-grid" id="pojkGrid"></div>
+</div>
+</div>
+
+<!-- DOKUMEN -->
+<div id="docs" class="section-alt">
+<div class="section">
+  <div class="st"><h2>📁 Dokumen Wajib Penagihan</h2><p>Dokumen yang wajib dibawa saat penagihan dan pengamanan unit</p></div>
+  <div style="overflow-x:auto;border-radius:var(--r);box-shadow:var(--shadow)">
+    <table class="doc-table">
+      <thead><tr><th>Dokumen</th><th>Singkatan</th><th>Fungsi</th><th>Jenis</th><th>Masa Berlaku</th></tr></thead>
+      <tbody>
+        <tr><td><b>Surat Tugas</b></td><td>ST</td><td>Pengamanan unit fidusia oleh pihak <b>internal</b> BCAF</td><td><span class="badge-pill int">Internal</span></td><td><span class="sk-ref" onclick="gotoDoc('ketentuan-penarikan')">7 hari, perpanjang 2×</span></td></tr>
+        <tr><td><b>Surat Kuasa</b></td><td>SK</td><td>Pengamanan unit oleh <b>BHJP eksternal</b>. <span class="sk-ref" onclick="gotoDoc('ketentuan-penarikan')">OVD &gt;90 hr</span> atau memo percepatan (approval BOD)</td><td><span class="badge-pill ext">Eksternal</span></td><td><span class="sk-ref" onclick="gotoDoc('ketentuan-penarikan')">7 hr (AS) / 14 hr (Recovery), perpanjang 2×</span></td></tr>
+        <tr><td><b>Berita Acara Serah Terima</b></td><td>BAST</td><td>Bukti serah terima kendaraan antara konsumen dan FAC/PAC. <span class="sk-ref" onclick="gotoDoc('penerimaan-kend')">Beda ceklist = memo penyimpangan</span></td><td><span class="badge-pill both">Keduanya</span></td><td><span class="sk-ref" onclick="gotoDoc('penerimaan-kend')"><b>1 hari</b> (lebih dari 1 hr wajib memo penyimpangan kronologis pool)</span></td></tr>
+        <tr><td><b>Sertifikat Fidusia</b></td><td>SK Fidusia</td><td>Bukti hukum bahwa kendaraan adalah jaminan fidusia milik BCAF. Kekuatan setara putusan pengadilan</td><td><span class="badge-pill both">Keduanya</span></td><td>Sesuai kontrak pembiayaan</td></tr>
+        <tr><td><b>Tabel Angsuran</b></td><td>—</td><td>Rincian jadwal angsuran dan sisa kewajiban konsumen</td><td><span class="badge-pill both">Keduanya</span></td><td>—</td></tr>
+        <tr><td><b>Sertifikat Profesi Penagihan Indonesia</b></td><td>SPPI</td><td>Sertifikasi wajib bagi petugas penagihan/penarikan (termasuk BHJP eksternal)</td><td><span class="badge-pill both">Keduanya</span></td><td>Sesuai ketentuan OJK/POJK 35</td></tr>
+        <tr><td><b>Perjanjian Pembiayaan Kredit</b></td><td>PPK</td><td>Kontrak perjanjian kredit antara konsumen dan BCAF</td><td><span class="badge-pill both">Keduanya</span></td><td>Sesuai kontrak</td></tr>
+        <tr><td><b>Bukti Somasi</b></td><td>—</td><td>Wajib dilampirkan saat pengajuan pendampingan kepolisian (PERKAP 8/2011) — harus sudah kirim 2×</td><td><span class="badge-pill ext">Eksternal</span></td><td>—</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>
+
+<!-- INCENTIVE -->
 <div id="incentive">
 <div class="section">
   <div class="st"><h2>💰 Insentif Tarikan Unit</h2><p>Pembagian insentif per unit kendaraan yang berhasil ditarik (internal)</p></div>
@@ -1458,7 +1542,7 @@
 </div>
 </div>
 
-
+<!-- MEMOS -->
 <div id="memos" class="section-alt">
 <div class="section">
   <div class="st"><h2>📝 Memo-Memo di ASR</h2><p>Klik untuk melihat kapan memo digunakan dan dokumen yang diperlukan</p></div>
@@ -1466,7 +1550,7 @@
 </div>
 </div>
 
-
+<!-- TASK FORCE -->
 <div id="taskforce" class="section">
 <div class="section">
   <div class="st">
@@ -1605,250 +1689,142 @@
 </div>
 </div>
 
-
+<!-- AS SUPPORT -->
 <div id="assupport" class="section-alt">
 <div class="section">
   <div class="st">
     <h2>🏢 AS Support</h2>
-    <p>Tugas-tugas rutin AS Support dalam operasional harian, bulanan, dan administrasi cabang ASR</p>
+    <p>Fungsi pendukung operasional Area ASR: reporting, analisis, kelas cabang, dan administrasi bulanan</p>
   </div>
   <div class="ov-grid">
 
-    <!-- 1. Report Pergerakan Angka -->
     <div class="ov-card">
-      <div class="ov-icon">📊</div>
-      <h3>Report Pergerakan Angka (Aging)</h3>
-      <p style="font-size:.83rem;color:#555;margin:.3rem 0 .5rem">Salah satu tugas rutin harian AS Support adalah melakukan report pergerakan angka:</p>
-      <ul style="font-size:.85rem;margin:.3rem 0;padding-left:1.2rem;line-height:1.8">
-        <li><strong>Report Aging Mati</strong> — dilakukan setiap pagi</li>
-        <li><strong>Report Aging Hidup</strong> — dilakukan <strong>3× sehari</strong>:
-          <ul style="margin:.2rem 0;padding-left:1rem">
-            <li>Jam 09:00</li>
-            <li>Jam 13:00</li>
-            <li>Jam 17:30 (set 6 sore)</li>
-          </ul>
-        </li>
+      <div class="ov-icon">📅</div>
+      <h3>Jadwal Report Aging</h3>
+      <p style="font-size:.85rem;margin-bottom:.5rem"><strong>Report Aging Mati</strong> — dikirim setiap pagi (sebelum jam 09:00)</p>
+      <p style="font-size:.85rem;margin-bottom:.5rem"><strong>Report Aging Hidup</strong> — dikirim 3× sehari:</p>
+      <ul style="font-size:.85rem;margin:.3rem 0;padding-left:1.2rem">
+        <li>Jam 09:00</li>
+        <li>Jam 13:00</li>
+        <li>Jam 17:30</li>
       </ul>
+      <p style="font-size:.83rem;color:#666;margin-top:.5rem">Dikirim ke grup Area ASH &amp; seluruh cabang di wilayah</p>
     </div>
 
-    <!-- 2. Memo Promosi -->
     <div class="ov-card">
       <div class="ov-icon">📝</div>
-      <h3>Pemrosesan Memo Promosi</h3>
-      <p style="font-size:.83rem;color:#555;margin:.3rem 0 .5rem">AS Support memproses memo promosi karyawan dengan alur:</p>
-      <ol style="font-size:.85rem;margin:.3rem 0;padding-left:1.2rem;line-height:1.9">
-        <li>AASH melakukan pengajuan kepada Analyst</li>
-        <li>Analyst meneruskan ke HR → cek <strong>SLIK</strong> &amp; <strong>SPST</strong> (Surat Peringatan &amp; Surat Teguran)</li>
-        <li>Analyst membuat memo promosi → di-TTD pejabat terkait (<strong>AASH, DH, BOD</strong>)</li>
+      <h3>Alur Memo Promosi</h3>
+      <ol style="font-size:.85rem;margin:.5rem 0;padding-left:1.2rem;line-height:1.8">
+        <li>AASH mengajukan permohonan promosi ke Analyst</li>
+        <li>Analyst koordinasi HR → cek SLIK &amp; SPST</li>
+        <li>Memo ditandatangani pejabat berwenang &amp; diteruskan ke HR</li>
       </ol>
+      <p style="font-size:.83rem;color:#666;margin-top:.4rem">SLIK = Sistem Layanan Informasi Keuangan · SPST = Surat Pernyataan Sehat Tidak</p>
     </div>
 
-    <!-- 3. Insentif Tarikan -->
     <div class="ov-card">
       <div class="ov-icon">💰</div>
-      <h3>Perhitungan Insentif Tarikan</h3>
-      <p style="font-size:.82rem;color:#555;margin:.3rem 0 .4rem">Dihitung AS Support untuk tarikan internal per bulan berjalan.</p>
-
-      <p style="font-size:.83rem;font-weight:600;margin:.5rem 0 .2rem">📅 Cutoff Data</p>
-      <ul style="font-size:.84rem;margin:.2rem 0 .5rem;padding-left:1.2rem;line-height:1.7">
-        <li>Data tarikan masuk <strong>maks tgl 7 jam 14:00</strong> bulan berjalan → cair tgl <strong>25 bulan yang sama</strong></li>
-        <li>Jika melewati tgl 7 → wajib buat <strong>Memo Penyimpangan Keterlambatan Pencairan Tarikan</strong> → insentif cair bulan berikutnya</li>
-      </ul>
-
-      <p style="font-size:.83rem;font-weight:600;margin:.5rem 0 .2rem">💵 Besaran Insentif per Unit</p>
-      <table style="width:100%;font-size:.82rem;border-collapse:collapse;margin:.2rem 0 .5rem">
-        <tr style="background:#f0f7ff"><td style="padding:.28rem .5rem;border:1px solid #dde3f0"><strong>FAC / PAC</strong></td><td style="padding:.28rem .5rem;border:1px solid #dde3f0;text-align:right">Rp 2.150.000</td></tr>
-        <tr><td style="padding:.28rem .5rem;border:1px solid #dde3f0">Korwil</td><td style="padding:.28rem .5rem;border:1px solid #dde3f0;text-align:right">Rp 430.000</td></tr>
-        <tr style="background:#f0f7ff"><td style="padding:.28rem .5rem;border:1px solid #dde3f0">BASH</td><td style="padding:.28rem .5rem;border:1px solid #dde3f0;text-align:right">Rp 240.000</td></tr>
-        <tr><td style="padding:.28rem .5rem;border:1px solid #dde3f0">AASH</td><td style="padding:.28rem .5rem;border:1px solid #dde3f0;text-align:right">Rp 180.000</td></tr>
-        <tr style="background:#fff8e1"><td style="padding:.28rem .5rem;border:1px solid #dde3f0"><strong>TOTAL</strong></td><td style="padding:.28rem .5rem;border:1px solid #dde3f0;text-align:right"><strong>Rp 3.000.000</strong></td></tr>
-      </table>
-
-      <p style="font-size:.83rem;font-weight:600;margin:.5rem 0 .2rem">📊 Rumus A × B (Insentif × Achievement Cabang)</p>
-      <ul style="font-size:.84rem;margin:.2rem 0;padding-left:1.2rem;line-height:1.7">
-        <li>Achievement &lt;50% → ×<strong>0,5</strong> (nilai minimal)</li>
-        <li>Achievement &gt;100% → ×<strong>1</strong> (nilai maksimal)</li>
-        <li>Contoh: Ach. 90% → Rp 2.150.000 × 90% = <strong>Rp 1.935.000</strong></li>
+      <h3>Insentif Tarikan &amp; Cutoff</h3>
+      <ul style="font-size:.85rem;margin:.5rem 0;padding-left:1.2rem;line-height:1.7">
+        <li>Data tarikan masuk <strong>maks tgl 7 jam 14:00</strong></li>
+        <li>Insentif cair pada <strong>tgl 25 bulan berikutnya</strong></li>
+        <li>Status <em>paid</em> harus sebelum tgl 7 jam 14:00</li>
+        <li>Keterlambatan data = tidak terhitung bulan berjalan</li>
       </ul>
     </div>
 
-    <!-- 4. Reporting Bulanan / Closing -->
     <div class="ov-card">
       <div class="ov-icon">📆</div>
-      <h3>Reporting Bulanan (MOM &amp; EOM)</h3>
-      <p style="font-size:.83rem;color:#555;margin:.3rem 0 .5rem">Closing terbagi menjadi 2 periode:</p>
-      <ul style="font-size:.85rem;margin:.3rem 0;padding-left:1.2rem;line-height:1.8">
-        <li><strong>MOM</strong> (Mid of Month): awal bulan — tgl 15</li>
-        <li><strong>EOM</strong> (End of Month): tgl 16 — akhir bulan</li>
-        <li>Report dilakukan setiap <strong>H+1 closing</strong></li>
+      <h3>MOM &amp; EOM Closing</h3>
+      <ul style="font-size:.85rem;margin:.5rem 0;padding-left:1.2rem;line-height:1.7">
+        <li><strong>MOM</strong> (Middle of Month): closing pertengahan bulan → review progress target</li>
+        <li><strong>EOM</strong> (End of Month): closing akhir bulan → tutup buku resmi</li>
+        <li>Report H+1 dikirim paling lambat hari kerja berikutnya setelah closing</li>
+        <li>Report tutup buku mencakup: realisasi vs target, outstanding, flow rate, success rate</li>
       </ul>
     </div>
 
-    <!-- 5. Setting Kode POS -->
     <div class="ov-card">
       <div class="ov-icon">🗺️</div>
-      <h3>Setting Kode POS di MAS</h3>
-      <p style="font-size:.83rem;color:#555;margin:.3rem 0 .5rem">Dilakukan <strong>setiap awal bulan</strong> untuk update penugasan FAC dan PAC di masing-masing kode POS.</p>
-      <ul style="font-size:.85rem;margin:.3rem 0;padding-left:1.2rem;line-height:1.8">
-        <li>Setiap kode POS memiliki <strong>amount dan account</strong> → insentif menjadi <strong>hak milik PIC</strong> yang terdaftar</li>
-        <li>Jika tidak di-setting → insentif otomatis menjadi <strong>hak milik PIC lama</strong></li>
+      <h3>Setting Kode POS MAS</h3>
+      <ul style="font-size:.85rem;margin:.5rem 0;padding-left:1.2rem;line-height:1.7">
+        <li>Dilakukan di <strong>awal bulan</strong> sebelum operasional berjalan</li>
+        <li>Kode POS MAS digunakan untuk pemetaan wilayah kerja collector</li>
+        <li>Perubahan kode POS harus melalui persetujuan AASH</li>
+        <li>Berkaitan langsung dengan laporan deviasi jarak kunjungan</li>
       </ul>
     </div>
 
-    <!-- 6. Kelas Cabang -->
     <div class="ov-card">
       <div class="ov-icon">🏆</div>
-      <h3>Parameter Kelas Cabang ASR (Grading)</h3>
-      <p style="font-size:.83rem;font-weight:600;margin:.3rem 0 .3rem">4 Parameter Penilaian:</p>
-      <table style="width:100%;font-size:.82rem;border-collapse:collapse;margin:.2rem 0 .6rem">
-        <thead><tr style="background:var(--blue-main);color:#fff">
-          <th style="padding:.3rem .4rem">Parameter</th><th style="padding:.3rem .4rem;text-align:right">Bobot</th>
-        </tr></thead>
-        <tbody>
-          <tr style="background:#f0f7ff"><td style="padding:.28rem .5rem;border:1px solid #dde3f0">Jumlah account TMA cabang</td><td style="padding:.28rem .5rem;border:1px solid #dde3f0;text-align:right">25%</td></tr>
-          <tr><td style="padding:.28rem .5rem;border:1px solid #dde3f0">Jumlah account OVD 1–9 hari</td><td style="padding:.28rem .5rem;border:1px solid #dde3f0;text-align:right">20%</td></tr>
-          <tr style="background:#f0f7ff"><td style="padding:.28rem .5rem;border:1px solid #dde3f0">Jumlah account OVD 10–30 hari</td><td style="padding:.28rem .5rem;border:1px solid #dde3f0;text-align:right">25%</td></tr>
-          <tr><td style="padding:.28rem .5rem;border:1px solid #dde3f0">Jumlah account OVD &gt;30 hari</td><td style="padding:.28rem .5rem;border:1px solid #dde3f0;text-align:right">30%</td></tr>
-        </tbody>
-      </table>
-      <p style="font-size:.83rem;font-weight:600;margin:.4rem 0 .3rem">Hasil Grading Kelas Cabang:</p>
+      <h3>Kelas Cabang (Grading)</h3>
+      <p style="font-size:.84rem;margin-bottom:.4rem"><strong>4 Parameter Penilaian:</strong></p>
+      <ul style="font-size:.83rem;margin:.3rem 0 .6rem;padding-left:1.2rem">
+        <li>Outstanding (NPL/NPF portofolio)</li>
+        <li>Success Rate</li>
+        <li>Flow Rate</li>
+        <li>Kepatuhan operasional (RKH, geotagging, SP)</li>
+      </ul>
       <table style="font-size:.82rem;width:100%;border-collapse:collapse">
         <thead><tr style="background:var(--blue-main);color:#fff">
-          <th style="padding:.3rem .4rem">Kelas</th><th style="padding:.3rem .4rem">Nilai Akhir</th>
+          <th style="padding:.3rem .4rem">Kelas</th><th style="padding:.3rem .4rem">Predikat</th>
         </tr></thead>
         <tbody>
-          <tr style="background:#e8f5e9"><td style="padding:.25rem .5rem;text-align:center"><strong>A</strong></td><td style="padding:.25rem .5rem">&gt; 4,75 – 5</td></tr>
-          <tr><td style="padding:.25rem .5rem;text-align:center"><strong>B</strong></td><td style="padding:.25rem .5rem">&gt; 2,75 – 4,75</td></tr>
-          <tr style="background:#fff3e0"><td style="padding:.25rem .5rem;text-align:center"><strong>C</strong></td><td style="padding:.25rem .5rem">&gt; 1 – 2,75</td></tr>
-          <tr style="background:#ffeaea"><td style="padding:.25rem .5rem;text-align:center"><strong>D</strong></td><td style="padding:.25rem .5rem">&lt; 1</td></tr>
+          <tr style="background:#e8f5e9"><td style="padding:.25rem .4rem;text-align:center"><strong>A</strong></td><td style="padding:.25rem .4rem">Excellent</td></tr>
+          <tr><td style="padding:.25rem .4rem;text-align:center"><strong>B</strong></td><td style="padding:.25rem .4rem">Good</td></tr>
+          <tr style="background:#fff3e0"><td style="padding:.25rem .4rem;text-align:center"><strong>C</strong></td><td style="padding:.25rem .4rem">Needs Improvement</td></tr>
+          <tr style="background:#ffeaea"><td style="padding:.25rem .4rem;text-align:center"><strong>D</strong></td><td style="padding:.25rem .4rem">Poor</td></tr>
         </tbody>
       </table>
     </div>
 
-    <!-- 7. Pemecahan Cabang -->
-    <div class="ov-card">
-      <div class="ov-icon">🏗️</div>
-      <h3>Pemecahan Cabang</h3>
-      <p style="font-size:.83rem;color:#555;margin:.3rem 0 .5rem">Dilakukan dengan beberapa pertimbangan, contohnya memecah cabang <strong>Used Car</strong> dan <strong>non-Used Car</strong>.</p>
-      <ul style="font-size:.85rem;margin:.3rem 0;padding-left:1.2rem;line-height:1.8">
-        <li>Jika TMA salah satu produk <strong>tidak mencapai 30%</strong> dari total → diajukan perubahan secara <strong>bertahap</strong></li>
-        <li>Perubahan dari penanganan <strong>per produk</strong> menjadi penanganan <strong>per wilayah</strong></li>
-      </ul>
-    </div>
-
-    <!-- 8. Rekomendasi Zonasi -->
     <div class="ov-card">
       <div class="ov-icon">🎯</div>
-      <h3>Rekomendasi Zonasi</h3>
-      <p style="font-size:.83rem;color:#555;margin:.3rem 0 .4rem">Dibuat berdasarkan histori realisasi, tunggakan, dan kolektibilitas. Data diambil dari rentang <strong>28 bulan</strong> → dimasukkan ke Excel (sudah ada rumusnya).</p>
-      <p style="font-size:.83rem;font-weight:600;margin:.4rem 0 .2rem">Parameter penilaian:</p>
-      <ul style="font-size:.83rem;margin:.2rem 0 .5rem;padding-left:1.2rem;line-height:1.7">
-        <li>Pernah menunggak &gt;60 hari</li>
-        <li>Pernah menunggak &gt;90 hari</li>
-        <li>Tarikan non-WO</li>
-        <li>Account di WO</li>
-        <li>WO ter-recovery</li>
-        <li>Poin kategori kasus</li>
-      </ul>
-      <p style="font-size:.83rem;font-weight:600;margin:.4rem 0 .2rem">Hasil score zona:</p>
-      <table style="font-size:.82rem;width:100%;border-collapse:collapse">
-        <tr style="background:#e8f5e9"><td style="padding:.28rem .5rem;border:1px solid #dde3f0">🟢 <strong>Hijau</strong></td><td style="padding:.28rem .5rem;border:1px solid #dde3f0">Poin &lt; 3</td></tr>
-        <tr style="background:#fffde7"><td style="padding:.28rem .5rem;border:1px solid #dde3f0">🟡 <strong>Kuning</strong></td><td style="padding:.28rem .5rem;border:1px solid #dde3f0">Poin 3–5</td></tr>
-        <tr style="background:#ffeaea"><td style="padding:.28rem .5rem;border:1px solid #dde3f0">🔴 <strong>Merah</strong></td><td style="padding:.28rem .5rem;border:1px solid #dde3f0">Poin 5</td></tr>
+      <h3>Zonasi Risiko</h3>
+      <table style="font-size:.82rem;width:100%;border-collapse:collapse;margin-top:.4rem">
+        <thead><tr style="background:var(--blue-main);color:#fff">
+          <th style="padding:.3rem .5rem">Zona</th><th style="padding:.3rem .5rem">Risiko</th><th style="padding:.3rem .5rem">Tindakan</th>
+        </tr></thead>
+        <tbody>
+          <tr style="background:#e8f5e9"><td style="padding:.3rem .5rem;text-align:center">🟢 Hijau</td><td style="padding:.3rem .5rem">Rendah</td><td style="padding:.3rem .5rem">Monitor rutin</td></tr>
+          <tr style="background:#fffde7"><td style="padding:.3rem .5rem;text-align:center">🟡 Kuning</td><td style="padding:.3rem .5rem">Sedang</td><td style="padding:.3rem .5rem">Intensifikasi</td></tr>
+          <tr style="background:#ffeaea"><td style="padding:.3rem .5rem;text-align:center">🔴 Merah</td><td style="padding:.3rem .5rem">Tinggi</td><td style="padding:.3rem .5rpm">Task Force</td></tr>
+        </tbody>
       </table>
     </div>
 
-    <!-- 9. Report Tutup Buku -->
-    <div class="ov-card">
-      <div class="ov-icon">📒</div>
-      <h3>Report Tutup Buku</h3>
-      <p style="font-size:.83rem;color:#555;margin:.3rem 0 .5rem">Dilakukan di <strong>tiap awal bulan</strong>:</p>
-      <ul style="font-size:.85rem;margin:.3rem 0;padding-left:1.2rem;line-height:1.8">
-        <li>Membuat list konsumen yang menjadi <strong>NPL</strong></li>
-        <li>Mengklasifikasikan <strong>layak WO atau tidak</strong> di Excel menggunakan rumus</li>
-      </ul>
-    </div>
-
-    <!-- 10. Report Deviasi Jarak -->
     <div class="ov-card">
       <div class="ov-icon">📉</div>
-      <h3>Report Deviasi Jarak</h3>
-      <p style="font-size:.83rem;color:#555;margin:.3rem 0 .5rem">Dibuat berdasarkan titik lokasi inputan vs lokasi yang seharusnya di MAS.</p>
-      <ul style="font-size:.85rem;margin:.3rem 0;padding-left:1.2rem;line-height:1.8">
-        <li>Dikelompokkan dalam deviasi <strong>&gt;2 km s/d 10 km</strong></li>
-        <li>Dikirimkan ke <strong>pak Iril</strong></li>
+      <h3>Report Deviasi Jarak &amp; MPP</h3>
+      <p style="font-size:.84rem;margin-bottom:.4rem"><strong>Report Deviasi Jarak:</strong></p>
+      <ul style="font-size:.83rem;margin:.2rem 0 .6rem;padding-left:1.2rem">
+        <li>Rekap collector yang kunjungan &gt; 3 km dari alamat debitur</li>
+        <li>Dikirim ke AASH &amp; kepala cabang tiap hari</li>
+        <li>Dasar coaching &amp; evaluasi kinerja lapangan</li>
+      </ul>
+      <p style="font-size:.84rem;margin-bottom:.4rem"><strong>Analisis MPP (Man Power Planning):</strong></p>
+      <ul style="font-size:.83rem;margin:.2rem 0;padding-left:1.2rem">
+        <li>Analisis kebutuhan SDM vs portofolio aktif</li>
+        <li>Dasar pemecahan / penggabungan cabang</li>
+        <li>Review berkala setiap kuartal atau saat terjadi perubahan signifikan</li>
       </ul>
     </div>
 
-    <!-- 11. Analisis MPP -->
     <div class="ov-card">
-      <div class="ov-icon">👥</div>
-      <h3>Analisis MPP (Man Power Planning)</h3>
-      <p style="font-size:.83rem;color:#555;margin:.3rem 0 .5rem">Mengatur berapa SDM yang diperlukan untuk setiap cabang.</p>
-      <ul style="font-size:.85rem;margin:.3rem 0;padding-left:1.2rem;line-height:1.8">
-        <li>Mempertimbangkan <strong>budget HR</strong> dan <strong>beban dari cabang</strong></li>
-        <li>Beberapa cabang tidak memiliki PAC karena TMA-nya tidak terlalu besar → masih bisa dihandle FAC dengan wilayah kelolaan yang tidak terlalu besar</li>
+      <div class="ov-icon">🏗️</div>
+      <h3>Pemecahan &amp; Penggabungan Cabang</h3>
+      <ul style="font-size:.85rem;margin:.5rem 0;padding-left:1.2rem;line-height:1.7">
+        <li>Pemecahan cabang dilakukan jika portofolio sudah terlalu besar untuk 1 tim</li>
+        <li>Penggabungan jika portofolio terlalu kecil (efisiensi SDM)</li>
+        <li>Perlu analisis MPP &amp; persetujuan Area AASH &amp; Regional ASDH</li>
+        <li>Kode cabang baru didaftarkan ke sistem MAS setelah disetujui</li>
+        <li>Semua collector diremap ulang sesuai wilayah baru</li>
       </ul>
     </div>
 
   </div>
 </div>
 </div>
-
-
-<div id="skse" class="section-alt">
-<div class="section">
-  <div class="st">
-    <h2>📑 Galeri Dokumen SK &amp; SE</h2>
-    <p>Semua Surat Keputusan, Surat Edaran, Memo, dan Instruksi Kerja ASR — klik gambar untuk memperbesar</p>
-    <p style="font-size:.82rem;margin-top:.4rem"><span style="display:inline-block;background:rgba(45,198,83,.15);border-radius:5px;padding:.2rem .7rem;color:#1a7a3c;font-weight:600">💡 Teks hijau bergaris bawah</span> di seluruh halaman = informasi berasal dari SK/SE resmi. Klik untuk langsung ke dokumen sumbernya.</p>
-  </div>
-  <div class="filter-tabs" id="filterTabs">
-    <button class="ftab active" onclick="filterDocs('all',this)">Semua <span id="countAll"></span></button>
-    <button class="ftab" onclick="filterDocs('SK',this)">Surat Keputusan <span id="countSK"></span></button>
-    <button class="ftab" onclick="filterDocs('SE',this)">Surat Edaran <span id="countSE"></span></button>
-    <button class="ftab" onclick="filterDocs('Memo',this)">Memo <span id="countMemo"></span></button>
-    <button class="ftab" onclick="filterDocs('Instruksi Kerja',this)">Instruksi Kerja <span id="countIK"></span></button>
-    <span class="doc-count" id="docCountLabel"></span>
-  </div>
-  <div class="doc-gallery" id="docGallery"></div>
-</div>
-</div>
-
-
-<div id="pojk">
-<div class="section">
-  <div class="st">
-    <h2>⚖️ Landasan Hukum &amp; POJK</h2>
-    <p>"Kitab Suci Leasing" — 5 peraturan yang wajib dipahami. Klik untuk buka detail.</p>
-  </div>
-  <div class="pojk-grid" id="pojkGrid"></div>
-</div>
-</div>
-
-
-<div id="docs" class="section-alt">
-<div class="section">
-  <div class="st"><h2>📁 Dokumen Wajib Penagihan</h2><p>Dokumen yang wajib dibawa saat penagihan dan pengamanan unit</p></div>
-  <div style="overflow-x:auto;border-radius:var(--r);box-shadow:var(--shadow)">
-    <table class="doc-table">
-      <thead><tr><th>Dokumen</th><th>Singkatan</th><th>Fungsi</th><th>Jenis</th><th>Masa Berlaku</th></tr></thead>
-      <tbody>
-        <tr><td><b>Surat Tugas</b></td><td>ST</td><td>Pengamanan unit fidusia oleh pihak <b>internal</b> BCAF</td><td><span class="badge-pill int">Internal</span></td><td><span class="sk-ref" onclick="gotoDoc('ketentuan-penarikan')">7 hari, perpanjang 2×</span></td></tr>
-        <tr><td><b>Surat Kuasa</b></td><td>SK</td><td>Pengamanan unit oleh <b>BHJP eksternal</b>. <span class="sk-ref" onclick="gotoDoc('ketentuan-penarikan')">OVD &gt;90 hr</span> atau memo percepatan (approval BOD)</td><td><span class="badge-pill ext">Eksternal</span></td><td><span class="sk-ref" onclick="gotoDoc('ketentuan-penarikan')">7 hr (AS) / 14 hr (Recovery), perpanjang 2×</span></td></tr>
-        <tr><td><b>Berita Acara Serah Terima</b></td><td>BAST</td><td>Bukti serah terima kendaraan antara konsumen dan FAC/PAC. <span class="sk-ref" onclick="gotoDoc('penerimaan-kend')">Beda ceklist = memo penyimpangan</span></td><td><span class="badge-pill both">Keduanya</span></td><td><span class="sk-ref" onclick="gotoDoc('penerimaan-kend')"><b>1 hari</b> (lebih dari 1 hr wajib memo penyimpangan kronologis pool)</span></td></tr>
-        <tr><td><b>Sertifikat Fidusia</b></td><td>SK Fidusia</td><td>Bukti hukum bahwa kendaraan adalah jaminan fidusia milik BCAF. Kekuatan setara putusan pengadilan</td><td><span class="badge-pill both">Keduanya</span></td><td>Sesuai kontrak pembiayaan</td></tr>
-        <tr><td><b>Tabel Angsuran</b></td><td>—</td><td>Rincian jadwal angsuran dan sisa kewajiban konsumen</td><td><span class="badge-pill both">Keduanya</span></td><td>—</td></tr>
-        <tr><td><b>Sertifikat Profesi Penagihan Indonesia</b></td><td>SPPI</td><td>Sertifikasi wajib bagi petugas penagihan/penarikan (termasuk BHJP eksternal)</td><td><span class="badge-pill both">Keduanya</span></td><td>Sesuai ketentuan OJK/POJK 35</td></tr>
-        <tr><td><b>Perjanjian Pembiayaan Kredit</b></td><td>PPK</td><td>Kontrak perjanjian kredit antara konsumen dan BCAF</td><td><span class="badge-pill both">Keduanya</span></td><td>Sesuai kontrak</td></tr>
-        <tr><td><b>Bukti Somasi</b></td><td>—</td><td>Wajib dilampirkan saat pengajuan pendampingan kepolisian (PERKAP 8/2011) — harus sudah kirim 2×</td><td><span class="badge-pill ext">Eksternal</span></td><td>—</td></tr>
-      </tbody>
-    </table>
-  </div>
-</div>
-</div>
-
-
 
 <!-- FOOTER -->
 <footer>
@@ -2161,22 +2137,20 @@ pojkData.forEach(p => {
 });
 
 // Memos accordion
-const IMG = (src) => `<img src="img/${src}" style="margin-top:.7rem;width:100%;border-radius:8px;border:1px solid #ddd;display:block">`;
-const IMG2 = (a, b) => `<div style="display:flex;gap:.5rem;margin-top:.7rem"><img src="img/${a}" style="width:50%;border-radius:8px;border:1px solid #ddd;object-fit:contain"><img src="img/${b}" style="width:50%;border-radius:8px;border:1px solid #ddd;object-fit:contain"></div>`;
 const memos = [
-  { t:'Penyimpangan Geotagging', b:'Diajukan ketika FAC/PAC berdiam &gt;2 jam di satu titik saat jam kerja, berkumpul di 1 titik &gt;2 jam, atau PAC di kantor &gt;3 jam (Recovery: ARO tidak bergerak &gt;2 jam, di kantor &gt;4 jam).'+IMG('memo-geotagging.png') },
-  { t:'Penyimpangan Deviasi', b:'Diajukan ketika FAC/PAC melakukan inputan di lokasi yang berbeda (&gt;3 km) dari lokasi yang tercatat di MAS.'+IMG('memo-deviasi.png') },
-  { t:'Penyimpangan Beda Ceklist BAST', b:'Diajukan ketika ceklist BAST FAC/PAC memiliki perbedaan saat dilakukan pengecekan oleh petugas pool.'+IMG('memo-beda-ceklist.png') },
-  { t:'Penyimpangan Remarks (Kosong / &lt;5 kata / Copy Paste)', b:'Remarks di MAS kosong = memo. Kurang dari 5 kata = memo. Copy-paste dari kunjungan berbeda = memo. Wajib ada remarks informatif di setiap kunjungan.'+IMG2('memo-remarks.png','memo-remarks-lt5.png') },
-  { t:'Pelunasan Khusus', b:'Diajukan ketika konsumen minta pelunasan khusus (biasanya lebih kecil dari OSPOH tersisa). Butuh <b>approval 2 BOD</b>. Dokumen: surat permohonan debitur, KTP, memo data konsumen &amp; dasar pengajuan.'+IMG('memo-pelunasan-khusus.png') },
-  { t:'Waive Denda', b:'Diajukan untuk keringanan denda keterlambatan. Dokumen: data konsumen &amp; kendaraan, data pinjaman, kronologis, analisa ASR. Kewenangan: <span class="sk-ref" onclick="gotoDoc(\'ketentuan-waive-denda\')">ASDH ≤35%, NASDD ≤50%, BOD ≥50%</span>.'+IMG2('memo-waive-denda-1.png','memo-waive-denda-2.png') },
-  { t:'Reversal Dana', b:'Diajukan ketika konsumen masih terkena autodebet padahal unit telah diamankan. Dokumen: surat permohonan konsumen, KTP, form permohonan penyelesaian kelebihan dana.'+IMG('memo-reversal-dana.png') },
-  { t:'Pinjam Pakai BAST', b:'Dikeluarkan ketika cabang ingin menggunakan BAST dari cabang lain karena unit berada di luar jangkauan cabang asal — namun SK/ST tetap dari cabang asal.'+IMG2('memo-pinjam-pakai-bast-1.png','memo-pinjam-pakai-bast-2.png') },
-  { t:'Percepatan Penanganan (Cetak SK OVD &lt;90 hari)', b:'Dikeluarkan untuk <span class="sk-ref" onclick="gotoDoc(\'ketentuan-penarikan\')">cetak SK walaupun OVD konsumen belum &gt;90 hari</span>. Memerlukan <b>approval hingga BOD</b>.'+IMG('memo-percepatan.png') },
-  { t:'Tunda Aset / Hold Aset', b:'Dikeluarkan ketika unit tidak bisa dilelang: konsumen ingin tebus, ada LP, masalah ormas. <span class="sk-ref" onclick="gotoDoc(\'kewenangan-recovery-div\')"><b>OVD &lt;90 hr di pool: approval DD. OVD &gt;90 hr di pool: approval BOD.</b></span>'+IMG('memo-tunda-aset.png') },
-  { t:'Derek', b:'Diajukan untuk reimburse biaya derek kendaraan tarikan yang perlu didrek ke pool.'+IMG2('memo-derek-1.png','memo-derek-2.png') },
-  { t:'Pengeluaran Kendaraan Tarikan', b:'Dikeluarkan untuk mengeluarkan kendaraan tarikan dari pool — biasanya saat konsumen melakukan penebusan.'+IMG('memo-pengeluaran-kendaraan.png') },
-  { t:'Bantuan Penanganan (Antar Cabang)', b:'Dikeluarkan ketika ingin meminta bantuan cabang lain di luar area (misal JABO 1 minta ke JABO 3). BAST &amp; SK keluar dari cabang yang diminta. <b>Approval 2 AASH &amp; 2 DH Region masing-masing.</b>'+IMG('memo-bantuan-penanganan.png') },
+  { t:'Penyimpangan Geotagging', b:'Diajukan ketika FAC/PAC berdiam &gt;2 jam di satu titik saat jam kerja, berkumpul di 1 titik &gt;2 jam, atau PAC di kantor &gt;3 jam (Recovery: ARO tidak bergerak &gt;2 jam, di kantor &gt;4 jam).' },
+  { t:'Penyimpangan Deviasi', b:'Diajukan ketika FAC/PAC melakukan inputan di lokasi yang berbeda (&gt;3 km) dari lokasi yang tercatat di MAS.' },
+  { t:'Penyimpangan Beda Ceklist BAST', b:'Diajukan ketika ceklist BAST FAC/PAC memiliki perbedaan saat dilakukan pengecekan oleh petugas pool.' },
+  { t:'Penyimpangan Remarks (Kosong / &lt;5 kata / Copy Paste)', b:'Remarks di MAS kosong = memo. Kurang dari 5 kata = memo. Copy-paste dari kunjungan berbeda = memo. Wajib ada remarks informatif di setiap kunjungan.' },
+  { t:'Pelunasan Khusus', b:'Diajukan ketika konsumen minta pelunasan khusus (biasanya lebih kecil dari OSPOH tersisa). Butuh <b>approval 2 BOD</b>. Dokumen: surat permohonan debitur, KTP, memo data konsumen &amp; dasar pengajuan.' },
+  { t:'Waive Denda', b:'Diajukan untuk keringanan denda keterlambatan. Dokumen: data konsumen &amp; kendaraan, data pinjaman, kronologis, analisa ASR. Kewenangan: <span class="sk-ref" onclick="gotoDoc(\'ketentuan-waive-denda\')">ASDH ≤35%, NASDD ≤50%, BOD ≥50%</span>.' },
+  { t:'Reversal Dana', b:'Diajukan ketika konsumen masih terkena autodebet padahal unit telah diamankan. Dokumen: surat permohonan konsumen, KTP, form permohonan penyelesaian kelebihan dana.' },
+  { t:'Pinjam Pakai BAST', b:'Dikeluarkan ketika cabang ingin menggunakan BAST dari cabang lain karena unit berada di luar jangkauan cabang asal — namun SK/ST tetap dari cabang asal.' },
+  { t:'Percepatan Penanganan (Cetak SK OVD &lt;90 hari)', b:'Dikeluarkan untuk <span class="sk-ref" onclick="gotoDoc(\'ketentuan-penarikan\')">cetak SK walaupun OVD konsumen belum &gt;90 hari</span>. Memerlukan <b>approval hingga BOD</b>.' },
+  { t:'Tunda Aset / Hold Aset', b:'Dikeluarkan ketika unit tidak bisa dilelang: konsumen ingin tebus, ada LP, masalah ormas. <span class="sk-ref" onclick="gotoDoc(\'kewenangan-recovery-div\')"><b>OVD &lt;90 hr di pool: approval DD. OVD &gt;90 hr di pool: approval BOD.</b></span>' },
+  { t:'Derek', b:'Diajukan untuk reimburse biaya derek kendaraan tarikan yang perlu didrek ke pool.' },
+  { t:'Pengeluaran Kendaraan Tarikan', b:'Dikeluarkan untuk mengeluarkan kendaraan tarikan dari pool — biasanya saat konsumen melakukan penebusan.' },
+  { t:'Bantuan Penanganan (Antar Cabang)', b:'Dikeluarkan ketika ingin meminta bantuan cabang lain di luar area (misal JABO 1 minta ke JABO 3). BAST &amp; SK keluar dari cabang yang diminta. <b>Approval 2 AASH &amp; 2 DH Region masing-masing.</b>' },
   { t:'Penyimpangan Keterlambatan Pencairan Tarikan', b:'Diajukan ketika data tarikan masuk <span class="sk-ref" onclick="gotoDoc(\'penetapan-tanggal-cut-o\')">setelah tanggal 7 jam 14:00. Insentif baru bisa cair di tanggal 25 bulan berikutnya</span>.' },
   { t:'Sharing Loss', b:'Diajukan ketika ingin memberikan kompensasi dana kepada konsumen saat penarikan unit. Alur: cabang ajukan ke Task Force → verifikasi → buat memo → tarik unit → serahkan berkas → pencairan dana. Dokumen: ST, BAST, Surat Pernyataan Debitur, Memo approval.' },
 ];
@@ -2195,274 +2169,245 @@ memos.forEach(m => {
 // Init gallery
 window.addEventListener('DOMContentLoaded', initGallery);
 </script>
-
 <!-- ============================================================
-     FIREBASE COMMENT SYSTEM — Figma/Canva Style
-     Setup: Isi firebaseConfig di bawah dengan konfigurasi Firebase kamu
+     FIREBASE COMMENT SYSTEM — Figma/Canva Style (v2 — event delegation)
      ============================================================ -->
 <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
 
 <style>
-/* ── Comment Layer ─────────────────────────────────────────── */
+/* ── Layer ─────────────────────────────────────────────────── */
 body { position: relative; }
-
 #cmt-layer {
   position: absolute; top: 0; left: 0;
-  width: 100%; height: 100%;
+  width: 100%; min-height: 100%;
   pointer-events: none;
-  z-index: 9800;
+  z-index: 10100;
 }
 
 /* ── Pin ───────────────────────────────────────────────────── */
 .cmt-pin {
-  position: absolute;
-  pointer-events: all;
-  width: 30px; height: 30px;
+  position: absolute; pointer-events: all;
+  width: 28px; height: 28px;
   border-radius: 50% 50% 50% 2px;
-  transform: translate(-50%, -100%) rotate(0deg);
+  transform: translate(-50%, -100%);
   display: flex; align-items: center; justify-content: center;
-  font-size: .72rem; font-weight: 800; color: #fff;
+  font-size: .68rem; font-weight: 800; color: #fff;
   cursor: pointer; user-select: none;
   background: #0050C8;
-  box-shadow: 0 3px 12px rgba(0,80,200,.4);
+  box-shadow: 0 3px 10px rgba(0,80,200,.5);
   border: 2px solid #fff;
   transition: transform .15s, box-shadow .15s;
-  z-index: 9801;
+  z-index: 10101;
 }
-.cmt-pin:hover {
-  transform: translate(-50%, -100%) scale(1.2);
-  box-shadow: 0 5px 18px rgba(0,80,200,.55);
-}
-.cmt-pin.mine  { background: #E63946; box-shadow: 0 3px 12px rgba(230,57,70,.4); }
-.cmt-pin.open  { background: #2DC653; box-shadow: 0 3px 12px rgba(45,198,83,.4); }
+.cmt-pin:hover { transform: translate(-50%,-100%) scale(1.18); }
+.cmt-pin.open  { background: #2DC653; box-shadow: 0 3px 10px rgba(45,198,83,.5); }
 
-/* ── Bubble card (popup saat pin diklik) ───────────────────── */
+/* ── Bubble ────────────────────────────────────────────────── */
 .cmt-bubble {
-  position: absolute;
+  position: fixed;          /* fixed = selalu di layar, tidak ikut scroll */
   pointer-events: all;
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 8px 32px rgba(0,48,135,.18);
-  padding: 0;
+  box-shadow: 0 8px 32px rgba(0,48,135,.22);
   width: 280px;
   font-family: 'Segoe UI', sans-serif;
-  z-index: 9810;
+  z-index: 10200;           /* di atas segalanya termasuk lightbox (9999) */
   border: 1px solid #dce4f5;
   overflow: hidden;
-  animation: cmtFadeIn .15s ease;
+  animation: cmtPop .15s ease;
 }
-@keyframes cmtFadeIn {
-  from { opacity:0; transform:scale(.92) translateY(4px); }
+@keyframes cmtPop {
+  from { opacity:0; transform:scale(.9) translateY(6px); }
   to   { opacity:1; transform:scale(1) translateY(0); }
 }
 .cmt-bubble-head {
-  background: #003087;
-  color: #fff;
-  padding: .55rem .85rem;
-  display: flex; align-items: center; gap: .5rem;
-  font-size: .8rem; font-weight: 700;
+  background:#003087; color:#fff;
+  padding:.5rem .8rem;
+  display:flex; align-items:center; gap:.4rem;
+  font-size:.78rem; font-weight:700;
 }
-.cmt-bubble-author { flex: 1; opacity: .9; }
-.cmt-bubble-time { font-size: .68rem; opacity: .65; margin-left: auto; }
-.cmt-bubble-close {
-  background: none; border: none; color: #fff;
-  cursor: pointer; font-size: 1rem; padding: 0; line-height: 1;
-  opacity: .7; margin-left: .3rem;
+.cmt-bubble-author { flex:1; }
+.cmt-bubble-time   { font-size:.65rem; opacity:.6; }
+.cmt-bubble-close  {
+  background:none; border:none; color:#fff;
+  cursor:pointer; font-size:1rem; padding:0;
+  opacity:.7; margin-left:.3rem;
 }
-.cmt-bubble-close:hover { opacity: 1; }
+.cmt-bubble-close:hover { opacity:1; }
 .cmt-bubble-body {
-  padding: .8rem .85rem;
-  font-size: .88rem; color: #1a2340; line-height: 1.55;
-  word-break: break-word;
-  min-height: 48px;
+  padding:.75rem .8rem;
+  font-size:.87rem; color:#1a2340; line-height:1.5;
+  word-break:break-word; min-height:44px;
+  outline:none;
 }
 .cmt-bubble-body[contenteditable="true"] {
-  background: #f4f6fb;
-  border-radius: 6px;
-  outline: 2px solid #0050C8;
-  padding: .6rem .85rem;
+  background:#f4f6fb;
+  outline:2px solid #0050C8;
 }
 .cmt-bubble-actions {
-  display: flex; gap: .4rem;
-  padding: .5rem .85rem .7rem;
-  border-top: 1px solid #edf0f8;
+  display:flex; gap:.35rem; flex-wrap:wrap;
+  padding:.45rem .8rem .65rem;
+  border-top:1px solid #edf0f8;
+  pointer-events: all;
 }
 .cmt-btn {
-  padding: .3rem .75rem; border-radius: 6px; border: none;
-  font-size: .78rem; font-weight: 600; cursor: pointer;
-  transition: background .15s, color .15s;
+  padding:.28rem .7rem; border-radius:6px; border:none;
+  font-size:.76rem; font-weight:600; cursor:pointer;
+  pointer-events: all;
+  transition:background .15s,color .15s;
+  -webkit-tap-highlight-color: transparent;
 }
-.cmt-btn-edit  { background: #e8f0fe; color: #0050C8; }
-.cmt-btn-edit:hover  { background: #0050C8; color: #fff; }
-.cmt-btn-save  { background: #2DC653; color: #fff; }
-.cmt-btn-save:hover  { background: #22a343; }
-.cmt-btn-del   { background: #fde8ea; color: #E63946; margin-left: auto; }
-.cmt-btn-del:hover   { background: #E63946; color: #fff; }
-.cmt-btn-cancel { background: #f4f6fb; color: #6B7280; }
-.cmt-btn-cancel:hover { background: #e0e0e0; }
+.cmt-btn-edit   { background:#e8f0fe; color:#0050C8; }
+.cmt-btn-edit:hover   { background:#0050C8; color:#fff; }
+.cmt-btn-save   { background:#2DC653; color:#fff; }
+.cmt-btn-save:hover   { background:#22a343; }
+.cmt-btn-del    { background:#fde8ea; color:#E63946; margin-left:auto; }
+.cmt-btn-del:hover    { background:#E63946; color:#fff; }
+.cmt-btn-cancel { background:#f4f6fb; color:#6B7280; }
+.cmt-btn-cancel:hover { background:#e0e0e0; }
+.cmt-btn-ok     { background:#E63946; color:#fff; }
+.cmt-btn-ok:hover     { background:#b91c2b; }
 
-/* ── Input popup (saat double-click) ──────────────────────── */
+/* ── Input popup ──────────────────────────────────────────── */
 #cmt-input-wrap {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  pointer-events: none;
+  display:none; position:fixed;
+  z-index:10300; pointer-events:none;
 }
-#cmt-input-wrap.show { display: block; pointer-events: all; }
-
+#cmt-input-wrap.show { display:block; pointer-events:all; }
 #cmt-input-box {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 10px 40px rgba(0,48,135,.2);
-  overflow: hidden;
-  width: 300px;
-  font-family: 'Segoe UI', sans-serif;
-  border: 1px solid #dce4f5;
-  animation: cmtFadeIn .18s ease;
+  background:#fff; border-radius:12px;
+  box-shadow:0 10px 40px rgba(0,48,135,.22);
+  overflow:hidden; width:300px;
+  font-family:'Segoe UI',sans-serif;
+  border:1px solid #dce4f5;
+  animation:cmtPop .18s ease;
 }
 #cmt-input-header {
-  background: #003087; color: #fff;
-  padding: .6rem 1rem; font-size: .85rem; font-weight: 700;
-  display: flex; align-items: center; gap: .4rem;
+  background:#003087; color:#fff;
+  padding:.55rem 1rem; font-size:.82rem; font-weight:700;
 }
 #cmt-author-input {
-  display: block; width: 100%;
-  border: none; border-bottom: 1px solid #edf0f8;
-  padding: .55rem 1rem; font-size: .82rem;
-  font-family: inherit; color: #1a2340;
-  outline: none; background: #f9fbff;
+  display:block; width:100%; box-sizing:border-box;
+  border:none; border-bottom:1px solid #edf0f8;
+  padding:.5rem 1rem; font-size:.8rem;
+  font-family:inherit; color:#1a2340;
+  outline:none; background:#f9fbff;
 }
-#cmt-author-input:focus { background: #eef3ff; }
 #cmt-text-input {
-  display: block; width: 100%; resize: none;
-  border: none; padding: .7rem 1rem;
-  font-size: .88rem; font-family: inherit; color: #1a2340;
-  outline: none; line-height: 1.55; min-height: 80px;
+  display:block; width:100%; box-sizing:border-box;
+  resize:none; border:none;
+  padding:.65rem 1rem; font-size:.86rem;
+  font-family:inherit; color:#1a2340;
+  outline:none; line-height:1.5; min-height:76px;
 }
-#cmt-text-input:focus { background: #fafbff; }
 #cmt-input-actions {
-  display: flex; gap: .5rem;
-  padding: .5rem .85rem .75rem;
-  border-top: 1px solid #edf0f8;
+  display:flex; gap:.5rem;
+  padding:.45rem .8rem .7rem;
+  border-top:1px solid #edf0f8;
 }
 #cmt-submit-btn {
-  background: #0050C8; color: #fff;
-  padding: .35rem 1rem; border-radius: 6px;
-  border: none; font-size: .82rem; font-weight: 700;
-  cursor: pointer; flex: 1;
+  background:#0050C8; color:#fff;
+  padding:.32rem 1rem; border-radius:6px;
+  border:none; font-size:.8rem; font-weight:700;
+  cursor:pointer; flex:1;
 }
-#cmt-submit-btn:hover { background: #003087; }
-#cmt-submit-btn:disabled { background: #aac0e8; cursor: default; }
+#cmt-submit-btn:hover  { background:#003087; }
 #cmt-cancel-btn {
-  background: #f4f6fb; color: #6B7280;
-  padding: .35rem .9rem; border-radius: 6px;
-  border: none; font-size: .82rem; cursor: pointer;
+  background:#f4f6fb; color:#6B7280;
+  padding:.32rem .85rem; border-radius:6px;
+  border:none; font-size:.8rem; cursor:pointer;
 }
-#cmt-cancel-btn:hover { background: #e0e0e0; }
+#cmt-cancel-btn:hover  { background:#e0e0e0; }
 
-/* ── Toggle & Counter button ───────────────────────────────── */
+/* ── FAB ───────────────────────────────────────────────────── */
 #cmt-toggle-btn {
-  position: fixed; bottom: 24px; right: 24px;
-  z-index: 9900;
-  background: #003087; color: #fff;
-  border: none; border-radius: 50px;
-  padding: .6rem 1.1rem; font-size: .85rem; font-weight: 700;
-  cursor: pointer; box-shadow: 0 4px 18px rgba(0,48,135,.35);
-  display: flex; align-items: center; gap: .5rem;
-  transition: background .2s, transform .15s;
-  user-select: none;
+  position:fixed; bottom:22px; right:22px;
+  z-index:10300;
+  background:#003087; color:#fff;
+  border:none; border-radius:50px;
+  padding:.55rem 1rem; font-size:.82rem; font-weight:700;
+  cursor:pointer; box-shadow:0 4px 18px rgba(0,48,135,.4);
+  display:flex; align-items:center; gap:.45rem;
+  user-select:none; transition:background .2s,transform .15s;
 }
-#cmt-toggle-btn:hover { background: #0050C8; transform: translateY(-2px); }
-#cmt-toggle-btn .cmt-count {
-  background: #F5A623; color: #003087;
-  border-radius: 999px; font-size: .72rem;
-  padding: .1rem .45rem; font-weight: 800;
-  min-width: 18px; text-align: center;
+#cmt-toggle-btn:hover { background:#0050C8; transform:translateY(-2px); }
+.cmt-count {
+  background:#F5A623; color:#003087;
+  border-radius:999px; font-size:.7rem;
+  padding:.08rem .4rem; font-weight:800; min-width:16px; text-align:center;
 }
 
-/* ── Comment panel (daftar semua comment) ──────────────────── */
+/* ── Panel ─────────────────────────────────────────────────── */
 #cmt-panel {
-  position: fixed; right: 0; top: 58px; bottom: 0;
-  width: 300px; background: #fff;
-  border-left: 1px solid #dce4f5;
-  z-index: 9850; display: flex; flex-direction: column;
-  box-shadow: -6px 0 24px rgba(0,48,135,.1);
-  transform: translateX(100%);
-  transition: transform .25s cubic-bezier(.4,0,.2,1);
+  position:fixed; right:0; top:58px; bottom:0;
+  width:290px; background:#fff;
+  border-left:1px solid #dce4f5;
+  z-index:10250; display:flex; flex-direction:column;
+  box-shadow:-6px 0 24px rgba(0,48,135,.1);
+  transform:translateX(100%);
+  transition:transform .25s cubic-bezier(.4,0,.2,1);
+  pointer-events:all;
 }
-#cmt-panel.open { transform: translateX(0); }
+#cmt-panel.open { transform:translateX(0); }
 #cmt-panel-head {
-  background: #003087; color: #fff;
-  padding: .85rem 1rem; font-size: .9rem; font-weight: 700;
-  display: flex; align-items: center; gap: .5rem;
+  background:#003087; color:#fff;
+  padding:.8rem 1rem; font-size:.88rem; font-weight:700;
+  display:flex; align-items:center; gap:.4rem;
 }
 #cmt-panel-close {
-  margin-left: auto; background: none; border: none;
-  color: #fff; cursor: pointer; font-size: 1.2rem; opacity: .7;
+  margin-left:auto; background:none; border:none;
+  color:#fff; cursor:pointer; font-size:1.2rem; opacity:.7;
 }
-#cmt-panel-close:hover { opacity: 1; }
+#cmt-panel-close:hover { opacity:1; }
 #cmt-hint {
-  padding: .5rem 1rem; font-size: .75rem; color: #6B7280;
-  background: #f9fbff; border-bottom: 1px solid #edf0f8;
-  display: flex; align-items: center; gap: .4rem;
+  padding:.45rem 1rem; font-size:.73rem; color:#6B7280;
+  background:#f9fbff; border-bottom:1px solid #edf0f8;
 }
-#cmt-panel-list {
-  flex: 1; overflow-y: auto;
-  padding: .5rem 0;
-}
+#cmt-panel-list { flex:1; overflow-y:auto; padding:.4rem 0; }
 .cmt-panel-item {
-  padding: .75rem 1rem; cursor: pointer;
-  border-bottom: 1px solid #f0f2f8;
-  transition: background .15s;
+  padding:.7rem 1rem; cursor:pointer;
+  border-bottom:1px solid #f0f2f8;
+  transition:background .15s;
 }
-.cmt-panel-item:hover { background: #f4f6fb; }
-.cmt-panel-item-author {
-  font-size: .78rem; font-weight: 700; color: #003087;
-  margin-bottom: .2rem;
-}
-.cmt-panel-item-text {
-  font-size: .82rem; color: #1a2340;
-  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-}
-.cmt-panel-item-time {
-  font-size: .7rem; color: #9ca3af; margin-top: .2rem;
-}
-#cmt-panel-empty {
-  text-align: center; padding: 2.5rem 1rem;
-  color: #9ca3af; font-size: .85rem;
-}
+.cmt-panel-item:hover { background:#f4f6fb; }
+.cmt-panel-item-author { font-size:.76rem; font-weight:700; color:#003087; margin-bottom:.15rem; }
+.cmt-panel-item-text { font-size:.8rem; color:#1a2340; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.cmt-panel-item-time  { font-size:.68rem; color:#9ca3af; margin-top:.15rem; }
+#cmt-panel-empty { text-align:center; padding:2.5rem 1rem; color:#9ca3af; font-size:.82rem; }
 
-/* ── Mode indicator ────────────────────────────────────────── */
+/* ── Mode bar & Loading ────────────────────────────────────── */
 #cmt-mode-bar {
-  position: fixed; top: 58px; left: 50%; transform: translateX(-50%);
-  background: rgba(0,48,135,.92); color: #fff;
-  padding: .4rem 1.2rem; border-radius: 0 0 10px 10px;
-  font-size: .78rem; font-weight: 600;
-  z-index: 9900; display: none;
-  backdrop-filter: blur(4px);
-  pointer-events: none;
+  position:fixed; top:58px; left:50%; transform:translateX(-50%);
+  background:rgba(0,48,135,.92); color:#fff;
+  padding:.38rem 1.1rem; border-radius:0 0 8px 8px;
+  font-size:.76rem; font-weight:600;
+  z-index:10300; display:none;
+  pointer-events:none;
 }
-#cmt-mode-bar.show { display: block; }
-
-/* ── Firebase loading indicator ─────────────────────────────── */
+#cmt-mode-bar.show { display:block; }
 #cmt-loading {
-  position: fixed; bottom: 80px; right: 24px;
-  background: rgba(0,48,135,.85); color: #fff;
-  padding: .4rem .85rem; border-radius: 8px;
-  font-size: .75rem; z-index: 9901;
-  display: none;
+  position:fixed; bottom:76px; right:22px;
+  background:rgba(0,48,135,.85); color:#fff;
+  padding:.35rem .8rem; border-radius:8px;
+  font-size:.73rem; z-index:10300; display:none;
+}
+
+/* ── Mobile responsive ─────────────────────────────────────── */
+@media (max-width:600px) {
+  .cmt-bubble { width:260px; }
+  #cmt-panel  { width:100%; top:auto; bottom:0; height:60vh; border-radius:16px 16px 0 0; }
 }
 </style>
 
-<!-- Comment Layer & UI Elements -->
+<!-- Comment Layer & UI -->
 <div id="cmt-layer"></div>
 
 <div id="cmt-input-wrap">
   <div id="cmt-input-box">
-    <div id="cmt-input-header">💬 Tambah Comment</div>
-    <input id="cmt-author-input" placeholder="Nama kamu..." maxlength="40" autocomplete="off">
-    <textarea id="cmt-text-input" placeholder="Tulis comment di sini..." maxlength="500"></textarea>
+    <div id="cmt-input-header">💬 Tambah Komentar</div>
+    <input  id="cmt-author-input" placeholder="Nama kamu…" maxlength="40" autocomplete="off">
+    <textarea id="cmt-text-input" placeholder="Tulis komentar di sini…" maxlength="500"></textarea>
     <div id="cmt-input-actions">
       <button id="cmt-cancel-btn">Batal</button>
       <button id="cmt-submit-btn">Simpan 💾</button>
@@ -2471,30 +2416,28 @@ body { position: relative; }
 </div>
 
 <button id="cmt-toggle-btn">
-  💬 Comments
-  <span class="cmt-count" id="cmt-total">0</span>
+  💬 Komentar <span class="cmt-count" id="cmt-total">0</span>
 </button>
 
 <div id="cmt-panel">
   <div id="cmt-panel-head">
-    💬 Semua Comments
+    💬 Semua Komentar
     <button id="cmt-panel-close">✕</button>
   </div>
-  <div id="cmt-hint">💡 Double-click di mana saja untuk tambah comment</div>
+  <div id="cmt-hint">💡 Double-click di mana saja untuk tambah komentar</div>
   <div id="cmt-panel-list">
-    <div id="cmt-panel-empty">Belum ada comment.<br>Double-click di halaman untuk mulai!</div>
+    <div id="cmt-panel-empty">Belum ada komentar.<br>Double-click untuk mulai!</div>
   </div>
 </div>
 
-<div id="cmt-mode-bar">✏️ Comment Mode — Double-click di mana saja untuk tambah comment</div>
-<div id="cmt-loading">⏳ Menyimpan...</div>
+<div id="cmt-mode-bar">✏️ Double-click di mana saja untuk tambah komentar</div>
+<div id="cmt-loading">⏳ Menyimpan…</div>
 
 <script>
-(function() {
-  // ══════════════════════════════════════════════════════════════
-  //  ⚙️  FIREBASE CONFIG — ISI DENGAN KONFIGURASI FIREBASE KAMU
-  //  Cara dapat config: console.firebase.google.com → Project Settings → Web App
-  // ══════════════════════════════════════════════════════════════
+(function () {
+  /* ══════════════════════════════════════════════════
+     FIREBASE CONFIG
+  ══════════════════════════════════════════════════ */
   const FIREBASE_CONFIG = {
     apiKey:            "AIzaSyCarBtr7lERHz9tMPXXXfsVu0f3XcIrFMY",
     authDomain:        "pdm-itdm.firebaseapp.com",
@@ -2504,18 +2447,13 @@ body { position: relative; }
     appId:             "1:646420574712:web:8b369fc585753de2ea660d",
     measurementId:     "G-S6X9TL9P9V"
   };
-  // ══════════════════════════════════════════════════════════════
+  const COLLECTION      = 'comments_asr';
+  const KEY_AUTHOR      = 'cmt_author_asr';
+  const KEY_DATA        = 'cmt_data_asr';
 
-  const COLLECTION = 'comments_asr'; // nama koleksi Firestore
-  const STORAGE_KEY_AUTHOR = 'cmt_author_asr';
-
-  // Check apakah Firebase sudah dikonfigurasi
-  const isConfigured = !Object.values(FIREBASE_CONFIG).some(v => v.startsWith('FILL_IN'));
-
-  // ── Elemen DOM ──────────────────────────────────────────────
+  /* ── DOM refs ──────────────────────────────────── */
   const layer       = document.getElementById('cmt-layer');
   const inputWrap   = document.getElementById('cmt-input-wrap');
-  const inputBox    = document.getElementById('cmt-input-box');
   const authorInput = document.getElementById('cmt-author-input');
   const textInput   = document.getElementById('cmt-text-input');
   const submitBtn   = document.getElementById('cmt-submit-btn');
@@ -2529,320 +2467,304 @@ body { position: relative; }
   const modeBar     = document.getElementById('cmt-mode-bar');
   const loadingEl   = document.getElementById('cmt-loading');
 
-  // ── State ───────────────────────────────────────────────────
-  let db = null;
-  let comments = {};          // {id: {text, author, x, y, createdAt}}
-  let pendingX = 0, pendingY = 0;   // posisi double-click (pageX, pageY)
-  let pendingXPct = 0, pendingYPct = 0; // posisi relatif (0-1) untuk responsivitas
-  let openBubbleId = null;
-  let commentMode = false;
-  let reopenTimeout = null;  // track setTimeout untuk mencegah double bubble
+  /* ── State ─────────────────────────────────────── */
+  let db            = null;
+  let comments      = {};
+  let pendingX      = 0, pendingY = 0;
+  let pendingXPct   = 0, pendingYPct = 0;
+  let openBubbleId  = null;
+  let reopenTimer   = null;
 
-  // ── Restore author name ─────────────────────────────────────
-  const savedAuthor = localStorage.getItem(STORAGE_KEY_AUTHOR) || '';
+  /* ── Restore author name ───────────────────────── */
+  const savedAuthor = localStorage.getItem(KEY_AUTHOR) || '';
   if (savedAuthor) authorInput.value = savedAuthor;
 
-  // ── Firebase init ────────────────────────────────────────────
+  /* ════════════════════════════════════════════════
+     FIREBASE
+  ════════════════════════════════════════════════ */
   function initFirebase() {
-    if (!isConfigured) {
-      showConfigWarning();
-      return;
-    }
+    const configured = !Object.values(FIREBASE_CONFIG).some(v => String(v).startsWith('FILL_IN'));
+    if (!configured) { loadLocal(); return; }
     try {
       if (!firebase.apps.length) firebase.initializeApp(FIREBASE_CONFIG);
       db = firebase.firestore();
-      listenComments();
-    } catch (e) {
-      console.error('Firebase init error:', e);
-      showConfigWarning();
-    }
-  }
-
-  function showConfigWarning() {
-    const warn = document.createElement('div');
-    warn.style.cssText = `position:fixed;top:66px;left:50%;transform:translateX(-50%);
-      background:#E63946;color:#fff;padding:.5rem 1.2rem;border-radius:0 0 10px 10px;
-      font-size:.8rem;font-weight:600;z-index:9999;text-align:center;`;
-    warn.innerHTML = '⚠️ Firebase belum dikonfigurasi — comment tidak tersimpan ke cloud.<br>'
-      + '<span style="font-weight:400;font-size:.74rem;">Edit <code>FIREBASE_CONFIG</code> di dalam asr-flow.html</span>';
-    document.body.appendChild(warn);
-    setTimeout(() => warn.remove(), 8000);
-
-    // Fallback: pakai localStorage saja
-    loadLocalFallback();
-  }
-
-  // ── Firebase real-time listener ──────────────────────────────
-  function listenComments() {
-    db.collection(COLLECTION)
-      .orderBy('createdAt', 'asc')
-      .onSnapshot(snapshot => {
+      db.collection(COLLECTION).orderBy('createdAt', 'asc').onSnapshot(snap => {
         comments = {};
-        snapshot.forEach(doc => { comments[doc.id] = { id: doc.id, ...doc.data() }; });
-        renderAllPins();
+        snap.forEach(doc => { comments[doc.id] = { id: doc.id, ...doc.data() }; });
+        renderPins();
         renderPanel();
-      }, err => console.error('Firestore error:', err));
+      }, err => { console.warn('Firestore:', err); loadLocal(); });
+    } catch (e) { console.warn('Firebase init:', e); loadLocal(); }
   }
 
-  // ── Fallback: localStorage ───────────────────────────────────
-  function loadLocalFallback() {
-    const raw = localStorage.getItem('cmt_data_asr');
-    if (raw) {
-      try {
-        const arr = JSON.parse(raw);
-        arr.forEach(c => { comments[c.id] = c; });
-        renderAllPins(); renderPanel();
-      } catch(e) {}
-    }
+  /* ── localStorage fallback ─────────────────────── */
+  function loadLocal() {
+    try {
+      const arr = JSON.parse(localStorage.getItem(KEY_DATA) || '[]');
+      arr.forEach(c => { comments[c.id] = c; });
+      renderPins(); renderPanel();
+    } catch (_) {}
+  }
+  function saveLocal() {
+    localStorage.setItem(KEY_DATA, JSON.stringify(Object.values(comments)));
   }
 
-  function saveLocalFallback() {
-    localStorage.setItem('cmt_data_asr', JSON.stringify(Object.values(comments)));
-  }
-
-  // ── Add comment ──────────────────────────────────────────────
-  async function addComment(x, y, text, author) {
-    const id = 'cmt_' + Date.now() + '_' + Math.random().toString(36).slice(2,6);
-    const data = { id, x, y, xPct: pendingXPct, yPct: pendingYPct, text: text.trim(), author: author.trim() || 'Anonymous',
-                   createdAt: Date.now() };
-    showLoading(true);
+  /* ── Firestore CRUD ────────────────────────────── */
+  async function addComment(x, y, xPct, yPct, text, author) {
+    const id   = 'c' + Date.now().toString(36) + Math.random().toString(36).slice(2, 5);
+    const data = { id, x, y, xPct, yPct, text, author, createdAt: Date.now() };
+    loading(true);
     if (db) {
       try {
         await db.collection(COLLECTION).doc(id).set({
-          x, y, xPct: pendingXPct, yPct: pendingYPct, text: data.text, author: data.author,
+          x, y, xPct, yPct, text, author,
           createdAt: firebase.firestore.FieldValue.serverTimestamp()
         });
-      } catch(e) {
-        console.error(e);
-        comments[id] = data; renderAllPins(); renderPanel(); saveLocalFallback();
-      }
+      } catch (e) { comments[id] = data; renderPins(); renderPanel(); saveLocal(); }
     } else {
-      comments[id] = data; renderAllPins(); renderPanel(); saveLocalFallback();
+      comments[id] = data; renderPins(); renderPanel(); saveLocal();
     }
-    showLoading(false);
+    loading(false);
   }
 
-  // ── Update comment ───────────────────────────────────────────
   async function updateComment(id, newText) {
-    showLoading(true);
+    loading(true);
     if (db) {
       try {
         await db.collection(COLLECTION).doc(id).update({
           text: newText,
           updatedAt: firebase.firestore.FieldValue.serverTimestamp()
         });
-      } catch(e) { comments[id].text = newText; renderAllPins(); renderPanel(); saveLocalFallback(); }
+      } catch (e) {
+        if (comments[id]) comments[id].text = newText;
+        renderPins(); renderPanel(); saveLocal();
+      }
     } else {
       if (comments[id]) comments[id].text = newText;
-      renderAllPins(); renderPanel(); saveLocalFallback();
+      renderPins(); renderPanel(); saveLocal();
     }
-    showLoading(false);
+    loading(false);
   }
 
-  // ── Delete comment ───────────────────────────────────────────
   async function deleteComment(id) {
-    showLoading(true);
+    loading(true);
     if (db) {
-      try {
-        await db.collection(COLLECTION).doc(id).delete();
-      } catch(e) {
-        delete comments[id]; renderAllPins(); renderPanel(); saveLocalFallback();
-      }
+      try { await db.collection(COLLECTION).doc(id).delete(); }
+      catch (e) { delete comments[id]; renderPins(); renderPanel(); saveLocal(); }
     } else {
-      delete comments[id]; renderAllPins(); renderPanel(); saveLocalFallback();
+      delete comments[id]; renderPins(); renderPanel(); saveLocal();
     }
     openBubbleId = null;
-    showLoading(false);
+    loading(false);
   }
 
-  // ── Render all pins ──────────────────────────────────────────
-  function renderAllPins() {
-    const wasOpen = openBubbleId;
-    clearTimeout(reopenTimeout);   // batalkan reopen timeout sebelumnya agar tidak double bubble
-    layer.innerHTML = '';
-    openBubbleId = null;           // reset state segera
-    Object.values(comments).forEach((c, i) => {
-      createPin(c, i + 1);
-    });
-    if (wasOpen && comments[wasOpen]) {
-      reopenTimeout = setTimeout(() => openBubble(wasOpen), 80);
-    }
-    const count = Object.keys(comments).length;
-    totalBadge.textContent = count;
-  }
-
-  function createPin(c, num) {
-    const pin = document.createElement('div');
-    pin.className = 'cmt-pin';
-    pin.dataset.id = c.id;
-    pin.textContent = num;
-    // Gunakan koordinat persentase jika tersedia (responsif antar device)
-    if (c.xPct !== undefined && c.yPct !== undefined) {
+  /* ════════════════════════════════════════════════
+     RENDER PINS
+  ════════════════════════════════════════════════ */
+  function pinPos(c) {
+    if (c.xPct != null && c.yPct != null) {
       const sw = Math.max(document.body.scrollWidth, document.documentElement.scrollWidth);
       const sh = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
-      pin.style.left = (c.xPct * sw) + 'px';
-      pin.style.top  = (c.yPct * sh) + 'px';
-    } else {
-      pin.style.left = c.x + 'px';
-      pin.style.top  = c.y + 'px';
+      return { left: c.xPct * sw, top: c.yPct * sh };
     }
-    if (c.id === openBubbleId) pin.classList.add('open');
-    pin.addEventListener('click', e => { e.stopPropagation(); toggleBubble(c.id, pin); });
-    layer.appendChild(pin);
+    return { left: c.x, top: c.y };
   }
 
-  // ── Bubble (popup comment) ───────────────────────────────────
-  function toggleBubble(id, pin) {
-    if (openBubbleId === id) {
-      closeBubble(); return;
+  function renderPins() {
+    const wasOpen = openBubbleId;
+    clearTimeout(reopenTimer);
+    closeBubble(false);          /* tutup tanpa reset openBubbleId dulu */
+    openBubbleId = null;
+    layer.innerHTML = '';
+
+    let i = 0;
+    Object.values(comments).forEach(c => {
+      i++;
+      const pin = document.createElement('div');
+      pin.className  = 'cmt-pin';
+      pin.dataset.id = c.id;
+      pin.textContent = i;
+      const pos = pinPos(c);
+      pin.style.left = pos.left + 'px';
+      pin.style.top  = pos.top  + 'px';
+      layer.appendChild(pin);
+    });
+
+    totalBadge.textContent = i;
+
+    if (wasOpen && comments[wasOpen]) {
+      reopenTimer = setTimeout(() => showBubble(wasOpen), 80);
     }
-    closeBubble();
-    openBubbleId = id;
-    openBubble(id, pin);
   }
 
-  function openBubble(id, pinEl) {
-    const c = comments[id]; if (!c) return;
+  /* ════════════════════════════════════════════════
+     BUBBLE — gunakan event delegation, bukan individual listener
+  ════════════════════════════════════════════════ */
 
-    // Hapus bubble lama dengan ID sama untuk mencegah duplikat
-    const existingBubble = document.getElementById('cmt-bubble-' + id);
-    if (existingBubble) existingBubble.remove();
+  /* Delegation: satu listener di layer untuk semua interaksi bubble & pin */
+  layer.addEventListener('click', function (e) {
+    /* Klik pin */
+    const pin = e.target.closest('.cmt-pin');
+    if (pin) {
+      e.stopPropagation();
+      const id = pin.dataset.id;
+      if (openBubbleId === id) { closeBubble(); }
+      else { closeBubble(); showBubble(id, pin); }
+      return;
+    }
 
+    /* Klik di dalam bubble */
+    const bubble = e.target.closest('.cmt-bubble');
+    if (!bubble) return;
+    const id = bubble.dataset.cmtid;
+
+    if (e.target.closest('.cmt-bubble-close'))   { closeBubble(); return; }
+    if (e.target.closest('[data-act="edit"]'))    { startEdit(id, bubble); return; }
+    if (e.target.closest('[data-act="save"]'))    { saveEdit(id, bubble); return; }
+    if (e.target.closest('[data-act="cancel"]'))  { cancelEdit(id, bubble); return; }
+    if (e.target.closest('[data-act="del"]'))     { askDelete(id, bubble); return; }
+    if (e.target.closest('[data-act="ok-del"]'))  { doDelete(id); return; }
+    if (e.target.closest('[data-act="no-del"]'))  { cancelDelete(id, bubble); return; }
+  });
+
+  function showBubble(id, pinEl) {
+    const c = comments[id];
+    if (!c) return;
+    closeBubble(false);
     openBubbleId = id;
 
-    // Update pin style
-    const pin = pinEl || layer.querySelector(`[data-id="${id}"]`);
+    /* Tandai pin */
+    const pin = pinEl || layer.querySelector('[data-id="' + id + '"]');
     if (pin) pin.classList.add('open');
 
-    const bubble = document.createElement('div');
-    bubble.className = 'cmt-bubble';
-    bubble.id = 'cmt-bubble-' + id;
+    /* Buat bubble */
+    const b = document.createElement('div');
+    b.className      = 'cmt-bubble';
+    b.id             = 'cmtb-' + id;
+    b.dataset.cmtid  = id;
 
-    const ts = c.createdAt ? (typeof c.createdAt === 'object' && c.createdAt.toDate
-      ? c.createdAt.toDate() : new Date(c.createdAt)) : new Date();
-    const timeStr = ts.toLocaleDateString('id-ID', { day:'2-digit', month:'short' })
-      + ' ' + ts.toLocaleTimeString('id-ID', { hour:'2-digit', minute:'2-digit' });
+    const ts = c.createdAt
+      ? (c.createdAt.toDate ? c.createdAt.toDate() : new Date(c.createdAt))
+      : new Date();
+    const tStr = ts.toLocaleDateString('id-ID', { day:'2-digit', month:'short' })
+               + ' ' + ts.toLocaleTimeString('id-ID', { hour:'2-digit', minute:'2-digit' });
 
-    bubble.innerHTML = `
-      <div class="cmt-bubble-head">
-        <span class="cmt-bubble-author">👤 ${escHtml(c.author)}</span>
-        <span class="cmt-bubble-time">${timeStr}</span>
-        <button class="cmt-bubble-close" data-close="${id}">✕</button>
-      </div>
-      <div class="cmt-bubble-body" id="cmt-body-${id}">${escHtml(c.text)}</div>
-      <div class="cmt-bubble-actions" id="cmt-actions-${id}">
-        <button class="cmt-btn cmt-btn-edit" data-edit="${id}">✏️ Edit</button>
-        <button class="cmt-btn cmt-btn-del" data-del="${id}">🗑️ Hapus</button>
-      </div>
-    `;
+    b.innerHTML =
+      '<div class="cmt-bubble-head">'
+      + '<span class="cmt-bubble-author">👤 ' + esc(c.author) + '</span>'
+      + '<span class="cmt-bubble-time">' + tStr + '</span>'
+      + '<button class="cmt-bubble-close" title="Tutup">✕</button>'
+      + '</div>'
+      + '<div class="cmt-bubble-body">' + esc(c.text) + '</div>'
+      + '<div class="cmt-bubble-actions">'
+      + '<button class="cmt-btn cmt-btn-edit" data-act="edit">✏️ Edit</button>'
+      + '<button class="cmt-btn cmt-btn-del"  data-act="del">🗑️ Hapus</button>'
+      + '</div>';
 
-    // Posisi bubble viewport-aware berdasarkan posisi pin yang sudah ter-render
-    {
-      const pinNode = layer.querySelector(`[data-id="${id}"]`);
-      const vpW = window.innerWidth;
-      const scrollX = window.scrollX || window.pageXOffset;
-      const scrollY = window.scrollY || window.pageYOffset;
-      let bLeft, bTop;
-      if (pinNode) {
-        const rect = pinNode.getBoundingClientRect();
-        bLeft = rect.left + scrollX + 18;
-        bTop  = rect.top  + scrollY - 55;
-        if (rect.left + 18 + 296 > vpW - 8) bLeft = rect.left + scrollX - 296 - 10;
-      } else {
-        bLeft = (c.xPct !== undefined ? c.xPct * document.documentElement.scrollWidth : c.x) + 18;
-        bTop  = (c.yPct !== undefined ? c.yPct * document.documentElement.scrollHeight : c.y) - 55;
-      }
-      bubble.style.left = Math.max(8, bLeft) + 'px';
-      bubble.style.top  = Math.max(8, bTop)  + 'px';
+    /* Posisi (fixed = viewport) berdasarkan pin.getBoundingClientRect */
+    const vpW = window.innerWidth;
+    const vpH = window.innerHeight;
+    const bW  = 284;
+    let   bL, bT;
+    if (pin) {
+      const r = pin.getBoundingClientRect();
+      bL = r.right + 6;
+      bT = r.top - 20;
+      if (bL + bW > vpW - 8)  bL = r.left - bW - 6;
+      if (bT + 180 > vpH - 8) bT = vpH - 188;
+      if (bT < 66)             bT = 66;
+      if (bL < 8)              bL = 8;
+    } else {
+      bL = Math.min(vpW / 2 - bW / 2, vpW - bW - 8);
+      bT = 80;
     }
+    b.style.left = bL + 'px';
+    b.style.top  = bT + 'px';
 
-    layer.appendChild(bubble);
-
-    // Event listeners
-    bubble.querySelector(`[data-close="${id}"]`).addEventListener('click', closeBubble);
-    bubble.querySelector(`[data-edit="${id}"]`).addEventListener('click', () => startEdit(id));
-    bubble.querySelector(`[data-del="${id}"]`).addEventListener('click', () => confirmDelete(id));
+    layer.appendChild(b);
   }
 
-  function closeBubble() {
+  function closeBubble(resetId) {
+    if (resetId === undefined) resetId = true;
     if (openBubbleId) {
-      const pin = layer.querySelector(`[data-id="${openBubbleId}"]`);
+      const pin = layer.querySelector('[data-id="' + openBubbleId + '"]');
       if (pin) pin.classList.remove('open');
-      const bubble = document.getElementById('cmt-bubble-' + openBubbleId);
-      if (bubble) bubble.remove();
-      openBubbleId = null;
+      const b = document.getElementById('cmtb-' + openBubbleId);
+      if (b) b.remove();
     }
+    if (resetId) openBubbleId = null;
   }
 
-  function startEdit(id) {
-    // Cari elemen relatif terhadap bubble-nya bukan document-wide (cegah salah element jika ada duplikat)
-    const bubble = document.getElementById('cmt-bubble-' + id);
-    if (!bubble) return;
-    const bodyEl   = bubble.querySelector('#cmt-body-' + id);
-    const actionsEl = bubble.querySelector('#cmt-actions-' + id);
-    if (!bodyEl || !actionsEl) return;
-
-    const original = comments[id].text;
-    bodyEl.setAttribute('contenteditable', 'true');
-    bodyEl.focus();
-
-    // Pindahkan kursor ke akhir teks
-    const range = document.createRange();
-    range.selectNodeContents(bodyEl);
-    range.collapse(false);
-    window.getSelection().removeAllRanges();
-    window.getSelection().addRange(range);
-
-    actionsEl.innerHTML = `
-      <button class="cmt-btn cmt-btn-save" data-save="${id}">💾 Simpan</button>
-      <button class="cmt-btn cmt-btn-cancel" data-cancel="${id}">Batal</button>
-    `;
-    actionsEl.querySelector(`[data-save="${id}"]`).addEventListener('click', () => {
-      const newText = bodyEl.textContent.trim();
-      if (!newText) return;
-      bodyEl.removeAttribute('contenteditable');
-      updateComment(id, newText);
-    });
-    actionsEl.querySelector(`[data-cancel="${id}"]`).addEventListener('click', () => {
-      bodyEl.textContent = original;
-      bodyEl.removeAttribute('contenteditable');
-      actionsEl.innerHTML = `
-        <button class="cmt-btn cmt-btn-edit" data-edit2="${id}">✏️ Edit</button>
-        <button class="cmt-btn cmt-btn-del" data-del2="${id}">🗑️ Hapus</button>
-      `;
-      actionsEl.querySelector(`[data-edit2="${id}"]`).addEventListener('click', () => startEdit(id));
-      actionsEl.querySelector(`[data-del2="${id}"]`).addEventListener('click', () => confirmDelete(id));
-    });
+  /* ── Edit ──────────────────────────────────────── */
+  function startEdit(id, bubble) {
+    const body    = bubble.querySelector('.cmt-bubble-body');
+    const actions = bubble.querySelector('.cmt-bubble-actions');
+    if (!body || !actions) return;
+    bubble.dataset.orig = body.textContent;
+    body.contentEditable = 'true';
+    body.focus();
+    /* Kursor ke akhir */
+    try {
+      const r = document.createRange();
+      r.selectNodeContents(body); r.collapse(false);
+      const sel = window.getSelection();
+      sel.removeAllRanges(); sel.addRange(r);
+    } catch (_) {}
+    actions.innerHTML =
+      '<button class="cmt-btn cmt-btn-save" data-act="save">💾 Simpan</button>'
+      + '<button class="cmt-btn cmt-btn-cancel" data-act="cancel">Batal</button>';
   }
 
-  function confirmDelete(id) {
-    const bubble = document.getElementById('cmt-bubble-' + id);
-    if (!bubble) return;
-    const actionsEl = bubble.querySelector('#cmt-actions-' + id);
-    if (!actionsEl) return;
-    actionsEl.innerHTML = `
-      <span style="font-size:.78rem;color:#E63946;font-weight:600;">Hapus comment ini?</span>
-      <button class="cmt-btn cmt-btn-del" data-confirm-del="${id}">Ya, Hapus</button>
-      <button class="cmt-btn cmt-btn-cancel" data-cancel-del="${id}">Batal</button>
-    `;
-    actionsEl.querySelector(`[data-confirm-del="${id}"]`).addEventListener('click', () => {
-      closeBubble(); deleteComment(id);
-    });
-    actionsEl.querySelector(`[data-cancel-del="${id}"]`).addEventListener('click', () => {
-      actionsEl.innerHTML = `
-        <button class="cmt-btn cmt-btn-edit" data-edit3="${id}">✏️ Edit</button>
-        <button class="cmt-btn cmt-btn-del" data-del3="${id}">🗑️ Hapus</button>
-      `;
-      actionsEl.querySelector(`[data-edit3="${id}"]`).addEventListener('click', () => startEdit(id));
-      actionsEl.querySelector(`[data-del3="${id}"]`).addEventListener('click', () => confirmDelete(id));
-    });
+  function saveEdit(id, bubble) {
+    const body = bubble.querySelector('.cmt-bubble-body');
+    if (!body) return;
+    const newText = body.textContent.trim();
+    if (!newText) return;
+    body.contentEditable = 'false';
+    updateComment(id, newText);
   }
 
-  // ── Panel (daftar semua comment) ─────────────────────────────
+  function cancelEdit(id, bubble) {
+    const body    = bubble.querySelector('.cmt-bubble-body');
+    const actions = bubble.querySelector('.cmt-bubble-actions');
+    if (!body || !actions) return;
+    body.textContent   = bubble.dataset.orig || (comments[id] && comments[id].text) || '';
+    body.contentEditable = 'false';
+    actions.innerHTML  =
+      '<button class="cmt-btn cmt-btn-edit" data-act="edit">✏️ Edit</button>'
+      + '<button class="cmt-btn cmt-btn-del" data-act="del">🗑️ Hapus</button>';
+  }
+
+  /* ── Delete ────────────────────────────────────── */
+  function askDelete(id, bubble) {
+    const actions = bubble.querySelector('.cmt-bubble-actions');
+    if (!actions) return;
+    actions.innerHTML =
+      '<span style="font-size:.75rem;color:#E63946;font-weight:600;flex:1">Hapus komentar ini?</span>'
+      + '<button class="cmt-btn cmt-btn-ok"     data-act="ok-del">Ya</button>'
+      + '<button class="cmt-btn cmt-btn-cancel" data-act="no-del">Tidak</button>';
+  }
+
+  function cancelDelete(id, bubble) {
+    const actions = bubble.querySelector('.cmt-bubble-actions');
+    if (!actions) return;
+    actions.innerHTML =
+      '<button class="cmt-btn cmt-btn-edit" data-act="edit">✏️ Edit</button>'
+      + '<button class="cmt-btn cmt-btn-del" data-act="del">🗑️ Hapus</button>';
+  }
+
+  function doDelete(id) {
+    closeBubble();
+    deleteComment(id);
+  }
+
+  /* ════════════════════════════════════════════════
+     PANEL
+  ════════════════════════════════════════════════ */
   function renderPanel() {
-    const items = Object.values(comments).sort((a,b) => {
-      const ta = a.createdAt?.toDate ? a.createdAt.toDate().getTime() : (a.createdAt || 0);
-      const tb = b.createdAt?.toDate ? b.createdAt.toDate().getTime() : (b.createdAt || 0);
+    const items = Object.values(comments).sort((a, b) => {
+      const ta = a.createdAt ? (a.createdAt.toDate ? a.createdAt.toDate().getTime() : a.createdAt) : 0;
+      const tb = b.createdAt ? (b.createdAt.toDate ? b.createdAt.toDate().getTime() : b.createdAt) : 0;
       return ta - tb;
     });
     if (!items.length) {
@@ -2852,49 +2774,46 @@ body { position: relative; }
     }
     panelList.innerHTML = '';
     items.forEach((c, i) => {
-      const div = document.createElement('div');
-      div.className = 'cmt-panel-item';
-      const ts = c.createdAt ? (typeof c.createdAt === 'object' && c.createdAt.toDate
-        ? c.createdAt.toDate() : new Date(c.createdAt)) : new Date();
-      const timeStr = ts.toLocaleDateString('id-ID', { day:'2-digit', month:'short', year:'2-digit' });
-      div.innerHTML = `
-        <div class="cmt-panel-item-author">#${i+1} — ${escHtml(c.author)}</div>
-        <div class="cmt-panel-item-text">${escHtml(c.text)}</div>
-        <div class="cmt-panel-item-time">${timeStr}</div>
-      `;
-      div.addEventListener('click', () => {
-        // Scroll ke posisi pin dan buka bubble
-        window.scrollTo({ top: Math.max(0, c.y - 200), behavior: 'smooth' });
-        setTimeout(() => {
-          closeBubble();
-          openBubbleId = null;
-          openBubble(c.id);
-        }, 350);
+      const ts = c.createdAt
+        ? (c.createdAt.toDate ? c.createdAt.toDate() : new Date(c.createdAt))
+        : new Date();
+      const d = document.createElement('div');
+      d.className = 'cmt-panel-item';
+      d.innerHTML =
+        '<div class="cmt-panel-item-author">#' + (i+1) + ' — ' + esc(c.author) + '</div>'
+        + '<div class="cmt-panel-item-text">' + esc(c.text) + '</div>'
+        + '<div class="cmt-panel-item-time">'
+        + ts.toLocaleDateString('id-ID', { day:'2-digit', month:'short', year:'2-digit' })
+        + '</div>';
+      d.addEventListener('click', () => {
+        const pos = pinPos(c);
+        window.scrollTo({ top: Math.max(0, pos.top - 200), behavior: 'smooth' });
+        setTimeout(() => { closeBubble(); showBubble(c.id); }, 350);
       });
-      panelList.appendChild(div);
+      panelList.appendChild(d);
     });
   }
 
-  // ── Input popup ──────────────────────────────────────────────
-  function showInputAt(pageX, pageY, clientX, clientY) {
+  /* ════════════════════════════════════════════════
+     INPUT POPUP
+  ════════════════════════════════════════════════ */
+  function showInput(pageX, pageY, clientX, clientY) {
     pendingX = pageX; pendingY = pageY;
-    // Simpan posisi sebagai persentase untuk responsivitas
     const sw = Math.max(document.body.scrollWidth, document.documentElement.scrollWidth);
     const sh = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
     pendingXPct = sw > 0 ? pageX / sw : 0;
     pendingYPct = sh > 0 ? pageY / sh : 0;
 
-    // Posisi popup (viewport-aware)
     const vpW = window.innerWidth, vpH = window.innerHeight;
-    const boxW = 300, boxH = 230;
-    let left = clientX + 14;
-    let top  = clientY - 40;
-    if (left + boxW > vpW - 16) left = clientX - boxW - 10;
-    if (top + boxH > vpH - 16)  top  = vpH - boxH - 16;
-    if (top < 66) top = 66;
+    const bW = 304, bH = 234;
+    let L = clientX + 12, T = clientY - 40;
+    if (L + bW > vpW - 8)  L = clientX - bW - 10;
+    if (T + bH > vpH - 8)  T = vpH - bH - 8;
+    if (T < 66)             T = 66;
+    if (L < 8)              L = 8;
 
-    inputWrap.style.left = left + 'px';
-    inputWrap.style.top  = top  + 'px';
+    inputWrap.style.left = L + 'px';
+    inputWrap.style.top  = T + 'px';
     inputWrap.classList.add('show');
     textInput.value = '';
     textInput.focus();
@@ -2905,88 +2824,73 @@ body { position: relative; }
     textInput.value = '';
   }
 
-  // ── Double-click handler ─────────────────────────────────────
+  /* ── Double-click → tambah komentar ─────────────── */
   document.body.addEventListener('dblclick', e => {
-    // Abaikan jika klik pada elemen UI comment
-    if (e.target.closest('#cmt-layer, #cmt-input-wrap, #cmt-panel, #cmt-toggle-btn, #cmt-mode-bar'))
+    if (e.target.closest('#cmt-layer,#cmt-input-wrap,#cmt-panel,#cmt-toggle-btn,#cmt-mode-bar'))
       return;
-
     e.preventDefault();
     closeBubble();
-    showInputAt(e.pageX, e.pageY, e.clientX, e.clientY);
+    showInput(e.pageX, e.pageY, e.clientX, e.clientY);
   });
 
-  // Submit
+  /* ── Submit ──────────────────────────────────────── */
   submitBtn.addEventListener('click', async () => {
     const text   = textInput.value.trim();
     const author = authorInput.value.trim() || 'Anonymous';
-    if (!text) { textInput.focus(); textInput.style.borderBottom = '2px solid red'; return; }
-    textInput.style.borderBottom = '';
-
-    // Simpan nama author ke localStorage
-    if (authorInput.value.trim())
-      localStorage.setItem(STORAGE_KEY_AUTHOR, authorInput.value.trim());
-
+    if (!text) { textInput.style.outline = '2px solid red'; textInput.focus(); return; }
+    textInput.style.outline = '';
+    if (authorInput.value.trim()) localStorage.setItem(KEY_AUTHOR, authorInput.value.trim());
     hideInput();
-    await addComment(pendingX, pendingY, text, author);
+    await addComment(pendingX, pendingY, pendingXPct, pendingYPct, text, author);
   });
 
-  // Enter = submit, Shift+Enter = baris baru
   textInput.addEventListener('keydown', e => {
     if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); submitBtn.click(); }
     if (e.key === 'Escape') hideInput();
-    textInput.style.borderBottom = '';
+    textInput.style.outline = '';
   });
 
   cancelBtn.addEventListener('click', hideInput);
 
-  // Klik di luar input = tutup
+  /* ── Klik di luar → tutup ──────────────────────── */
   document.addEventListener('click', e => {
-    if (inputWrap.classList.contains('show') &&
-        !inputWrap.contains(e.target)) {
+    if (inputWrap.classList.contains('show') && !inputWrap.contains(e.target))
       hideInput();
-    }
-    // Tutup bubble jika klik di luar layer
-    if (openBubbleId &&
-        !e.target.closest('#cmt-layer') &&
-        !e.target.closest('#cmt-panel')) {
+    if (openBubbleId
+        && !e.target.closest('#cmt-layer')
+        && !e.target.closest('#cmt-panel'))
       closeBubble();
-    }
   });
 
-  // ── Toggle panel ─────────────────────────────────────────────
+  /* ── Panel toggle ────────────────────────────────── */
   toggleBtn.addEventListener('click', () => {
     panel.classList.toggle('open');
-    commentMode = !commentMode;
-    modeBar.classList.toggle('show', commentMode);
+    modeBar.classList.toggle('show', panel.classList.contains('open'));
   });
   panelClose.addEventListener('click', () => {
     panel.classList.remove('open');
-    commentMode = false;
     modeBar.classList.remove('show');
   });
 
-  // ── Loading indicator ────────────────────────────────────────
-  function showLoading(show) {
-    loadingEl.style.display = show ? 'block' : 'none';
-  }
-
-  // ── Escape key = close everything ────────────────────────────
+  /* ── Escape ──────────────────────────────────────── */
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') { hideInput(); closeBubble(); }
   });
 
-  // ── Helpers ──────────────────────────────────────────────────
-  function escHtml(s) {
-    return String(s)
+  /* ── Resize → reposisi pin ───────────────────────── */
+  window.addEventListener('resize', () => {
+    if (Object.keys(comments).length) renderPins();
+  });
+
+  /* ── Helpers ─────────────────────────────────────── */
+  function esc(s) {
+    return String(s || '')
       .replace(/&/g,'&amp;').replace(/</g,'&lt;')
       .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
   }
+  function loading(on) { loadingEl.style.display = on ? 'block' : 'none'; }
 
-  // ── Reposition pins on resize (responsivitas) ───────────────────
-  window.addEventListener('resize', () => { if (Object.keys(comments).length) renderAllPins(); });
-
-  // ── Init ──────────────────────────────────────────────────────
+  /* ── Init ────────────────────────────────────────── */
   initFirebase();
 
 })();
