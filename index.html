@@ -684,79 +684,217 @@
       </div>
       <!-- DAS MOTOR -->
       <div id="vm-das-motor" class="vm-panel panel-body">
-        <div class="info-card">
-          <h4>2 Jobdesk Desk Coll Motor</h4>
-          <ul>
-            <li>📲 <b>Reminder</b>: Telepon H-1 jatuh tempo — khusus konsumen angsuran ke-1 sampai ke-3</li>
-            <li>📞 <b>Active (Penagihan)</b>: OVD <b>1–10 hari (KPM)</b> dan <b>1–30 hari (Non-KPM)</b></li>
-          </ul>
-        </div>
-        <div class="info-card">
-          <h4>Sistem &amp; Metode</h4>
-          <ul>
-            <li>📞 Sistem: <b>Ecentrix</b> + <b>X-lite</b></li>
-            <li>🔄 <b>Callback</b>: nomor yang tidak angkat dimasukkan ke sistem callback, start jam 13:30 (jeda 5 jam)</li>
-            <li>💳 Pembayaran via VA: <b>20222 + nomor kontrak</b> (tidak bisa generate VA seperti OnTrace)</li>
-            <li>📤 <b>Eskalasi ke cabang</b>: Manual (nomor invalid, wajib approval TL) | Auto (tidak jawab 5× berturut, tidak bisa bayar, tidak bertanggung jawab)</li>
-            <li>💸 Denda keterlambatan: <b>0,5% per hari</b></li>
-          </ul>
-        </div>
-        <div class="info-card">
-          <h4>KPI Agent Motor</h4>
-          <ul>
-            <li>✅ Success Call: <b>24%</b></li>
-            <li>📈 Current Rate: <b>57%</b></li>
-            <li>🏆 Success Rate: <b>12%</b></li>
-            <li>📉 Flow Rate KSM: <b>9,77%</b> | KPM: <b>5,11%</b></li>
-            <li>💪 Produktivitas: <b>100%</b> | Kehadiran: <b>100%</b></li>
-          </ul>
-        </div>
+
+        <!-- ROW 1: 2 Jobdesk -->
         <div class="info-card" style="grid-column:1/-1">
-          <h4>Call Result Motor</h4>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:.8rem;font-size:.83rem">
-            <div>
-              <div style="font-weight:700;margin-bottom:.4rem;color:#1a4fa0">Konsumen Angkat</div>
-              <ul style="margin:0 0 0 1rem;line-height:1.9">
-                <li>Telepon kembali</li><li>Sudah bayar</li><li>Janji bayar</li>
-                <li>Request visit</li><li>Tidak bisa bayar</li><li>Tidak bertanggung jawab</li><li>Complain</li>
+          <h4>2 Jobdesk Desk Coll Motor</h4>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:.8rem;font-size:.86rem;margin-top:.4rem">
+            <div style="background:#E8F0FE;border-radius:8px;padding:.7rem 1rem;border-left:4px solid #2176FF">
+              <div style="font-weight:700;color:#1a4fa0;margin-bottom:.4rem">📲 Reminder</div>
+              <ul style="margin:0 0 0 1rem;line-height:1.8">
+                <li>Mengingatkan konsumen <b>H-1 sebelum jatuh tempo</b></li>
+                <li>Hanya berlaku untuk angsuran ke-<b>1 s.d. 3</b></li>
+                <li>Yang di-call: <b>nomor telepon konsumen saja</b> (bukan emergency contact)</li>
+                <li>Badan usaha: yang di-call <b>PIC perusahaan</b></li>
+                <li>Memiliki <b>WA Coster</b>: broadcast TL/UH → konsumen balas chatbot → pilih "agent kami" → terhubung ke agent reminder. <em>WA Coster tidak termasuk KPI agent.</em></li>
               </ul>
             </div>
-            <div>
-              <div style="font-weight:700;margin-bottom:.4rem;color:#e07800">Tidak/Non-Konsumen</div>
-              <ul style="margin:0 0 0 1rem;line-height:1.9">
-                <li>Titip pesan</li><li>Invalid</li><li>Tidak ada jawaban</li>
-                <li>Nomor telepon salah</li><li>Telepon sibuk</li>
+            <div style="background:#FFF3E0;border-radius:8px;padding:.7rem 1rem;border-left:4px solid #F57C00">
+              <div style="font-weight:700;color:#E65100;margin-bottom:.4rem">📞 Active (Penagihan)</div>
+              <ul style="margin:0 0 0 1rem;line-height:1.8">
+                <li>Follow up konsumen yang sudah menunggak (<b>DPD / OVD &gt; 0</b>)</li>
+                <li>Jam call: <b>08:30 – 17:30</b> sesuai jam kantor <em>(POJK 22/2023: batas OJK 08.00–20.00)</em></li>
+                <li>Urutan call: No. Konsumen → <b>Emergency Contact</b> (spouse jika ada → office jika ada)</li>
+                <li>Multi kontrak (badan usaha): jika jatuh tempo <b>sama</b> → call sekali, input hasilnya sesuai jumlah kontrak; jika beda → call sesuai tanggal masing-masing</li>
               </ul>
             </div>
           </div>
         </div>
+
+        <!-- ROW 2: Sistem & KPI Agent -->
         <div class="info-card">
-          <h4>Indikator Penilaian QA Motor</h4>
-          <table style="width:100%;border-collapse:collapse;font-size:.82rem">
-            <tr style="background:var(--blue-pale)"><th style="padding:.3rem .5rem;text-align:left">Indikator</th><th style="text-align:center">Bobot</th></tr>
-            <tr><td style="padding:.25rem .5rem">Opening</td><td style="text-align:center">15%</td></tr>
-            <tr style="background:#f9f9f9"><td style="padding:.25rem .5rem">Konfirmasi</td><td style="text-align:center">15%</td></tr>
-            <tr><td style="padding:.25rem .5rem">Informasi / Solusi</td><td style="text-align:center">10%</td></tr>
-            <tr style="background:#f9f9f9"><td style="padding:.25rem .5rem">Intonasi</td><td style="text-align:center">10%</td></tr>
-            <tr><td style="padding:.25rem .5rem">Empati</td><td style="text-align:center">10%</td></tr>
-            <tr style="background:#f9f9f9"><td style="padding:.25rem .5rem">Persuasi</td><td style="text-align:center">15%</td></tr>
-            <tr><td style="padding:.25rem .5rem">Product Knowledge</td><td style="text-align:center">10%</td></tr>
-            <tr style="background:#f9f9f9"><td style="padding:.25rem .5rem">Temuan</td><td style="text-align:center">25%</td></tr>
-            <tr><td style="padding:.25rem .5rem">Magic Word</td><td style="text-align:center">5%</td></tr>
-            <tr style="background:#f9f9f9"><td style="padding:.25rem .5rem">Closing</td><td style="text-align:center">5%</td></tr>
-          </table>
+          <h4>Sistem &amp; Aplikasi <span style="font-size:.72rem;background:#e8f5e9;color:#2e7d32;border-radius:4px;padding:.1rem .4rem;margin-left:.3rem">Update Mar 2025</span></h4>
+          <ul>
+            <li>📞 Sistem utama: <b>Ecentrix Collection System</b></li>
+            <li style="color:#c62828">❌ <b>X-Lite sudah tidak digunakan</b> sejak <b>1 Maret 2025</b></li>
+            <li style="color:#c62828">❌ <b>Sistem callback sudah tidak ada</b>; agent boleh call ulang kapan saja jika data <i>fresh (untouch)</i> sudah habis</li>
+            <li style="color:#c62828">❌ <b>Auto eskalasi cabang sudah tidak ada</b></li>
+            <li>📥 Data dari IT → masuk Ecentrix otomatis setiap pagi <b>jam 07:00</b> → TL (<b>Bu Arnita</b>) assign ke masing-masing agent</li>
+            <li>🔍 Jika konsumen ngaku sudah bayar → cek di <b>FAST</b></li>
+            <li>🔍 Ngaku salah sambung → tetap diinput sesuai hasil call; kebenaran bisa dicek dari history di FAST (misal agent A = salah sambung, agent B keesokan harinya baru ngaku bener)</li>
+          </ul>
         </div>
+
         <div class="info-card">
-          <h4>KPI QA Motor</h4>
+          <h4>KPI Agent Motor <span style="font-size:.72rem;background:#fff3e0;color:#e65100;border-radius:4px;padding:.1rem .4rem;margin-left:.3rem">Diperbarui</span></h4>
           <table style="width:100%;border-collapse:collapse;font-size:.82rem">
-            <tr style="background:var(--blue-pale)"><th style="padding:.3rem .5rem;text-align:left">KPI</th><th style="text-align:center">Bobot</th></tr>
-            <tr><td style="padding:.25rem .5rem">Sample Call</td><td style="text-align:center">30%</td></tr>
-            <tr style="background:#f9f9f9"><td style="padding:.25rem .5rem">Kalibrasi</td><td style="text-align:center">15%</td></tr>
-            <tr><td style="padding:.25rem .5rem">Kehadiran / Kedisiplinan</td><td style="text-align:center">15%</td></tr>
-            <tr style="background:#f9f9f9"><td style="padding:.25rem .5rem">Report Finding</td><td style="text-align:center">15%</td></tr>
+            <tr style="background:var(--blue-pale)"><th style="padding:.3rem .5rem;text-align:left">KPI</th><th style="text-align:center">Target</th><th style="padding:.3rem .5rem">Keterangan</th></tr>
+            <tr><td style="padding:.25rem .5rem">✅ Current Rate</td><td style="text-align:center"><b>58%</b></td><td style="padding:.25rem .5rem;font-size:.78rem">Pindah bucket dari nunggak → lancar</td></tr>
+            <tr style="background:#f9f9f9"><td style="padding:.25rem .5rem">🏆 Success Rate</td><td style="text-align:center"><b>12%</b></td><td style="padding:.25rem .5rem;font-size:.78rem">Terhubung + bayar sesuai janji (max janji: KSM 10 hari, KPM 5 hari)</td></tr>
+            <tr><td style="padding:.25rem .5rem">💬 Success Call</td><td style="text-align:center"><b>28%</b></td><td style="padding:.25rem .5rem;font-size:.78rem">Terhubung tapi belum bayar</td></tr>
+            <tr style="background:#f9f9f9"><td style="padding:.25rem .5rem">📉 Flow Rate</td><td style="text-align:center"><b>Serendah mungkin</b></td><td style="padding:.25rem .5rem;font-size:.78rem">Eskalasi dari Deskcoll ke cabang (FAC)</td></tr>
           </table>
-          <p style="font-size:.8rem;color:var(--gray-text);margin-top:.4rem">QA bertugas monitoring kualitas penanganan agent, mengukur performa secara periodik, mengidentifikasi &amp; menganalisa performa, serta memberi bimbingan agar agent tetap sesuai SOP.</p>
+          <p style="font-size:.8rem;color:var(--gray-text);margin-top:.4rem">💡 Insentif: TL (Bu Arnita) yang menghitung. Rata-rata semua KPI &gt; <b>70%</b> → dapat insentif.</p>
         </div>
+
+        <!-- ROW 3: Pembayaran -->
+        <div class="info-card" style="grid-column:1/-1">
+          <h4>💳 Metode Pembayaran Angsuran</h4>
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:.6rem;font-size:.83rem;margin-top:.5rem">
+            <div style="background:#f0f7ff;border-radius:7px;padding:.6rem .8rem;border-top:3px solid #2176FF">
+              <div style="font-weight:700;color:#2176FF;margin-bottom:.3rem">🔄 Autodebet</div>
+              <ul style="margin:0 0 0 1rem;line-height:1.7">
+                <li>4x batch proses, <b>max jam 17:00</b></li>
+                <li>Meliputi <b>angsuran + denda</b></li>
+                <li>Mostly produk <b>KSM</b> (nasabah BCA)</li>
+              </ul>
+            </div>
+            <div style="background:#f0f7ff;border-radius:7px;padding:.6rem .8rem;border-top:3px solid #0050C8">
+              <div style="font-weight:700;color:#0050C8;margin-bottom:.3rem">🏦 VA BCA</div>
+              <ul style="margin:0 0 0 1rem;line-height:1.7">
+                <li>Kode: <b>20222 + No. Kontrak</b></li>
+                <li>Hanya <b>angsuran saja</b>, denda dibayar di akhir</li>
+                <li>Mostly produk <b>KPM</b> (bukan nasabah BCA)</li>
+                <li style="color:#c62828">⚠️ VA BCA <b>tidak bisa</b> bayar pakai bank lain → suruh refund</li>
+              </ul>
+            </div>
+            <div style="background:#f9f9f9;border-radius:7px;padding:.6rem .8rem;border-top:3px solid #757575">
+              <div style="font-weight:700;color:#424242;margin-bottom:.3rem">🏪 Indomaret / Alfamart</div>
+              <ul style="margin:0 0 0 1rem;line-height:1.7">
+                <li>Cukup informasikan <b>no. kontrak</b> ke kasir</li>
+                <li>Max jam <b>21:00</b> (di atas jam 9 malam → bayar masuk keesokan hari → kena denda)</li>
+              </ul>
+            </div>
+            <div style="background:#e8f5e9;border-radius:7px;padding:.6rem .8rem;border-top:3px solid #2DC653">
+              <div style="font-weight:700;color:#1b5e20;margin-bottom:.3rem">📱 FINA App</div>
+              <ul style="margin:0 0 0 1rem;line-height:1.7">
+                <li>Nomor VA unik: <b>kode bank + no. kontrak</b></li>
+                <li>Bisa bayar pakai <b>bank lain</b></li>
+              </ul>
+            </div>
+            <div style="background:#f9f9f9;border-radius:7px;padding:.6rem .8rem;border-top:3px solid #757575">
+              <div style="font-weight:700;color:#424242;margin-bottom:.3rem">📮 Kantor Pos</div>
+              <ul style="margin:0 0 0 1rem;line-height:1.7">
+                <li>Cukup informasikan <b>no. kontrak</b></li>
+                <li>Max jam <b>17:00</b> (jam tutup kantor pos)</li>
+              </ul>
+            </div>
+            <div style="background:#f9f9f9;border-radius:7px;padding:.6rem .8rem;border-top:3px solid #757575">
+              <div style="font-weight:700;color:#424242;margin-bottom:.3rem">🛒 E-Commerce</div>
+              <ul style="margin:0 0 0 1rem;line-height:1.7">
+                <li>Shopee, Blibli</li>
+              </ul>
+            </div>
+            <div style="background:#f9f9f9;border-radius:7px;padding:.6rem .8rem;border-top:3px solid #757575">
+              <div style="font-weight:700;color:#424242;margin-bottom:.3rem">🏢 Via Kasir Cabang</div>
+              <ul style="margin:0 0 0 1rem;line-height:1.7">
+                <li>Konsumen langsung ke cabang</li>
+                <li>Bayar via <b>Transfer atau QRIS</b></li>
+              </ul>
+            </div>
+          </div>
+          <div style="background:#fff3e0;border-radius:6px;padding:.5rem .8rem;font-size:.8rem;margin-top:.6rem;border-left:3px solid #F57C00">
+            ⚠️ Jika sistem delay (konsumen sudah bayar tapi masih bisa di-call): minta konsumen kirim <b>bukti bayar via WA</b> ke agent → agent → TL → Finance.
+          </div>
+        </div>
+
+        <!-- ROW 4: Eskalasi & Call Result Tabel -->
+        <div class="info-card">
+          <h4>📤 Kasus yang Bisa Dieskalasi ke Cabang</h4>
+          <ul style="font-size:.86rem;line-height:1.9">
+            <li>🚗 <b>Request Visit</b> — konsumen minta kendaraannya ditarik saja</li>
+            <li>📵 <b>Nomor Invalid</b> — operator: "nomor yang Anda tuju tidak terdaftar"</li>
+            <li>📉 <b>Intensitas bayar rendah</b> — bayar hanya 2 bulan sekali (tutup lobang doang)</li>
+            <li>🙏 <b>Minta keringanan</b> — karena musibah, bencana alam, atau konsumen meninggal</li>
+          </ul>
+        </div>
+
+        <div class="info-card">
+          <h4>🗂️ Tabel Kombinasi Call Result</h4>
+          <div style="font-size:.82rem;margin-bottom:.5rem;color:var(--gray-text)">Input hasil penanganan di Ecentrix menggunakan 5 kolom LOV:</div>
+          <table style="width:100%;border-collapse:collapse;font-size:.82rem">
+            <tr style="background:var(--blue-pale)"><th style="padding:.3rem .5rem;text-align:left">Kolom</th><th style="padding:.3rem .5rem;text-align:left">Nama Field</th></tr>
+            <tr><td style="padding:.25rem .5rem"><b>LOV 1</b></td><td style="padding:.25rem .5rem">Contact Status</td></tr>
+            <tr style="background:#f9f9f9"><td style="padding:.25rem .5rem"><b>LOV 2</b></td><td style="padding:.25rem .5rem">Connect Status</td></tr>
+            <tr><td style="padding:.25rem .5rem"><b>LOV 3</b></td><td style="padding:.25rem .5rem">Connect With</td></tr>
+            <tr style="background:#f9f9f9"><td style="padding:.25rem .5rem"><b>LOV 5</b></td><td style="padding:.25rem .5rem">Description Call</td></tr>
+            <tr><td style="padding:.25rem .5rem"><b>Call Result</b></td><td style="padding:.25rem .5rem">Call Result (hasil akhir)</td></tr>
+          </table>
+          <div style="margin-top:.6rem;font-size:.8rem;color:var(--gray-text)">Lihat tabel kombinasi lengkap di foto di bawah:</div>
+          <img src="img/call-result-motor.jpeg" alt="Tabel Kombinasi Call Result Motor" style="width:100%;border-radius:6px;margin-top:.4rem;border:1px solid #dce8f3;cursor:pointer" onclick="this.style.transform=this.style.transform?'':'scale(1.5)';this.style.zIndex=this.style.zIndex?'':'99'">
+        </div>
+
+        <!-- ROW 5: QA Alur & Indikator -->
+        <div class="info-card" style="grid-column:1/-1">
+          <h4>🔍 Alur QA Motor (Input → Process → Output)</h4>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:.8rem;font-size:.84rem;margin-top:.5rem">
+            <div style="background:#E8F0FE;border-radius:8px;padding:.7rem 1rem;border-top:3px solid #2176FF">
+              <div style="font-weight:700;color:#1a4fa0;margin-bottom:.4rem">📥 INPUT</div>
+              <p>Setelah agent call melalui <b>Ecentrix</b>, hasil recording masuk ke list <b>Ecentrix QA Deskcoll Motor</b> secara otomatis (<b>H+1</b>).</p>
+            </div>
+            <div style="background:#FFF8E1;border-radius:8px;padding:.7rem 1rem;border-top:3px solid #F57C00">
+              <div style="font-weight:700;color:#E65100;margin-bottom:.4rem">⚙️ PROCESS</div>
+              <ul style="margin:0 0 0 1rem;line-height:1.8">
+                <li>QA mendengarkan recording — sampling <b>10%</b> dari total yang terhubung per agent</li>
+                <li>QA membuat penilaian per agent via <b>Excel</b> sesuai bobot nilai</li>
+              </ul>
+            </div>
+            <div style="background:#E8F5E9;border-radius:8px;padding:.7rem 1rem;border-top:3px solid #2DC653">
+              <div style="font-weight:700;color:#1b5e20;margin-bottom:.4rem">📤 OUTPUT</div>
+              <ul style="margin:0 0 0 1rem;line-height:1.8">
+                <li>Hasil penilaian Excel diberikan ke UH (<b>Bu Yulike</b>) setiap hari via Email</li>
+                <li>Dikumpulkan sebulan → jadi bahan <b>kalibrasi</b> + <b>coaching</b> per agent</li>
+              </ul>
+            </div>
+          </div>
+          <div style="background:#f4f6fb;border-radius:7px;padding:.6rem 1rem;font-size:.83rem;margin-top:.7rem;border-left:3px solid #2176FF">
+            <b>Kalibrasi</b>: Sesi presentasi QA kepada semua agent — menyamakan persepsi, membahas komponen penilaian, menampilkan hasil penilaian per agent (terlihat siapa terbaik &amp; terburuk beserta kekurangannya).
+            Dilaksanakan setiap bulan. <a href="img/Kalibrasi Februari 2026 Fix.pdf" target="_blank" style="color:var(--blue-mid)">📄 Lihat Kalibrasi Feb 2026</a><br>
+            <b>Coaching</b>: Dilakukan secara individu oleh QA dengan agent terkait, setelah sesi kalibrasi.
+          </div>
+        </div>
+
+        <div class="info-card">
+          <h4>📋 Tugas Utama QA Deskcoll Motor</h4>
+          <ul style="font-size:.85rem;line-height:1.9">
+            <li>🎙️ Monitoring hasil recording percakapan agent (reminder &amp; active) dengan debitur sesuai prosedur BCAF</li>
+            <li>📊 Mengukur performa agent secara periodik, memastikan prosedur &amp; aturan dijalankan</li>
+            <li>🔍 Identifikasi &amp; analisa performa agent → dasar pengembangan &amp; peningkatan kinerja</li>
+            <li>📚 Memberi bimbingan kepada agent yang belum memahami sistem, prosedur, &amp; proses kerja</li>
+          </ul>
+          <div style="background:#fff3e0;border-radius:6px;padding:.5rem .8rem;font-size:.8rem;margin-top:.5rem;border-left:3px solid #F57C00">
+            🔧 <b>Aplikasi QA saat ini</b>: <b>Ecentrix Collection System</b> (role QA) — hanya bisa dengarkan recording, input penilaian manual via Excel.<br>
+            🆕 <b>QM Management</b> (aplikasi baru pengganti Ecentrix) sedang dalam pengembangan — belum digunakan karena bug (nilai maks hanya 90%, seharusnya 100%).
+          </div>
+        </div>
+
+        <div class="info-card">
+          <h4>📊 Indikator Penilaian QA Motor <span style="font-size:.72rem;background:#fce4ec;color:#c62828;border-radius:4px;padding:.1rem .4rem;margin-left:.3rem">Dikoreksi</span></h4>
+          <table style="width:100%;border-collapse:collapse;font-size:.82rem">
+            <tr style="background:var(--blue-pale)"><th style="padding:.3rem .5rem;text-align:left">Header</th><th style="text-align:center">Bobot</th><th style="padding:.3rem .5rem;text-align:left">Sub-indikator</th><th style="text-align:center">Sub-bobot</th></tr>
+            <tr><td style="padding:.25rem .5rem" rowspan="2"><b>Opening</b></td><td style="text-align:center" rowspan="2"><b>5%</b></td><td style="padding:.25rem .5rem">Salam pembuka sesuai kondisi waktu</td><td style="text-align:center">2,5%</td></tr>
+            <tr><td style="padding:.25rem .5rem">Memperkenalkan identitas diri</td><td style="text-align:center">2,5%</td></tr>
+            <tr style="background:#f9f9f9"><td style="padding:.25rem .5rem"><b>Confirmation</b></td><td style="text-align:center"><b>5%</b></td><td style="padding:.25rem .5rem">Memastikan bicara dgn konsumen / orang lain (jika orang lain → boleh titip pesan)</td><td style="text-align:center">5%</td></tr>
+            <tr><td style="padding:.25rem .5rem" rowspan="2"><b>Consumer Data Confirmation</b></td><td style="text-align:center" rowspan="2"><b>15%</b></td><td style="padding:.25rem .5rem">Konfirmasi data konsumen</td><td style="text-align:center">7,5%</td></tr>
+            <tr><td style="padding:.25rem .5rem">Sampaikan info keterlambatan (jumlah angsuran, jatuh tempo, denda)</td><td style="text-align:center">7,5%</td></tr>
+            <tr style="background:#f9f9f9"><td style="padding:.25rem .5rem"><b>Empathy</b></td><td style="text-align:center"><b>10%</b></td><td style="padding:.25rem .5rem">Tanyakan &amp; simak kendala keterlambatan pembayaran</td><td style="text-align:center">10%</td></tr>
+            <tr><td style="padding:.25rem .5rem" rowspan="3"><b>Persuasion / Negotiation</b></td><td style="text-align:center" rowspan="3"><b>25%</b></td><td style="padding:.25rem .5rem">Berikan alternatif solusi atas permasalahan / komplain</td><td style="text-align:center">8%</td></tr>
+            <tr><td style="padding:.25rem .5rem">Sampaikan SLIK OJK &amp; konsekuensi jika menunda pembayaran</td><td style="text-align:center">8%</td></tr>
+            <tr><td style="padding:.25rem .5rem">Pastikan kapan konsumen akan bayar</td><td style="text-align:center">9%</td></tr>
+            <tr style="background:#f9f9f9"><td style="padding:.25rem .5rem" rowspan="4"><b>Product Knowledge</b></td><td style="text-align:center" rowspan="4"><b>20%</b></td><td style="padding:.25rem .5rem">Cara pembayaran</td><td style="text-align:center">5%</td></tr>
+            <tr style="background:#f9f9f9"><td style="padding:.25rem .5rem">Sisa saldo mengendap</td><td style="text-align:center">5%</td></tr>
+            <tr style="background:#f9f9f9"><td style="padding:.25rem .5rem">Jam maksimal autodebet</td><td style="text-align:center">5%</td></tr>
+            <tr style="background:#f9f9f9"><td style="padding:.25rem .5rem">Informasikan penanganan terakhir DAS sebelum masuk ke FAC</td><td style="text-align:center">5%</td></tr>
+            <tr><td style="padding:.25rem .5rem" rowspan="2"><b>Closing</b></td><td style="text-align:center" rowspan="2"><b>5%</b></td><td style="padding:.25rem .5rem">Salam penutup sesuai kondisi waktu</td><td style="text-align:center">5%</td></tr>
+            <tr><td style="padding:.25rem .5rem">Pengucapan Magic Word (Sehat selalu, Tuhan Memberkati, dll)</td><td style="text-align:center">—</td></tr>
+            <tr style="background:#f9f9f9"><td style="padding:.25rem .5rem"><b>Intonation</b></td><td style="text-align:center"><b>5%</b></td><td style="padding:.25rem .5rem">Suara baik, aktif, sopan &amp; jelas</td><td style="text-align:center">5%</td></tr>
+            <tr><td style="padding:.25rem .5rem" rowspan="2"><b>Findings</b></td><td style="text-align:center" rowspan="2"><b>10%</b></td><td style="padding:.25rem .5rem">Agent kurang siap (diam, tertawa, mengobrol)</td><td style="text-align:center">5%</td></tr>
+            <tr><td style="padding:.25rem .5rem">Agent salah input hasil penanganan</td><td style="text-align:center">5%</td></tr>
+            <tr style="background:#E8F0FE;font-weight:700"><td colspan="2" style="padding:.3rem .5rem">TOTAL</td><td></td><td style="text-align:center">100%</td></tr>
+          </table>
+          <p style="font-size:.78rem;color:var(--gray-text);margin-top:.4rem">📎 Detail lengkap lihat: <a href="img/Kalibrasi Februari 2026 Fix.pdf" target="_blank" style="color:var(--blue-mid)">Kalibrasi Februari 2026 Fix.pdf</a> &amp; <a href="img/C5-ASR-QM-DAS-2025.pdf" target="_blank" style="color:var(--blue-mid)">SK C5-ASR DIV-XII-2025</a></p>
+        </div>
+
       </div>
     </div>
 
