@@ -203,7 +203,10 @@
 
     /* POJK */
     #pojk{background:var(--gray-bg)}
-    .pojk-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.2rem}
+    .pojk-grid{display:block}
+    .pojk-tab-nav{display:flex;flex-wrap:nowrap;overflow-x:auto;border-bottom:2px solid #dde3ef;margin-bottom:.9rem;gap:0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+    .pojk-tab-nav::-webkit-scrollbar{display:none}
+    .ptab{white-space:nowrap;background:#f4f6fb;border:1px solid #e5e7eb;border-bottom:2px solid transparent;border-radius:6px 6px 0 0;padding:.55rem 1rem;font-size:.8rem;font-weight:600;cursor:pointer;color:#666;flex-shrink:0;margin-bottom:-2px;transition:background .15s,color .15s;display:flex;align-items:center;gap:.4rem}
     .pojk-card{background:var(--white);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden}
     .pojk-header{padding:1.1rem 1.3rem;cursor:pointer;display:flex;align-items:center;gap:.9rem}
     .pojk-num{width:46px;height:46px;border-radius:10px;display:flex;align-items:center;
@@ -380,13 +383,187 @@
     </div>
     <div class="ov-card red">
       <div class="icon">🗂️</div>
-      <h4>4 Wilayah Regional ASR</h4>
+      <h4>5 Wilayah Regional ASR</h4>
       <ul>
         <li>🔵 <b>Regional I</b>: Jabodetabek I, II, III — Bpk. Hizkia</li>
         <li>🟢 <b>Regional II</b>: Jateng I,II, Jabar, Kalimantan — Bpk. Yudhi</li>
         <li>🟡 <b>Regional III</b>: Sumbagut I,II, Sumbagsel — Bpk. Prima</li>
         <li>🔴 <b>Regional IV</b>: Jatim I,II, Sulawesi — Bpk. Farit</li>
+        <li>⚫ <b>Regional V</b>: Motor (Nasional) — Bpk. Wulis</li>
       </ul>
+    </div>
+  </div>
+
+  <!-- ── STATISTIK ASR NASIONAL ── -->
+  <div style="background:#fff;border-radius:10px;box-shadow:0 1px 4px rgba(0,0,0,.09);padding:1.2rem 1.4rem;margin-top:1.2rem;border-top:4px solid #1a4fa0">
+    <div style="font-size:1.05rem;font-weight:800;color:#1a4fa0;margin-bottom:.3rem">📊 Statistik ASR Nasional</div>
+    <div style="font-size:.78rem;color:#888;margin-bottom:1rem">Data per Februari 2026 (closing) &amp; 27 Maret 2026</div>
+
+    <!-- NPL block -->
+    <div style="margin-bottom:.9rem">
+      <div style="font-size:.82rem;font-weight:700;color:#333;margin-bottom:.5rem;border-bottom:1px solid #e5e7eb;padding-bottom:.25rem">📉 NPL — Non-Performing Loan (OVD &gt;30 hari)</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:.5rem;font-size:.8rem">
+        <div style="background:#fdecea;border-radius:7px;padding:.55rem .8rem">
+          <div style="font-size:.72rem;color:#777;margin-bottom:.15rem">Closing Feb 2026</div>
+          <div style="font-size:1.35rem;font-weight:800;color:#c62828">4,29%</div>
+          <div style="font-size:.72rem;color:#888">Target: 4,17% <span style="color:#c62828;font-weight:700">▲ belum tercapai</span></div>
+        </div>
+        <div style="background:#fff3e0;border-radius:7px;padding:.55rem .8rem">
+          <div style="font-size:.72rem;color:#777;margin-bottom:.15rem">Per 27 Maret 2026</div>
+          <div style="font-size:1.35rem;font-weight:800;color:#e65100">6,59%</div>
+          <div style="font-size:.72rem;color:#888">Real-time (belum closing)</div>
+        </div>
+        <div style="background:#fdecea;border-radius:7px;padding:.55rem .8rem">
+          <div style="font-size:.72rem;color:#777;margin-bottom:.15rem">Amount NPL (30+)</div>
+          <div style="font-size:1.35rem;font-weight:800;color:#c62828">2,2 T</div>
+          <div style="font-size:.72rem;color:#888">Target: 2,1 T <span style="color:#c62828;font-weight:700">▲ masih di atas target</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NPF block -->
+    <div>
+      <div style="font-size:.82rem;font-weight:700;color:#333;margin-bottom:.5rem;border-bottom:1px solid #e5e7eb;padding-bottom:.25rem">📉 NPF — Non-Performing Financing (OVD &gt;90 hari)</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:.5rem;font-size:.8rem">
+        <div style="background:#fdecea;border-radius:7px;padding:.55rem .8rem">
+          <div style="font-size:.72rem;color:#777;margin-bottom:.15rem">Closing Feb 2026</div>
+          <div style="font-size:1.35rem;font-weight:800;color:#c62828">2,45%</div>
+          <div style="font-size:.72rem;color:#888">Target: 2,41% <span style="color:#c62828;font-weight:700">▲ belum tercapai</span></div>
+        </div>
+        <div style="background:#fff3e0;border-radius:7px;padding:.55rem .8rem">
+          <div style="font-size:.72rem;color:#777;margin-bottom:.15rem">Per 27 Maret 2026</div>
+          <div style="font-size:1.35rem;font-weight:800;color:#e65100">2,63%</div>
+          <div style="font-size:.72rem;color:#888">Real-time (belum closing)</div>
+        </div>
+        <div style="background:#fdecea;border-radius:7px;padding:.55rem .8rem">
+          <div style="font-size:.72rem;color:#777;margin-bottom:.15rem">Amount NPF (90+)</div>
+          <div style="font-size:1.35rem;font-weight:800;color:#c62828">1,273 T</div>
+          <div style="font-size:.72rem;color:#888">Target: 1,252 T <span style="color:#c62828;font-weight:700">▲ masih di atas target</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="background:#fff8e1;border-radius:6px;padding:.45rem .9rem;font-size:.77rem;margin-top:.8rem;color:#92400e">
+      ⚠️ <b>Catatan:</b> NPL/NPF di atas target berarti jumlah konsumen menunggak <b>melebihi batas yang ditetapkan</b> — menjadi fokus utama ASR untuk diturunkan. Semakin rendah NPL/NPF, semakin sehat portofolio perusahaan.
+    </div>
+  </div>
+
+  <!-- ── TUJUAN & KOMPONEN BUNGA ── -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.5rem">
+
+    <!-- Tujuan ASR -->
+    <div style="background:#fff;border-radius:10px;box-shadow:0 1px 4px rgba(0,0,0,.09);padding:1.1rem 1.3rem;border-top:4px solid #c62828">
+      <div style="font-size:1.1rem;font-weight:800;color:#c62828;margin-bottom:.6rem">🎯 Tujuan ASR</div>
+      <div style="display:flex;flex-direction:column;gap:.6rem;font-size:.85rem">
+        <div style="background:#fdecea;border-radius:7px;padding:.6rem .9rem;border-left:3px solid #c62828">
+          <div style="font-weight:700;color:#b91c1c;margin-bottom:.2rem">Meminimalisir Potensi Kerugian</div>
+          <div style="color:#555">Mencegah akun jatuh ke status <b>Write Off (WO)</b> — akun yang belum WO namun berpotensi macet tetap diprioritaskan untuk diselesaikan sebelum sampai ke tahap kerugian.</div>
+        </div>
+        <div style="background:#fef3c7;border-radius:7px;padding:.6rem .9rem;border-left:3px solid #d97706">
+          <div style="font-weight:700;color:#92400e;margin-bottom:.2rem">Meminimalisir Kerugian</div>
+          <div style="color:#555">Memaksimalkan pemulihan (recovery) pada akun yang sudah berstatus <b>Write Off (WO)</b> — menekan kerugian yang sudah terjadi.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Komponen Bunga -->
+    <div style="background:#fff;border-radius:10px;box-shadow:0 1px 4px rgba(0,0,0,.09);padding:1.1rem 1.3rem;border-top:4px solid #1a4fa0">
+      <div style="font-size:1.1rem;font-weight:800;color:#1a4fa0;margin-bottom:.6rem">💹 Komponen Bunga Kredit</div>
+      <div style="font-size:.82rem;color:#555;margin-bottom:.7rem">Bunga yang dibayar konsumen terdiri dari 4 komponen — ASR dan Marketing masing-masing bertanggung jawab atas komponen yang berbeda:</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:.5rem;font-size:.82rem">
+        <div style="background:#f0f4ff;border-radius:6px;padding:.5rem .7rem;border-left:2px solid #6b7db3">
+          <div style="font-weight:700;color:#1a4fa0">COF</div>
+          <div style="color:#555;font-size:.78rem">Cost of Fund — biaya dana yang digunakan perusahaan untuk mendanai kredit</div>
+        </div>
+        <div style="background:#f0f4ff;border-radius:6px;padding:.5rem .7rem;border-left:2px solid #6b7db3">
+          <div style="font-weight:700;color:#1a4fa0">Opex</div>
+          <div style="color:#555;font-size:.78rem">Operational Expenditure — biaya operasional harian perusahaan</div>
+        </div>
+        <div style="background:#fdecea;border-radius:6px;padding:.5rem .7rem;border-left:2px solid #c62828">
+          <div style="font-weight:700;color:#b91c1c">RISK <span style="font-size:.72rem;background:#c62828;color:#fff;border-radius:3px;padding:.1rem .4rem;margin-left:.3rem">ASR</span></div>
+          <div style="color:#555;font-size:.78rem">Biaya risiko kredit macet — komponen yang <b>menjadi tanggung jawab ASR</b> untuk diminimalisir</div>
+        </div>
+        <div style="background:#e8f5e9;border-radius:6px;padding:.5rem .7rem;border-left:2px solid #2e7d32">
+          <div style="font-weight:700;color:#1b5e20">Margin <span style="font-size:.72rem;background:#2e7d32;color:#fff;border-radius:3px;padding:.1rem .4rem;margin-left:.3rem">Marketing</span></div>
+          <div style="color:#555;font-size:.78rem">Keuntungan perusahaan — komponen yang <b>menjadi tanggung jawab Marketing</b> untuk dimaksimalkan</div>
+        </div>
+      </div>
+      <div style="background:#e8f0fe;border-radius:6px;padding:.45rem .8rem;font-size:.78rem;margin-top:.6rem;color:#1a4fa0">
+        💡 Semakin kecil RISK (NPL/NPF rendah) → komponen bunga kredit bisa lebih efisien → produk lebih kompetitif di pasar.
+      </div>
+    </div>
+  </div>
+
+  <!-- ── STRUKTUR ORGANISASI ASR ── -->
+  <div style="background:#fff;border-radius:10px;box-shadow:0 1px 4px rgba(0,0,0,.09);padding:1.2rem 1.4rem;margin-top:1rem;border-top:4px solid #1a4fa0">
+    <div style="font-size:1.05rem;font-weight:800;color:#1a4fa0;margin-bottom:1rem">🏗️ Struktur Organisasi ASR — Garis Besar</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;font-size:.84rem">
+
+      <!-- Kiri: Account Solution & Recovery -->
+      <div>
+        <div style="font-weight:700;font-size:.82rem;color:#fff;background:#1a4fa0;border-radius:6px 6px 0 0;padding:.4rem .8rem">Direktorat ASR</div>
+        <div style="border:1px solid #c7d9f5;border-top:none;border-radius:0 0 6px 6px;overflow:hidden">
+          <!-- Account Solution -->
+          <div style="background:#e8f0fe;padding:.55rem .8rem;border-bottom:1px solid #c7d9f5">
+            <div style="font-weight:700;color:#1a4fa0;margin-bottom:.3rem">📞 Account Solution</div>
+            <div style="display:flex;gap:.4rem;flex-wrap:wrap">
+              <span style="background:#fff;border:1px solid #adc4ed;border-radius:4px;padding:.15rem .5rem;font-size:.78rem"><b>Deskcoll</b> — penagihan via telepon</span>
+              <span style="background:#fff;border:1px solid #adc4ed;border-radius:4px;padding:.15rem .5rem;font-size:.78rem"><b>PAC</b> — kunjungan motor OVD 10–90 hr</span>
+              <span style="background:#fff;border:1px solid #adc4ed;border-radius:4px;padding:.15rem .5rem;font-size:.78rem"><b>FAC</b> — kunjungan mobil OVD 10–90 hr</span>
+            </div>
+          </div>
+          <!-- Recovery -->
+          <div style="background:#fef3c7;padding:.55rem .8rem">
+            <div style="font-weight:700;color:#92400e;margin-bottom:.3rem">🔄 Recovery</div>
+            <div style="font-size:.78rem;color:#555">Penanganan akun OVD &gt;90 hari — pengamanan unit, penjualan, pemulihan piutang macet hingga WO</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kanan: Support -->
+      <div>
+        <div style="font-weight:700;font-size:.82rem;color:#fff;background:#2e7d32;border-radius:6px 6px 0 0;padding:.4rem .8rem">Fungsi Pendukung</div>
+        <div style="border:1px solid #c8e6c9;border-top:none;border-radius:0 0 6px 6px;overflow:hidden">
+          <!-- AS Support -->
+          <div style="background:#e8f5e9;padding:.55rem .8rem;border-bottom:1px solid #c8e6c9">
+            <div style="font-weight:700;color:#1b5e20;margin-bottom:.3rem">🏢 AS Support</div>
+            <div style="display:flex;gap:.4rem;flex-wrap:wrap">
+              <span style="background:#fff;border:1px solid #a5d6a7;border-radius:4px;padding:.15rem .5rem;font-size:.78rem"><b>Collection Admin &amp; Dev</b></span>
+              <span style="background:#fff;border:1px solid #a5d6a7;border-radius:4px;padding:.15rem .5rem;font-size:.78rem"><b>Analyst</b></span>
+              <span style="background:#fff;border:1px solid #a5d6a7;border-radius:4px;padding:.15rem .5rem;font-size:.78rem"><b>Cyber</b></span>
+            </div>
+            <div style="font-size:.77rem;color:#555;margin-top:.4rem">Mendukung operasional harian: laporan, data, administrasi cabang, serta pengembangan sistem dan analitik collection</div>
+          </div>
+          <!-- Task Force -->
+          <div style="background:#fff8e1;padding:.55rem .8rem">
+            <div style="font-weight:700;color:#e65100;margin-bottom:.3rem">⚡ Task Force</div>
+            <div style="font-size:.78rem;color:#555">Tim lintas fungsi — pengembangan strategi, penanganan kasus khusus (sharing loss, eskalasi), perbaikan proses, dan data analysis</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bagan visual sederhana -->
+    <div style="margin-top:.9rem;background:#f4f6fb;border-radius:8px;padding:.8rem 1rem;font-size:.8rem">
+      <div style="text-align:center;font-weight:700;background:#1a4fa0;color:#fff;border-radius:5px;padding:.3rem .8rem;display:inline-block;margin-bottom:.5rem">Direktorat ASR</div>
+      <div style="display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap">
+        <div style="background:#e8f0fe;border:1px solid #adc4ed;border-radius:6px;padding:.4rem .8rem;text-align:center">
+          <div style="font-weight:700;color:#1a4fa0;font-size:.79rem">Account Solution</div>
+          <div style="font-size:.72rem;color:#555">Deskcoll · PAC · FAC</div>
+        </div>
+        <div style="background:#fef3c7;border:1px solid #fcd34d;border-radius:6px;padding:.4rem .8rem;text-align:center">
+          <div style="font-weight:700;color:#92400e;font-size:.79rem">Recovery</div>
+          <div style="font-size:.72rem;color:#555">OVD &gt;90 hr · WO</div>
+        </div>
+        <div style="background:#e8f5e9;border:1px solid #a5d6a7;border-radius:6px;padding:.4rem .8rem;text-align:center">
+          <div style="font-weight:700;color:#1b5e20;font-size:.79rem">AS Support</div>
+          <div style="font-size:.72rem;color:#555">Admin &amp; Dev · Analyst · Cyber</div>
+        </div>
+        <div style="background:#fff8e1;border:1px solid #fcd34d;border-radius:6px;padding:.4rem .8rem;text-align:center">
+          <div style="font-weight:700;color:#e65100;font-size:.79rem">Task Force</div>
+          <div style="font-size:.72rem;color:#555">Kasus Khusus · Sharing Loss</div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -2222,8 +2399,13 @@
 <div class="section">
   <div class="st">
     <h2>⚖️ Landasan Hukum &amp; POJK</h2>
-    <p>"Kitab Suci Leasing" — 5 peraturan yang wajib dipahami. Klik untuk buka detail.</p>
+    <p>"Kitab Suci Leasing" — 5 peraturan yang wajib dipahami. Pilih tab untuk buka masing-masing aturan.</p>
   </div>
+  <div style="margin-bottom:1rem;display:flex;align-items:center;gap:.8rem;flex-wrap:wrap">
+    <button onclick="openLB({title:'Rangkuman Peraturan Perusahaan Pembiayaan (Maret 2026)',filename:'rangkuman-peraturan-perusahaan-pembiayaan.pdf',desc:'Kompilasi POJK 35/2018 · POJK 22/2023 · UU 42/1999 · Putusan MK 18/2019 · PERKAP 8/2011 — 18 Halaman'})" style="background:#1a4fa0;color:#fff;border:none;border-radius:7px;padding:.5rem 1.1rem;font-size:.82rem;cursor:pointer;display:flex;align-items:center;gap:.4rem;font-weight:600">📄 Buka Rangkuman PDF</button>
+    <span style="font-size:.76rem;color:#888">Rangkuman Peraturan Perusahaan Pembiayaan · Maret 2026 · 18 Halaman</span>
+  </div>
+  <div class="pojk-tab-nav" id="pojkTabNav"></div>
   <div class="pojk-grid" id="pojkGrid"></div>
 </div>
 </div>
@@ -2466,80 +2648,410 @@ function gotoDoc(keyword) {
   }, 500);
 }
 
-// POJK
+// ── POJK TAB SYSTEM ──
+function switchPojk(idx) {
+  const tabs = document.querySelectorAll('.ptab');
+  const cards = document.querySelectorAll('#pojkGrid .pojk-card');
+  tabs.forEach((t, i) => {
+    const c = t.getAttribute('data-color');
+    t.style.background = i===idx ? c : '#f4f6fb';
+    t.style.color = i===idx ? '#fff' : '#666';
+    t.style.borderBottom = i===idx ? `2px solid ${c}` : '2px solid transparent';
+  });
+  cards.forEach((c, i) => { c.style.display = i===idx ? 'block' : 'none'; });
+}
+
 const pojkData = [
   {
-    label: 'POJK No. 35/POJK.05/2018',
+    label: 'POJK No. 35/POJK.05/2018', shortLabel: 'POJK 35/2018',
     color: '#003087',
     title: 'Penyelenggaraan Usaha Perusahaan Pembiayaan',
-    tag: '⚙️ Aturan "Dapur" Perusahaan',
+    tag: '⚙️ Aturan "Dapur/Mesin" — Di Balik Layar Perusahaan · 129 Halaman, 26 Bab',
     points: [
-      { h: '1. Jenis & Kegiatan Usaha', body: '<ul><li><b>Pembiayaan Investasi</b>: Barang modal usaha (mesin, alat berat, ruko) — skema Finance Lease/Sale and Leaseback</li><li><b>Pembiayaan Modal Kerja</b>: Siklus usaha — skema Factoring/Sale and Leaseback/Fasilitas Modal Usaha</li><li><b>Pembiayaan Multiguna</b>: Konsumsi perorangan (kredit motor/mobil) — skema Installment/Sewa Pembiayaan</li></ul>' },
-      { h: '2. Aturan Uang Muka (DP)', body: '<ul><li>NPF &lt;1% → DP minimal <b>0%</b></li><li>NPF 1–3% → DP minimal <b>10%</b></li><li>NPF 3–5% → DP minimal <b>15%</b></li><li>NPF &gt;5% → DP minimal <b>15–25%</b> (tergantung jenis kendaraan)</li></ul><p style="font-size:.78rem;margin-top:.3rem">NPF = OVD &gt;90 hari</p>' },
-      { h: '3. Fidusia & Asuransi', body: '<ul><li>Wajib daftar jaminan fidusia <b>max 1 bulan</b> sejak perjanjian</li><li>Kendaraan wajib diasuransikan di perusahaan berizin OJK</li></ul>' },
-      { h: '4. Penagihan & Eksekusi', body: '<ul><li>Wajib kirim <b>Surat Peringatan (SP)</b> sebelum tarik unit — memuat hari telat, total hutang, bunga, denda</li><li>Pihak ketiga (BHJP) wajib berbentuk PT (bukan ormas/perorangan), punya izin, dan SDM bersertifikasi SPPI</li><li>Saat pengamanan: wajib bawa ST/SK, Fidusia, BAST, debitur terbukti wanprestasi</li></ul>' },
-      { h: '5. Kualitas Piutang & CKPN', body: '<ul><li>Lancar (0–10 hr): 1% | DPK (10–90 hr): 5%</li><li>Kurang Lancar (90–120 hr): 15% | Diragukan (120–180 hr): 50%</li><li>Macet (&gt;180 hr): <b>100%</b></li></ul>' },
-      { h: '6. Batasan Pembiayaan (BMPP)', body: '<ul><li>Pihak terkait (grup sendiri): maks <b>50% ekuitas</b></li><li>1 debitur tidak terkait: maks <b>20% ekuitas</b></li><li>1 kelompok debitur: maks <b>50% ekuitas</b></li></ul>' },
+      { h: '1. Jenis & Kegiatan Usaha', body: `<ul>
+        <li><b>Pembiayaan Investasi</b>: Barang modal/jasa untuk aktivitas usaha (rehabilitasi, modernisasi, ekspansi, relokasi). Skema: Sewa Pembiayaan, Jual & Sewa-Balik, Anjak Piutang, Angsuran, Pembiayaan Proyek/Infrastruktur.</li>
+        <li><b>Pembiayaan Modal Kerja</b>: Kebutuhan operasional satu siklus usaha. Skema: Jual & Sewa-Balik, Anjak Piutang, Fasilitas Modal Usaha.</li>
+        <li><b>Pembiayaan Multiguna</b>: Barang/jasa konsumsi pribadi (paling umum — kredit motor/mobil). Skema: Sewa Pembiayaan, Angsuran, Fasilitas Dana.</li>
+        <li><b>Kegiatan Usaha Lain</b>: Wajib persetujuan OJK. Syarat: ekuitas min. <b>Rp 200 M</b>, tingkat kesehatan sehat, NPF rendah, tidak sedang disanksi OJK.</li>
+        <li><b>Sewa Operasi & Imbal Jasa</b>: Perusahaan pembiayaan dapat melakukan sewa operasi (operating lease) dan kegiatan berbasis imbal jasa, sepanjang tidak bertentangan dengan peraturan sektor jasa keuangan.</li>
+      </ul>` },
+      { h: '2. Uang Muka (DP) Kendaraan Bermotor — Tabel Lengkap', body: `<table style="width:100%;border-collapse:collapse;font-size:.78rem;margin-top:.3rem">
+        <tr style="background:#dbeafe"><th style="padding:.3rem .5rem;text-align:left">Kondisi Perusahaan</th><th style="padding:.3rem .5rem;text-align:center">Roda 2/3</th><th style="padding:.3rem .5rem;text-align:center">Roda 4+ (Investasi)</th><th style="padding:.3rem .5rem;text-align:center">Roda 4+ (Multiguna)</th></tr>
+        <tr><td style="padding:.25rem .5rem">Sehat &amp; NPF Neto ≤ 1%</td><td style="padding:.25rem .5rem;text-align:center"><b>0%</b></td><td style="padding:.25rem .5rem;text-align:center"><b>0%</b></td><td style="padding:.25rem .5rem;text-align:center"><b>0%</b></td></tr>
+        <tr style="background:#f9f9f9"><td style="padding:.25rem .5rem">Sehat &amp; 1% &lt; NPF ≤ 3%</td><td style="padding:.25rem .5rem;text-align:center"><b>15%</b></td><td style="padding:.25rem .5rem;text-align:center"><b>10%</b></td><td style="padding:.25rem .5rem;text-align:center"><b>15%</b></td></tr>
+        <tr><td style="padding:.25rem .5rem">Sehat &amp; NPF &gt; 3%</td><td style="padding:.25rem .5rem;text-align:center"><b>25%</b></td><td style="padding:.25rem .5rem;text-align:center"><b>20%</b></td><td style="padding:.25rem .5rem;text-align:center"><b>25%</b></td></tr>
+        <tr style="background:#f9f9f9"><td style="padding:.25rem .5rem">Cukup Sehat / Di bawah Sehat</td><td style="padding:.25rem .5rem;text-align:center"><b>25%</b></td><td style="padding:.25rem .5rem;text-align:center"><b>20%</b></td><td style="padding:.25rem .5rem;text-align:center"><b>25%</b></td></tr>
+      </table>
+      <p style="font-size:.78rem;margin-top:.4rem;color:#555">📌 <b>NPF Neto</b> = OVD &gt;90 hari / Total TMA. Dasar penghitungan DP berdasarkan laporan keuangan terakhir.</p>` },
+      { h: '3. Mitigasi Risiko & Jaminan Fidusia', body: `<ul>
+        <li><b>Wajib Manajemen Risiko</b>: Identifikasi, pengukuran, pemantauan, dan pengendalian risiko pembiayaan.</li>
+        <li><b>Analisis Kelayakan Debitur</b>: Wajib dilakukan sebelum penyaluran pembiayaan.</li>
+        <li><b>Pendaftaran Fidusia</b>: Wajib didaftarkan ke Kantor Pendaftaran Fidusia paling lambat <b>1 bulan</b> sejak tanggal perjanjian.</li>
+        <li><b>Asuransi Agunan</b>: Unit kendaraan wajib diasuransikan pada perusahaan asuransi yang <b>berizin OJK</b>.</li>
+        <li><b>Sertifikat Fidusia</b>: Wajib diserahkan salinannya kepada debitur.</li>
+      </ul>` },
+      { h: '4. Ketentuan Penagihan (BAB XI) — Wajib Dipatuhi', body: `<ul>
+        <li><b>Jadwal Penagihan</b>: Hanya boleh dilakukan pukul <b>08.00–20.00</b> waktu setempat, kecuali ada perjanjian berbeda secara tertulis.</li>
+        <li><b>Penagih Wajib Membawa</b>: Surat kuasa resmi, kartu identitas, dan dokumen perjanjian pembiayaan.</li>
+        <li><b>Hanya kepada Pihak yang Berwenang</b>: Penagihan hanya boleh kepada debitur, penjamin, atau pemilik agunan yang sah. <b>Dilarang</b> menagih ke keluarga, tetangga, atau rekan kerja.</li>
+        <li><b>Dilarang</b>: Ancaman kekerasan (fisik maupun verbal), intimidasi, atau tindakan yang mempermalukan debitur.</li>
+        <li><b>Tanggung Jawab Penuh</b>: Penagih yang menggunakan jasa pihak ketiga tetap menjadi tanggung jawab penuh perusahaan pembiayaan.</li>
+        <li><b>Syarat Pihak Ketiga (BHJP)</b>: Wajib berbentuk Badan Hukum (PT), punya izin, SDM ber-SPPI.</li>
+        <li><b>Sertifikasi Kompetensi Penagih</b>: Wajib dipenuhi sesuai ketentuan OJK (SPPI).</li>
+        <li><b>Surat Peringatan (SP)</b>: Wajib dikirim sebelum tarik unit; memuat jumlah hari telat, total hutang, bunga, dan denda.</li>
+      </ul>` },
+      { h: '5. Kualitas Piutang & Pencadangan (CKPN)', body: `<table style="width:100%;border-collapse:collapse;font-size:.8rem;margin-top:.3rem">
+        <tr style="background:#dbeafe"><th style="padding:.3rem .5rem;text-align:left">Kolektibilitas</th><th style="padding:.3rem .5rem;text-align:center">OVD</th><th style="padding:.3rem .5rem;text-align:center">CKPN</th></tr>
+        <tr><td style="padding:.25rem .5rem"><b style="color:#16a34a">Lancar</b></td><td style="padding:.25rem .5rem;text-align:center">0–10 hari</td><td style="padding:.25rem .5rem;text-align:center">1%</td></tr>
+        <tr style="background:#f9f9f9"><td style="padding:.25rem .5rem"><b style="color:#ca8a04">DPK</b> (Dalam Perhatian Khusus)</td><td style="padding:.25rem .5rem;text-align:center">&gt;10–90 hari</td><td style="padding:.25rem .5rem;text-align:center">5%</td></tr>
+        <tr><td style="padding:.25rem .5rem"><b style="color:#ea580c">Kurang Lancar</b></td><td style="padding:.25rem .5rem;text-align:center">&gt;90–120 hari</td><td style="padding:.25rem .5rem;text-align:center">15%</td></tr>
+        <tr style="background:#f9f9f9"><td style="padding:.25rem .5rem"><b style="color:#dc2626">Diragukan</b></td><td style="padding:.25rem .5rem;text-align:center">&gt;120–180 hari</td><td style="padding:.25rem .5rem;text-align:center">50%</td></tr>
+        <tr><td style="padding:.25rem .5rem"><b style="color:#991b1b">Macet</b></td><td style="padding:.25rem .5rem;text-align:center">&gt;180 hari</td><td style="padding:.25rem .5rem;text-align:center"><b>100%</b></td></tr>
+      </table>
+      <p style="font-size:.78rem;margin-top:.4rem;color:#555">📌 Semua persentase CKPN dihitung <b>setelah dikurangi nilai agunan</b></p>` },
+      { h: '6. Batasan Insentif & BMPP', body: `<ul>
+        <li><b>Insentif Pihak Ketiga</b>: Maks <b>17,5%</b> dari total pendapatan terkait pembiayaan per satu perjanjian.</li>
+        <li><b>BMPP — Pihak Terkait</b> (grup sendiri/Direksi): maks <b>50%</b> dari Ekuitas</li>
+        <li><b>BMPP — 1 Debitur</b> (Pihak Tidak Terkait): maks <b>20%</b> dari Ekuitas</li>
+        <li><b>BMPP — 1 Kelompok Debitur</b> (Grup Bisnis): maks <b>50%</b> dari Ekuitas</li>
+        <li>Dasar: laporan ekuitas bulanan terakhir sebelum penyaluran.</li>
+      </ul>` },
+      { h: '7. Sistem Informasi & Teknologi (BAB III)', body: `<ul>
+        <li>Perusahaan dengan <b>lebih dari 5 kantor cabang</b> wajib memiliki sistem IT terintegrasi.</li>
+        <li>Kegiatan berbasis TI wajib memiliki:
+          <ul>
+            <li><b>SOP tertulis</b></li>
+            <li><b>SDM berpengalaman</b> di bidang TI</li>
+            <li><b>Pusat data dan pusat pemulihan bencana</b> yang berlokasi di Indonesia</li>
+            <li><b>Sistem TI yang handal dan aman</b></li>
+          </ul>
+        </li>
+      </ul>` },
+      { h: '8. Pengendalian Fraud & Strategi Anti-Fraud (BAB XII)', body: `<ul>
+        <li>Wajib memiliki <b>Strategi Anti-Fraud</b> yang mencakup: pencegahan, deteksi, investigasi, pelaporan, dan sanksi internal.</li>
+        <li>Direksi wajib menetapkan, mengawasi implementasi, dan melaporkan kepada Dewan Komisaris secara berkala.</li>
+        <li><b>Pelaporan insiden fraud ke OJK</b>: paling lambat <b>3 hari kerja</b> setelah kejadian diketahui.</li>
+        <li>Strategi Anti-Fraud wajib dikaji dan diperbarui secara berkala.</li>
+      </ul>` },
+      { h: '9. Rasio Keuangan & Tingkat Kesehatan (BAB XVII–XIX)', body: `<ul>
+        <li><b>Rasio Piutang Pembiayaan</b>: Minimum <b>40%</b> dari total aset produktif harus berupa piutang pembiayaan.</li>
+        <li><b>Ekuitas Minimum</b>: Rp 100 miliar (perusahaan baru); Rp 200 miliar (kegiatan usaha tambahan).</li>
+        <li><b>Gearing Ratio</b>: Total pinjaman tidak boleh melebihi <b>10× ekuitas</b>.</li>
+        <li><b>NPF Neto &gt;5%</b> = tidak sehat → mempengaruhi ketentuan uang muka (DP lebih tinggi).</li>
+        <li><b>Tingkat Kesehatan</b>: dinilai dari permodalan, kualitas piutang, likuiditas, dan kinerja.<br>
+          Kategori: <span style="color:#16a34a;font-weight:700">Sehat</span> → <span style="color:#ca8a04;font-weight:700">Cukup Sehat</span> → <span style="color:#ea580c;font-weight:700">Kurang Sehat</span> → <span style="color:#dc2626;font-weight:700">Tidak Sehat</span></li>
+        <li><b>Sertifikasi Kompetensi</b>: Direksi, Dewan Komisaris, dan tenaga ahli wajib memiliki sertifikasi dari LSP yang diakui OJK; wajib diperbarui berkala.</li>
+      </ul>` },
+      { h: '10. Larangan Perusahaan Pembiayaan (BAB XVI)', body: `<ul>
+        <li>Membiayai objek yang <b>sedang dibiayai perusahaan pembiayaan lain</b> untuk debitur yang sama.</li>
+        <li>Memberikan jaminan dalam bentuk apapun kepada pihak lain atas kewajiban pihak ketiga.</li>
+        <li>Melakukan kegiatan usaha di luar yang telah <b>mendapat izin OJK</b>.</li>
+        <li>Menyampaikan <b>informasi tidak benar atau menyesatkan</b> kepada OJK maupun publik.</li>
+        <li>Menggunakan dana dari sumber tidak sah atau tidak transparan.</li>
+        <li>Menempatkan dana pada <b>investasi fiktif</b> atau produk yang tidak diizinkan.</li>
+      </ul>` },
+      { h: '11. Laporan Berkala Wajib (BAB XXI)', body: `<table style="width:100%;border-collapse:collapse;font-size:.8rem;margin-top:.3rem">
+        <tr style="background:#dbeafe"><th style="padding:.3rem .5rem">Jenis Laporan</th><th style="padding:.3rem .5rem">Batas Waktu</th><th style="padding:.3rem .5rem">Metode</th></tr>
+        <tr><td style="padding:.25rem .5rem"><b>Laporan Bulanan</b></td><td style="padding:.25rem .5rem">Maks. 10 hari kerja setelah akhir bulan</td><td style="padding:.25rem .5rem">Elektronik (sistem OJK)</td></tr>
+        <tr style="background:#f9f9f9"><td style="padding:.25rem .5rem"><b>Laporan Triwulanan</b></td><td style="padding:.25rem .5rem">Maks. 30 hari setelah akhir triwulan</td><td style="padding:.25rem .5rem">Elektronik (sistem OJK)</td></tr>
+        <tr><td style="padding:.25rem .5rem"><b>Laporan Tahunan (Audited)</b></td><td style="padding:.25rem .5rem">Maks. akhir April tahun berikutnya</td><td style="padding:.25rem .5rem">Elektronik (sistem OJK)</td></tr>
+      </table>` },
+      { h: '12. Sanksi Administratif (BAB XXIV)', body: `<table style="width:100%;border-collapse:collapse;font-size:.8rem;margin-top:.3rem">
+        <tr style="background:#dbeafe"><th style="padding:.3rem .5rem">Jenis Sanksi</th><th style="padding:.3rem .5rem">Keterangan</th></tr>
+        <tr><td style="padding:.25rem .5rem"><b>Peringatan Tertulis</b></td><td style="padding:.25rem .5rem">Diberikan pertama kali; dapat diberikan hingga 3× berturut-turut.</td></tr>
+        <tr style="background:#f9f9f9"><td style="padding:.25rem .5rem"><b>Pembatasan Kegiatan Usaha</b></td><td style="padding:.25rem .5rem">Jika peringatan tidak diindahkan atau pelanggaran berlanjut.</td></tr>
+        <tr><td style="padding:.25rem .5rem"><b>Pembekuan Kegiatan Usaha</b></td><td style="padding:.25rem .5rem">Untuk pelanggaran berat atau berulang setelah sanksi pembatasan.</td></tr>
+        <tr style="background:#f9f9f9"><td style="padding:.25rem .5rem"><b>Pencabutan Izin Usaha</b></td><td style="padding:.25rem .5rem">Sanksi tertinggi; jika tidak mematuhi setelah sanksi pembekuan.</td></tr>
+        <tr><td style="padding:.25rem .5rem"><b>Denda Administratif</b></td><td style="padding:.25rem .5rem">Besaran ditetapkan OJK sesuai jenis dan tingkat pelanggaran.</td></tr>
+        <tr style="background:#f9f9f9"><td style="padding:.25rem .5rem"><b>Pemberhentian Pengurus</b></td><td style="padding:.25rem .5rem">Dapat dikenakan kepada Direksi/Komisaris yang terbukti melanggar.</td></tr>
+      </table>` },
     ]
   },
   {
-    label: 'POJK No. 22 Tahun 2023',
+    label: 'POJK No. 22 Tahun 2023', shortLabel: 'POJK 22/2023',
     color: '#0050C8',
     title: 'Pelindungan Konsumen & Masyarakat di Sektor Jasa Keuangan',
-    tag: '🛡️ Aturan "Teras" — Perlindungan Konsumen',
+    tag: '🛡️ Aturan "Teras/Muka" — Di Depan Layar Perusahaan · 131 Halaman, 13 Bab',
     points: [
-      { h: '1. Itikad Baik & Larangan Menyesatkan', body: '<p>Perusahaan (PUJK) wajib beritikad baik. Dilarang memberikan informasi menyesatkan, tidak jelas, atau menyembunyikan risiko produk.</p>' },
-      { h: '2. Dokumen RIPLAY', body: '<p>Wajib sediakan Ringkasan Informasi Produk dan Layanan (RIPLAY) sebelum konsumen tanda tangan — memuat manfaat, biaya, risiko, hak &amp; kewajiban, dan simulasi angsuran.</p>' },
-      { h: '3. Perlindungan Data Pribadi', body: '<ul><li>Dilarang jual/bagikan data konsumen tanpa persetujuan tertulis</li><li>Persetujuan harus spesifik per tujuan — jika konsumen menolak, layanan inti tidak boleh dipersulit</li></ul>' },
-      { h: '4. Etika Penagihan (Larangan Penting)', body: '<ul><li>Perusahaan bertanggung jawab penuh atas tindakan vendor/debt collector</li><li>Dilarang: mengancam, kekerasan fisik/verbal, mempermalukan konsumen (menagih ke teman kantor/tetangga), teror</li></ul>' },
-      { h: '5. Klausula Terlarang dalam PPK', body: '<ul><li>Dilarang mencantumkan: pengalihan tanggung jawab sepihak, perubahan aturan sepihak tanpa pemberitahuan, klausul "tunduk" pada aturan yang belum ada saat kontrak</li></ul>' },
-      { h: '6. Layanan Pengaduan Wajib', body: '<ul><li>Wajib punya unit penanganan pengaduan — GRATIS untuk konsumen</li><li>Batas waktu respon: 20 hari kerja</li></ul>' },
+      { h: '1. 7 Prinsip Pelindungan Konsumen (BAB II)', body: `<ol style="padding-left:1.2rem;font-size:.83rem">
+        <li><b>Edukasi yang Memadai</b></li>
+        <li><b>Keterbukaan &amp; Transparansi Informasi</b></li>
+        <li><b>Perlakuan Adil &amp; Bisnis Bertanggung Jawab</b></li>
+        <li><b>Pelindungan Aset, Privasi, dan Data</b></li>
+        <li><b>Penanganan Pengaduan yang Efektif</b></li>
+        <li><b>Penegakan Kepatuhan</b></li>
+        <li><b>Persaingan yang Sehat</b></li>
+      </ol>` },
+      { h: '2. Kewajiban PUJK terhadap Konsumen', body: `<ul>
+        <li>Menyampaikan informasi produk/layanan secara <b>jelas, akurat, dan tidak menyesatkan</b> sebelum transaksi.</li>
+        <li>Perjanjian wajib memuat: jenis produk/layanan, biaya, risiko, hak-kewajiban, dan mekanisme penyelesaian sengketa.</li>
+        <li>Menyediakan layanan pengaduan yang mudah diakses dengan tenggat waktu penyelesaian yang jelas.</li>
+        <li>Menjaga kerahasiaan data pribadi; data hanya boleh digunakan sesuai tujuan yang telah disetujui.</li>
+        <li>Agen/mitra yang mewakili PUJK wajib juga mematuhi ketentuan pelindungan konsumen.</li>
+        <li>Dilarang menggunakan penagih yang <b>intimidatif, mengancam, atau tidak memiliki identitas resmi</b>.</li>
+        <li>Dilarang mempersulit klaim, membatalkan perjanjian sepihak, atau menunda pencairan tanpa alasan sah.</li>
+        <li>Dilarang menawarkan produk yang tidak sesuai profil risiko dan kebutuhan konsumen.</li>
+      </ul>` },
+      { h: '3. Dokumen RIPLAY (Ringkasan Informasi Produk & Layanan)', body: `<ul>
+        <li><b>Wajib Ada RIPLAY</b>: Perusahaan wajib menyediakan dokumen RIPLAY untuk setiap produk.</li>
+        <li><b>Isi RIPLAY</b>: Harus memuat manfaat, biaya, risiko, hak &amp; kewajiban, serta simulasi biaya/angsuran.</li>
+        <li><b>Waktu Penyampaian</b>: RIPLAY harus disampaikan <b>sebelum</b> konsumen menandatangani perjanjian.</li>
+      </ul>` },
+      { h: '4. Hak Konsumen (BAB IV)', body: `<ul>
+        <li>Mendapatkan <b>keamanan</b> dalam menggunakan produk/layanan.</li>
+        <li><b>Memilih</b> produk/layanan secara bebas tanpa paksaan.</li>
+        <li>Mendapatkan produk/layanan <b>sesuai penawaran</b> yang dijanjikan.</li>
+        <li>Mendapatkan <b>informasi jelas, akurat, dan tidak menyesatkan</b>.</li>
+        <li>Menyampaikan pendapat dan pengaduan <b>tanpa hambatan</b>.</li>
+        <li>Mendapatkan <b>advokasi dan penyelesaian sengketa</b> yang efektif.</li>
+        <li>Mendapatkan <b>kompensasi/ganti rugi</b> jika terbukti dirugikan.</li>
+      </ul>` },
+      { h: '5. Kewajiban Konsumen (BAB IV)', body: `<ul>
+        <li>Membaca dan memahami informasi produk/layanan <b>sebelum bertransaksi</b>.</li>
+        <li>Memberikan informasi yang <b>benar, lengkap, dan tidak menyesatkan</b> ke PUJK.</li>
+        <li>Memenuhi kewajiban pembayaran dan ketentuan perjanjian <b>tepat waktu</b>.</li>
+        <li>Mengikuti prosedur dan tata cara pemanfaatan produk/layanan.</li>
+        <li>Memberi tahu PUJK jika ada <b>perubahan informasi</b> yang relevan.</li>
+      </ul>` },
+      { h: '6. Larangan Iklan & Pemasaran (BAB II)', body: `<ul>
+        <li>Menjanjikan keuntungan atau imbal hasil yang <b>tidak realistis</b>.</li>
+        <li>Menampilkan <b>testimoni palsu atau berlebihan</b> yang menyesatkan.</li>
+        <li>Menyembunyikan <b>biaya penting, risiko produk, atau syarat utama</b>.</li>
+        <li>Menargetkan iklan kepada kelompok rentan secara eksploitatif (anak-anak, lansia, penyandang disabilitas).</li>
+        <li>Menggunakan bahasa yang <b>membingungkan atau teknis berlebihan</b> yang tidak dapat dipahami konsumen awam.</li>
+        <li>Menggunakan nama, logo, atau citra lembaga pemerintah secara <b>menyesatkan</b>.</li>
+      </ul>` },
+      { h: '7. Mekanisme Layanan Pengaduan', body: `<table style="width:100%;border-collapse:collapse;font-size:.78rem;margin-top:.3rem">
+        <tr style="background:#dbeafe"><th style="padding:.3rem .5rem">Jalur</th><th style="padding:.3rem .5rem">Pengelola</th><th style="padding:.3rem .5rem">Tenggat Waktu</th></tr>
+        <tr><td style="padding:.25rem .5rem"><b>Pengaduan Internal</b></td><td style="padding:.25rem .5rem">PUJK</td><td style="padding:.25rem .5rem">20 hari kerja (dapat diperpanjang 20 HK dengan alasan sah)</td></tr>
+        <tr style="background:#f9f9f9"><td style="padding:.25rem .5rem"><b>Pengaduan ke OJK</b></td><td style="padding:.25rem .5rem">OJK</td><td style="padding:.25rem .5rem">Jika tidak diselesaikan PUJK atau konsumen tidak puas</td></tr>
+        <tr><td style="padding:.25rem .5rem"><b>Mediasi (LAPS)</b></td><td style="padding:.25rem .5rem">Lembaga Alternatif Penyelesaian Sengketa</td><td style="padding:.25rem .5rem">Sukarela; lebih cepat dari litigasi</td></tr>
+        <tr style="background:#f9f9f9"><td style="padding:.25rem .5rem"><b>Litigasi</b></td><td style="padding:.25rem .5rem">Pengadilan</td><td style="padding:.25rem .5rem">Jalur terakhir jika seluruh upaya di luar pengadilan gagal</td></tr>
+      </table>` },
+      { h: '8. Perlindungan Data Pribadi', body: `<ul>
+        <li><b>Larangan Jual Beli Data</b>: Perusahaan dilarang memberikan data konsumen kepada pihak lain <b>tanpa persetujuan tertulis</b>.</li>
+        <li><b>Persetujuan Spesifik per Tujuan</b>: Jika data digunakan untuk tujuan lain (misal: tawaran asuransi tambahan di luar kredit), harus ada opsi persetujuan terpisah. Konsumen berhak menolak — jika menolak, <b>layanan inti (kredit) tidak boleh dipersulit</b>.</li>
+      </ul>` },
+      { h: '9. Etika Penagihan & Tanggung Jawab Pihak Ketiga', body: `<ul>
+        <li><b>Tanggung Jawab Penuh</b>: Perusahaan bertanggung jawab penuh atas segala tindakan pihak ketiga (debt collector/vendor) yang bekerja untuk kepentingan perusahaan.</li>
+        <li><b>Larangan dalam Penagihan</b>: Ancaman, kekerasan fisik/verbal, mempermalukan konsumen (tagih ke teman kantor/tetangga), teror dalam bentuk apapun.</li>
+        <li><b>Penagih Wajib</b>: Memiliki identitas resmi dan sertifikasi kompetensi (SPPI).</li>
+      </ul>` },
+      { h: '10. Perjanjian Baku (PPK) — Klausula Terlarang', body: `<p style="margin-bottom:.4rem;font-size:.83rem">Dalam perjanjian baku, dilarang mencantumkan klausul yang menyatakan:</p>
+      <ul>
+        <li>Pengalihan tanggung jawab sepihak</li>
+        <li>Perusahaan berhak mengubah aturan <b>sepihak tanpa pemberitahuan</b></li>
+        <li>Konsumen "tunduk" pada aturan baru yang <b>belum ada saat kontrak dibuat</b></li>
+        <li>Dilarang mencantumkan klausul yang <b>tidak adil atau merugikan debitur secara sepihak</b></li>
+      </ul>` },
+      { h: '11. Pengawasan OJK (BAB VII)', body: `<ul>
+        <li>OJK dapat melakukan pengawasan <b>on-site dan off-site</b>.</li>
+        <li>OJK berwenang meminta data, dokumen, dan informasi dari PUJK kapan saja.</li>
+        <li>OJK dapat melakukan <b>mystery shopping</b> untuk menguji kualitas layanan dan kepatuhan.</li>
+        <li>PUJK wajib menyampaikan laporan pelindungan konsumen kepada OJK secara berkala.</li>
+        <li>OJK berwenang melakukan pembelaan hukum atas nama kelompok konsumen yang dirugikan (<b>class action</b>).</li>
+        <li>Sanksi dijatuhkan berdasarkan tingkat pelanggaran; dapat diajukan keberatan dalam <b>10 hari kerja</b>. OJK dapat mengumumkan sanksi kepada publik.</li>
+      </ul>` },
+      { h: '12. Sanksi POJK 22/2023', body: `<table style="width:100%;border-collapse:collapse;font-size:.8rem;margin-top:.3rem">
+        <tr style="background:#dbeafe"><th style="padding:.3rem .5rem">Jenis</th><th style="padding:.3rem .5rem">Keterangan</th></tr>
+        <tr><td style="padding:.25rem .5rem"><b>Peringatan Tertulis</b></td><td style="padding:.25rem .5rem">Untuk pelanggaran ringan atau pertama kali.</td></tr>
+        <tr style="background:#f9f9f9"><td style="padding:.25rem .5rem"><b>Pembatasan Produk/Layanan</b></td><td style="padding:.25rem .5rem">Pembatasan sebagian atau seluruh kegiatan usaha.</td></tr>
+        <tr><td style="padding:.25rem .5rem"><b>Pembekuan Produk/Layanan</b></td><td style="padding:.25rem .5rem">Untuk pelanggaran lebih berat atau berulang.</td></tr>
+        <tr style="background:#f9f9f9"><td style="padding:.25rem .5rem"><b>Pemberhentian Pengurus</b></td><td style="padding:.25rem .5rem">Terhadap pengurus yang terbukti melanggar.</td></tr>
+        <tr><td style="padding:.25rem .5rem"><b>Denda Administratif</b></td><td style="padding:.25rem .5rem">Besaran ditetapkan OJK sesuai jenis pelanggaran.</td></tr>
+        <tr style="background:#f9f9f9"><td style="padding:.25rem .5rem"><b>Pencabutan Izin Usaha</b></td><td style="padding:.25rem .5rem">Sanksi tertinggi; untuk pelanggaran sangat berat.</td></tr>
+      </table>` },
     ]
   },
   {
-    label: 'UU No. 42 Tahun 1999',
+    label: 'UU No. 42 Tahun 1999', shortLabel: 'UU 42/1999',
     color: '#6A1B9A',
     title: 'Jaminan Fidusia',
-    tag: '⚖️ Landasan Hukum Fundamental',
+    tag: '⚖️ Landasan Hukum Paling Fundamental Leasing · 22 Halaman, 8 Bab, 52 Pasal',
     points: [
-      { h: '1. Definisi Fidusia', body: '<p>Pengalihan hak kepemilikan atas dasar kepercayaan — <b>kendaraan tetap di tangan konsumen</b> namun hak milik sudah beralih ke BCAF sampai hutang lunas. Inilah mengapa BPKB disimpan perusahaan.</p>' },
-      { h: '2. Hak Mendahului (Droit de Preference)', body: '<p>BCAF memiliki hak yang didahulukan dari kreditur lain. Jika konsumen bangkrut, hasil penjualan kendaraan digunakan melunasi BCAF dahulu.</p>' },
-      { h: '3. Kewajiban Pendaftaran', body: '<ul><li>Wajib daftar di Kantor Pendaftaran Fidusia — menghasilkan Sertifikat Jaminan Fidusia</li><li>Jaminan fidusia lahir pada tanggal tercatat di Buku Daftar Fidusia</li></ul>' },
-      { h: '4. Kekuatan Sertifikat Fidusia', body: '<p>Sertifikat fidusia memiliki <b>kekuatan eksekutorial setara putusan pengadilan berkekuatan hukum tetap</b> — perusahaan tidak perlu gugat perdata yang butuh bertahun-tahun.</p>' },
-      { h: '5. Cara Eksekusi Kredit Macet', body: '<ul><li><b>Titel Eksekutorial</b>: Eksekusi langsung dengan kekuatan sertifikat fidusia</li><li><b>Penjualan Lelang</b>: Via lelang umum (biasa)</li><li><b>Bawah Tangan</b>: Ke dealer/showroom atas kesepakatan — syarat: tunggu 1 bulan sejak pemberitahuan tertulis, umumkan di ≥2 surat kabar</li></ul>' },
-      { h: '6. Larangan Konsumen (Sanksi Pidana!)', body: '<ul><li><b>Pasal 35</b>: Pemalsuan data fidusia → pidana 1–5 tahun + denda maks Rp 100 juta</li><li><b>Pasal 36</b>: Mengalihkan/menggadaikan/menyewakan unit tanpa izin tertulis BCAF → pidana maks 2 tahun + denda maks Rp 50 juta</li></ul>' },
+      { h: '1. Definisi-Definisi Penting (BAB I)', body: `<ul>
+        <li><b>Fidusia</b>: Pengalihan hak kepemilikan suatu benda <b>atas dasar kepercayaan</b>, dengan ketentuan bahwa benda tetap dalam penguasaan pemilik (debitur). Implikasi: meskipun motor/mobil dipakai konsumen, <b>hak milik sudah beralih ke BCAF</b> — inilah mengapa BPKB disimpan perusahaan.</li>
+        <li><b>Jaminan Fidusia</b>: Hak jaminan atas benda bergerak (berwujud/tidak berwujud) dan benda tidak bergerak tertentu yang tidak dapat dibebani Hak Tanggungan, sebagai agunan pelunasan utang tertentu.</li>
+        <li><b>Akta Jaminan Fidusia</b>: Akta notaris dalam bahasa Indonesia yang mencatat perjanjian jaminan fidusia. Wajib memuat: identitas para pihak, uraian benda jaminan, nilai penjaminan, dan nilai benda.</li>
+        <li><b>Sertifikat Jaminan Fidusia</b>: Sertifikat otentik diterbitkan oleh KPF. Memiliki irah-irah: <em>"DEMI KEADILAN BERDASARKAN KETUHANAN YANG MAHA ESA"</em>.</li>
+        <li><b>KPF</b> (Kantor Pendaftaran Fidusia): Lembaga di bawah Kemenkumham tempat mendaftarkan fidusia; yang menerbitkan sertifikat dan mencatat di Buku Daftar Fidusia.</li>
+      </ul>` },
+      { h: '2. Pembebanan, Pendaftaran & Pengalihan (BAB II–III)', body: `<ul>
+        <li><b>Pembebanan Fidusia</b>: Dilakukan dengan Akta Jaminan Fidusia oleh notaris dalam bahasa Indonesia.</li>
+        <li><b>Pendaftaran ke KPF</b>: Wajib didaftarkan ke KPF di bawah Kemenkumham. Sejak pendaftaran berlaku asas publisitas dan <b>hak kebendaan lahir</b>.</li>
+        <li><b>Tanggal Efektif = Buku Daftar Fidusia</b>: Jaminan Fidusia lahir pada tanggal yang tercatat dalam Buku Daftar Fidusia (bukan tanggal akta notaris).</li>
+        <li><b>Perubahan Jaminan</b>: Jika ada perubahan nilai utang atau deskripsi benda, penerima fidusia wajib mengajukan permohonan perubahan ke KPF.</li>
+        <li><b>Pengalihan Piutang (Cessie)</b>: Jaminan fidusia dapat dialihkan bersama piutangnya. Pengalihan wajib diberitahukan kepada pemberi fidusia.</li>
+        <li><b>Hapusnya Jaminan</b>: Fidusia hapus jika utang lunas, penerima melepaskan hak, atau benda musnah. KPF wajib diberi tahu dan sertifikat diserahkan kembali untuk dicoret.</li>
+      </ul>` },
+      { h: '3. Hak Mendahulu (Droit de Préférence & Droit de Suite)', body: `<ul>
+        <li>Penerima Fidusia (BCAF) memiliki <b>hak yang didahulukan</b> dibandingkan kreditur lain untuk pelunasan dari hasil penjualan benda jaminan.</li>
+        <li>Hak mendahulu <b>berlaku sejak tanggal pendaftaran</b> di KPF.</li>
+        <li><b>Droit de Suite</b>: Hak mendahulu mengikuti benda ke mana pun berpindah, <b>kecuali ke pihak yang beritikad baik</b>.</li>
+        <li>Hak mendahulu hapus bila utang lunas, penerima melepaskan hak, atau benda musnah.</li>
+      </ul>` },
+      { h: '4. Kekuatan Sertifikat Fidusia (Eksekutorial)', body: `<ul>
+        <li>Sertifikat Fidusia memiliki kekuatan eksekutorial yang <b>sama dengan putusan pengadilan yang telah berkekuatan hukum tetap</b>.</li>
+        <li>Artinya: secara teoritis perusahaan tidak perlu menggugat perdata dahulu — namun pemaknaan ini <b>dibatasi oleh Putusan MK 18/2019</b> (lihat tab Putusan MK).</li>
+      </ul>` },
+      { h: '5. Eksekusi Jaminan Fidusia saat Kredit Macet (BAB V)', body: `<table style="width:100%;border-collapse:collapse;font-size:.78rem;margin-top:.3rem">
+        <tr style="background:#ede7f6"><th style="padding:.3rem .5rem">Cara Eksekusi</th><th style="padding:.3rem .5rem">Mekanisme</th><th style="padding:.3rem .5rem">Catatan Penting</th></tr>
+        <tr><td style="padding:.25rem .5rem"><b>Titel Eksekutorial</b></td><td style="padding:.25rem .5rem">Berdasarkan kekuatan eksekutorial Sertifikat; dimohonkan ke Pengadilan Negeri.</td><td style="padding:.25rem .5rem;color:#c62828">WAJIB melalui PN jika debitur keberatan (Putusan MK 18/2019).</td></tr>
+        <tr style="background:#f9f9f9"><td style="padding:.25rem .5rem"><b>Lelang Umum</b></td><td style="padding:.25rem .5rem">Permohonan lelang kepada KPKNL.</td><td style="padding:.25rem .5rem">Harga harus kompetitif; hasil bersih untuk melunasi utang.</td></tr>
+        <tr><td style="padding:.25rem .5rem"><b>Penjualan di Bawah Tangan</b></td><td style="padding:.25rem .5rem">Penjualan langsung atas dasar kesepakatan bersama.</td><td style="padding:.25rem .5rem">Hanya jika ada kesepakatan. Wajib diumumkan di 2 surat kabar min. 1 bulan sebelum penjualan.</td></tr>
+      </table>` },
+      { h: '6. Larangan bagi Konsumen (Pemberi Fidusia)', body: `<ul>
+        <li>Konsumen <b>dilarang</b> mengalihkan, menggadaikan, atau menyewakan benda yang menjadi objek Jaminan Fidusia, <b>kecuali dengan persetujuan tertulis</b> dari Penerima Fidusia (BCAF).</li>
+        <li><b>Implikasi Nyata</b>: Menggadaikan motor kredit ke <em>"gadai pinggir jalan"</em> tanpa izin tertulis dari leasing = <b>ilegal dan dapat dipidana</b>.</li>
+      </ul>` },
+      { h: '7. Sanksi Pidana (BAB VI)', body: `<ul>
+        <li><b>Pasal 35 — Pemalsuan Data</b>: Setiap orang yang sengaja memalsukan, mengubah, menghilangkan, atau menyembunyikan data dalam akta pendaftaran fidusia → pidana penjara <b>min 1 tahun, maks 5 tahun</b> + denda maks <b>Rp 100 juta</b>.</li>
+        <li><b>Pasal 36 — Penggelapan Unit</b>: Konsumen yang mengalihkan, menggadaikan, atau menyewakan benda jaminan tanpa persetujuan tertulis → pidana penjara maks <b>2 tahun</b> + denda maks <b>Rp 50 juta</b>.</li>
+        <li><b>Penerima Fidusia</b> yang tidak mendaftarkan jaminan ke KPF dapat dikenai tuntutan perdata dan/atau pidana.</li>
+      </ul>` },
     ]
   },
   {
-    label: 'Putusan MK No. 18/PUU-XVII/2019',
+    label: 'Putusan MK No. 18/PUU-XVII/2019', shortLabel: 'Putusan MK 18/2019',
     color: '#C62828',
     title: '"Aturan Main Baru" Eksekusi Fidusia',
-    tag: '🔴 Pembatasan Parate Eksekusi (berlaku 6 Jan 2020)',
+    tag: '🔴 Pembatasan atas UU 42/1999 — Diucapkan 6 Januari 2020 · 127 Halaman',
     points: [
-      { h: '1. Latar Belakang', body: '<p>Dulu perusahaan merasa berhak langsung tarik unit di mana saja karena "Sertifikat Fidusia = Putusan Pengadilan". MK menilai praktik ini melanggar <b>Due Process of Law</b> — perusahaan swasta tidak boleh menjadi penilai tunggal apakah seseorang wanprestasi.</p>' },
-      { h: '2. Syarat Eksekusi Tanpa Pengadilan (Harus KEDUANYA terpenuhi)', body: '<ul><li>✅ <b>Konsumen MENGAKUI</b> bahwa dirinya memang wanprestasi (tidak ada sengketa)</li><li>✅ <b>Konsumen SUKARELA</b> menyerahkan kendaraan</li></ul><p style="font-size:.78rem;margin-top:.3rem">Jika konsumen bilang "Saya sudah bayar!" atau "Hitungan dendanya salah!" → syarat GUGUR</p>' },
-      { h: '3. Jika Konsumen Tidak Setuju', body: '<ul><li>Perusahaan <b>DILARANG</b> melakukan eksekusi sendiri (paksa)</li><li>Wajib ajukan permohonan eksekusi ke <b>Pengadilan Negeri</b></li><li>Hanya Negara (Pengadilan + Polisi) yang berhak melakukan upaya paksa</li></ul>' },
-      { h: '4. Implikasi bagi BCAF', body: '<p>Selama konsumen mengakui wanprestasi dan mau menyerahkan unit secara sukarela → proses normal. Jika konsumen menolak dan tidak mengakui wanprestasi → wajib lewat pengadilan, tidak bisa langsung tarik paksa.</p>' },
+      { h: '1. Latar Belakang & Kronologis Permohonan', body: `<ul>
+        <li><b>Pemohon</b>: Aprilliani Dewi dan Suri Agung Prabowo (suami-istri), warga Bekasi. Permohonan diajukan <b>15 Februari 2019</b>.</li>
+        <li><b>Kejadian</b>: Pemohon mengalami penarikan mobil (objek fidusia) secara paksa oleh debt collector <b>PT Astra Sedaya Finance</b> tanpa prosedur pengadilan. PN Jakarta Selatan sebelumnya telah memutus tindakan tersebut sebagai Perbuatan Melawan Hukum (PMH), namun eksekusi tetap dilakukan.</li>
+        <li><b>Praktik Lama</b>: Perusahaan merasa punya "kuasa tuhan" — sertifikat fidusia dianggap langsung bisa dieksekusi tanpa perlu persetujuan siapapun.</li>
+        <li><b>Putusan MK</b>: Mahkamah Konstitusi menilai praktik ini melanggar hak asasi (<b>Due Process of Law</b>) — perusahaan swasta tidak boleh menjadi penilai tunggal dan menggunakan paksaan fisik tanpa bantuan negara.</li>
+      </ul>` },
+      { h: '2. Pasal yang Diuji & Bunyi Aslinya', body: `<ul>
+        <li><b>Pasal 15 ayat (2)</b>: <em>"Sertifikat Jaminan Fidusia mempunyai kekuatan eksekutorial yang sama dengan putusan pengadilan yang telah berkekuatan hukum tetap."</em></li>
+        <li><b>Pasal 15 ayat (3)</b>: <em>"Apabila debitor cidera janji, Penerima Fidusia mempunyai hak untuk menjual Benda yang menjadi objek Jaminan Fidusia atas kekuasaannya sendiri."</em></li>
+      </ul>` },
+      { h: '3. Amar Putusan MK (6 Poin)', body: `<ol style="padding-left:1.2rem;font-size:.83rem">
+        <li>Mengabulkan permohonan para Pemohon untuk sebagian.</li>
+        <li>Pasal 15 ayat (2) — Frasa "kekuatan eksekutorial" dinyatakan <b>BERTENTANGAN dengan UUD 1945</b> dan tidak mempunyai kekuatan hukum mengikat, sepanjang tidak dimaknai bahwa: jika debitur keberatan menyerahkan secara sukarela, maka segala mekanisme eksekusi <b>harus dilakukan sama dengan eksekusi putusan pengadilan yang berkekuatan hukum tetap</b>.</li>
+        <li>Pasal 15 ayat (3) — Frasa "cidera janji" dinyatakan <b>BERTENTANGAN dengan UUD 1945</b> dan tidak mempunyai kekuatan hukum mengikat, sepanjang tidak dimaknai bahwa: adanya cidera janji <b>tidak ditentukan secara sepihak oleh kreditur</b> melainkan atas dasar kesepakatan atau upaya hukum.</li>
+        <li>Penjelasan Pasal 15 ayat (2) juga dinyatakan tidak mengikat dengan pemaknaan yang sama.</li>
+        <li>Memerintahkan pemuatan putusan ini dalam Berita Negara Republik Indonesia.</li>
+        <li>Menolak permohonan para Pemohon untuk selain dan selebihnya.</li>
+      </ol>` },
+      { h: '4. Implikasi Praktis bagi Leasing', body: `<table style="width:100%;border-collapse:collapse;font-size:.78rem;margin-top:.3rem">
+        <tr style="background:#fde8e8"><th style="padding:.3rem .5rem">Situasi</th><th style="padding:.3rem .5rem">Sebelum Putusan MK</th><th style="padding:.3rem .5rem">Setelah Putusan MK</th></tr>
+        <tr><td style="padding:.25rem .5rem">Debitur <b>akui wanprestasi</b> dan <b>sukarela serahkan</b> objek</td><td style="padding:.25rem .5rem">Boleh eksekusi sendiri</td><td style="padding:.25rem .5rem;color:#16a34a;font-weight:600">TETAP boleh eksekusi sendiri ✅</td></tr>
+        <tr style="background:#f9f9f9"><td style="padding:.25rem .5rem">Debitur <b>TIDAK akui wanprestasi</b> atau <b>KEBERATAN</b> menyerahkan</td><td style="padding:.25rem .5rem">Boleh eksekusi paksa berdasarkan Sertifikat</td><td style="padding:.25rem .5rem;color:#c62828;font-weight:600">WAJIB ajukan ke Pengadilan Negeri ⛔</td></tr>
+        <tr><td style="padding:.25rem .5rem">Penentuan <b>kapan debitur cidera janji</b></td><td style="padding:.25rem .5rem">Kreditur tentukan sendiri secara sepihak</td><td style="padding:.25rem .5rem;color:#c62828;font-weight:600">Harus berdasarkan kesepakatan bersama atau putusan pengadilan ⛔</td></tr>
+        <tr style="background:#f9f9f9"><td style="padding:.25rem .5rem">Penggunaan <b>debt collector/pihak ketiga</b></td><td style="padding:.25rem .5rem">Boleh eksekusi langsung</td><td style="padding:.25rem .5rem">Hanya membantu proses; tidak boleh eksekusi paksa tanpa kesepakatan debitur atau perintah PN</td></tr>
+      </table>` },
+      { h: '5. Syarat Mutlak "Parate Eksekusi" — Wajib Terpenuhi KEDUANYA', body: `<ul>
+        <li>✅ <b>Ada Kesepakatan Cidera Janji</b>: Nasabah mengakui bahwa dirinya memang telat bayar/salah. Tidak ada sengketa.<br>
+          <span style="font-size:.78rem;color:#b91c1c">⚠️ Jika nasabah bilang "Saya sudah bayar!" atau "Perhitungan denda kalian salah!" → syarat ini <b>GUGUR</b>.</span>
+        </li>
+        <li>✅ <b>Penyerahan Secara Sukarela</b>: Nasabah menyerahkan objek jaminan dengan kemauan sendiri.</li>
+      </ul>
+      <p style="font-size:.78rem;color:#c62828;margin-top:.4rem">Jika salah satu syarat tidak terpenuhi → perusahaan <b>DILARANG</b> eksekusi sendiri secara paksa → harus lewat <b>Pengadilan Negeri</b>.</p>` },
+      { h: '6. Definisi "Cidera Janji" Tidak Boleh Sepihak', body: `<ul>
+        <li><b>Dulu</b>: "Telat 1 hari = Cidera Janji = Tarik unit" — kreditur bisa menetapkan sepihak.</li>
+        <li><b>Sekarang (Putusan MK)</b>: Cidera Janji (Wanprestasi) tidak boleh ditentukan secara sepihak. Harus:
+          <ul>
+            <li>Berdasarkan <b>kesepakatan antara kreditur dan debitur</b>, ATAU</li>
+            <li>Berdasarkan <b>putusan hukum (pengadilan)</b>.</li>
+          </ul>
+        </li>
+      </ul>` },
+      { h: '7. Bantuan Polri Tetap Dimungkinkan', body: `<ul>
+        <li>MK menegaskan bahwa bantuan kepolisian dalam pengamanan eksekusi tetap <b>sah dan dimungkinkan</b>.</li>
+        <li>Peran Polri adalah <b>pengamanan ketertiban</b>, bukan sebagai pelaksana eksekusi.</li>
+        <li>Tata cara mengacu pada <b>Peraturan Kapolri No. 8 Tahun 2011</b> (PERKAP 8/2011).</li>
+      </ul>` },
     ]
   },
   {
-    label: 'PERKAP No. 8 Tahun 2011',
+    label: 'PERKAP No. 8 Tahun 2011', shortLabel: 'PERKAP 8/2011',
     color: '#2E7D32',
     title: 'Pengamanan Eksekusi Jaminan Fidusia',
-    tag: '👮 Bantuan "Otot" Negara — Pendampingan Polisi',
+    tag: '👮 Bantuan "Otot" Negara — Pendampingan Polisi · 12 Halaman, 6 Bab, 24 Pasal',
     points: [
-      { h: '1. Mengapa Polisi Terlibat?', body: '<p>Eksekusi fidusia sering menimbulkan konflik fisik. Polisi bertugas memberikan <b>pengamanan, pengayoman, dan pelayanan</b> agar eksekusi berjalan aman dan tertib — bukan sebagai eksekutor langsung.</p>' },
-      { h: '2. Kapan Perusahaan Bisa Minta Bantuan Polisi?', body: '<ul><li>Konsumen <b>tidak mau menyerahkan unit secara sukarela</b></li><li>Ada potensi <b>ancaman fisik atau gangguan keamanan</b></li></ul>' },
-      { h: '3. Dokumen yang Diperlukan', body: '<ul><li>Salinan Akta &amp; Sertifikat Jaminan Fidusia</li><li>Surat Peringatan &amp; Somasi — masing-masing sudah dikirim <b>2×</b></li><li>Identitas pelaksana eksekusi (tim internal/BHJP)</li><li>Surat Kuasa (eksternal) atau Surat Tugas (internal)</li><li>Bukti kepemilikan objek (BPKB)</li></ul>' },
-      { h: '4. Tahapan SOP Polisi', body: '<ul><li><b>Pra Eksekusi</b>: Penilaian risiko (intel), Rapat Koordinasi (Rakor), terbitkan Surat Perintah (Sprint) — pastikan personel punya Sprint!</li><li><b>Pelaksanaan</b>: Himbauan/negosiasi persuasif → perlindungan kedua belah pihak → tindakan tegas terukur jika ada perlawanan fisik berbahaya</li><li><b>Pasca Eksekusi</b>: Konsolidasi, buat Berita Acara pengamanan</li></ul>' },
+      { h: '1. Tujuan & 4 Prinsip Dasar (BAB I)', body: `<ul>
+        <li><b>Tujuan 1</b>: Terselenggaranya pelaksanaan eksekusi jaminan fidusia secara aman, tertib, lancar, dan dapat dipertanggungjawabkan.</li>
+        <li><b>Tujuan 2</b>: Terlindunginya keselamatan Penerima Jaminan, Pemberi Jaminan, dan masyarakat dari perbuatan yang dapat menimbulkan kerugian harta benda maupun jiwa.</li>
+        <li><b>Prinsip Legalitas</b>: Pengamanan eksekusi harus sesuai dengan ketentuan peraturan perundang-undangan yang berlaku.</li>
+        <li><b>Prinsip Nesesitas</b>: Pengamanan diberikan berdasarkan penilaian situasi dan kondisi yang dihadapi di lapangan.</li>
+        <li><b>Prinsip Proporsionalitas</b>: Pengamanan dilaksanakan dengan memperhitungkan hakikat ancaman dan pelibatan kekuatan secara proporsional.</li>
+        <li><b>Prinsip Akuntabilitas</b>: Seluruh tindakan pengamanan eksekusi dapat dipertanggungjawabkan secara hukum.</li>
+      </ul>` },
+      { h: '2. Objek & Persyaratan Pengamanan (BAB II)', body: `<p style="font-size:.83rem;font-weight:700;margin-bottom:.4rem">Objek yang dapat diamankan:</p>
+      <ul>
+        <li>Benda bergerak berwujud (kendaraan bermotor, mesin, peralatan, dll.)</li>
+        <li>Benda bergerak tidak berwujud (piutang, saham, hak paten, dll.)</li>
+        <li>Benda tidak bergerak yang tidak dapat dibebani Hak Tanggungan</li>
+      </ul>
+      <p style="font-size:.83rem;font-weight:700;margin:.5rem 0 .3rem">Syarat sebelum pengamanan dapat diberikan:</p>
+      <ul>
+        <li>Ada <b>permintaan tertulis</b> dari pemohon (penerima jaminan fidusia atau kuasa hukumnya).</li>
+        <li>Memiliki <b>Akta Jaminan Fidusia</b> yang dibuat oleh notaris.</li>
+        <li>Jaminan fidusia telah <b>terdaftar di KPF</b> (Kemenkumham).</li>
+        <li>Memiliki <b>Sertifikat Jaminan Fidusia</b> yang sah dan masih berlaku.</li>
+        <li>Benda jaminan berada dalam <b>wilayah hukum Indonesia</b>.</li>
+      </ul>` },
+      { h: '3. Kapan Perusahaan Dapat Meminta Bantuan Kepolisian?', body: `<ul>
+        <li>Pemberi Fidusia (Konsumen) <b>tidak mau menyerahkan</b> objek jaminan secara sukarela.</li>
+        <li>Adanya potensi <b>ancaman fisik</b> atau gangguan keamanan dan ketertiban masyarakat.</li>
+      </ul>` },
+      { h: '4. Prosedur Permohonan Pengamanan (BAB III)', body: `<table style="width:100%;border-collapse:collapse;font-size:.78rem;margin-top:.3rem">
+        <tr style="background:#e8f5e9"><th style="padding:.3rem .5rem">Langkah</th><th style="padding:.3rem .5rem">Ketentuan</th></tr>
+        <tr><td style="padding:.25rem .5rem"><b>1. Mengajukan Permohonan Tertulis</b></td><td style="padding:.25rem .5rem">Diajukan kepada Kapolda atau Kapolres di wilayah tempat eksekusi. Jika melalui kuasa hukum, wajib lampirkan surat kuasa resmi.</td></tr>
+        <tr style="background:#f9f9f9"><td style="padding:.25rem .5rem"><b>2. Dokumen yang Dilampirkan</b></td><td style="padding:.25rem .5rem">Salinan Akta JF; Salinan Sertifikat JF; Surat Peringatan kepada Debitur min. 2× (tanda terima); Identitas pelaksana eksekusi; Surat Tugas/Kuasa pelaksanaan eksekusi.</td></tr>
+        <tr><td style="padding:.25rem .5rem"><b>3. Penelitian Dokumen</b></td><td style="padding:.25rem .5rem">Kabidkum Polda atau Kasubbagkum Polres menelaah kelengkapan dan keabsahan dokumen, lalu memberikan saran tertulis kepada Kapolda/Kapolres.</td></tr>
+        <tr style="background:#f9f9f9"><td style="padding:.25rem .5rem"><b>4. Persetujuan / Penolakan</b></td><td style="padding:.25rem .5rem">Memenuhi syarat → siapkan pengamanan. Kurang lengkap → diberi tahu untuk melengkapi. Tidak memenuhi syarat → ditolak dengan alasan tertulis.</td></tr>
+        <tr><td style="padding:.25rem .5rem"><b>5. Pihak Ketiga Pelaksana</b></td><td style="padding:.25rem .5rem">Jika penerima jaminan menunjuk pihak ketiga sebagai pelaksana eksekusi, wajib melampirkan perjanjian kerja sama. Segala akibat tetap menjadi tanggung jawab bersama.</td></tr>
+      </table>` },
+      { h: '5. Dokumen yang Diperlukan saat Mengajukan Pendampingan', body: `<ul>
+        <li>Salinan <b>Akta Jaminan Fidusia</b></li>
+        <li>Salinan <b>Sertifikat Jaminan Fidusia</b></li>
+        <li><b>Surat Peringatan dan Somasi</b> — masing-masing telah dikirim <b>2×</b></li>
+        <li><b>Identitas Pelaksana Eksekusi</b></li>
+        <li><b>Surat Kuasa</b> (eksekutor Eksternal/BHJP) atau <b>Surat Tugas</b> (eksekutor Internal)</li>
+        <li><b>Bukti Kepemilikan Objek</b> (BPKB)</li>
+      </ul>` },
+      { h: '6. Tahapan Pelaksanaan Pengamanan (BAB IV)', body: `<table style="width:100%;border-collapse:collapse;font-size:.78rem;margin-top:.3rem">
+        <tr style="background:#e8f5e9"><th style="padding:.3rem .5rem">Tahap</th><th style="padding:.3rem .5rem">Kegiatan</th></tr>
+        <tr><td style="padding:.25rem .5rem"><b>1. Persiapan</b></td><td style="padding:.25rem .5rem">Penyusunan rencana: perkiraan intelijen (cek ormas/rawan), waktu, jumlah personel, anggaran, peralatan, pola pengamanan, cara bertindak. Rapat koordinasi sebelum pengamanan.</td></tr>
+        <tr style="background:#f9f9f9"><td style="padding:.25rem .5rem"><b>2. Persiapan Pelaksanaan</b></td><td style="padding:.25rem .5rem">Pengecekan jumlah personel dan peralatan; pemberian pengarahan; pembagian tugas; pergeseran pasukan ke lokasi.</td></tr>
+        <tr><td style="padding:.25rem .5rem"><b>3. Pelaksanaan di Lapangan</b></td><td style="padding:.25rem .5rem">Berjalan aman → personel bersikap pasif, hanya mengamankan lingkungan. Terjadi perlawanan → amankan/tangkap pelaku; geledah pihak yang diduga membawa senjata; sita benda berbahaya; lakukan penyekatan area.</td></tr>
+        <tr style="background:#f9f9f9"><td style="padding:.25rem .5rem"><b>4. Pengawasan & Pengendalian</b></td><td style="padding:.25rem .5rem">Langsung (pimpinan melekat di lapangan) dan tidak langsung (sarana komunikasi/laporan). Berjenjang sesuai struktur organisasi.</td></tr>
+      </table>` },
+      { h: '7. Penanganan Sengketa di Lokasi Eksekusi', body: `<ul>
+        <li>Polri melakukan <b>pendekatan persuasif melalui musyawarah</b> antara pemohon dan termohon.</li>
+        <li>Meminta debitur menunjukkan <b>bukti pembayaran/pelunasan yang sah</b> secara sopan.</li>
+        <li>Mengamankan lingkungan sekitar untuk mencegah eskalasi.</li>
+        <li>Jika debitur memiliki bukti pembayaran sah → Polri <b>menunda/menghentikan eksekusi</b>; petugas eksekusi dibawa ke penyidik Polri; kedua pihak dibawa ke kantor polisi untuk penanganan lebih lanjut.</li>
+      </ul>` },
+      { h: '8. Pelaporan Setelah Pengamanan Selesai', body: `<ul>
+        <li>Personel Polri wajib membuat <b>laporan tertulis</b> setelah pengamanan selesai dilaksanakan.</li>
+        <li>Laporan disampaikan kepada Karoops (Polda) atau Kabagops (Polres) dengan tembusan Kapolda/Kapolres.</li>
+        <li>Isi laporan: kronologis; identitas pemohon, termohon, objek, dan lokasi; personel &amp; peralatan; situasi sebelum/saat/sesudah eksekusi; hasil akhir; dan kesimpulan.</li>
+      </ul>` },
     ]
   },
 ];
 
 const pojkGrid = document.getElementById('pojkGrid');
-pojkData.forEach(p => {
+const pojkTabNav = document.getElementById('pojkTabNav');
+
+pojkData.forEach((p, idx) => {
+  // Build tab button
+  const btn = document.createElement('button');
+  btn.className = 'ptab';
+  btn.setAttribute('data-color', p.color);
+  btn.innerHTML = `<span style="width:9px;height:9px;border-radius:50%;background:${p.color};display:inline-block;flex-shrink:0"></span>${p.shortLabel}`;
+  btn.style.cssText = idx===0 ? `background:${p.color};color:#fff;border-bottom:2px solid ${p.color}` : '';
+  btn.onclick = () => switchPojk(idx);
+  pojkTabNav.appendChild(btn);
+
+  // Build card (start open)
   const card = document.createElement('div');
-  card.className = 'pojk-card';
+  card.className = 'pojk-card open';
+  card.style.display = idx===0 ? 'block' : 'none';
   const pointsHtml = p.points.map(pt => `
     <div class="pojk-point">
       <h5>${pt.h}</h5>
@@ -2548,7 +3060,7 @@ pojkData.forEach(p => {
   `).join('');
   card.innerHTML = `
     <div class="pojk-header" onclick="this.parentElement.classList.toggle('open')">
-      <div class="pojk-num" style="background:${p.color}">${p.label.split(' ').slice(0,2).join('<br>')}</div>
+      <div class="pojk-num" style="background:${p.color}">${p.shortLabel}</div>
       <div style="flex:1">
         <h4>${p.title}</h4>
         <p>${p.tag}</p>
@@ -2562,6 +3074,59 @@ pojkData.forEach(p => {
   `;
   pojkGrid.appendChild(card);
 });
+
+// Referensi Cepat tab
+const refBtn = document.createElement('button');
+refBtn.className = 'ptab';
+refBtn.setAttribute('data-color', '#455a64');
+refBtn.innerHTML = `<span style="width:9px;height:9px;border-radius:50%;background:#455a64;display:inline-block;flex-shrink:0"></span>📋 Referensi Cepat`;
+refBtn.onclick = () => switchPojk(pojkData.length);
+pojkTabNav.appendChild(refBtn);
+
+const refCard = document.createElement('div');
+refCard.className = 'pojk-card open';
+refCard.style.display = 'none';
+refCard.innerHTML = `
+  <div class="pojk-header" onclick="this.parentElement.classList.toggle('open')">
+    <div class="pojk-num" style="background:#455a64">📋<br>Ref</div>
+    <div style="flex:1">
+      <h4>Referensi Cepat — Pertanyaan Praktis Seputar Leasing</h4>
+      <p>Keterkaitan antar dokumen &amp; jawaban cepat atas pertanyaan umum</p>
+    </div>
+    <span class="pojk-chevron">▼</span>
+  </div>
+  <div class="pojk-body">
+    <span class="regulation-label" style="background:#455a6420;color:#455a64">Kompilasi 5 Peraturan</span>
+    <div class="pojk-point">
+      <h5>Keterkaitan Antar Dokumen</h5>
+      <table style="width:100%;border-collapse:collapse;font-size:.78rem;margin-top:.3rem">
+        <tr style="background:#eceff1"><th style="padding:.3rem .5rem">Dokumen</th><th style="padding:.3rem .5rem">Peran</th><th style="padding:.3rem .5rem">Hubungan dengan Dokumen Lain</th></tr>
+        <tr><td style="padding:.25rem .5rem"><b>POJK 35/2018</b></td><td style="padding:.25rem .5rem">INDUK — Seluruh aspek operasional perusahaan pembiayaan</td><td style="padding:.25rem .5rem">Mengacu ke UU 42/1999 untuk fidusia; wajib dipatuhi bersama POJK 22/2023.</td></tr>
+        <tr style="background:#f9f9f9"><td style="padding:.25rem .5rem"><b>POJK 22/2023</b></td><td style="padding:.25rem .5rem">PERLINDUNGAN KONSUMEN — Standar minimum perlakuan terhadap konsumen</td><td style="padding:.25rem .5rem">Berlaku atas PUJK termasuk yang diatur POJK 35/2018. Bersifat lintas sektor.</td></tr>
+        <tr><td style="padding:.25rem .5rem"><b>UU 42/1999</b></td><td style="padding:.25rem .5rem">FONDASI HUKUM — Dasar hukum penggunaan fidusia sebagai jaminan</td><td style="padding:.25rem .5rem">Digunakan oleh POJK 35/2018; diuji oleh Putusan MK; pengamanan eksekusinya diatur PERKAP.</td></tr>
+        <tr style="background:#f9f9f9"><td style="padding:.25rem .5rem"><b>Putusan MK 18/2019</b></td><td style="padding:.25rem .5rem">PEMBATASAN EKSEKUSI — Membatasi parate eksekusi jika debitur keberatan</td><td style="padding:.25rem .5rem">Memodifikasi Pasal 15 ayat (2)&amp;(3) UU 42/1999; berdampak langsung pada prosedur penagihan.</td></tr>
+        <tr><td style="padding:.25rem .5rem"><b>PERKAP 8/2011</b></td><td style="padding:.25rem .5rem">PROSEDUR PENGAMANAN — Tata cara Polri mengamankan eksekusi</td><td style="padding:.25rem .5rem">Mengacu pada UU 42/1999; diakui dan diperkuat oleh Putusan MK 18/2019.</td></tr>
+      </table>
+    </div>
+    <div class="pojk-point">
+      <h5>Pertanyaan Praktis — Jawaban Cepat</h5>
+      <table style="width:100%;border-collapse:collapse;font-size:.78rem;margin-top:.3rem">
+        <tr style="background:#eceff1"><th style="padding:.3rem .5rem">Pertanyaan</th><th style="padding:.3rem .5rem">Jawaban Singkat</th><th style="padding:.3rem .5rem">Sumber</th></tr>
+        <tr><td style="padding:.25rem .5rem">Bolehkah leasing menarik kendaraan tanpa kesepakatan debitur?</td><td style="padding:.25rem .5rem;color:#c62828;font-weight:600">TIDAK. Jika debitur keberatan, wajib melalui Pengadilan Negeri.</td><td style="padding:.25rem .5rem">Putusan MK</td></tr>
+        <tr style="background:#f9f9f9"><td style="padding:.25rem .5rem">Kapan leasing boleh eksekusi sendiri (parate eksekusi)?</td><td style="padding:.25rem .5rem">Hanya jika debitur MENGAKUI wanprestasi dan SUKARELA menyerahkan objek.</td><td style="padding:.25rem .5rem">Putusan MK</td></tr>
+        <tr><td style="padding:.25rem .5rem">Kapan Polri bisa diminta mengamankan eksekusi?</td><td style="padding:.25rem .5rem">Jika ada permintaan tertulis + dokumen lengkap + surat peringatan 2×.</td><td style="padding:.25rem .5rem">PERKAP 8/2011</td></tr>
+        <tr style="background:#f9f9f9"><td style="padding:.25rem .5rem">Berapa DP minimum kredit kendaraan bermotor?</td><td style="padding:.25rem .5rem">0% jika perusahaan sehat &amp; NPF ≤1%; s.d. 25% jika NPF tinggi.</td><td style="padding:.25rem .5rem">POJK 35/2018</td></tr>
+        <tr><td style="padding:.25rem .5rem">Apa sanksi jika debitur memindahtangankan benda fidusia?</td><td style="padding:.25rem .5rem">Pidana penjara maks. 2 tahun dan/atau denda maks. Rp 50 juta.</td><td style="padding:.25rem .5rem">UU 42/1999</td></tr>
+        <tr style="background:#f9f9f9"><td style="padding:.25rem .5rem">Ke mana konsumen mengadu jika diperlakukan tidak adil?</td><td style="padding:.25rem .5rem">Pertama ke PUJK (maks. 20 HK); jika tidak puas, ke OJK atau LAPS.</td><td style="padding:.25rem .5rem">POJK 22/2023</td></tr>
+        <tr><td style="padding:.25rem .5rem">Berapa batas insentif yang boleh diberikan ke dealer/agen?</td><td style="padding:.25rem .5rem">Maksimal 17,5% dari total pendapatan per perjanjian.</td><td style="padding:.25rem .5rem">POJK 35/2018</td></tr>
+        <tr style="background:#f9f9f9"><td style="padding:.25rem .5rem">Apakah penagih boleh menghubungi debitur malam hari?</td><td style="padding:.25rem .5rem">Tidak. Penagihan hanya pukul 08.00–20.00 waktu setempat.</td><td style="padding:.25rem .5rem">POJK 35/2018</td></tr>
+        <tr><td style="padding:.25rem .5rem">Apa yang terjadi jika fidusia tidak didaftarkan ke KPF?</td><td style="padding:.25rem .5rem">Tidak mempunyai hak mendahulu, tidak dapat eksekusi via sertifikat, dan dapat dipidana.</td><td style="padding:.25rem .5rem">UU 42/1999</td></tr>
+        <tr style="background:#f9f9f9"><td style="padding:.25rem .5rem">Berapa gearing ratio maksimum perusahaan pembiayaan?</td><td style="padding:.25rem .5rem">Maksimal 10× ekuitas.</td><td style="padding:.25rem .5rem">POJK 35/2018</td></tr>
+      </table>
+    </div>
+  </div>
+`;
+pojkGrid.appendChild(refCard);
 
 // Memos accordion
 const IMG = (src) => `<img src="img/${src}" style="margin-top:.7rem;width:100%;border-radius:8px;border:1px solid #ddd;display:block">`;
