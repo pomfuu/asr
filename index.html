@@ -1366,7 +1366,7 @@
             <div style="background:#f0f7ff;border-radius:10px;padding:.8rem 1rem;border-top:3px solid #1a4fa0">
               <div style="font-size:.8rem;font-weight:700;color:#1a4fa0;margin-bottom:.5rem">1️⃣ Pra Kunjungan</div>
               <ul style="font-size:.8rem;color:#444;padding-left:1rem;line-height:1.65;margin:0">
-                <li>Menentukan RKH Konsumen</li>
+                <li>Menentukan RKH Konsumen <span style="font-size:.75rem;color:#1a4fa0">(50% oleh Korwil berdasarkan skala prioritas, 50% dari FAC sendiri sesuai kondisi lapangan)</span></li>
                 <li>Analisa hasil kasus sebelumnya</li>
               </ul>
             </div>
@@ -1387,20 +1387,47 @@
                 <li>Analisa keterlambatan</li>
                 <li>Melakukan input hasil kunjungan di MAS <b>(wajib ≥5 kata)</b></li>
                 <li>Review hasil kunjungan dengan Korwil</li>
+                <li><b>Follow up by telepon</b> untuk dorong produktivitas</li>
                 <li>Monitoring janji bayar konsumen</li>
               </ul>
             </div>
           </div>
         </div>
         <div class="info-card">
-          <h4>Alur Tarik Unit Internal</h4>
-          <div class="flow-steps">
+          <h4>Ketentuan Tarik Unit — Internal &amp; External</h4>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin:.5rem 0">
+            <div style="background:#e8f5e9;border-radius:8px;padding:.7rem .9rem;font-size:.82rem">
+              <b style="color:#2e7d32">✅ Internal (Surat Tugas)</b>
+              <p style="margin:.4rem 0 .3rem;color:#555">Jika konsumen ingin tebus setelah ditarik:</p>
+              <ul style="margin:0;padding-left:1rem;line-height:1.7;color:#444">
+                <li>Pelancaran (angsuran tertunggak)</li>
+                <li>Biaya tarikan</li>
+                <li>Biaya penanganan (jika sudah keluar ST tapi mau bayar saat ditarik)</li>
+                <li>Deposit <b>3× angsuran</b></li>
+                <li>Biaya parkir pool: <b>Rp 25.000/hari</b></li>
+              </ul>
+            </div>
+            <div style="background:#fff3e0;border-radius:8px;padding:.7rem .9rem;font-size:.82rem">
+              <b style="color:#e65100">⚠️ External (Surat Kuasa → BHJP)</b>
+              <p style="margin:.4rem 0 .3rem;color:#555">Jika konsumen ingin tebus setelah ditarik:</p>
+              <ul style="margin:0;padding-left:1rem;line-height:1.7;color:#444">
+                <li><b>Pelunasan penuh</b></li>
+                <li>Biaya penanganan: <b>Rp 1,5 juta – 3 juta</b></li>
+                <li>Biaya tarikan sesuai BHJP</li>
+              </ul>
+              <p style="margin:.5rem 0 0;font-size:.78rem;color:#c62828"><b>FAC sekarang tidak bisa gunakan External</b> — kecuali pakai <b>memo percepatan</b> untuk kasus: anggota ormas, alamat fiktif, masalah hukum, kekerasan, dll</p>
+            </div>
+          </div>
+          <div class="flow-steps" style="margin-top:.8rem">
             <div class="flow-step"><div class="num">1</div><p>FAC konfirmasi ke konsumen, lapor Korwil</p></div>
-            <div class="flow-step"><div class="num">2</div><p>Korwil cetak ST di <b>Financore</b>, konfirmasi ke BASH</p></div>
-            <div class="flow-step"><div class="num">3</div><p>FAC bertemu konsumen &amp; unit — validasi fidusia, foto full body</p></div>
+            <div class="flow-step"><div class="num">2</div><p>Korwil cetak ST di <b>Financore</b>, konfirmasi ke BASH. Status akun berubah ke <b>"Assign Coll"</b> → autodebet berhenti → harus debet manual oleh admin</p></div>
+            <div class="flow-step"><div class="num">3</div><p>FAC bertemu konsumen &amp; unit — validasi fidusia, foto full body. <b>Serah terima hanya di kantor BCA atau alamat domisili konsumen</b> (tidak bisa di jalan)</p></div>
             <div class="flow-step"><div class="num">4</div><p>Kirim ke pool terdekat, bawa BAST pink + ST kembali ke cabang</p></div>
             <div class="flow-step"><div class="num">5</div><p>Admin pool cek &amp; input ke <b>CSIS</b>, lalu repo di Financore</p></div>
             <div class="flow-step"><div class="num">6</div><p>Korwil/admin ajukan Biaya Tarikan (BT) via <b>ABC</b></p></div>
+          </div>
+          <div style="background:#fce4ec;border-radius:8px;padding:.6rem .9rem;margin-top:.7rem;font-size:.81rem">
+            <b>⚠️ Catatan penting:</b> Unit ditarik karena <b>Cidera Janji / Wanprestasi</b> (melanggar kontrak — tidak bisa dipaksa, ada fidusia). Saat unit ditangani external, <b>BCAF yang membayarkan biayanya terlebih dahulu</b> — namun ketika konsumen ingin menebus/melanjutkan kendaraannya, konsumen harus membayar lunas sekaligus mengembalikan biaya-biaya tersebut. Hal ini sudah tertulis di kontrak (<em>biaya lain-lain dibebankan ke konsumen</em>). Jika produk <b>multiguna</b> → mobil ditarik tapi konsumen <b>tetap harus melunasi multiguna</b>-nya. Biaya external bergantung tingkat kesulitan dan hasil negosiasi BASH dengan BHJP.
           </div>
         </div>
         <div class="info-card">
@@ -1420,6 +1447,8 @@
             <li>Insentif tarikan masuk tanggal <b>25 bulan berikutnya</b></li>
             <li>Status harus <b>paid payment</b> sebelum tgl 7 jam 14:00 bulan berjalan agar cair tgl 25 bulan tersebut</li>
             <li>Terlambat = wajib memo penyimpangan, insentif cair bulan depan</li>
+            <li>Insentif OLX Autos: <b>1,5%</b> dari harga jual di OLX Autos</li>
+            <li>Insentif dipengaruhi <b>KPI</b> dan <b>pencapaian cabang</b> — KPI tercapai tapi pencapaian cabang jelek = insentif tetap kecil</li>
           </ul>
           <div style="margin-top:.5rem;font-size:.82rem">
             <b>Kewenangan approval biaya penanganan eksternal (OVD &gt;90):</b>
@@ -1427,6 +1456,118 @@
               <li>Area ASH: ≤ Rp 5.000.000</li>
               <li>Regional ASDH: ≤ Rp 14.000.000</li>
               <li>NASDD: ≤ Rp 25.000.000</li>
+            </ul>
+          </div>
+        </div>
+        <div class="info-card">
+          <h4>KPI &amp; Kunjungan Minimal FAC</h4>
+          <ul>
+            <li><b>KPI FAC:</b> 75% per bulan — dari 100 orang yang ditangani, 75 orang harus bayar</li>
+            <li><b>Minimal Kunjungan:</b> 11 RKH per hari</li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h4>Jobdesc FAC Mobil</h4>
+          <ul>
+            <li><b>Validasi</b> — validasi keberadaan konsumen, unit, dan alamat</li>
+            <li><b>Penagihan</b> — melakukan penagihan dan mendorong pembayaran</li>
+            <li><b>Input Kunjungan</b> — input di aplikasi MAS dan Group WA Cabang</li>
+            <li><b>Memberikan Solusi</b> — menawarkan solusi terkait keterlambatan bayar</li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h4>Jobdesc Korwil</h4>
+          <ul style="font-size:.84rem;line-height:1.75">
+            <li>Membantu FAC dalam menangani kunjungan jika ada kasus yang berhubungan dengan <b>hukum dan kekerasan</b> — bisa turun lapangan bersama FAC untuk mengejar target atau backup memberikan penjelasan kepada konsumen (jika di luar kapasitas FAC)</li>
+            <li>Menentukan <b>50% RKH</b> berdasarkan Skala Prioritas:
+              <ul style="margin:.3rem 0;padding-left:1rem">
+                <li>🔴 <b>Ospok besar</b> → menjadi beban cabang</li>
+                <li>🔴 <b>OVD tinggi</b> (top prioritas) → berisiko masuk ke layer berikutnya</li>
+                <li>🟡 <b>New Comer</b> → akun yang baru saja nunggak</li>
+              </ul>
+            </li>
+            <li>Memastikan kesiapan Fieldcoll — fisik dan kendaraan yang digunakan untuk kunjungan</li>
+            <li>Menarik &amp; mengelola data <b>DCO</b> (Data Customer Overdue) dari <b>Qlicksense</b> untuk monitoring dan menentukan strategi penanganan</li>
+          </ul>
+          <div style="background:#f0f7ff;border-radius:8px;padding:.7rem .9rem;margin-top:.7rem">
+            <b style="font-size:.82rem;color:#1a4fa0">📊 Isi DCO (Data Customer Overdue):</b>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:.2rem .8rem;font-size:.79rem;margin-top:.4rem;color:#444">
+              <span>• PIC (FAC yang menangani)</span><span>• Nama Customer</span>
+              <span>• Penanganan (BCAF / BCAMF)</span><span>• Overdue (jumlah hari menunggak)</span>
+              <span>• Status Coll (KR / Assign Coll ST)</span><span>• Overdue TB (Tenggak Bulan)</span>
+              <span>• Norek Pin</span><span>• Ospok &amp; Angsuran</span>
+              <span>• Angsuran ke berapa &amp; Tenor</span><span>• Tanggal Jatuh Tempo</span>
+              <span>• Tipe &amp; Nopol Kendaraan</span><span>• Alamat &amp; No HP Konsumen</span>
+              <span>• Kode Pos &amp; Alamat Kantor</span><span>• Jenis Pekerjaan &amp; Telp Rumah/HP Lain</span>
+            </div>
+          </div>
+        </div>
+        <div class="info-card">
+          <h4>SP / SPT / Somasi</h4>
+          <table style="font-size:.82rem;width:100%;border-collapse:collapse;margin:.5rem 0">
+            <thead><tr style="background:#1a4fa0;color:#fff">
+              <th style="padding:.3rem .5rem;text-align:left">Surat</th>
+              <th style="padding:.3rem .5rem;text-align:left">Waktu</th>
+              <th style="padding:.3rem .5rem;text-align:left">Keterangan</th>
+            </tr></thead>
+            <tbody>
+              <tr style="background:#f0f5ff"><td style="padding:.28rem .5rem"><b>SP 1</b></td><td style="padding:.28rem .5rem">OVD ≥ 11 hari</td><td style="padding:.28rem .5rem">Surat Peringatan pertama</td></tr>
+              <tr><td style="padding:.28rem .5rem"><b>SPT</b></td><td style="padding:.28rem .5rem">OVD ≥ 17 hari</td><td style="padding:.28rem .5rem">Surat Peringatan Terakhir</td></tr>
+              <tr style="background:#f0f5ff"><td style="padding:.28rem .5rem"><b>Somasi</b></td><td style="padding:.28rem .5rem">OVD ~30+ hari</td><td style="padding:.28rem .5rem">Berdasarkan analisa masing-masing cabang</td></tr>
+            </tbody>
+          </table>
+          <ul style="font-size:.82rem;margin:.4rem 0;padding-left:1.2rem;line-height:1.7">
+            <li><b>Akun Individu:</b> SP &amp; SPT dikirim via <b>WA/Email oleh vendor</b>, atas nama BCA Finance (centang biru ✓✓)</li>
+            <li><b>Akun Badan Usaha:</b> SP &amp; SPT dikirim dalam bentuk <b>fisik</b> — ada tanda terima</li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h4>Aging Hidup vs Aging Mati (Toleransi 30 Hari)</h4>
+          <ul style="font-size:.85rem;line-height:1.85">
+            <li><b>Aging Hidup:</b> Batas toleransi keterlambatan bayar di BCAF = <b>30 hari</b><br>
+              <em style="font-size:.8rem;color:#666">Contoh: jatuh tempo 2 April → masih bisa bayar sampai 1 Mei</em></li>
+            <li><b>Aging Mati / NPL:</b> OVD &gt; 30 hari → sudah dihitung sebagai <b>NPL</b> → jika konsumen bayar, masuk pencapaian cabang dan kembali jadi aging hidup</li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h4>Info Penting FAC Mobil</h4>
+          <ul style="font-size:.83rem;line-height:1.85;padding-left:1.2rem">
+            <li><b>1 konsumen 2 kontrak</b> (Induk + Multiguna) → autodebet menarik berdasarkan angsuran yang <b>paling kecil</b> nominalnya</li>
+            <li><b>Surat Tugas terbit</b> → di Financore statusnya jadi <b>"Assign Coll"</b> → autodebet tidak berjalan → harus proses <b>debet manual oleh admin</b></li>
+            <li><b>OLX Autos melalui BCAF</b> = tidak ada denda pinalti. Jika konsumen langsung ke OLX/tempat lain tanpa BCAF → dikenakan <b>pinalti 5%</b></li>
+            <li><b>Harga jual sharing loss/lelang &lt; OSPO</b> → konsumen diinformasikan, wajib bayar kekurangan. Jika tidak bayar → berpengaruh ke <b>SLIK</b></li>
+            <li><b>CPRM:</b> Data tidak masuk MAS, masuk ke <b>DCO</b> — cara cek: akun yang tidak ada di MAS tapi ada di DCO. Jika FAC bantu penanganan CPRM → insentif tetap ke <b>marketing</b></li>
+            <li><b>BHJP:</b> Kelebihan = SK lebih terstruktur &amp; meminimalisir risiko. Kekurangan = tidak bisa cepat (profcoll/matel yang ketemu unit di jalan tidak bisa langsung eksekusi — harus tunggu SK terbit, padahal unit bisa kabur duluan)</li>
+            <li><b>Rolling wilayah</b> (ganti kode pos) → idealnya <b>2× setahun</b> — alasan: menjaga keadilan antar FAC, konsumen tidak pusing didatangi orang berbeda tiap hari, menghindari pungutan liar &amp; kecemburuan antar FAC</li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h4>Profil Cabang ASR — Contoh: Jaksel (Kelas A)</h4>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:.6rem;font-size:.83rem;margin:.5rem 0">
+            <div style="background:#f0f7ff;border-radius:8px;padding:.6rem .8rem">
+              <b>📍 Info Cabang</b>
+              <ul style="margin:.3rem 0;padding-left:1rem;line-height:1.7">
+                <li>Kelas: <b>A</b> | Area: <b>Jabo2</b></li>
+                <li>AASH: <b>Rudi Setiawan</b></li>
+                <li>BASH: <b>Pak Rulih</b></li>
+                <li>Korwil: <b>3 orang</b> (Zaki, Lutfi, Oci)</li>
+              </ul>
+            </div>
+            <div style="background:#f0f7ff;border-radius:8px;padding:.6rem .8rem">
+              <b>👥 Man Power</b>
+              <ul style="margin:.3rem 0;padding-left:1rem;line-height:1.7">
+                <li>FAC: <b>11 orang</b> (2 layer)</li>
+                <li>PAC: <b>3 orang</b></li>
+                <li>Admin: <b>1 orang</b></li>
+              </ul>
+            </div>
+          </div>
+          <div style="background:#fff8e1;border-radius:8px;padding:.6rem .8rem;font-size:.83rem">
+            <b>📊 Statistik Cabang (Februari)</b>
+            <ul style="margin:.3rem 0;padding-left:1rem;line-height:1.7">
+              <li>TMA: <b>Rp 3,1 Triliun</b></li>
+              <li>NPL Actual: <b>1,3%</b></li>
+              <li>Total Credit Masalah (OSPO): <b>Rp 40,3 Miliar</b> <em style="font-size:.78rem;color:#888">(TMA × NPL — ini OSPO, bukan angsuran)</em></li>
             </ul>
           </div>
         </div>
@@ -2050,55 +2191,43 @@
 <div class="section">
   <div class="st">
     <h2>⚡ Task Force</h2>
-    <p>Tim khusus monitoring, quality control, dan penanganan kasus kompleks lintas fungsi ASR</p>
+    <p>Tim khusus monitoring, quality control, dan penanganan kasus kompleks lintas fungsi ASR — terbagi dalam tiga sub-unit: QA/QC, BHJP Management, dan Solution Center</p>
   </div>
+
+  <div class="pojk-tab-nav" id="tfTabNav" style="margin-bottom:1rem">
+    <button class="ptab" data-color="#1565C0" onclick="switchTF(0)" style="background:#1565C0;color:#fff;border-bottom:2px solid #1565C0">QA / QC</button>
+    <button class="ptab" data-color="#6A1B9A" onclick="switchTF(1)" style="background:#f4f6fb;color:#666;border-bottom:2px solid transparent">BHJP Management</button>
+    <button class="ptab" data-color="#B71C1C" onclick="switchTF(2)" style="background:#f4f6fb;color:#666;border-bottom:2px solid transparent">Solution Center</button>
+  </div>
+
+  <!-- Panel 0: QA / QC -->
+  <div id="tfPanel0">
   <div class="ov-grid">
 
     <div class="ov-card">
       <div class="ov-icon">👥</div>
       <h3>Tim Task Force ASR</h3>
+      <p style="font-size:.83rem;color:#555;margin:.3rem 0 .5rem">Unit Task Force terbagi menjadi tiga sub-unit:</p>
       <p><strong>Tim QA / QC</strong></p>
       <ul style="font-size:.85rem;margin:.4rem 0 .8rem;padding-left:1.2rem">
         <li>Monitoring 80 cabang per bulan</li>
         <li>Review BINGO (Behavior Indicator for Nego)</li>
-        <li>Edukasi & coaching collector</li>
+        <li>Edukasi &amp; coaching collector</li>
         <li>Kalibrasi penilaian call center</li>
+      </ul>
+      <p><strong>BHJP Management</strong></p>
+      <ul style="font-size:.85rem;margin:.4rem 0 .8rem;padding-left:1.2rem">
+        <li>Pengelolaan penggunaan BHJP (matel/profcoll)</li>
+        <li>Mengeluarkan daftar debitur layak SK &amp; distribusi SK</li>
+        <li>Evaluasi dan rekomendasi penanganan BHJP</li>
+        <li>Komplain handling (Medsos, Halo BCA, Cabang)</li>
       </ul>
       <p><strong>Tim Solution Center (Solcen)</strong></p>
       <ul style="font-size:.85rem;margin:.4rem 0;padding-left:1.2rem">
+        <li>Penanganan unit mewah bermasalah (OTR &gt; 900 juta)</li>
         <li>Sharing loss kasus sulit ke tim ASR</li>
         <li>Eskalasi penanganan debitur bermasalah</li>
         <li>Koordinasi lintas fungsi (Legal, Audit, FSM)</li>
-      </ul>
-    </div>
-
-    <div class="ov-card">
-      <div class="ov-icon">🔄</div>
-      <h3>Alur Sharing Loss di Task Force</h3>
-      <ol style="font-size:.85rem;margin:.5rem 0;padding-left:1.2rem;line-height:1.8">
-        <li>Cabang ajukan sharing loss ke PIC Task Force Solcen — sertakan: data konsumen, data unit, data angsuran, kronologis, &amp; upaya penanganan sebelumnya</li>
-        <li>PIC isi form analisis — cocokkan data cabang dengan data di Financore, hitung biaya kompensasi yang masih memungkinkan</li>
-        <li>PIC verifikasi via telepon ke konsumen, nego kompensasi (biasanya senilai ±1 angsuran) agar lebih rendah dari pengajuan awal</li>
-        <li>Setelah deal tercapai — buat &amp; naikkan memo ke atasan</li>
-        <li>Cabang tarik unit dari konsumen, serahkan seluruh berkas ke Task Force</li>
-        <li>Unit diproses lelang / OLX Autos, kompensasi diberikan ke konsumen</li>
-      </ol>
-      <div style="margin-top:.8rem">
-        <div style="font-size:.78rem;font-weight:700;color:#1a4fa0;margin-bottom:.5rem">📸 Foto Alur Sharing Loss (Materi OJT 2)</div>
-        <img src="img/sharing-loss-alur.png" alt="Alur Sharing Loss Task Force" style="width:100%;max-width:700px;border-radius:10px;border:1px solid #dde8ff;display:block;cursor:pointer" onclick="window.open(this.src)">
-      </div>
-    </div>
-
-    <div class="ov-card">
-      <div class="ov-icon">📋</div>
-      <h3>Dokumen Sharing Loss</h3>
-      <ul style="font-size:.85rem;margin:.5rem 0;padding-left:1.2rem;line-height:1.7">
-        <li>Data identitas debitur (KTP, KK)</li>
-        <li>Riwayat pembayaran & outstanding</li>
-        <li>Laporan kunjungan lapangan (RKH)</li>
-        <li>Foto geotagging kunjungan</li>
-        <li>Kronologi penanganan sebelumnya</li>
-        <li>Rekomendasi tindak lanjut collector</li>
       </ul>
     </div>
 
@@ -2181,6 +2310,253 @@
     </div>
 
   </div>
+  </div>
+
+  <!-- Panel 1: BHJP Management -->
+  <div id="tfPanel1" style="display:none">
+  <div class="ov-grid">
+
+    <div class="ov-card">
+      <div class="ov-icon">📋</div>
+      <h3>Latar Belakang BHJP Management</h3>
+      <div style="background:#f3e5f5;border-radius:8px;padding:.7rem .9rem;margin:.5rem 0;font-size:.85rem;line-height:1.7">
+        Dulu, matel di lapangan yang ketemu kendaraan BCA Finance yang nunggak langsung ke kantor cabang untuk minta SK (nyari kerjaan). Ini sangat berisiko karena matel tersebut bisa jadi tidak resmi (tidak punya SPPI), dan kalau tidak resmi bisa terjerat hukum — BCAF pun bisa ikut kena karena telah mengeluarkan SK ke matel tersebut.
+      </div>
+      <p style="font-size:.83rem;font-weight:700;margin:.6rem 0 .3rem">📌 Tugas Utama BHJP Management</p>
+      <ul style="font-size:.85rem;margin:.3rem 0;padding-left:1.2rem;line-height:1.8">
+        <li>Pengelolaan penggunaan BHJP (BHJP dipilih di sini, namun cabang boleh mengajukan)</li>
+        <li>Mengeluarkan daftar debitur layak SK &amp; distribusi SK (Mapping SK)</li>
+        <li>Evaluasi dan rekomendasi terkait penanganan konsumen oleh BHJP</li>
+        <li>Komplain handling (Media Sosial, Halo BCA, Cabang)</li>
+      </ul>
+    </div>
+
+    <div class="ov-card">
+      <div class="ov-icon">✅</div>
+      <h3>Syarat Akun Layak SK</h3>
+      <div style="background:#e8f5e9;border-radius:8px;padding:.6rem .9rem;margin:.5rem 0;font-size:.85rem">
+        <strong>⚠️ SK bisa dikeluarkan kalau akun sudah &gt;90 hari overdue</strong>
+      </div>
+      <p style="font-size:.83rem;font-weight:700;margin:.6rem 0 .3rem">Klasifikasi Inputan (Syarat Kunjungan):</p>
+      <ul style="font-size:.85rem;margin:.3rem 0;padding-left:1.2rem;line-height:1.7">
+        <li>Sudah dilakukan <strong>3x Kunjungan</strong> ke Alamat Rumah, Alamat KTP, dan Alamat Kantor</li>
+        <li>Setelah dikunjungi tidak ada hasilnya (tidak ketemu dan/atau tidak bayar)</li>
+      </ul>
+      <p style="font-size:.83rem;font-weight:700;margin:.6rem 0 .3rem">Klasifikasi Unit:</p>
+      <ul style="font-size:.85rem;margin:.3rem 0;padding-left:1.2rem;line-height:1.7">
+        <li>Unit tidak terlihat / tidak ada</li>
+        <li>Konsumen tidak ditemukan</li>
+      </ul>
+      <p style="font-size:.83rem;font-weight:700;margin:.6rem 0 .3rem">Syarat Khusus (Boleh Langsung SK):</p>
+      <ul style="font-size:.85rem;margin:.3rem 0;padding-left:1.2rem;line-height:1.7">
+        <li>Akun yang masuk ke penanganan deskcoll &gt;90 di-exclude oleh analis</li>
+        <li>Kasus <strong>Fiktif, Raib, atau Pindah Tangan</strong> (kendaraan dialihkan) → boleh langsung dikeluarkan SK asal ada <strong>1 kunjungan</strong></li>
+      </ul>
+    </div>
+
+    <div class="ov-card">
+      <div class="ov-icon">🔄</div>
+      <h3>Flow BHJP Matel / Profcoll</h3>
+      <p style="font-size:.8rem;color:#7b1fa2;font-style:italic;margin:.3rem 0 .6rem">Alur ketika matel secara random menemukan kendaraan BCAF nunggak di jalan (via aplikasi matel)</p>
+      <div class="flow-steps" style="margin-top:.3rem">
+        <div class="flow-step"><div class="num">1</div><p>Cabang ASR internal kelola data debitur menunggak — ada inputan matel yang perlu dieksekusi lewat spreadsheet</p></div>
+        <div class="flow-step"><div class="num">2</div><p>Matel input di spreadsheet: KTP matel, SPPI, Foto Unit, SS permintaan SK oleh Cabang</p></div>
+        <div class="flow-step"><div class="num">3</div><p>BHJP Management cek kevalidan inputan matel dari <b>APK Hunter / APK lain</b> → kalau tidak sesuai, tidak dilanjut</p></div>
+        <div class="flow-step"><div class="num">4</div><p>BHJP Management koordinasi dengan matel dan cabang untuk cetak SK sesuai dengan BHJP dari matel tersebut</p></div>
+        <div class="flow-step"><div class="num">5</div><p>BHJP Management monitoring progress dari SK (berhasil / tidak)</p></div>
+        <div class="flow-step"><div class="num">6</div><p>Kalau <b>tidak berhasil</b> → SK diperpanjang atau rolling ke BHJP lain</p></div>
+        <div class="flow-step"><div class="num">7</div><p>Kalau <b>berhasil</b> → BHJP Management ajukan biaya tarikan → Cabang ASR input pengajuan di <b>aplikasi ABC</b> sampai pencairan</p></div>
+      </div>
+    </div>
+
+    <div class="ov-card">
+      <div class="ov-icon">🗺️</div>
+      <h3>Flow BHJP Reguler</h3>
+      <p style="font-size:.8rem;color:#7b1fa2;font-style:italic;margin:.3rem 0 .6rem">Alur ketika BHJP Management sendiri yang menentukan matel</p>
+      <div class="flow-steps" style="margin-top:.3rem">
+        <div class="flow-step"><div class="num">1</div><p>Cabang ASR internal kelola data debitur menunggak</p></div>
+        <div class="flow-step"><div class="num">2</div><p>Cabang ASR internal membutuhkan eskalasi ke BHJP</p></div>
+        <div class="flow-step"><div class="num">3</div><p>BHJP Management filter &amp; analisa: apakah akun layak di-SK berdasarkan history penanganan (syarat akun layak SK)</p></div>
+        <div class="flow-step"><div class="num">4</div><p>BHJP Management menentukan BHJP yang tepat berdasarkan <b>beban, produktivitas, dan spesialisasi</b> BHJP</p></div>
+        <div class="flow-step"><div class="num">5</div><p>BHJP Management monitoring progress dari SK (berhasil / tidak)</p></div>
+        <div class="flow-step"><div class="num">6</div><p>Kalau <b>tidak berhasil</b> → SK diperpanjang atau rolling ke BHJP lain</p></div>
+        <div class="flow-step"><div class="num">7</div><p>Kalau <b>berhasil</b> → BHJP Management ajukan biaya tarikan → Cabang ASR input pengajuan di <b>aplikasi ABC</b> sampai pencairan</p></div>
+      </div>
+    </div>
+
+    <div class="ov-card">
+      <div class="ov-icon">📡</div>
+      <h3>Monitoring BHJP</h3>
+      <p style="font-size:.83rem;color:#555;margin:.3rem 0 .5rem">Setelah SK terbit dan BHJP eksekusi, PAC akan input hasil penanganannya di <strong>aplikasi MAS</strong>. Progress bisa dimonitor di sini. Kalau tidak ada progress → buat SK baru lalu rolling ke BHJP lain, atau perpanjang SK.</p>
+      <p style="font-size:.83rem;font-weight:700;margin:.5rem 0 .3rem">Yang Dimonitor:</p>
+      <ul style="font-size:.85rem;margin:.3rem 0;padding-left:1.2rem;line-height:1.8">
+        <li>Total SK seluruhnya</li>
+        <li>SK Expired berapa</li>
+        <li>Hasil penanganan SK → Unit Tarik, Bayar Current, Bayar Partial</li>
+      </ul>
+    </div>
+
+    <div class="ov-card">
+      <div class="ov-icon">📊</div>
+      <h3>KPI BHJP Management</h3>
+      <table style="font-size:.82rem;width:100%;border-collapse:collapse;margin-top:.5rem">
+        <thead><tr style="background:#6A1B9A;color:#fff">
+          <th style="padding:.35rem .5rem;text-align:left">KPI</th>
+          <th style="padding:.35rem .5rem;text-align:left">Keterangan</th>
+          <th style="padding:.35rem .5rem;text-align:center">Target</th>
+        </tr></thead>
+        <tbody>
+          <tr style="background:#f3e5f5"><td style="padding:.3rem .5rem"><strong>Recovery Rate</strong></td><td style="padding:.3rem .5rem">Total amount sukses dari portofolio BHJP</td><td style="padding:.3rem .5rem;text-align:center">Tinggi = bagus</td></tr>
+          <tr><td style="padding:.3rem .5rem"><strong>Cost Efisiensi</strong></td><td style="padding:.3rem .5rem">Total biaya BHJP per total penyelesaian</td><td style="padding:.3rem .5rem;text-align:center">Rendah = bagus</td></tr>
+          <tr style="background:#f3e5f5"><td style="padding:.3rem .5rem"><strong>BHJP Compliance</strong></td><td style="padding:.3rem .5rem">Jumlah keluhan konsumen ke Customer Care per portofolio yang ditangani BHJP</td><td style="padding:.3rem .5rem;text-align:center">Rendah = bagus</td></tr>
+        </tbody>
+      </table>
+      <p style="font-size:.78rem;color:#888;margin-top:.5rem"><em>Portofolio = akun per konsumen</em></p>
+    </div>
+
+    <div class="ov-card">
+      <div class="ov-icon">💡</div>
+      <h3>Nice to Know — BHJP</h3>
+      <ul style="font-size:.84rem;margin:.4rem 0;padding-left:1.2rem;line-height:1.9">
+        <li><strong>PEOJF</strong> = Pelaksana Eksekusi Objek Jaminan Fidusia (di lapangan namanya profcoll atau matel)</li>
+        <li><strong>SK berlaku 7 hari</strong>, max perpanjang <strong>2x</strong> (bisa 3x tapi pakai memo approval DD)</li>
+        <li>Kenapa bisa diperpanjang? Misal nasabah mau bayar 9 hari lagi, tidak ditemukan, atau gagal tarik (konsumen bersikeras)</li>
+        <li><strong>PKS BHJP</strong> = 2 tahun sekali dievaluasi</li>
+        <li><strong>BHJP</strong> = sebutan untuk perusahaan yang menyediakan jasa matel atau profcoll</li>
+        <li>SK ditandatangani oleh <strong>BASH</strong> dan <strong>PIC BHJP</strong></li>
+        <li><strong>SK Ganda</strong> = 1 akun ditangani oleh 2 BHJP</li>
+        <li><strong>Multi Kontrak</strong> = 1 konsumen punya lebih dari 1 kontrak → tetap 1 kontrak 1 SK, tapi boleh ditangani BHJP yang sama</li>
+        <li>Bisa pakai bantuan cabang: misal asal cabang di Medan tapi mobil ditemukan di Jateng → minta bantuan BHJP Jateng → ditarik → ke pool terdekat</li>
+      </ul>
+    </div>
+
+  </div>
+  </div>
+
+  <!-- Panel 2: Solution Center -->
+  <div id="tfPanel2" style="display:none">
+  <div class="ov-grid">
+
+    <div class="ov-card">
+      <div class="ov-icon">🏎️</div>
+      <h3>Penanganan Unit Mewah — Solution Center</h3>
+      <p style="font-size:.83rem;font-weight:700;margin:.5rem 0 .3rem">Jobdesk Solcen:</p>
+      <ul style="font-size:.85rem;margin:.3rem 0 .6rem;padding-left:1.2rem;line-height:1.7">
+        <li>Pengelolaan dan penanganan akun mobil mewah bermasalah dengan kriteria khusus</li>
+        <li>Pendampingan dan perbantuan cabang dalam penanganan akun bermasalah</li>
+        <li>Penyediaan alternatif solusi penanganan yang sesuai ketentuan dan mitigasi risiko</li>
+        <li>Penanganan dan penyelesaian keluhan nasabah terkait proses penanganan akun</li>
+      </ul>
+      <p style="font-size:.83rem;font-weight:700;margin:.5rem 0 .3rem">Kriteria Unit Mobil Mewah:</p>
+      <ul style="font-size:.85rem;margin:.3rem 0;padding-left:1.2rem;line-height:1.7">
+        <li><strong>OTR &gt; 900 juta</strong></li>
+        <li><strong>Total OSPH &gt; 900 juta</strong></li>
+        <li><strong>Profil debitur</strong> — exposure besar / lebih dari 1 akun</li>
+        <li><strong>Request khusus</strong> — permintaan dari manajemen (artis, orang penting, dll)</li>
+      </ul>
+    </div>
+
+    <div class="ov-card">
+      <div class="ov-icon">🗺️</div>
+      <h3>Alur Penanganan Solcen — 6 Fase</h3>
+      <div style="font-size:.83rem;margin:.4rem 0">
+        <div style="background:#fff3e0;border-left:3px solid #e65100;padding:.5rem .7rem;border-radius:0 6px 6px 0;margin-bottom:.4rem">
+          <strong>① Investigasi &amp; Analisis Perilaku (OVD 31–90)</strong><br>
+          <span style="color:#555">Pemetaan karakter debitur &amp; kapasitas pembayaran. Persiapan dokumen, profiling debitur, penelusuran latar belakang, personal call &amp; appointment.</span><br>
+          <em style="color:#999">Hasil: profil debitur &amp; strategi pendekatan tepat sasaran</em><br>
+          <span style="font-size:.78rem;font-weight:700">PIC: Task Force</span>
+        </div>
+        <div style="background:#fff3e0;border-left:3px solid #e65100;padding:.5rem .7rem;border-radius:0 6px 6px 0;margin-bottom:.4rem">
+          <strong>② Konsultan Keuangan &amp; Penagihan Persuasif (OVD 31–90)</strong><br>
+          <span style="color:#555">Realisasi pembayaran. Koordinasi pihak terkait, verifikasi keberadaan aset, opsi penyelesaian (bayar partial, periode kelonggaran, reschedule terbatas, dll).</span><br>
+          <em style="color:#999">Hasil: pembayaran partial atau kesepakatan tertulis</em><br>
+          <span style="font-size:.78rem;font-weight:700">PIC: Task Force &amp; ASR Cabang</span>
+        </div>
+        <div style="background:#fce4ec;border-left:3px solid #c62828;padding:.5rem .7rem;border-radius:0 6px 6px 0;margin-bottom:.4rem">
+          <strong>③ Pendekatan Persuasif namun Tegas (OVD 91–120)</strong><br>
+          <span style="color:#555">Penerapan jalur formal pada tingkat manajerial. Pertemuan antar pejabat, penetapan batas waktu eksklusif sesuai kesepakatan sebelumnya.</span><br>
+          <em style="color:#999">Hasil: komitmen final debitur</em><br>
+          <span style="font-size:.78rem;font-weight:700">PIC: Task Force &amp; Pejabat ASR Cabang</span>
+        </div>
+        <div style="background:#fce4ec;border-left:3px solid #c62828;padding:.5rem .7rem;border-radius:0 6px 6px 0;margin-bottom:.4rem">
+          <strong>④ Kunjungan Pimpinan (OVD 91–120)</strong><br>
+          <span style="color:#555">Menjelaskan bahwa masalah telah menjadi perhatian manajemen pusat. Negosiasi oleh pimpinan, penyusunan ulang pendekatan melalui solusi win-win.</span><br>
+          <em style="color:#999">Hasil: pembayaran, penarikan unit, skema sharing loss, atau alternatif lain</em><br>
+          <span style="font-size:.78rem;font-weight:700">PIC: Task Force &amp; Pejabat ASR</span>
+        </div>
+        <div style="background:#f3e5f5;border-left:3px solid #7b1fa2;padding:.5rem .7rem;border-radius:0 6px 6px 0;margin-bottom:.4rem">
+          <strong>⑤ Tekanan Psikologis &amp; Reputasi (&gt;120)</strong><br>
+          <span style="color:#555">Meningkatkan kesadaran debitur terhadap risiko reputasi. Somasi format khusus dari legal, kunjungan resmi bersama tim legal atau pejabat lebih tinggi, penekanan risiko terhadap SLIK.</span><br>
+          <em style="color:#999">Hasil: pembayaran, penarikan unit, skema sharing loss, atau alternatif lain</em>
+        </div>
+        <div style="background:#f3e5f5;border-left:3px solid #7b1fa2;padding:.5rem .7rem;border-radius:0 6px 6px 0">
+          <strong>⑥ Upaya Eksekusi / Langkah Hukum (&gt;120)</strong><br>
+          <span style="color:#555">Menegaskan komitmen dan ketegasan BCAF terhadap debitur yang mengabaikan seluruh upaya penyelesaian. Koordinasi dengan BHJP, tim legal, dan aparat terkait.</span><br>
+          <em style="color:#999">Hasil: penarikan kendaraan dan/atau upaya litigasi</em>
+        </div>
+      </div>
+    </div>
+
+    <div class="ov-card">
+      <div class="ov-icon">🤝</div>
+      <h3>Sharing Loss — Latar Belakang &amp; Tujuan</h3>
+      <div style="background:#fff8e1;border-radius:8px;padding:.7rem .9rem;margin:.5rem 0;font-size:.85rem;line-height:1.7">
+        Sharing loss adalah upaya terakhir yang diajukan oleh cabang agar konsumen mau menyerahkan mobil — karena tidak bisa menarik mobil kalau konsumen tidak sukarela.
+      </div>
+      <p style="font-size:.83rem;font-weight:700;margin:.5rem 0 .3rem">Tujuan Sharing Loss:</p>
+      <ul style="font-size:.85rem;margin:.3rem 0;padding-left:1.2rem;line-height:1.8">
+        <li><strong>Pembanding dengan biaya BHJP</strong> — BHJP makan biaya besar, program ini dibuat sebagai alternatif yang lebih hemat</li>
+        <li><strong>Minimalisir fraud</strong> — cabang bisa menahan mobil untuk kepentingan sendiri; audit akan cek hasil penanganan, harus minimal pernah ditangani oleh Solution Center (termasuk sharing loss)</li>
+        <li><strong>Membantu amount cabang</strong></li>
+      </ul>
+    </div>
+
+    <div class="ov-card">
+      <div class="ov-icon">🔄</div>
+      <h3>Alur Sharing Loss (Detail)</h3>
+      <div class="flow-steps" style="margin-top:.3rem">
+        <div class="flow-step"><div class="num">1</div><p>Cabang ajukan ke <strong>PIC Task Force Solcen</strong> (dibagi per region) — sertakan: data konsumen, data unit, data angsuran &amp; overdue, kronologis, &amp; upaya penanganan sebelumnya<br><em style="font-size:.78rem;color:#888">OVD &lt;30: min 2 kunjungan &amp; ST &gt;3 hari | OVD &gt;30: min 3 kunjungan &amp; wajib ST 2x</em></p></div>
+        <div class="flow-step"><div class="num">2</div><p>PIC isi form analisis — cocokkan data MAS dengan data di Financore, hitung biaya kompensasi (GAIN / LOSS)<br><em style="font-size:.78rem;color:#888">Amount = Harga Lelang – (OSPH saat ini + kompensasi sharing loss)</em><br><em style="font-size:.78rem;color:#888">Nett% = (Est. Lelang – kompensasi) / OSPO Awal → kalau &gt;70% masih dipertimbangkan</em></p></div>
+        <div class="flow-step"><div class="num">3</div><p>PIC verifikasi via telepon ke konsumen, nego kompensasi (biasanya di bawah Rp 5 juta)</p></div>
+        <div class="flow-step"><div class="num">4</div><p>Setelah deal — buat &amp; naikkan <strong>Memo Sharing Loss</strong> ke atasan:<br><em style="font-size:.8rem">• 0–5 juta → DH (kode C3) &nbsp;|&nbsp; &gt;5 juta → BOD (kode C5)<br>CC: Tim Finance &nbsp;|&nbsp; From: Solcen &amp; Cabang Pengajuan</em></p></div>
+        <div class="flow-step"><div class="num">5</div><p>Cabang tarik unit dari konsumen, serahkan dokumen ke Task Force (Pak Erik)</p></div>
+        <div class="flow-step"><div class="num">6</div><p>Task Force (Pak Erik) kirim ke Finance untuk pencairan ke konsumen<br><em style="font-size:.78rem;color:#888">BCA: 2 hari pencairan &nbsp;|&nbsp; Bank lain: 3 hari pencairan</em></p></div>
+        <div class="flow-step"><div class="num">7</div><p>Unit diproses <strong>lelang / OLX Autos</strong></p></div>
+      </div>
+      <div style="background:#fff3e0;border-radius:8px;padding:.6rem .9rem;margin-top:.7rem;font-size:.8rem">
+        <strong>⚠️ Catatan:</strong> Tarik unit bisa dilakukan kalau memo sharing loss sudah full TTD, tapi bersifat case by case — misal konsumen mau keluar kota, bisa ditarik lebih cepat (belum TTD) asal area mau bertanggung jawab.
+      </div>
+      <div style="margin-top:.8rem">
+        <div style="font-size:.78rem;font-weight:700;color:#1a4fa0;margin-bottom:.5rem">📸 Foto Alur Sharing Loss (Materi OJT 2)</div>
+        <img src="img/sharing-loss-alur.png" alt="Alur Sharing Loss Task Force" style="width:100%;max-width:700px;border-radius:10px;border:1px solid #dde8ff;display:block;cursor:pointer" onclick="window.open(this.src)">
+      </div>
+    </div>
+
+    <div class="ov-card">
+      <div class="ov-icon">📄</div>
+      <h3>Isi Memo &amp; Dokumen Sharing Loss</h3>
+      <p style="font-size:.83rem;font-weight:700;margin:.5rem 0 .3rem">📋 Isi Memo Sharing Loss:</p>
+      <ul style="font-size:.85rem;margin:.3rem 0 .6rem;padding-left:1.2rem;line-height:1.7">
+        <li>Informasi debitur (form analisa)</li>
+        <li>Kronologis</li>
+        <li>Upaya cabang</li>
+        <li>Potensi rugi/untung dari hasil lelang</li>
+        <li>Pertimbangan: apa yang membuat sharing loss ini di-accept?</li>
+        <li>Permohonan: nominal kompensasinya berapa</li>
+        <li>Data rekening BCA (2 hari pencairan) atau rekening bank lain (3 hari pencairan)</li>
+      </ul>
+      <p style="font-size:.83rem;font-weight:700;margin:.5rem 0 .3rem">📁 Dokumen Diserahkan ke Task Force (Pak Erik):</p>
+      <ul style="font-size:.85rem;margin:.3rem 0;padding-left:1.2rem;line-height:1.7">
+        <li>Surat permohonan (step awal)</li>
+        <li>Memo sharing loss yang full TTD</li>
+        <li>Surat pernyataan (nama dan norek sama seperti di memo sharing loss)</li>
+        <li>ST / BAST</li>
+      </ul>
+    </div>
+
+  </div>
+  </div>
+
 </div>
 </div>
 
@@ -3310,6 +3686,19 @@ const csData = [
 
 const csTabNav = document.getElementById('csTabNav');
 const csPanels = document.getElementById('csPanels');
+
+function switchTF(idx) {
+  const count = 3;
+  for (let i = 0; i < count; i++) {
+    const panel = document.getElementById('tfPanel' + i);
+    const tab = document.querySelectorAll('#tfTabNav .ptab')[i];
+    const c = tab.getAttribute('data-color');
+    panel.style.display = i === idx ? 'block' : 'none';
+    tab.style.background = i === idx ? c : '#f4f6fb';
+    tab.style.color = i === idx ? '#fff' : '#666';
+    tab.style.borderBottom = i === idx ? '2px solid ' + c : '2px solid transparent';
+  }
+}
 
 function switchCS(idx) {
   document.querySelectorAll('#csTabNav .ptab').forEach((t, i) => {
