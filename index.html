@@ -2282,11 +2282,9 @@
           <th style="padding:.35rem .5rem;text-align:center">Standar</th>
         </tr></thead>
         <tbody>
-          <tr style="background:#f0f5ff"><td style="padding:.3rem .5rem">Geotagging di kantor</td><td style="padding:.3rem .5rem;text-align:center">Maks 2 jam, maks 4 jam</td></tr>
-          <tr><td style="padding:.3rem .5rem">Deviasi jarak</td><td style="padding:.3rem .5rem;text-align:center">Maks 3 km dari alamat</td></tr>
-          <tr style="background:#f0f5ff"><td style="padding:.3rem .5rem">RKH disetor</td><td style="padding:.3rem .5rem;text-align:center">Jam 09:30 setiap hari</td></tr>
-          <tr><td style="padding:.3rem .5rem">Handling per collector</td><td style="padding:.3rem .5rem;text-align:center">&lt; 3 akun aktif</td></tr>
-          <tr style="background:#f0f5ff"><td style="padding:.3rem .5rem">Laporan tarikan</td><td style="padding:.3rem .5rem;text-align:center">Real-time via sistem</td></tr>
+          <tr style="background:#f0f5ff"><td style="padding:.3rem .5rem">Geotagging di luar kantor</td><td style="padding:.3rem .5rem;text-align:center">ARO Tidak Bergerak ≥2 jam atau ARO Berkumpul &gt;2 jam</td></tr>
+          <tr><td style="padding:.3rem .5rem">Geotagging di dalam kantor</td><td style="padding:.3rem .5rem;text-align:center">Berada di kantor lebih dari 4 jam</td></tr>
+          <tr style="background:#f0f5ff"><td style="padding:.3rem .5rem">RKH</td><td style="padding:.3rem .5rem;text-align:center">Data ditarik jam 09:00, tunggu sampai 09:30 — jika belum diinput = temuan</td></tr>
         </tbody>
       </table>
     </div>
@@ -2458,7 +2456,7 @@
 
     <div class="ov-card">
       <div class="ov-icon">🗺️</div>
-      <h3>Alur Penanganan Solcen — 6 Fase</h3>
+      <h3>Alur penanganan Unit Mewah</h3>
       <div style="font-size:.83rem;margin:.4rem 0">
         <div style="background:#fff3e0;border-left:3px solid #e65100;padding:.5rem .7rem;border-radius:0 6px 6px 0;margin-bottom:.4rem">
           <strong>① Investigasi &amp; Analisis Perilaku (OVD 31–90)</strong><br>
@@ -3564,7 +3562,7 @@ const csData = [
     label: 'Admin Monitoring', shortLabel: 'Monitoring', color: '#00695C', pic: 'Fiki',
     desc: 'Admin yang tugasnya monitoring MAS, FAC, dan PAC (saat ini fokus ke MAS dan FAC, PAC dimonitor langsung oleh Task Force).',
     sections: [
-      { h: '🗺️ Monitoring MAS (FAC Only)', body: `<ul style="font-size:.83rem;padding-left:1.2rem;line-height:1.9">
+      { h: '🗺️ Monitoring Aplikasi MAS (Cabang)', body: `<ul style="font-size:.83rem;padding-left:1.2rem;line-height:1.9">
           <li>Memastikan akun MAS setiap agent di cabang statusnya <b>online</b> dan lokasinya <b>menyala</b> (data refresh 5 menit sekali via web)</li>
           <li>Jika ada <b>anomali (MAS terhenti)</b> — dilihat dari last update &gt;1 jam tidak ada update:
             <ol style="padding-left:1rem;margin-top:.3rem">
@@ -3756,7 +3754,7 @@ const memos = [
   { t:'Penyimpangan Beda Ceklist BAST', b:'Diajukan ketika ceklist BAST FAC/PAC memiliki perbedaan saat dilakukan pengecekan oleh petugas pool.'+IMG('memo-beda-ceklist.png') },
   { t:'Penyimpangan Remarks (Kosong / &lt;5 kata / Copy Paste)', b:'Remarks di MAS kosong = memo. Kurang dari 5 kata = memo. Copy-paste dari kunjungan berbeda = memo. Wajib ada remarks informatif di setiap kunjungan.'+IMG2('memo-remarks.png','memo-remarks-lt5.png') },
   { t:'Pelunasan Khusus', b:'Diajukan ketika konsumen minta pelunasan khusus (biasanya lebih kecil dari OSPOH tersisa). Butuh <b>approval 2 BOD</b>. Dokumen: surat permohonan debitur, KTP, memo data konsumen &amp; dasar pengajuan.'+IMG('memo-pelunasan-khusus.png') },
-  { t:'Waive Denda', b:'Diajukan untuk keringanan denda keterlambatan. Dokumen: data konsumen &amp; kendaraan, data pinjaman, kronologis, analisa ASR. Kewenangan: <span class="sk-ref" onclick="gotoDoc(\'ketentuan-waive-denda\')">ASDH ≤35%, NASDD ≤50%, BOD ≥50%</span>.'+IMG2('memo-waive-denda-1.png','memo-waive-denda-2.png') },
+  { t:'Waive Denda', b:'Diajukan untuk keringanan denda keterlambatan. <b>Hanya untuk akun yang belum lunas</b> (harus berada di bucket PAC atau FAC). Dokumen: data konsumen &amp; kendaraan, data pinjaman, kronologis, analisa ASR. Kewenangan: <span class="sk-ref" onclick="gotoDoc(\'ketentuan-waive-denda\')">ASDH ≤35%, NASDD ≤50%, BOD ≥50%</span>.'+IMG2('memo-waive-denda-1.png','memo-waive-denda-2.png') },
   { t:'Reversal Dana', b:'Diajukan ketika konsumen masih terkena autodebet padahal unit telah diamankan. Dokumen: surat permohonan konsumen, KTP, form permohonan penyelesaian kelebihan dana.'+IMG('memo-reversal-dana.png') },
   { t:'Pinjam Pakai BAST', b:'Dikeluarkan ketika cabang ingin menggunakan BAST dari cabang lain karena unit berada di luar jangkauan cabang asal — namun SK/ST tetap dari cabang asal.'+IMG2('memo-pinjam-pakai-bast-1.png','memo-pinjam-pakai-bast-2.png') },
   { t:'Percepatan Penanganan (Cetak SK OVD &lt;90 hari)', b:'Dikeluarkan untuk <span class="sk-ref" onclick="gotoDoc(\'ketentuan-penarikan\')">cetak SK walaupun OVD konsumen belum &gt;90 hari</span>. Memerlukan <b>approval hingga BOD</b>.'+IMG('memo-percepatan.png') },
