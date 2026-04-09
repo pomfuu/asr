@@ -1426,6 +1426,18 @@
             <div class="flow-step"><div class="num">5</div><p>Admin pool cek &amp; input ke <b>CSIS</b>, lalu repo di Financore</p></div>
             <div class="flow-step"><div class="num">6</div><p>Korwil/admin ajukan Biaya Tarikan (BT) via <b>ABC</b></p></div>
           </div>
+          <div style="background:#e8eaf6;border-radius:8px;padding:.7rem .9rem;margin-top:.7rem;font-size:.82rem">
+            <b style="color:#283593">🔑 Prosedur Penebusan Unit Tarikan (via CS / Cabang ASR)</b>
+            <p style="margin:.4rem 0 .3rem;color:#555">Kalau tarik lalu mau tebus: <b>Pelunasan + Biaya Tarik + Parkir Pool + Denda</b></p>
+            <div class="flow-steps" style="margin:.5rem 0">
+              <div class="flow-step"><div class="num">1</div><p>Customer datang ke CS / Cabang ASR untuk tebus. Customer bayar → CS hubungi Korwil.</p></div>
+              <div class="flow-step"><div class="num">2</div><p>Admin buat <b>Form PKCSP</b> (Pengeluaran Kendaraan Credit Settlement Process), isi: no kontrak, nama konsumen, STNK atas nama, tgl penarikan, merk/jenis/tahun kendaraan, no polisi/rangka/mesin, warna, status lunas/lancar + tanggal + nominal, ceklist serah terima dokumen (STNK, kartu titipan, bukti kirim), letak pool</p></div>
+              <div class="flow-step"><div class="num">3</div><p>TTD dokumen oleh <b>Admin Cabang, BASH, AASH</b></p></div>
+              <div class="flow-step"><div class="num">4</div><p>Input <b>Car Out</b> di CSIS</p></div>
+              <div class="flow-step"><div class="num">5</div><p>Customer ke pool → terima kunci dan STNK</p></div>
+            </div>
+            <p style="margin:.3rem 0 0;font-size:.8rem;color:#666">Untuk External (BHJP bayar): BHJP + konsumen nego biaya penanganan → setuju → BHJP input hasil + nominal biaya → buat <b>VA 55000</b> (total angsuran nunggak + biaya penanganan)</p>
+          </div>
           <div style="background:#fce4ec;border-radius:8px;padding:.6rem .9rem;margin-top:.7rem;font-size:.81rem">
             <b>⚠️ Catatan penting:</b> Unit ditarik karena <b>Cidera Janji / Wanprestasi</b> (melanggar kontrak — tidak bisa dipaksa, ada fidusia). Saat unit ditangani external, <b>BCAF yang membayarkan biayanya terlebih dahulu</b> — namun ketika konsumen ingin menebus/melanjutkan kendaraannya, konsumen harus membayar lunas sekaligus mengembalikan biaya-biaya tersebut. Hal ini sudah tertulis di kontrak (<em>biaya lain-lain dibebankan ke konsumen</em>). Jika produk <b>multiguna</b> → mobil ditarik tapi konsumen <b>tetap harus melunasi multiguna</b>-nya. Biaya external bergantung tingkat kesulitan dan hasil negosiasi BASH dengan BHJP.
           </div>
@@ -1473,6 +1485,24 @@
             <li><b>Penagihan</b> — melakukan penagihan dan mendorong pembayaran</li>
             <li><b>Input Kunjungan</b> — input di aplikasi MAS dan Group WA Cabang</li>
             <li><b>Memberikan Solusi</b> — menawarkan solusi terkait keterlambatan bayar</li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h4>Jobdesc Admin Cabang (FAC &amp; PAC Mobil)</h4>
+          <ul style="font-size:.83rem;line-height:1.85;padding-left:1.2rem">
+            <li><b>Cetak SP / SPT / SPHL</b> — dikirim email oleh Collection Admin Support (KP). Admin Cabang cek sesuai cabangnya → print → FAC kirim ke konsumen → tanda terima → admin simpan + input report pengiriman di Google Form</li>
+            <li><b>Register ST/BAST Internal (Tarik)</b> — ST diterbitkan oleh Korwil → admin registrasi (Excel) → FAC/PAC eksekusi ST → hasil tarik/bayar/gagal dikembalikan ke admin beserta: Surat Tugas, Tabel Angsuran, Data BPKB, BAST <em>(Pink=simpan cabang, Kuning=untuk orang pool, Ijo=disimpan KP dikirim oleh pool)</em>, data pendukung pengeluaran SK BHJP, Foto Unit (hanya kalau tarik)</li>
+            <li><b>Input ABC &amp; CSIS untuk Insentif</b> — Pool input di CSIS → kasih BAST Ijo ke KP → di-approved KP → Admin input ABC. Setiap penanganan berhasil bayar/tarik wajib input di ABC (butuh BAST, Foto Mobil, Estimasi Harga OLX). Untuk insentif: CSIS dan ABC harus sync → repo di Financore → baru cair.</li>
+            <li><b>Asset (Penarikan &amp; Penebusan)</b>
+              <ul style="margin:.3rem 0;padding-left:1rem;line-height:1.7">
+                <li><b>Tunda Aset</b> — cegah auto-lelang (12 hari di pool kena auto-lelang) → surat pernyataan bermaterai → scan → input CSIS → Approval (&lt;20 hari: DH; &gt;20 hari: DD)</li>
+                <li><b>Batal Aset</b> — membatalkan unit saat sedang di proses lelang</li>
+              </ul>
+            </li>
+            <li><b>OLX Autos</b> — FAC nego konsumen untuk dijual via OLX. Konsumen isi: surat kuasa, surat permohonan, form checklist OLX, dan specimen tanda tangan (admin create → FAC → konsumen isi → TTD). Admin input ABC → repo di Financore. Pencairan insentif FAC/PAC: <b>Rp 1.999.999 + 1,5% harga jual OLX</b> (yang mengurus KP ke Fieldcoll). Tidak input CSIS karena tidak masuk ke pool.</li>
+            <li><b>Kode Pos</b> (sebulan sekali, rolling wilayah 3 bulan sekali — setahun min 2×) — Admin download format Excel setting kode pos (isi: kode pos nasional, daftar branch, contoh pengisian) → Korwil/BASH filter kode pos cabangnya → mapping kode pos masing-masing fieldcoll sesuai petunjuk → kasih ke admin untuk upload ke Google Form → KP (AS Support/analyst) setting kode pos sesuai Excel</li>
+            <li><b>Waive Denda</b> — Konsumen ngajuin ke CS atau langsung ke ASR. Admin bikin Memo Waive Denda → upload ke Privy untuk approval. Harus diselesaikan/dilunasi maks <b>2 minggu</b>. Kewenangan berdasarkan % denda yang di-waive: 100% = all pejabat ASR + BM + RM &nbsp;|&nbsp; &gt;50% = DD &nbsp;|&nbsp; &lt;50% = Dept Head &nbsp;|&nbsp; 80/85% = BOD</li>
+            <li><b>Biaya Kordinasi / Bikor</b> (backup operasional — ormas/LSM/dll) — Admin bikin Memo Bikor → upload Privy (approval sampai DH) → upload Eger (SLA 2 hari, bisa lebih) → lanjut ke AS Support → Coll Admin</li>
           </ul>
         </div>
         <div class="info-card">
@@ -2175,6 +2205,72 @@
     <div class="f"><span class="sk-ref" onclick="gotoDoc('ketentuan-waive-denda')" style="color:#7fffaa">ASDH (Regional) ≤35% &nbsp;|&nbsp; NASDD (Nasional) ≤50% &nbsp;|&nbsp; BOD ≥50%</span></div>
     <div class="vars">Biaya penanganan internal: Rp 3 juta per konsumen &nbsp;|&nbsp; Eksternal: sesuai ketentuan BHJP</div>
   </div>
+  <div class="formula-box" style="margin-top:1.2rem">
+    <h5>Cara Hitung Insentif PAC / FAC / Korwil (Mobil)</h5>
+    <div class="f" style="font-size:.82rem;line-height:1.6">Achievement Cabang % × (Total Account Success + Total Amount Success)</div>
+    <div class="vars" style="margin:.4rem 0;font-size:.79rem;line-height:1.7">
+      <b>Total Account Success</b> = Total Account × Nominal Tiering (Current / NotCurrent)<br>
+      <b>Total Amount Success</b> = Total OSPO × Nominal Tiering (Current / NotCurrent / OVD bucket)
+    </div>
+    <div style="font-size:.79rem;margin:.4rem 0 .2rem;font-weight:700">Contoh:</div>
+    <div style="font-size:.78rem;line-height:1.75;color:#d4eaff;margin-bottom:.7rem">
+      Steve → Ach NPL &gt;30% × {(0,10 M × 0) + (1 Akun × 0)} = <b>Rp 0</b><br>
+      Tony → Ach NPL &gt;30% × {(0,1 M × 28.000) + (1 Akun × 8.500)} = 80% × Rp 11.300 = <b>Rp 9.040</b><br>
+      Thanos → Ach NPL &gt;30% × {(0,2 × 518.000) + (0,2 × 1.650.000) + (1 × 85.000) + (1 × 370.000)} = 80% × 888.600 = <b>Rp 710.880</b>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:.5rem;font-size:.77rem">
+      <div style="background:rgba(255,255,255,.07);border-radius:6px;padding:.5rem .7rem">
+        <div style="font-weight:700;margin-bottom:.4rem;font-style:italic;color:#ffd54f">A. Bucket 10–30</div>
+        <table style="width:100%;border-collapse:collapse">
+          <tr style="color:#7ec8ff"><th style="text-align:left;padding:.15rem .3rem">Kategori</th><th style="text-align:right;padding:.15rem .3rem">Internal</th><th style="text-align:right;padding:.15rem .3rem">BHJP</th></tr>
+          <tr><td style="padding:.12rem .3rem">Acc NotCurrent</td><td style="text-align:right;padding:.12rem .3rem">—</td><td style="text-align:right;padding:.12rem .3rem">—</td></tr>
+          <tr style="background:rgba(255,255,255,.05)"><td style="padding:.12rem .3rem">Acc Current</td><td style="text-align:right;padding:.12rem .3rem">26.000</td><td style="text-align:right;padding:.12rem .3rem">—</td></tr>
+          <tr><td style="padding:.12rem .3rem">AM NotCurrent</td><td style="text-align:right;padding:.12rem .3rem">—</td><td style="text-align:right;padding:.12rem .3rem">—</td></tr>
+          <tr style="background:rgba(255,255,255,.05)"><td style="padding:.12rem .3rem">AM Current</td><td style="text-align:right;padding:.12rem .3rem">102.000</td><td style="text-align:right;padding:.12rem .3rem">—</td></tr>
+        </table>
+      </div>
+      <div style="background:rgba(255,255,255,.07);border-radius:6px;padding:.5rem .7rem">
+        <div style="font-weight:700;margin-bottom:.4rem;font-style:italic;color:#ffd54f">B. Bucket 31–60</div>
+        <table style="width:100%;border-collapse:collapse">
+          <tr style="color:#7ec8ff"><th style="text-align:left;padding:.15rem .3rem">Kategori</th><th style="text-align:right;padding:.15rem .3rem">Internal</th><th style="text-align:right;padding:.15rem .3rem">BHJP</th></tr>
+          <tr><td style="padding:.12rem .3rem">Acc NotCurrent</td><td style="text-align:right;padding:.12rem .3rem">16.000</td><td style="text-align:right;padding:.12rem .3rem">10.000</td></tr>
+          <tr style="background:rgba(255,255,255,.05)"><td style="padding:.12rem .3rem">Acc Current</td><td style="text-align:right;padding:.12rem .3rem">146.000</td><td style="text-align:right;padding:.12rem .3rem">20.000</td></tr>
+          <tr><td style="padding:.12rem .3rem">AM NotCurrent</td><td style="text-align:right;padding:.12rem .3rem">69.000</td><td style="text-align:right;padding:.12rem .3rem">35.000</td></tr>
+          <tr style="background:rgba(255,255,255,.05)"><td style="padding:.12rem .3rem">AM Current</td><td style="text-align:right;padding:.12rem .3rem">583.000</td><td style="text-align:right;padding:.12rem .3rem">65.000</td></tr>
+        </table>
+      </div>
+      <div style="background:rgba(255,255,255,.07);border-radius:6px;padding:.5rem .7rem">
+        <div style="font-weight:700;margin-bottom:.4rem;font-style:italic;color:#ffd54f">C. Bucket 61–90</div>
+        <table style="width:100%;border-collapse:collapse">
+          <tr style="color:#7ec8ff"><th style="text-align:left;padding:.15rem .3rem">Kategori</th><th style="text-align:right;padding:.15rem .3rem">Internal</th><th style="text-align:right;padding:.15rem .3rem">BHJP</th></tr>
+          <tr><td style="padding:.12rem .3rem">Acc NotCurrent</td><td style="text-align:right;padding:.12rem .3rem">109.000</td><td style="text-align:right;padding:.12rem .3rem">46.000</td></tr>
+          <tr style="background:rgba(255,255,255,.05)"><td style="padding:.12rem .3rem">Acc Current</td><td style="text-align:right;padding:.12rem .3rem">474.000</td><td style="text-align:right;padding:.12rem .3rem">98.000</td></tr>
+          <tr><td style="padding:.12rem .3rem">AM NotCurrent</td><td style="text-align:right;padding:.12rem .3rem">664.000</td><td style="text-align:right;padding:.12rem .3rem">211.000</td></tr>
+          <tr style="background:rgba(255,255,255,.05)"><td style="padding:.12rem .3rem">AM Current</td><td style="text-align:right;padding:.12rem .3rem">2.100.000</td><td style="text-align:right;padding:.12rem .3rem">327.000</td></tr>
+        </table>
+      </div>
+      <div style="background:rgba(255,255,255,.07);border-radius:6px;padding:.5rem .7rem">
+        <div style="font-weight:700;margin-bottom:.4rem;font-style:italic;color:#ffd54f">D. Bucket 10–90</div>
+        <table style="width:100%;border-collapse:collapse">
+          <tr style="color:#7ec8ff"><th style="text-align:left;padding:.15rem .3rem">Kategori</th><th style="text-align:right;padding:.15rem .3rem">Internal</th><th style="text-align:right;padding:.15rem .3rem">BHJP</th></tr>
+          <tr><td style="padding:.12rem .3rem">Acc NotCurrent</td><td style="text-align:right;padding:.12rem .3rem">30.000</td><td style="text-align:right;padding:.12rem .3rem">20.000</td></tr>
+          <tr style="background:rgba(255,255,255,.05)"><td style="padding:.12rem .3rem">Acc Current</td><td style="text-align:right;padding:.12rem .3rem">53.000</td><td style="text-align:right;padding:.12rem .3rem">34.000</td></tr>
+          <tr><td style="padding:.12rem .3rem">AM NotCurrent</td><td style="text-align:right;padding:.12rem .3rem">130.000</td><td style="text-align:right;padding:.12rem .3rem">77.000</td></tr>
+          <tr style="background:rgba(255,255,255,.05)"><td style="padding:.12rem .3rem">AM Current</td><td style="text-align:right;padding:.12rem .3rem">198.000</td><td style="text-align:right;padding:.12rem .3rem">105.000</td></tr>
+        </table>
+      </div>
+      <div style="background:rgba(255,255,255,.07);border-radius:6px;padding:.5rem .7rem;grid-column:span 2">
+        <div style="font-weight:700;margin-bottom:.4rem;font-style:italic;color:#ffd54f">E. Bucket 31–90</div>
+        <table style="width:100%;border-collapse:collapse">
+          <tr style="color:#7ec8ff"><th style="text-align:left;padding:.15rem .3rem">Kategori</th><th style="text-align:right;padding:.15rem .3rem">Internal</th><th style="text-align:right;padding:.15rem .3rem">BHJP</th></tr>
+          <tr><td style="padding:.12rem .3rem">Acc NotCurrent</td><td style="text-align:right;padding:.12rem .3rem">20.000</td><td style="text-align:right;padding:.12rem .3rem">16.000</td></tr>
+          <tr style="background:rgba(255,255,255,.05)"><td style="padding:.12rem .3rem">Acc Current</td><td style="text-align:right;padding:.12rem .3rem">179.000</td><td style="text-align:right;padding:.12rem .3rem">28.000</td></tr>
+          <tr><td style="padding:.12rem .3rem">AM NotCurrent</td><td style="text-align:right;padding:.12rem .3rem">101.000</td><td style="text-align:right;padding:.12rem .3rem">66.000</td></tr>
+          <tr style="background:rgba(255,255,255,.05)"><td style="padding:.12rem .3rem">AM Current</td><td style="text-align:right;padding:.12rem .3rem">818.000</td><td style="text-align:right;padding:.12rem .3rem">94.000</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
 </div>
 </div>
 
@@ -2515,7 +2611,7 @@
       <div class="ov-icon">🔄</div>
       <h3>Alur Sharing Loss (Detail)</h3>
       <div class="flow-steps" style="margin-top:.3rem">
-        <div class="flow-step"><div class="num">1</div><p>Cabang ajukan ke <strong>PIC Task Force Solcen</strong> (dibagi per region) — sertakan: data konsumen, data unit, data angsuran &amp; overdue, kronologis, &amp; upaya penanganan sebelumnya<br><em style="font-size:.78rem;color:#888">OVD &lt;30: min 2 kunjungan &amp; ST &gt;3 hari | OVD &gt;30: min 3 kunjungan &amp; wajib ST 2x</em></p></div>
+        <div class="flow-step"><div class="num">1</div><p>Cabang ajukan ke <strong>PIC Task Force Solcen</strong> (dibagi per region) — sertakan: data konsumen, data unit, data angsuran &amp; overdue, kronologis, &amp; upaya penanganan sebelumnya<br><em style="font-size:.78rem;color:#888">Bucket 10–30: sudah ditangani internal ASR min 2× &amp; sudah cetak ST &gt;3 hari</em><br><em style="font-size:.78rem;color:#888">Bucket &gt;30: sudah ditangani min 3× &amp; sudah cetak ST min 1 sampai habis masa periode</em><br><em style="font-size:.78rem;color:#e07800">⚠️ Jika ada penyimpangan dari kondisi tsb → cabang harus dapat rekomendasi DD ASR dulu sebelum bisa diproses</em></p></div>
         <div class="flow-step"><div class="num">2</div><p>PIC isi form analisis — cocokkan data MAS dengan data di Financore, hitung biaya kompensasi (GAIN / LOSS)<br><em style="font-size:.78rem;color:#888">Amount = Harga Lelang – (OSPH saat ini + kompensasi sharing loss)</em><br><em style="font-size:.78rem;color:#888">Nett% = (Est. Lelang – kompensasi) / OSPO Awal → kalau &gt;70% masih dipertimbangkan</em></p></div>
         <div class="flow-step"><div class="num">3</div><p>PIC verifikasi via telepon ke konsumen, nego kompensasi (biasanya di bawah Rp 5 juta)</p></div>
         <div class="flow-step"><div class="num">4</div><p>Setelah deal — buat &amp; naikkan <strong>Memo Sharing Loss</strong> ke atasan:<br><em style="font-size:.8rem">• 0–5 juta → DH (kode C3) &nbsp;|&nbsp; &gt;5 juta → BOD (kode C5)<br>CC: Tim Finance &nbsp;|&nbsp; From: Solcen &amp; Cabang Pengajuan</em></p></div>
@@ -2552,6 +2648,26 @@
         <li>Surat pernyataan (nama dan norek sama seperti di memo sharing loss)</li>
         <li>ST / BAST</li>
       </ul>
+      <p style="font-size:.83rem;font-weight:700;margin:.7rem 0 .3rem">📦 Bundle Dokumen After Penarikan dari Cabang:</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:.4rem .8rem;font-size:.83rem">
+        <div>
+          <p style="font-weight:700;margin:.2rem 0 .3rem;color:#1a4fa0">Wajib:</p>
+          <ol style="margin:0;padding-left:1.2rem;line-height:1.8">
+            <li>BAST</li>
+            <li>ST</li>
+            <li>Surat Permohonan</li>
+            <li>Surat Pernyataan</li>
+            <li>Memo Sharing Loss (dicetak cabang)</li>
+          </ol>
+        </div>
+        <div>
+          <p style="font-weight:700;margin:.2rem 0 .3rem;color:#6a1b9a">Opsional:</p>
+          <ol style="margin:0;padding-left:1.2rem;line-height:1.8">
+            <li>Fidusia</li>
+            <li>Tabel Angsuran</li>
+          </ol>
+        </div>
+      </div>
     </div>
 
   </div>
@@ -3756,7 +3872,8 @@ const memos = [
   { t:'Penyimpangan Beda Ceklist BAST', b:'Diajukan ketika ceklist BAST FAC/PAC memiliki perbedaan saat dilakukan pengecekan oleh petugas pool.'+IMG('memo-beda-ceklist.png') },
   { t:'Penyimpangan Remarks (Kosong / &lt;5 kata / Copy Paste)', b:'Remarks di MAS kosong = memo. Kurang dari 5 kata = memo. Copy-paste dari kunjungan berbeda = memo. Wajib ada remarks informatif di setiap kunjungan.'+IMG2('memo-remarks.png','memo-remarks-lt5.png') },
   { t:'Pelunasan Khusus', b:'Diajukan ketika konsumen minta pelunasan khusus (biasanya lebih kecil dari OSPOH tersisa). Butuh <b>approval 2 BOD</b>. Dokumen: surat permohonan debitur, KTP, memo data konsumen &amp; dasar pengajuan.'+IMG('memo-pelunasan-khusus.png') },
-  { t:'Waive Denda', b:'Diajukan untuk keringanan denda keterlambatan. <b>Hanya untuk akun yang belum lunas</b> (harus berada di bucket PAC atau FAC). Dokumen: data konsumen &amp; kendaraan, data pinjaman, kronologis, analisa ASR. Kewenangan: <span class="sk-ref" onclick="gotoDoc(\'ketentuan-waive-denda\')">ASDH ≤35%, NASDD ≤50%, BOD ≥50%</span>.'+IMG2('memo-waive-denda-1.png','memo-waive-denda-2.png') },
+  { t:'Waive Denda', b:'Diajukan untuk keringanan denda keterlambatan. <b>Hanya untuk akun yang belum lunas</b> (harus berada di bucket PAC atau FAC). Setelah di-approve, konsumen <b>wajib melunasi maks 2 minggu</b>. Pengajuan bisa ke CS atau langsung ke ASR.<br><br>Alur: Konsumen ajukan → Admin buat Memo Waive Denda → upload ke <b>Privy</b> untuk approval.<br><br><b>Kewenangan berdasarkan % denda yang di-waive:</b><ul style="margin:.4rem 0;padding-left:1.2rem"><li>100% denda = all pejabat ASR + BM + RM</li><li>&gt;50% = DD</li><li>&lt;50% = Dept Head</li><li>80/85% = BOD</li></ul>Dokumen: data konsumen &amp; kendaraan, data pinjaman, kronologis, analisa ASR. Kewenangan batas cabang: <span class="sk-ref" onclick="gotoDoc(\'ketentuan-waive-denda\')">ASDH ≤35%, NASDD ≤50%, BOD ≥50%</span>.'+IMG2('memo-waive-denda-1.png','memo-waive-denda-2.png') },
+  { t:'Biaya Kordinasi (Bikor)', b:'Diajukan untuk backup operasional lapangan yang melibatkan pihak ketiga (ormas/LSM/dll). Alur: Admin buat Memo Bikor → upload ke <b>Privy</b> (approval sampai DH) → upload ke <b>Eger</b> (SLA 2 hari, bisa lebih) → lanjut ke AS Support → Coll Admin.' },
   { t:'Reversal Dana', b:'Diajukan ketika konsumen masih terkena autodebet padahal unit telah diamankan. Dokumen: surat permohonan konsumen, KTP, form permohonan penyelesaian kelebihan dana.'+IMG('memo-reversal-dana.png') },
   { t:'Pinjam Pakai BAST', b:'Dikeluarkan ketika cabang ingin menggunakan BAST dari cabang lain karena unit berada di luar jangkauan cabang asal — namun SK/ST tetap dari cabang asal.'+IMG2('memo-pinjam-pakai-bast-1.png','memo-pinjam-pakai-bast-2.png') },
   { t:'Percepatan Penanganan (Cetak SK OVD &lt;90 hari)', b:'Dikeluarkan untuk <span class="sk-ref" onclick="gotoDoc(\'ketentuan-penarikan\')">cetak SK walaupun OVD konsumen belum &gt;90 hari</span>. Memerlukan <b>approval hingga BOD</b>.'+IMG('memo-percepatan.png') },
