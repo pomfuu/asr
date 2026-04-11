@@ -1159,23 +1159,61 @@
             <li>📞 Sistem utama: <b>Ecentrix Collection System</b></li>
             <li style="color:#c62828">❌ <b>X-Lite sudah tidak digunakan</b> sejak <b>1 Maret 2025</b></li>
             <li style="color:#c62828">❌ <b>Sistem callback sudah tidak ada</b>; agent boleh call ulang kapan saja jika data <i>fresh (untouch)</i> sudah habis</li>
-            <li style="color:#c62828">❌ <b>Auto eskalasi cabang sudah tidak ada</b></li>
-            <li>📥 Data dari IT → masuk Ecentrix otomatis setiap pagi <b>jam 07:00</b> → TL (<b>Bu Arnita</b>) assign ke masing-masing agent</li>
+            <li>📥 Data dari IT → masuk Ecentrix otomatis setiap pagi <b>jam 07:00</b>, dibagi sama rata → TL (<b>Bu Arnita</b>) bisa assign atau memindahkan data secara manual ke satu agent (jika ada yang cuti)</li>
+            <li>📊 SPV/TL monitoring kegiatan agent melalui Ecentrix — ada status activity seperti <b>ACW, Call, Ready</b>, dll.</li>
+            <li style="color:#b45309">⚠️ <b>Eskalasi Cabang (Auto Eskalasi):</b> tetap ada, namun cara kerjanya bukan bucket pindah langsung ke FAC — melainkan <b>FAC membantu</b> meski data tetap di bucket Deskcoll. Kasus yang bisa dieskalasi: tidak bertanggung jawab (tidak diangkat 5× berturut-turut di hari berbeda), tidak bisa bayar, karakter buruk. Eskalasi manual: nomor invalid — dari Ecentrix, TL approve.</li>
+            <li style="color:#6a1b9a">📌 <b>Merger 2025:</b> Sebelumnya PAC Motor pakai <b>MCS</b>, data bisa pindah otomatis dari Ecentrix ke MCS. Sekarang sudah menggunakan <b>MAS</b> — data tidak bisa pindah otomatis.</li>
+            <li>🔄 Untuk update no. telp konsumen: <b>SPV kirim list data</b> yang mau diupdate ke <b>AS Support melalui Email</b></li>
             <li>🔍 Jika konsumen ngaku sudah bayar → cek di <b>FAST</b></li>
-            <li>🔍 Ngaku salah sambung → tetap diinput sesuai hasil call; kebenaran bisa dicek dari history di FAST (misal agent A = salah sambung, agent B keesokan harinya baru ngaku bener)</li>
+            <li>🔍 Ngaku salah sambung → tetap diinput sesuai hasil call; kebenaran bisa dicek dari history di FAST</li>
           </ul>
         </div>
 
         <div class="info-card">
+          <h4>📋 Status Call (Call Result) Deskcoll Motor</h4>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:.2rem .8rem;font-size:.82rem;margin-top:.4rem">
+            <span>• Tidak Bertanggung Jawab</span><span>• PTP / Janji Bayar</span>
+            <span>• Telepon Kembali</span><span>• Complain</span>
+            <span>• Telepon Sibuk</span><span>• Tidak Ada Jawaban</span>
+            <span>• Tidak Bisa Bayar</span><span>• Titip Pesan</span>
+            <span>• Sudah Bayar</span><span>• Invalid Number</span>
+            <span>• Telepon Salah / Salah Sambung</span><span></span>
+          </div>
+          <div style="margin-top:.6rem;border-top:1px solid #e8eef8;padding-top:.5rem">
+            <b style="font-size:.82rem;color:#1a4fa0">🧑‍💼 Tugas SPV / TL Deskcoll Motor:</b>
+            <ul style="font-size:.81rem;margin:.3rem 0;padding-left:1.2rem;line-height:1.7">
+              <li>Menangani nomor <b>Invalid Number</b> → kirim WA Coster (BCAF Official)</li>
+              <li>Report pencapaian dan produktivitas</li>
+              <li>Update KPI Agent</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="info-card">
           <h4>KPI Agent Motor <span style="font-size:.72rem;background:#fff3e0;color:#e65100;border-radius:4px;padding:.1rem .4rem;margin-left:.3rem">Diperbarui</span></h4>
-          <table style="width:100%;border-collapse:collapse;font-size:.82rem">
-            <tr style="background:var(--blue-pale)"><th style="padding:.3rem .5rem;text-align:left">KPI</th><th style="text-align:center">Target</th><th style="padding:.3rem .5rem">Keterangan</th></tr>
-            <tr><td style="padding:.25rem .5rem">✅ Current Rate</td><td style="text-align:center"><b>58%</b></td><td style="padding:.25rem .5rem;font-size:.78rem">Pindah bucket dari nunggak → lancar</td></tr>
-            <tr style="background:#f9f9f9"><td style="padding:.25rem .5rem">🏆 Success Rate</td><td style="text-align:center"><b>12%</b></td><td style="padding:.25rem .5rem;font-size:.78rem">Terhubung + bayar sesuai janji (max janji: KSM 10 hari, KPM 5 hari)</td></tr>
-            <tr><td style="padding:.25rem .5rem">💬 Success Call</td><td style="text-align:center"><b>28%</b></td><td style="padding:.25rem .5rem;font-size:.78rem">Terhubung tapi belum bayar</td></tr>
-            <tr style="background:#f9f9f9"><td style="padding:.25rem .5rem">📉 Flow Rate</td><td style="text-align:center"><b>Serendah mungkin</b></td><td style="padding:.25rem .5rem;font-size:.78rem">Eskalasi dari Deskcoll ke cabang (FAC)</td></tr>
+          <p style="font-size:.79rem;font-weight:700;color:#1a4fa0;margin-bottom:.3rem">📞 Agent Active:</p>
+          <table style="width:100%;border-collapse:collapse;font-size:.81rem;margin-bottom:.6rem">
+            <tr style="background:var(--blue-pale)"><th style="padding:.28rem .5rem;text-align:left">KPI</th><th style="text-align:center">Target</th></tr>
+            <tr><td style="padding:.22rem .5rem">Success Rate</td><td style="text-align:center"><b>18%</b></td></tr>
+            <tr style="background:#f9f9f9"><td style="padding:.22rem .5rem">Success Call</td><td style="text-align:center"><b>40%</b></td></tr>
+            <tr><td style="padding:.22rem .5rem">Bucket Current / Current Rate</td><td style="text-align:center"><b>89–92%</b></td></tr>
+            <tr style="background:#f9f9f9"><td style="padding:.22rem .5rem">Produktifitas</td><td style="text-align:center"><b>100%</b></td></tr>
+            <tr><td style="padding:.22rem .5rem">Kehadiran</td><td style="text-align:center"><b>100%</b></td></tr>
+            <tr style="background:#f9f9f9"><td style="padding:.22rem .5rem">Flow Rate</td><td style="text-align:center">Tiap bulan berbeda</td></tr>
+            <tr><td style="padding:.22rem .5rem">KPM</td><td style="text-align:center"><b>9,5% / 97%</b></td></tr>
+            <tr style="background:#f9f9f9"><td style="padding:.22rem .5rem">KSM</td><td style="text-align:center"><b>5,1% / 5,5%</b></td></tr>
           </table>
-          <p style="font-size:.8rem;color:var(--gray-text);margin-top:.4rem">💡 Insentif: TL (Bu Arnita) yang menghitung. Rata-rata semua KPI &gt; <b>70%</b> → dapat insentif.</p>
+          <p style="font-size:.79rem;font-weight:700;color:#1a4fa0;margin-bottom:.3rem">📲 Agent Reminder:</p>
+          <table style="width:100%;border-collapse:collapse;font-size:.81rem">
+            <tr style="background:var(--blue-pale)"><th style="padding:.28rem .5rem;text-align:left">KPI</th><th style="text-align:center">Target</th></tr>
+            <tr><td style="padding:.22rem .5rem">Success Rate</td><td style="text-align:center"><b>42%</b></td></tr>
+            <tr style="background:#f9f9f9"><td style="padding:.22rem .5rem">Success Call</td><td style="text-align:center"><b>60%</b></td></tr>
+            <tr><td style="padding:.22rem .5rem">Bucket Current</td><td style="text-align:center"><b>89–92%</b></td></tr>
+            <tr style="background:#f9f9f9"><td style="padding:.22rem .5rem">Kehadiran &amp; Produktifitas</td><td style="text-align:center"><b>100%</b></td></tr>
+            <tr><td style="padding:.22rem .5rem">Payment Success</td><td style="text-align:center"><b>42%</b></td></tr>
+          </table>
+          <p style="font-size:.79rem;color:var(--gray-text);margin-top:.4rem">💡 Latar belakang Agent Reminder: untuk <b>mengurangi potensi keterlambatan</b> pembayaran yang sama. Di Deskcoll Motor <b>tidak ada vendor</b>. Flow rate / roll rate = bahan yang masuk ke bucket FAC (Maju).</p>
+          <p style="font-size:.8rem;color:var(--gray-text);margin-top:.3rem">💡 Insentif: TL (Bu Arnita) yang menghitung. Rata-rata semua KPI &gt; <b>70%</b> → dapat insentif.</p>
         </div>
 
         <!-- ROW 3: Pembayaran -->
@@ -1185,7 +1223,7 @@
             <div style="background:#f0f7ff;border-radius:7px;padding:.6rem .8rem;border-top:3px solid #2176FF">
               <div style="font-weight:700;color:#2176FF;margin-bottom:.3rem">🔄 Autodebet</div>
               <ul style="margin:0 0 0 1rem;line-height:1.7">
-                <li>4x batch proses, <b>max jam 17:00</b></li>
+                <li><b>5x</b> sehari — pukul <b>09:00, 11:00, 13:00, 14:00, 16:00</b></li>
                 <li>Meliputi <b>angsuran + denda</b></li>
                 <li>Mostly produk <b>KSM</b> (nasabah BCA)</li>
               </ul>
@@ -1237,6 +1275,17 @@
           <div style="background:#fff3e0;border-radius:6px;padding:.5rem .8rem;font-size:.8rem;margin-top:.6rem;border-left:3px solid #F57C00">
             ⚠️ Jika sistem delay (konsumen sudah bayar tapi masih bisa di-call): minta konsumen kirim <b>bukti bayar via WA</b> ke agent → agent → TL → Finance.
           </div>
+        </div>
+
+        <!-- Case Khusus Asuransi -->
+        <div class="info-card">
+          <h4>🛡️ Case Khusus — Asuransi &amp; Situasi Tertentu</h4>
+          <ul style="font-size:.82rem;line-height:1.85">
+            <li><b>Asuransi:</b> atas nama mengambil unit atas nama orang lain (di dalam/luar keluarga)</li>
+            <li><b>Unit hilang / kecelakaan:</b> dilihat dari produk — hanya <b>KSM</b> yang memiliki asuransi (KPM tidak)</li>
+            <li><b>Debitur meninggal:</b> dilakukan pengurusan surat <b>AKM (Asuransi Kematian)</b></li>
+            <li><b>Unit raib:</b> dicuri dalam rumah (harus ada CCTV) atau di tempat parkir</li>
+          </ul>
         </div>
 
         <!-- ROW 4: Eskalasi & Call Result Tabel -->
@@ -1543,19 +1592,26 @@
             <tbody>
               <tr style="background:#f0f5ff"><td style="padding:.28rem .5rem"><b>SP</b></td><td style="padding:.28rem .5rem">OVD ≥ 11 hari</td><td style="padding:.28rem .5rem">Surat Pemberitahuan Pertama — mengingatkan keterlambatan</td></tr>
               <tr><td style="padding:.28rem .5rem"><b>SPT</b></td><td style="padding:.28rem .5rem">OVD ≥ 17 hari</td><td style="padding:.28rem .5rem">Surat Pemberitahuan Terakhir — tahap akhir sebelum tindakan hukum</td></tr>
-              <tr style="background:#f0f5ff"><td style="padding:.28rem .5rem"><b>Somasi</b></td><td style="padding:.28rem .5rem">OVD ~30+ hari</td><td style="padding:.28rem .5rem">Berdasarkan analisa masing-masing cabang</td></tr>
+              <tr style="background:#f0f5ff"><td style="padding:.28rem .5rem"><b>SPHL</b></td><td style="padding:.28rem .5rem">H-1 unit masuk pool</td><td style="padding:.28rem .5rem">Surat Pemberitahuan Hutang &amp; Lelang — diterbitkan sehari sebelum kendaraan masuk pool</td></tr>
+              <tr><td style="padding:.28rem .5rem"><b>Somasi</b></td><td style="padding:.28rem .5rem">OVD ~30+ hari</td><td style="padding:.28rem .5rem">Berdasarkan analisa masing-masing cabang — dikirim <b>fisik</b>, ada tanda terima</td></tr>
             </tbody>
           </table>
           <ul style="font-size:.82rem;margin:.4rem 0;padding-left:1.2rem;line-height:1.7">
-            <li><b>Akun Individu:</b> SP &amp; SPT dikirim via <b>WA/Email oleh vendor</b>, atas nama BCA Finance (centang biru ✓✓)</li>
+            <li><b>Akun Individu:</b> SP, SPT &amp; SPHL dikirim via <b>vendor (by system)</b> pada hari kerja — pertama via <b>WA</b>, jika gagal → dikirim ulang <b>H+2 via Email</b></li>
             <li><b>Akun Badan Usaha:</b> SP &amp; SPT dikirim dalam bentuk <b>fisik</b> — ada tanda terima</li>
+            <li><b>Somasi:</b> dikirim secara <b>fisik</b> — ada tanda terima. Somasi kedua dikirim selang <b>7 hari</b> dari Somasi pertama</li>
           </ul>
+          <div style="background:#e8f0fe;border-radius:7px;padding:.5rem .8rem;font-size:.8rem;margin-top:.5rem;border-left:3px solid #1a4fa0">
+            📊 <b>Monitoring:</b> TIM ASR Cabang wajib monitoring pengiriman SP/SPT/SPHL via report pengiriman. Jika gagal karena sistem → koordinasi dengan tim IT. <b>BASH, AASH, ARH</b> wajib punya aplikasi <b>JogetDX</b> (untuk lihat report gagal kirim SP &amp; SPHL — ada log via WA dan laporan kirim via email).
+          </div>
           <div style="margin-top:.7rem">
             <b style="font-size:.82rem;color:#1a4fa0">📄 Definisi:</b>
             <ul style="font-size:.81rem;margin:.3rem 0;padding-left:1.2rem;line-height:1.75">
-              <li><b>SP (Surat Pemberitahuan Pertama):</b> Dikirimkan kepada konsumen menunggak dengan OVD 11 hari dengan tujuan untuk mengingatkan perihal keterlambatan.</li>
-              <li><b>SPT (Surat Pemberitahuan Terakhir):</b> Dikirimkan kepada konsumen menunggak dengan OVD 17 hari — tahap akhir sebelum tindakan hukum. Jika dalam 5 hari tidak diselesaikan, petugas akan melaksanakan hak-hak hukum atas barang jaminan.</li>
-              <li><b>Somasi:</b> Surat peringatan yang berisi teguran perihal wanprestasi dan himbauan untuk melakukan pembayaran angsuran ataupun penyerahan unit. BCA Finance akan melakukan penarikan unit hingga jalur hukum jika tidak ada penyelesaian.</li>
+              <li><b>SP (Surat Pemberitahuan Pertama):</b> Dikirimkan kepada konsumen menunggak dengan OVD 11 hari untuk mengingatkan perihal keterlambatan.</li>
+              <li><b>SPT (Surat Pemberitahuan Terakhir):</b> Dikirimkan dengan OVD 17 hari — tahap akhir sebelum tindakan hukum. Jika dalam 5 hari tidak diselesaikan, petugas akan melaksanakan hak-hak hukum atas barang jaminan.</li>
+              <li><b>SPHL (Surat Pemberitahuan Hutang &amp; Lelang):</b> Diterbitkan H-1 sejak kendaraan masuk pool. Pengiriman by system (vendor) pada hari kerja.</li>
+              <li><b>Somasi 1:</b> Berisi informasi tindakan cidera hukum / wanprestasi dan himbauan bayar atau serahkan unit.</li>
+              <li><b>Somasi 2:</b> Berisi informasi pasal dan proses hukum — dikirim selang 7 hari dari Somasi 1. Dasar hukum: <em>Pasal 46 No. 42 Tahun 1999 (pidana), Pasal 23 Ayat 2, Pasal 30 UUD Fidusia</em>.</li>
             </ul>
           </div>
           <div style="margin-top:.7rem">
@@ -2108,6 +2164,41 @@ Besar harapan kami Bapak/Ibu dapat memenuhi hal-hal dimaksud. Namun apabila Bapa
             </div>
           </div>
         </div>
+        <div class="info-card" style="grid-column:1/-1">
+          <h4>🔄 Flow Data WO (Write Off)</h4>
+          <div class="flow-steps">
+            <div class="flow-step"><div class="num">1</div><p>Admin Collection (khusus WO — DIAH) menarik data <b>RTB (Report Tutup Buku)</b> setiap closingan cabang — ditarik melalui aplikasi <b>MAS</b></p></div>
+            <div class="flow-step"><div class="num">2</div><p>Data dikasih ke <b>Audit</b> untuk verifikasi data</p></div>
+            <div class="flow-step"><div class="num">3</div><p>Audit memberikan <b>Rekomendasi</b> → jadi <b>QWO</b></p></div>
+            <div class="flow-step"><div class="num">4</div><p>a. Diskusi Budgeting CKPN oleh <b>Finance dan Riskman</b> (bulan ini nominalnya berapa) &nbsp;|&nbsp; b. Persetujuan <b>BOD</b></p></div>
+            <div class="flow-step"><div class="num">5</div><p>Dikasih ke <b>Dept Head</b> → Diteruskan ke <b>cabang</b> → Eksekusi QWO oleh <b>Recovery</b></p></div>
+          </div>
+          <p style="font-size:.79rem;color:#555;margin-top:.5rem">📌 <b>Data WO</b> = bahan WO &nbsp;|&nbsp; <b>WO Recovery</b> = data WO yang berhasil di-recovery</p>
+        </div>
+        <div class="info-card">
+          <h4>🏊 Batas Waktu Kendaraan di Pool</h4>
+          <table style="width:100%;border-collapse:collapse;font-size:.82rem;margin-top:.4rem">
+            <tr style="background:var(--blue-pale)"><th style="padding:.3rem .5rem;text-align:left">Jenis Akun</th><th style="text-align:center">Maks di Pool</th><th style="padding:.3rem .5rem">Keterangan</th></tr>
+            <tr><td style="padding:.25rem .5rem">Non WO</td><td style="text-align:center"><b>12 hari</b></td><td style="padding:.25rem .5rem;font-size:.78rem">Setelah itu → auto asset / auto lelang</td></tr>
+            <tr style="background:#f9f9f9"><td style="padding:.25rem .5rem">WO</td><td style="text-align:center"><b>21 hari</b></td><td style="padding:.25rem .5rem;font-size:.78rem">⚠️ Rencana diubah menjadi 12 hari (menyamakan non WO)</td></tr>
+          </table>
+        </div>
+        <div class="info-card">
+          <h4>ℹ️ Info Tambahan Recovery</h4>
+          <ul style="font-size:.82rem;line-height:1.85">
+            <li><b>OSWO</b> = total WO (nominal ±Rp 5,7T) sejak BCAF berdiri sampai saat ini</li>
+            <li><b>Target amount recovery nasional:</b> Rp 58 juta / bulan (April)</li>
+            <li><b>ARO kunjungan:</b> minimal <b>3 konsumen/hari</b></li>
+            <li>Recovery fokus pada <b>penarikan</b> dan <b>pelunasan</b></li>
+            <li><b>Biaya penarikan internal:</b> Rp 100.000</li>
+            <li><b>Biaya penarikan eksternal (BHJP):</b> hasil nego antara konsumen dan BHJP</li>
+            <li><b>Metode pelunasan Recovery:</b> menggunakan <b>no. rekening BCA Finance</b></li>
+            <li><b>Vendor Atlasat:</b> digunakan Recovery untuk melacak no. telp debitur berdasarkan <b>NIK</b></li>
+            <li><b>Deskcoll Recovery:</b> ada vendor deskcoll khusus Recovery untuk bantu telepon setiap hari</li>
+            <li><b>Aplikasi ABC:</b> digunakan untuk input biaya penanganan, biaya tarik, cetak SK, dan simulasi ET — di-print dan dibawa saat penagihan profcoll</li>
+            <li><b>Inputan Matel:</b> Matel kirim nopol, nosin, noka, tipe, leasing, no kontrak, OVD, CP untuk request penanganan SK — melalui WA</li>
+          </ul>
+        </div>
       </div>
       <!-- REC MOTOR -->
       <div id="vm-rec-motor" class="vm-panel panel-body">
@@ -2441,12 +2532,13 @@ Besar harapan kami Bapak/Ibu dapat memenuhi hal-hal dimaksud. Namun apabila Bapa
           <th style="padding:.35rem .5rem;text-align:left">Ketentuan / Standar</th>
         </tr></thead>
         <tbody>
-          <tr style="background:#f0f5ff"><td style="padding:.3rem .5rem">Geotagging — diam di 1 titik</td><td style="padding:.3rem .5rem">Maks <b>2 jam</b> di lokasi yang sama saat jam kerja</td></tr>
-          <tr><td style="padding:.3rem .5rem">Geotagging — PAC di kantor</td><td style="padding:.3rem .5rem">Maks <b>3 jam</b> di kantor (lebih dari itu = penyimpangan)</td></tr>
-          <tr style="background:#f0f5ff"><td style="padding:.3rem .5rem">Deviasi jarak inputan MAS</td><td style="padding:.3rem .5rem">Maks <b>3 km</b> dari alamat konsumen di MAS</td></tr>
+          <tr style="background:#f0f5ff"><td style="padding:.3rem .5rem">Geotagging (PAC/FAC) — diam/berkumpul di 1 titik</td><td style="padding:.3rem .5rem">Maks <b>2 jam</b> di lokasi yang sama saat jam kerja</td></tr>
+          <tr><td style="padding:.3rem .5rem">Geotagging di kantor</td><td style="padding:.3rem .5rem">Maks <b>3 jam</b> untuk PAC (lebih dari itu = penyimpangan)</td></tr>
+          <tr style="background:#f0f5ff"><td style="padding:.3rem .5rem">Deviasi jarak inputan MAS</td><td style="padding:.3rem .5rem">Maks <b>3 km (FAC)</b> dan <b>2 km (PAC)</b> dari alamat konsumen di MAS</td></tr>
           <tr><td style="padding:.3rem .5rem">RKH terisi</td><td style="padding:.3rem .5rem"><b>100%</b> — harus selesai setiap hari kerja</td></tr>
           <tr style="background:#f0f5ff"><td style="padding:.3rem .5rem">Min kunjungan PAC/hari</td><td style="padding:.3rem .5rem">Wajib input minimal <b>3 kunjungan/hari</b> di MAS</td></tr>
-          <tr><td style="padding:.3rem .5rem">Distribusi SP</td><td style="padding:.3rem .5rem"><b>100%</b> terkirim sesuai ketentuan</td></tr>
+          <tr><td style="padding:.3rem .5rem">Min kunjungan FAC/hari</td><td style="padding:.3rem .5rem">Wajib <b>11 kunjungan/hari</b> di MAS (minimal <b>8 kunjungan/hari</b>)</td></tr>
+          <tr style="background:#f0f5ff"><td style="padding:.3rem .5rem">Distribusi SP dan SPT</td><td style="padding:.3rem .5rem"><b>100%</b> terkirim sesuai ketentuan</td></tr>
         </tbody>
       </table>
     </div>
