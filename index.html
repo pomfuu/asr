@@ -2059,15 +2059,40 @@ Besar harapan kami Bapak/Ibu dapat memenuhi hal-hal dimaksud. Namun apabila Bapa
       </div>
       <!-- REC MOBIL -->
       <div id="vm-rec-mobil" class="vm-panel active panel-body">
-        <div class="info-card">
+        <div class="info-card" style="grid-column:1/-1">
           <h4>Proses Recovery Mobil</h4>
           <div class="flow-steps">
-            <div class="flow-step"><div class="num">1</div><p><span class="sk-ref" onclick="gotoDoc('kebijakan-write-off')">Input data WO (QWO — SK No. 054/SK/DIR/2016)</span> — terima data aging dari Account Solution Analyst &amp; Dev</p></div>
-            <div class="flow-step"><div class="num">2</div><p>Lengkapi berkas: Fidusia, PK, Copy BPKB, Dossier Copy</p></div>
-            <div class="flow-step"><div class="num">3</div><p>Analisa aging (pemetaan geografis, mail address) &amp; analisa kasus (OSPO, angsuran, awal nunggak)</p></div>
-            <div class="flow-step"><div class="num">4</div><p>Kunjungan internal + Pelacakan (cybercoll, QWO, somasi)</p></div>
-            <div class="flow-step"><div class="num">5</div><p>Terbitkan SK — koordinasi BHJP + Aparat + Ormas/LSM</p></div>
-            <div class="flow-step"><div class="num">6</div><p>Output: <b>Pelunasan</b> → memo kotak → BPKB keluar | atau <b>Pengamanan Unit</b> → pool → lelang (Credit Settlement)</p></div>
+            <div class="flow-step"><div class="num">1</div><p><b>Cek RKH</b> → Menentukan prioritas berdasarkan aging yang <b>baru masuk ke sistem (baru QWO)</b> karena kemungkinan bayar tinggi dan belum tersentuh oleh Recovery</p></div>
+            <div class="flow-step"><div class="num">2</div><p>Cek di <b>DMS</b> untuk berkas: <b>Fidusia, Kontrak, Copy BPKB, Dossier Copy</b></p></div>
+            <div class="flow-step"><div class="num">3</div><p><b>Analisa aging</b> (pemetaan geografis, mail address) &amp; analisa kasus (OSPO, angsuran, awal nunggak) + Evaluasi penanganan sebelumnya</p>
+              <div style="margin-top:.4rem;padding-left:1rem;border-left:3px solid #adc4ed;font-size:.81rem;line-height:1.7">
+                <div>a. Coba hubungi konsumen lagi via <b>WA</b></div>
+                <div style="margin-top:.2rem">b. <b>Kunjungan Internal</b> — verifikasi apakah konsumen masih ada (alamat home, mail/domisili, KTP, Office). Pastikan unit ada di mana — bisa melalui tetangga, RT/RW, atau satpam</div>
+              </div>
+            </div>
+            <div class="flow-step"><div class="num">4</div><p><b>Penanganan Lanjutan</b> (sesuai kondisi kasus):</p>
+              <div style="margin-top:.4rem;padding-left:1rem;border-left:3px solid #adc4ed;font-size:.81rem;line-height:1.7">
+                <div>a. <b>Kirim Somasi 1 &amp; 2</b> → ke alamat domisili (kalau orangnya ada tapi unitnya tidak ada) → somasi dilakukan untuk jalur <b>LP (Laporan Polisi)</b></div>
+                <div style="margin-top:.3rem">b. <b>Penanganan BHJP</b> — cetak SK oleh ARO lewat aplikasi <b>ABC</b> (kalau orang &amp; unit tidak ada). SK berlaku <b>14 hari, bebas perpanjang</b>.
+                  <div style="margin-top:.2rem;padding-left:.8rem;color:#555">📱 Di ABC: isi no kontrak → search → keluar data konsumen → pilih signer (ARO penanggung jawab) → pilih PT BHJP → SK otomatis terbentuk</div>
+                </div>
+                <div style="margin-top:.3rem">c. <b>Koordinasi Ormas/LSM</b> terkait untuk membantu menangani konsumen</div>
+              </div>
+            </div>
+            <div class="flow-step"><div class="num">5</div><p>Output: <b>Pelunasan via rekening BCAF</b> → memo kotak → BPKB keluar &nbsp;|&nbsp; atau <b>Pengamanan Unit</b> → pool → lelang (Credit Settlement)</p></div>
+          </div>
+          <div style="margin-top:.7rem;background:#f0f7ff;border-radius:7px;padding:.6rem .9rem;font-size:.8rem">
+            <b style="color:#1a4fa0">📌 Catatan:</b>
+            <ul style="margin:.3rem 0;padding-left:1.1rem;line-height:1.75">
+              <li>Pemilihan <b>LP vs BHJP</b> bersifat case by case — LP cenderung lebih lama (±6 bulan s.d. 1 tahun), BHJP lebih cepat. Tergantung analisa kasusnya.</li>
+            </ul>
+            <b style="color:#1a4fa0">⚙️ Kemungkinan Kasus di Recovery:</b>
+            <ul style="margin:.3rem 0;padding-left:1.1rem;line-height:1.75">
+              <li>🔵 <b>Mobil tidak ada, orangnya ada</b> → diskusi cari tahu mobil di mana (biasanya dialihkan) → ambil langkah hukum (somasi → LP)</li>
+              <li>🟢 <b>Mobil ada, orang ada</b> → diskusi untuk pelunasan atau penarikan unit (BHJP atau LP)</li>
+              <li>🟡 <b>Mobil ada, orangnya tidak ada</b> → unit biasanya diparkir di bandara / suatu tempat sementara konsumen pergi ke LN atau entah kemana. Unit tidak bisa langsung ditarik (konsumen harus TTD BAST) → kunjungi kerabat, gunakan LP, atau minta BHJP selidiki</li>
+              <li>🔴 <b>Mobil tidak ada, orangnya tidak ada</b> → kasus paling sulit → bisa LP dan/atau BHJP, tergantung analisa mana yang paling efektif menemukan konsumen dan unit</li>
+            </ul>
           </div>
         </div>
         <div class="info-card">
@@ -2167,11 +2192,15 @@ Besar harapan kami Bapak/Ibu dapat memenuhi hal-hal dimaksud. Namun apabila Bapa
         <div class="info-card" style="grid-column:1/-1">
           <h4>🔄 Flow Data WO (Write Off)</h4>
           <div class="flow-steps">
-            <div class="flow-step"><div class="num">1</div><p>Admin Collection (khusus WO — DIAH) menarik data <b>RTB (Report Tutup Buku)</b> setiap closingan cabang — ditarik melalui aplikasi <b>MAS</b></p></div>
+            <div class="flow-step"><div class="num">1</div><p>Admin Collection (khusus WO — <b>DIAH</b>) menarik data <b>RTB (Report Tutup Buku)</b> setiap closingan cabang — ditarik melalui aplikasi <b>MAS</b></p></div>
             <div class="flow-step"><div class="num">2</div><p>Data dikasih ke <b>Audit</b> untuk verifikasi data</p></div>
-            <div class="flow-step"><div class="num">3</div><p>Audit memberikan <b>Rekomendasi</b> → jadi <b>QWO</b></p></div>
-            <div class="flow-step"><div class="num">4</div><p>a. Diskusi Budgeting CKPN oleh <b>Finance dan Riskman</b> (bulan ini nominalnya berapa) &nbsp;|&nbsp; b. Persetujuan <b>BOD</b></p></div>
-            <div class="flow-step"><div class="num">5</div><p>Dikasih ke <b>Dept Head</b> → Diteruskan ke <b>cabang</b> → Eksekusi QWO oleh <b>Recovery</b></p></div>
+            <div class="flow-step"><div class="num">3</div><p>Audit memberikan <b>Rekomendasi</b> → jadi <b>QWO</b> — <em>masing-masing data WO di dalam QWO sudah ada PIC ARO-nya</em></p>
+              <div style="margin-top:.4rem;padding-left:1rem;border-left:3px solid #adc4ed;font-size:.81rem;line-height:1.7">
+                <div>a. Diskusi <b>Budgeting CKPN</b> oleh Finance dan Riskman (bulan ini nominalnya berapa)</div>
+                <div style="margin-top:.2rem">b. Persetujuan <b>BOD</b></div>
+              </div>
+            </div>
+            <div class="flow-step"><div class="num">4</div><p>Dikasih ke <b>Dept Head</b> → Diteruskan ke <b>cabang</b> → Eksekusi QWO oleh <b>Recovery</b></p></div>
           </div>
           <p style="font-size:.79rem;color:#555;margin-top:.5rem">📌 <b>Data WO</b> = bahan WO &nbsp;|&nbsp; <b>WO Recovery</b> = data WO yang berhasil di-recovery</p>
         </div>
