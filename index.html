@@ -2200,9 +2200,9 @@ Besar harapan kami Bapak/Ibu dapat memenuhi hal-hal dimaksud. Namun apabila Bapa
                 <div style="margin-top:.2rem">b. Persetujuan <b>BOD</b></div>
               </div>
             </div>
-            <div class="flow-step"><div class="num">4</div><p>Dikasih ke <b>Dept Head</b> → Diteruskan ke <b>cabang</b> → Eksekusi QWO oleh <b>Recovery</b></p></div>
+            <div class="flow-step"><div class="num">4</div><p>QWO diberikan ke <b>Pak Acil (Dept Head)</b> → diberikan ke <b>admin</b> → Diteruskan ke cabang (<b>ARH masing-masing</b>) → Eksekusi QWO oleh <b>Recovery</b></p></div>
           </div>
-          <p style="font-size:.79rem;color:#555;margin-top:.5rem">📌 <b>Data WO</b> = bahan WO &nbsp;|&nbsp; <b>WO Recovery</b> = data WO yang berhasil di-recovery</p>
+          <p style="font-size:.79rem;color:#555;margin-top:.5rem">📌 <b>Data WO</b> = bahan WO &nbsp;|&nbsp; <b>WO Recovery</b> = data WO yang berhasil di-recovery &nbsp;|&nbsp; Pembayaran melalui <b>rekening</b> karena akun WO sudah hapus account (tidak bisa autodebet atau VA)</p>
         </div>
         <div class="info-card">
           <h4>🏊 Batas Waktu Kendaraan di Pool</h4>
@@ -2219,14 +2219,238 @@ Besar harapan kami Bapak/Ibu dapat memenuhi hal-hal dimaksud. Namun apabila Bapa
             <li><b>Target amount recovery nasional:</b> Rp 58 juta / bulan (April)</li>
             <li><b>ARO kunjungan:</b> minimal <b>3 konsumen/hari</b></li>
             <li>Recovery fokus pada <b>penarikan</b> dan <b>pelunasan</b></li>
-            <li><b>Biaya penarikan internal:</b> Rp 100.000</li>
-            <li><b>Biaya penarikan eksternal (BHJP):</b> hasil nego antara konsumen dan BHJP</li>
-            <li><b>Metode pelunasan Recovery:</b> menggunakan <b>no. rekening BCA Finance</b></li>
+            <li><b>Biaya penarikan internal:</b> Rp 100.000 (atau biaya penarikan)</li>
+            <li><b>Biaya penarikan eksternal (BHJP):</b> sesuai hasil sukses penarikan (<b>success fee</b>)</li>
+            <li><b>OSAR</b> = hutang pokok (ospok) + bunga → <em>account receivable</em></li>
+            <li><b>Metode pelunasan Recovery:</b> transfer ke <b>no. rekening BCA Finance</b> (akun WO sudah hapus account → tidak bisa autodebet/VA)</li>
+            <li><b>ARH monitoring ARC</b> melalui <b>CMS Mobile Collection</b> — realtime untuk update data lokasi</li>
             <li><b>Vendor Atlasat:</b> digunakan Recovery untuk melacak no. telp debitur berdasarkan <b>NIK</b></li>
-            <li><b>Deskcoll Recovery:</b> ada vendor deskcoll khusus Recovery untuk bantu telepon setiap hari</li>
-            <li><b>Aplikasi ABC:</b> digunakan untuk input biaya penanganan, biaya tarik, cetak SK, dan simulasi ET — di-print dan dibawa saat penagihan profcoll</li>
+            <li><b>Deskcoll Recovery:</b> ada vendor deskcoll khusus Recovery untuk bantu telepon debitur setiap hari</li>
+            <li><b>Debitur / pemegang unit wajib TTD BAST</b> — baik pihak ketiga maupun tangan pertama</li>
+            <li><b>WO atas nama perusahaan:</b> bisa ditangani. Penanganan ormas juga case by case (BHJP atau tidak)</li>
+            <li><b>Sebar nopol:</b> boleh tapi harus memperhatikan UU — karena ada insiden profcoll di Kalibata, saat ini kegiatan sebar nopol dibatasi</li>
+            <li><b>Fungsi WO:</b> membuat NPL serendah mungkin → membuktikan BCAF sehat dan bisa lanjut usaha</li>
+            <li><b>OLX Autos tidak berlaku untuk akun WO</b> — harga kendaraan sudah jatuh, kondisi potensi tidak baik, pajak kendaraan biasanya kacau</li>
+            <li><b>Penebusan oleh orang lain:</b> bisa dilakukan di luar atas nama → wajib sertakan <b>surat kuasa dari atas nama + KTP asli atas nama</b></li>
             <li><b>Inputan Matel:</b> Matel kirim nopol, nosin, noka, tipe, leasing, no kontrak, OVD, CP untuk request penanganan SK — melalui WA</li>
           </ul>
+        </div>
+        <div class="info-card">
+          <h4>👥 Personil &amp; Laporan Harian Recovery</h4>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:.5rem;font-size:.82rem;margin-bottom:.6rem">
+            <div style="background:#e8f0fe;border-radius:7px;padding:.5rem .7rem">
+              <b style="color:#1a4fa0">ARH (Area Recovery Head)</b>
+              <div style="margin-top:.2rem">Deddy Aswar, Pak Billy</div>
+            </div>
+            <div style="background:#fff3e0;border-radius:7px;padding:.5rem .7rem">
+              <b style="color:#e65100">ARO / ARC</b>
+              <div style="margin-top:.2rem">Mas Hilmy, Mas Ikhlas, Mas Bambang</div>
+            </div>
+          </div>
+          <b style="font-size:.81rem;color:#1a4fa0">📊 Report Harian ARO ke ARH:</b>
+          <ul style="font-size:.81rem;margin:.3rem 0;padding-left:1.2rem;line-height:1.7">
+            <li>Kunjungan &amp; pelacakan cyber</li>
+            <li>Follow up by phone</li>
+            <li>Koordinasi pelunasan / penarikan</li>
+            <li>Administrasi / kegiatan di kantor</li>
+          </ul>
+          <b style="font-size:.81rem;color:#1a4fa0">💰 Insentif ARO / ARC:</b>
+          <ul style="font-size:.81rem;margin:.3rem 0;padding-left:1.2rem;line-height:1.7">
+            <li>Dilihat dari pencapaian <b>tengah bulan</b> dan <b>akhir bulan</b></li>
+            <li>Jumlah <b>amount realisasi</b> (pelunasan/penarikan yang berhasil)</li>
+          </ul>
+        </div>
+        <div class="info-card" style="grid-column:1/-1">
+          <h4>💳 Program Penyelesaian Recovery</h4>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:.8rem;font-size:.82rem">
+            <div>
+              <b style="color:#1a4fa0">📋 Jenis Program:</b>
+              <ul style="margin:.3rem 0;padding-left:1.1rem;line-height:1.75">
+                <li><b>Pelunasan saja</b> — tidak ada pembayaran per-termin kecuali autodebet</li>
+                <li><b>Diskon denda</b> (penghapusan/pengurangan) — minimal total di atas ospok, minimal 10% pelunasan di atas Rp 500.000</li>
+                <li><b>Sharing loss</b> (kompensasi)</li>
+              </ul>
+              <b style="color:#1a4fa0">⚙️ Proses Pelunasan:</b>
+              <ol style="margin:.3rem 0;padding-left:1.2rem;font-size:.81rem;line-height:1.75">
+                <li>Debitur buat <b>surat permohonan</b></li>
+                <li>ARC buat <b>Memo Kotak</b> → TTD by <b>Privy</b></li>
+                <li>Approval sampai <b>1 BOD (Pak Herwandi)</b> — mostly disetujui karena sudah difilter oleh ARC</li>
+                <li>Debitur bayar transfer ke <b>rekening BCAF</b> → kirim bukti bayar + no. kontrak ke finance</li>
+                <li><b>SKL</b> dicetak sesuai memo (cetak atau tidak tergantung keputusan BOD)</li>
+              </ol>
+              <div style="background:#fff3e0;border-radius:6px;padding:.4rem .6rem;font-size:.79rem;margin-top:.4rem;border-left:3px solid #f57c00">
+                ⚠️ Jika baru bisa <b>pelunasan sebagian</b> → denda tetap berjalan sampai tagihannya lunas. SKL hanya keluar sesuai keputusan BOD.
+              </div>
+            </div>
+            <div>
+              <b style="color:#1a4fa0">📄 Isi Memo Kotak:</b>
+              <ul style="margin:.3rem 0;padding-left:1.1rem;line-height:1.75">
+                <li>Data Kendaraan (tipe mobil/multiguna)</li>
+                <li>Total Kewajiban: OS pokok, OS interest, denda, fee profcoll, biaya lainnya</li>
+                <li>OS Principal Real + angsuran dari X ke N</li>
+                <li>Permohonan pelunasan konsumen (pelunasan + denda + biaya BHJP)</li>
+                <li>Tiering persetujuan denda: <b>35%</b> = Div Head, <b>45%</b> = DD, tinggi = BOD</li>
+                <li>Harga OLX → dikurangi <b>depresiasi</b> (karena OLX sudah di-upping, kondisi kendaraan WO biasanya kurang baik / pajak mati)</li>
+              </ul>
+              <b style="color:#1a4fa0">📌 Diskon ET:</b>
+              <ul style="margin:.3rem 0;padding-left:1.1rem;line-height:1.75;font-size:.81rem">
+                <li>Tidak ada maksimal</li>
+                <li>Kewenangan sampai DH untuk 35% — tergantung analisa karakter dan kondisi konsumen</li>
+              </ul>
+              <b style="color:#1a4fa0">📜 SKL (Surat Keterangan Lunas):</b>
+              <ul style="margin:.3rem 0;padding-left:1.1rem;line-height:1.75;font-size:.81rem">
+                <li>Keluar setelah lunas, dibundle bersama <b>BPKB</b></li>
+                <li>Berpengaruh ke <b>SLIK</b>: SKL keluar = SLIK aman; tidak keluar = SLIK bermasalah</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="info-card" style="grid-column:1/-1">
+          <h4>📦 Berkas, Dokumen &amp; BAST Recovery</h4>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:.8rem;font-size:.82rem">
+            <div>
+              <b style="color:#1a4fa0">🗂️ Bundle SK (1 paket):</b>
+              <ul style="margin:.3rem 0;padding-left:1.1rem;line-height:1.75">
+                <li>SK + BAST (bernomor, memuat nopol + nama PT agar tidak disalahgunakan)</li>
+                <li>Fidusia</li>
+                <li>Simulasi Pelunasan</li>
+                <li>Hitung Angsuran</li>
+              </ul>
+              <div style="background:#fdecea;border-radius:5px;padding:.35rem .55rem;font-size:.79rem;border-left:3px solid #c62828;margin-top:.3rem">
+                ⚠️ BAST <b>tidak boleh hilang</b>. Jika hilang → lapor polisi. Wajib dikembalikan saat SK expired atau tidak berhasil menarik.
+              </div>
+            </div>
+            <div>
+              <b style="color:#1a4fa0">📋 Berkas Wajib Profcoll:</b>
+              <ul style="margin:.3rem 0;padding-left:1.1rem;line-height:1.75">
+                <li>SK (Surat Kuasa — untuk BHJP)</li>
+                <li>ST (Surat Tugas — khusus internal)</li>
+                <li>BAST</li>
+                <li>Fidusia</li>
+                <li>Simulasi Pelunasan</li>
+                <li>History Angsuran</li>
+              </ul>
+            </div>
+            <div>
+              <b style="color:#1a4fa0">🎨 Warna BAST:</b>
+              <div style="display:flex;flex-direction:column;gap:.3rem;margin-top:.35rem">
+                <div style="background:#fff;border:1px solid #ddd;border-left:4px solid #888;border-radius:4px;padding:.3rem .5rem;font-size:.81rem"><b>Putih</b> — untuk debitur</div>
+                <div style="background:#fdecea;border:1px solid #ef9a9a;border-left:4px solid #c62828;border-radius:4px;padding:.3rem .5rem;font-size:.81rem"><b>Merah</b> — untuk petugas pool</div>
+                <div style="background:#fffde7;border:1px solid #ffe082;border-left:4px solid #f9a825;border-radius:4px;padding:.3rem .5rem;font-size:.81rem"><b>Kuning</b> — untuk admin pool</div>
+                <div style="background:#e8f5e9;border:1px solid #a5d6a7;border-left:4px solid #2e7d32;border-radius:4px;padding:.3rem .5rem;font-size:.81rem"><b>Hijau</b> — untuk credit settlement</div>
+              </div>
+            </div>
+          </div>
+          <div style="margin-top:.7rem;border-top:1px solid #e8eef8;padding-top:.6rem">
+            <b style="font-size:.82rem;color:#1a4fa0">🔄 Close Account — Berkas &amp; Flow:</b>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin-top:.4rem;font-size:.81rem">
+              <div>
+                <b>Berkas Close Account:</b>
+                <ul style="margin:.2rem 0;padding-left:1.1rem;line-height:1.7">
+                  <li>Memo Kotak</li>
+                  <li>Copy BPKB (SS 3 lembar dari Financore)</li>
+                  <li>Memo Pengeluaran BPKB</li>
+                  <li>Jadwal / Tabel Angsuran</li>
+                  <li>Foto OLX</li>
+                  <li>Bukti Bayar</li>
+                  <li><em>Penebusan mobil: + PKCS (Credit Settlement)</em></li>
+                </ul>
+              </div>
+              <div>
+                <b>Flow Close Account:</b>
+                <div style="margin-top:.3rem;padding-left:.5rem;border-left:3px solid #adc4ed;line-height:1.8">
+                  Admin input berkas di <b>ABC</b> → Output: <b>IOM by ARO</b> untuk Close Account → <b>FSM eksekusi</b> Close Account
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="info-card" style="grid-column:1/-1">
+          <h4>⚖️ Strategi Penanganan: ARO vs BHJP vs LP</h4>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:.8rem;font-size:.82rem;margin-bottom:.7rem">
+            <div style="background:#e8f0fe;border-radius:8px;padding:.6rem .8rem;border-top:3px solid #1a4fa0">
+              <b style="color:#1a4fa0">🏢 Internal / ARO</b>
+              <ul style="margin:.3rem 0;padding-left:1.1rem;line-height:1.7">
+                <li>Cocok ketika konsumen <b>kooperatif</b> dan mau melakukan pelunasan</li>
+              </ul>
+            </div>
+            <div style="background:#fff3e0;border-radius:8px;padding:.6rem .8rem;border-top:3px solid #e65100">
+              <b style="color:#e65100">🔍 BHJP (Eksternal)</b>
+              <ul style="margin:.3rem 0;padding-left:1.1rem;line-height:1.7">
+                <li>Bagus untuk <b>pelacakan unit</b> dan konsumen</li>
+                <li>Proses lebih <b>cepat</b></li>
+                <li>Bisa dibantu polisi, tapi <b>harus melalui BCAF</b> — BHJP tidak bisa buat LP sendiri</li>
+                <li>Monitoring: ARO komunikasi via WA/telp, tanya perkembangan &amp; kendala</li>
+              </ul>
+            </div>
+            <div style="background:#fdecea;border-radius:8px;padding:.6rem .8rem;border-top:3px solid #c62828">
+              <b style="color:#c62828">🚔 LP (Laporan Polisi)</b>
+              <ul style="margin:.3rem 0;padding-left:1.1rem;line-height:1.7">
+                <li>Bagus untuk konsumen dengan <b>backing kuat</b> (ormas, anggota)</li>
+                <li>Harus jelas unit dan kendaraan ada di mana</li>
+                <li>Tidak semua akun WO dilakukan LP</li>
+                <li>Jika orang ada, <b>unit tidak ada</b> → tidak perlu LP (tidak bisa lelang)</li>
+                <li>Jika nasabah <b>aparat</b> → lapor ke <b>polisi militer / provos</b></li>
+                <li>Proses lama: <b>±6 bulan – 1 tahun</b> — biasanya untuk membuat nasabah lebih jera</li>
+              </ul>
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:.8rem;font-size:.82rem">
+            <div style="background:#f9f9f9;border-radius:7px;padding:.6rem .8rem">
+              <b style="color:#444">🔄 Perbedaan FAC/PAC vs Recovery:</b>
+              <ul style="margin:.3rem 0;padding-left:1.1rem;line-height:1.7">
+                <li><b>FAC/PAC:</b> berkepentingan dengan bunga (sumber pendapatan) → lebih persuasif untuk bayar angsuran</li>
+                <li><b>Recovery:</b> lebih ditekankan untuk <b>penarikan atau pelunasan</b> → meminimalisir kerugian dari akun yang sudah WO</li>
+              </ul>
+            </div>
+            <div style="background:#f9f9f9;border-radius:7px;padding:.6rem .8rem">
+              <b style="color:#444">📌 Hal Penting Lainnya:</b>
+              <ul style="margin:.3rem 0;padding-left:1.1rem;line-height:1.7">
+                <li><b>Somasi di MAS:</b> MAS tidak ada tanda sudah somasi/belum → kalau PAC sudah somasi, ARC akan somasi ulang → ARC buat <b>rekapan Excel</b> untuk tracking kontrak yang sudah disomasi</li>
+                <li><b>Cassie vs Overkredit:</b> Cassie = ada orang mau lunasi &amp; ambil BPKB, debitur asal tidak tahu. OVK = kedua belah pihak sama-sama tahu</li>
+                <li><b>Refinancing/Multiguna:</b> tetap ditarik. Kasus: akun induk (collateral) sudah lunas tapi multiguna belum → tetap bisa ditarik / minta pelunasan (BPKB masih di BCAF)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="info-card" style="grid-column:1/-1">
+          <h4>📱 Aplikasi yang Digunakan Recovery</h4>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.6rem;font-size:.82rem">
+            <div style="background:#e8f0fe;border-radius:7px;padding:.6rem .8rem;border-top:3px solid #1a4fa0">
+              <b style="color:#1a4fa0">ABC (Gabungan ASR)</b>
+              <ul style="margin:.35rem 0;padding-left:1rem;line-height:1.75">
+                <li>Input biaya penanganan &amp; pengiriman biaya tarik</li>
+                <li>Cetak SK (WO): butuh no. kontrak, signer recovery, PT BHJP → di-print untuk profcoll</li>
+                <li>Simulasi ET (Early Termination)</li>
+                <li>Jika ada kesalahan input → minta IT untuk tembak data</li>
+              </ul>
+            </div>
+            <div style="background:#fff3e0;border-radius:7px;padding:.6rem .8rem;border-top:3px solid #e65100">
+              <b style="color:#e65100">EGER</b>
+              <ul style="margin:.35rem 0;padding-left:1rem;line-height:1.75">
+                <li>Biaya Koordinasi (Bikor)</li>
+                <li>Tidak ada limit biaya</li>
+              </ul>
+            </div>
+            <div style="background:#e8f5e9;border-radius:7px;padding:.6rem .8rem;border-top:3px solid #2e7d32">
+              <b style="color:#2e7d32">CSIS</b>
+              <ul style="margin:.35rem 0;padding-left:1rem;line-height:1.75">
+                <li>Extend (perpanjangan)</li>
+              </ul>
+            </div>
+            <div style="background:#f9f9f9;border-radius:7px;padding:.6rem .8rem;border-top:3px solid #757575">
+              <b style="color:#424242">MAS</b>
+              <ul style="margin:.35rem 0;padding-left:1rem;line-height:1.75">
+                <li>Tracking FAC &amp; PAC</li>
+              </ul>
+            </div>
+            <div style="background:#f3e5f5;border-radius:7px;padding:.6rem .8rem;border-top:3px solid #7b1fa2">
+              <b style="color:#7b1fa2">CMS Mobile Collection</b>
+              <ul style="margin:.35rem 0;padding-left:1rem;line-height:1.75">
+                <li>ARH monitoring ARO/ARC secara <b>realtime</b> (update data lokasi)</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
       <!-- REC MOTOR -->
