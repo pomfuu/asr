@@ -748,6 +748,38 @@
       <h4>BAST (Berita Acara Serah Terima)</h4>
       <p>Bukti serah terima kendaraan saat pengamanan unit. Masa berlaku <b>1 hari</b> (mempertimbangkan jarak lokasi pengamanan ke pool). Jika &gt;1 hari → wajib buat <b>memo penyimpangan kronologis pool</b>.</p>
     </div>
+    <div class="ov-card">
+      <div class="icon">🪣</div>
+      <h4>Kenapa Ada Bucket Penanganan?</h4>
+      <ul>
+        <li>OJK memiliki aturan <b>collectabilitas 5 tingkatan</b> — masing-masing punya jangkauan hari → membentuk bucket-bucket penanganan</li>
+        <li>Karakteristik konsumen di tiap bucket <b>berbeda-beda</b>:
+          <ul style="margin-top:.25rem;margin-bottom:.1rem">
+            <li><b>Deskcoll (0–10 hr):</b> Lupa bayar / tidak mengerti cara bayar</li>
+            <li><b>FAC (10–90 hr):</b> Dana dialihkan, penurunan pendapatan, dll.</li>
+            <li><b>PAC (90+, non-WO):</b> Konsumen raib, fiktif, atau berkarakter buruk</li>
+          </ul>
+        </li>
+      </ul>
+      <div style="margin-top:.5rem;padding:.4rem .7rem;background:#e8f5e9;border-radius:6px;font-size:.82rem;border-left:3px solid #2e7d32">
+        <b style="color:#2e7d32">🔄 Perbedaan PAC vs Recovery:</b>
+        <ul style="margin:.3rem 0 0 .9rem;line-height:1.75">
+          <li><b>PAC:</b> "Penjaga gawang terakhir" — tugasnya agar akun tidak di-WO; harus jaga <b>flow rate</b></li>
+          <li><b>Recovery:</b> Akun sudah WO → bisa <b>fokus selesaikan setiap kasus</b> secara maksimal tanpa harus jaga flow rate</li>
+          <li>Tidak semua akun PAC di-WO: belum tentu memenuhi syarat WO + ada <b>budget WO</b> dari management setiap tahun → Audit harus pilah secara hati-hati</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ov-card">
+      <div class="icon">📋</div>
+      <h4>Pengambilan vs Penarikan Unit</h4>
+      <ul>
+        <li><b>Penarikan unit</b> — hanya bisa dilakukan oleh <b>PAC</b> dan <b>Recovery</b></li>
+        <li><b>Pengambilan unit</b> — dilakukan oleh <b>FAC</b> dan <b>Deskcoll</b> (dengan bantuan FAC cabang)</li>
+        <li>Jika mobil <b>tidak ada STNK</b> → tetap ditarik; sudah risiko harga jatuh saat lelang — lebih baik amankan unit dulu daripada habiskan waktu mencari STNK</li>
+        <li>BPKB hanya bisa diambil oleh <b>atas nama</b>; kecuali atas nama sudah janjian dengan PU (<b>surat kuasa + KTP asli</b>)</li>
+      </ul>
+    </div>
   </div>
 </div>
 </div>
@@ -819,7 +851,8 @@
               <ul style="margin:0 0 0 1rem;line-height:1.9">
                 <li><b>Agent External</b> (vendor): Jabodetabek + Kalimantan</li>
                 <li><b>Agent Internal</b> (SIM): selain Jabodetabek &amp; Kalimantan (Sulawesi, Sumatra, Jawa Timur, dll.)</li>
-                <li style="font-size:.8rem;color:var(--gray-text)">💡 Dulu semua pakai external. Sejak 2022 ada internal, bertahap mau pindah ke internal semua.</li>
+                <li style="font-size:.8rem;color:var(--gray-text)">💡 <b>Latar belakang:</b> Dulunya deskcoll mobil hanya berisi agent external. AS Support di-challenge Pak Gito → dibentuk agent internal; awalnya 13 orang, kini <b>33 orang</b> — rencana menggeser unit external secara bertahap.</li>
+                <li style="font-size:.8rem;color:var(--gray-text)">📡 Agent external masuk sistem via <b>API</b> (otomatis update ke Financore); juga kirim report handling ke <b>Pak Bowo (AS Support)</b> dalam bentuk <b>TXT file via email</b> → dihitung pencapaian oleh tim analis</li>
               </ul>
               <div style="background:#fff3e0;border-radius:5px;padding:.4rem .7rem;font-size:.8rem;margin-top:.5rem">
                 🕐 Jam Kerja: <b>Senin – Sabtu</b> (s.d. jam 14:00)
@@ -849,6 +882,8 @@
             <li>Sistem: <b>OnTrace</b> (pantau real-time oleh SPV)</li>
             <li>WA Call setelah pk 14:00 — SPV sebar no telp data NSTD/CBR ke agent untuk di-WA</li>
             <li>Hasil WA diinput kembali ke OnTrace sesuai call result</li>
+            <li>Jika data konsumen berubah (misal no HP) → konsumen wajib <b>pengkinian data</b>; ketentuan kontrak: maximal <b>7 hari</b> setelah ada perubahan</li>
+            <li>Di OnTrace bisa <b>add phone number</b> (nomor selain yang terdaftar sistem); harus di-approve sampai <b>TL</b>; nomor tersebut hanya berlaku sampai <b>jam 12 malam</b> — besoknya hilang dan harus ajukan ke TL lagi</li>
           </ul>
           <div style="font-weight:700;font-size:.82rem;color:var(--blue-mid);margin-bottom:.4rem">Status Agent (dipantau SPV):</div>
           <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:.4rem;font-size:.79rem">
@@ -1121,7 +1156,14 @@
           </div>
           <p style="font-size:.8rem;color:var(--gray-text);margin-top:.5rem">Catatan: Sampling PTP otomatis melalui form penilaian di sistem; sampling CBC dilakukan manual melalui Excel.</p>
         </div>
-
+        <div class="info-card">
+          <h4>🚗 Konsumen Mau Serahkan Mobil (Bucket Deskcoll)</h4>
+          <ul style="font-size:.85rem;line-height:1.85">
+            <li>Konsumen bisa <b>langsung datang ke kantor cabang</b> untuk menyerahkan unit</li>
+            <li>Jika konsumen <b>tidak bisa ke kantor cabang</b> → diberikan no. telepon <b>PIC cabang</b> (biasanya BASH) → janjian ketemuan untuk dilakukan pengambilan unit</li>
+            <li>Pengambilan unit di deskcoll dibantu oleh <b>FAC cabang</b></li>
+          </ul>
+        </div>
       </div>
       <!-- DAS MOTOR -->
       <div id="vm-das-motor" class="vm-panel panel-body">
@@ -1598,8 +1640,9 @@
           </table>
           <ul style="font-size:.82rem;margin:.4rem 0;padding-left:1.2rem;line-height:1.7">
             <li><b>Akun Individu:</b> SP, SPT &amp; SPHL dikirim via <b>vendor (by system)</b> pada hari kerja — pertama via <b>WA</b>, jika gagal → dikirim ulang <b>H+2 via Email</b></li>
-            <li><b>Akun Badan Usaha:</b> SP &amp; SPT dikirim dalam bentuk <b>fisik</b> — ada tanda terima</li>
+            <li><b>Akun Badan Usaha:</b> SP, SPT &amp; SPHL dikirim dalam bentuk <b>fisik langsung</b> — ada tanda terima</li>
             <li><b>Somasi:</b> dikirim secara <b>fisik</b> — ada tanda terima. Somasi kedua dikirim selang <b>7 hari</b> dari Somasi pertama</li>
+            <li style="color:#1a4fa0">💡 <b>SP dan SPT perlu dikirim</b> sebagai syarat untuk membuat <b>Somasi</b>. Somasi sendiri tidak wajib, namun kalau mau dikirim harus menggunakan SP dan SPT terlebih dahulu. Somasi digunakan sebagai dasar untuk <b>Laporan Polisi (LP)</b>.</li>
           </ul>
           <div style="background:#e8f0fe;border-radius:7px;padding:.5rem .8rem;font-size:.8rem;margin-top:.5rem;border-left:3px solid #1a4fa0">
             📊 <b>Monitoring:</b> TIM ASR Cabang wajib monitoring pengiriman SP/SPT/SPHL via report pengiriman. Jika gagal karena sistem → koordinasi dengan tim IT. <b>BASH, AASH, ARH</b> wajib punya aplikasi <b>JogetDX</b> (untuk lihat report gagal kirim SP &amp; SPHL — ada log via WA dan laporan kirim via email).
@@ -1703,10 +1746,13 @@ Besar harapan kami Bapak/Ibu dapat memenuhi hal-hal dimaksud. Namun apabila Bapa
             <li><b>1 konsumen 2 kontrak</b> (Induk + Multiguna) → autodebet menarik berdasarkan angsuran yang <b>paling kecil</b> nominalnya</li>
             <li><b>Surat Tugas terbit</b> → di Financore statusnya jadi <b>"Assign Coll"</b> → autodebet tidak berjalan → harus proses <b>debet manual oleh admin</b></li>
             <li><b>OLX Autos melalui BCAF</b> = tidak ada denda pinalti. Jika konsumen langsung ke OLX/tempat lain tanpa BCAF → dikenakan <b>pinalti 5%</b></li>
+            <li><b>Alur dana OLX Autos:</b> Setelah unit diambil OLX Autos → dana langsung masuk ke <b>BCAF</b> (bukan ke konsumen); jika ada sisa dana → baru diberikan ke konsumen. Total nominal denda tetap dihitung — jika tidak nutup, konsumen tetap harus melunasi agar <b>SLIK</b> tetap bersih</li>
             <li><b>Harga jual sharing loss/lelang &lt; OSPO</b> → konsumen diinformasikan, wajib bayar kekurangan. Jika tidak bayar → berpengaruh ke <b>SLIK</b></li>
             <li><b>CPRM:</b> Data tidak masuk MAS, masuk ke <b>DCO</b> — cara cek: akun yang tidak ada di MAS tapi ada di DCO. Jika FAC bantu penanganan CPRM → insentif tetap ke <b>marketing</b></li>
             <li><b>BHJP:</b> Kelebihan = SK lebih terstruktur &amp; meminimalisir risiko. Kekurangan = tidak bisa cepat (profcoll/matel yang ketemu unit di jalan tidak bisa langsung eksekusi — harus tunggu SK terbit, padahal unit bisa kabur duluan)</li>
             <li><b>Rolling wilayah</b> (ganti kode pos) → idealnya <b>2× setahun</b> — alasan: menjaga keadilan antar FAC, konsumen tidak pusing didatangi orang berbeda tiap hari, menghindari pungutan liar &amp; kecemburuan antar FAC</li>
+            <li><b>ST dan SK cetak di FAC/PAC Mobil</b> → melalui <b>Financore</b> (akun belum dihapusbukukan). Di Recovery → cetak melalui aplikasi <b>ABC</b> (akun WO sudah hilang dari Financore)</li>
+            <li><b>Pengambilan unit di FAC</b> = bukan penarikan; FAC dan Deskcoll melakukan <b>pengambilan</b> (sukarela konsumen); penarikan paksa hanya bisa dilakukan oleh <b>PAC</b> dan <b>Recovery</b></li>
           </ul>
         </div>
         <div class="info-card">
@@ -2140,6 +2186,16 @@ Besar harapan kami Bapak/Ibu dapat memenuhi hal-hal dimaksud. Namun apabila Bapa
                 <li>Di-track saat kunjungan — kalau diarahkan ke A, kunjungi A; lihat unit/konsumen ada di mana lagi</li>
                 <li>Kasus gadai ke ormas: sudah <b>sulit diselesaikan</b></li>
               </ul>
+              <b style="color:#e65100">📋 RKH — Catatan Penting:</b>
+              <ul style="margin:.3rem 0;padding-left:1.1rem;line-height:1.75">
+                <li>RKH yang sudah diinput <b>tidak dapat didelete</b> → harus dikunjungi semua</li>
+                <li><b>Bahan Prediksi:</b> Misal OVD saat ini 82 hari → diprediksi akan masuk bucket PAC akhir bulan → PAC akan melakukan kunjungan untuk mencegah masuk PAC</li>
+              </ul>
+              <b style="color:#1a4fa0">📩 SP dan SPT — KPM vs KSM:</b>
+              <ul style="margin:.3rem 0;padding-left:1.1rem;line-height:1.75">
+                <li><b>KPM:</b> SP dikirim pada OVD ke-<b>16</b>; SPT dikirim <b>10 hari</b> setelah SP</li>
+                <li><b>KSM:</b> SP dikirim pada hari ke-<b>32</b> (setelah masuk bucket FAC, karena KSM dibedakan penanganannya dari KPM)</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -2284,14 +2340,27 @@ Besar harapan kami Bapak/Ibu dapat memenuhi hal-hal dimaksud. Namun apabila Bapa
             </div>
           </div>
         </div>
+        <div class="info-card">
+          <h4>🔑 Cetak SK PAC Mobil &amp; Penarikan Unit</h4>
+          <ul style="font-size:.85rem;line-height:1.85">
+            <li>Untuk bisa <b>cetak SK</b> di PAC Mobil → harus sudah dilakukan <b>kunjungan internal 3 kali</b> ke <b>3 alamat berbeda</b> (Rumah, KTP, Office) — sinkron dengan syarat akun layak SK di BHJP Management</li>
+            <li>ST dan SK PAC Mobil dicetak melalui <b>Financore</b> (akun belum WO)</li>
+            <li><b>Penarikan unit</b> = hak PAC dan Recovery; FAC dan Deskcoll hanya melakukan <b>pengambilan</b> (sukarela)</li>
+            <li>Jika mobil <b>tidak ada STNK</b> → tetap ditarik; sudah risiko harga lelang turun — lebih baik amankan unit dulu daripada habiskan waktu mencari STNK</li>
+          </ul>
+        </div>
       </div>
       <!-- PAC MOTOR -->
       <div id="vm-pac-motor" class="vm-panel panel-body">
         <div class="info-card">
           <h4>Range PAC Motor</h4>
           <ul>
-            <li>OVD <b>&gt;90 hari → Non-WO</b>, <b>1 layer</b></li>
-            <li>Pilihan penyelesaian sama seperti mobil (pelancaran, pelunasan, tarikan, prepayment)</li>
+            <li>OVD <b>&gt;90 hari → Non-WO</b>, <b>1 layer</b> — masing-masing sub-cabang Depok Raya ada <b>1 PAC</b></li>
+            <li><b>Target RKH:</b> <b>13 RKH/hari</b> (minimal 10/hari); minimal <b>10 nasabah/hari</b></li>
+            <li><b>Target penyelesaian:</b> <b>75%</b> dari semua nasabah yang masuk PAC</li>
+            <li><b>Program yang tersedia:</b> Waive denda, pelunasan, pembayaran not current, penarikan — tidak ada program khusus</li>
+            <li>Pilihan penyelesaian: pelancaran, pelunasan, tarikan, prepayment</li>
+            <li><b>Tidak ada syarat pelunasan</b></li>
           </ul>
         </div>
         <div class="info-card">
@@ -2321,6 +2390,161 @@ Besar harapan kami Bapak/Ibu dapat memenuhi hal-hal dimaksud. Namun apabila Bapa
             <tr><td style="padding:.25rem .6rem">Flow (91–120 hari)</td><td style="text-align:center">Sesuai Memo</td><td style="text-align:center">40%</td></tr>
           </table>
           <p style="font-size:.79rem;color:var(--gray-text);margin-top:.5rem">Proses kerja BASH Motor: MCS 30% (15%), Distribusi SP 100% (25%), Report LKRC 100% (25%), Penyelesaian bucket 11-90 tengah bulan 70% (75%)</p>
+        </div>
+        <div class="info-card">
+          <h4>🎯 Data Prioritas &amp; Biaya Tarik PAC Motor</h4>
+          <b style="font-size:.82rem;color:#1a4fa0">📌 Data PAC yang Diprioritaskan:</b>
+          <ul style="font-size:.82rem;line-height:1.85;margin:.3rem 0">
+            <li>Nasabah bucket <b>FAC 2 yang tidak tertangani</b> atau salah pendekatan di FAC</li>
+            <li>Nasabah OVD besar tapi masih bisa berkomunikasi / masih bisa bayar <b>1 angsuran</b></li>
+          </ul>
+          <b style="font-size:.82rem;color:#1a4fa0">💰 Biaya Tarik (sama dengan FAC):</b>
+          <ul style="font-size:.82rem;line-height:1.85;margin:.3rem 0">
+            <li>Ada STNK: <b>Rp 250.000</b> per agent</li>
+            <li>Tidak ada STNK: <b>Rp 150.000</b> per agent</li>
+          </ul>
+          <b style="font-size:.82rem;color:#1a4fa0">📦 Ketentuan Penarikan:</b>
+          <ul style="font-size:.82rem;line-height:1.85;margin:.3rem 0">
+            <li>Narik sendiri — kendaraan harus ada, biasanya di rumah debitur</li>
+            <li>Wajib <b>Surat Tugas (ST)</b> — tidak perlu somasi untuk penarikan</li>
+            <li>Ada pelelangan setelah penarikan → <b>memo tunda aset 7 hari</b></li>
+            <li>Penebusan di motor diberikan waktu <b>3 hari</b></li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h4>📋 SP, Somasi &amp; LP — PAC Motor</h4>
+          <b style="font-size:.82rem;color:#1a4fa0">📨 SP &amp; Somasi:</b>
+          <ul style="font-size:.82rem;line-height:1.85;margin:.3rem 0">
+            <li>Monitoring pengiriman <b>SP1 dan SP2</b> (by system dari email) bisa dilihat di <b>JogetDX</b> by BASH</li>
+            <li>Somasi 1 dan Somasi 2 memiliki <b>jeda 7 hari</b>, isinya sama</li>
+            <li><b>Fast App</b> digunakan untuk mengecek apakah nasabah sudah disomasi atau belum (dicetak/tidak)</li>
+            <li>Kalau sudah disomasi oleh <b>FAC</b> → PAC <b>tidak somasi ulang</b></li>
+            <li>Jika nasabah tidak diketahui keberadaannya dan akan dilakukan LP → <b>perlu somasi terlebih dahulu</b></li>
+          </ul>
+          <b style="font-size:.82rem;color:#1a4fa0">🚔 LP berguna jika:</b>
+          <ul style="font-size:.82rem;line-height:1.85;margin:.3rem 0">
+            <li>Unit dipindahtangankan ke ormas → bukti: <b>surat pernyataan dari ormas</b>, kwitansi, dan a/n dari awal</li>
+            <li>Ospok besar + angsuran 1–12 bulan + kondisi nasabah <b>tidak diketahui keberadaannya</b></li>
+          </ul>
+        </div>
+        <div class="info-card" style="grid-column:1/-1">
+          <h4>📝 Nego Denda (Waive Denda) — PAC Motor</h4>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:.8rem;font-size:.82rem">
+            <div>
+              <b style="color:#1a4fa0">✅ Ketentuan Dasar:</b>
+              <ul style="margin:.3rem 0;padding-left:1.1rem;line-height:1.75">
+                <li>Nego denda <b>sifatnya opsional</b> — tidak wajib; dilunasin tanpa nego denda juga boleh</li>
+                <li>Nego denda <b>disisakan 1x angsuran</b> (tidak ada aturan tertulis bahwa harus dihitung dari total pelunasan)</li>
+                <li>Kalau sudah lunas penuh (full dibayar) → <b>tidak bisa nego denda</b></li>
+                <li>Diskon denda tergantung approval berdasarkan nominalnya (tiering sama seperti FAC)</li>
+              </ul>
+              <b style="color:#1a4fa0">⚙️ Proses Waive Denda:</b>
+              <ul style="margin:.3rem 0;padding-left:1.1rem;line-height:1.75">
+                <li>Nasabah datang ke kantor untuk buat <b>surat pernyataan</b></li>
+                <li>Jika sudah di-approve → nasabah <b>tidak perlu datang lagi</b>; VA pembayaran dikirim via <b>WA</b></li>
+                <li>Jika nasabah tidak setuju nominal → bisa <b>direvisi lagi</b> pengajuan dendanya</li>
+                <li>Untuk nominal yang sudah di-approve → BASH koordinasi dengan pusat <b>(WTC)</b></li>
+                <li>Ormas biasanya <b>di-approve / diikutin</b> kemauannya</li>
+              </ul>
+            </div>
+            <div>
+              <b style="color:#1a4fa0">💳 Pembayaran Setelah Disetujui:</b>
+              <ul style="margin:.3rem 0;padding-left:1.1rem;line-height:1.75">
+                <li>Bayar lewat <b>VA 26777 + no. kontrak</b> — nominal pelunasan otomatis berubah sesuai hasil waive</li>
+                <li><b>Batas bayar 7 hari</b> — jika lewat, nominal kembali ke awal</li>
+                <li>Nasabah <b>autodebet</b> bisa waive denda, tapi pembayarannya tetap lewat <b>VA</b> (denda di autodebet baru terpotong setelah angsuran lunas)</li>
+              </ul>
+              <div style="background:#fff8e1;border-radius:6px;padding:.4rem .6rem;font-size:.79rem;border-left:3px solid #f9a825;margin-top:.4rem">
+                📌 Pengajuan waive denda di <b>JogetDX</b> — approval sesuai tiering (sama dengan FAC Motor)
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="info-card">
+          <h4>📊 Target, Monitoring &amp; Operasional PAC Motor</h4>
+          <ul style="font-size:.82rem;line-height:1.85">
+            <li><b>Target penyelesaian: 75%</b> dari semua nasabah yang masuk PAC</li>
+            <li>% target <b>tengah bulan (MOM) dan akhir bulan (EOM) dibedakan</b> — agar tengah bulan sudah banyak achieve; jika MOM tidak achieve, EOM harus dikejar dan target cukup besar, dibagi rata</li>
+            <li><b>Janji bayar</b> paling lama <b>1 minggu</b> untuk bisa dihitung sebagai penyelesaian</li>
+            <li><b>Cek Deviasi</b> → untuk mengetahui apakah agent benar-benar melakukan kunjungan atau tidak</li>
+            <li>Achieve target: awal bulan koordinasi dikuik kendalanya — cabang mana yang tidak achieve, pakai <b>MAS</b></li>
+            <li><b>AR DEV</b>: dahulu setiap tanggal 9, sekarang di akhir bulan — fluktuatif saat lebaran</li>
+            <li>Tidak ada rolling/pergantian kode pos — paling ada <b>perbantuan</b> dari cabang Cibinong ke Depok jika kode pos beririsan</li>
+            <li><b>Ambil BPKB</b> wajib ke kantor; jika bukan atas nama → pakai <b>surat kuasa</b> (TTD materai oleh atas nama) + <b>KTP asli atas nama</b> + KTP pengambil</li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h4>📋 Rekomendasi WO dari PAC Motor</h4>
+          <ul style="font-size:.82rem;line-height:1.85">
+            <li><b>PAC tidak bisa mengajukan WO secara langsung</b> — hanya bisa memberikan rekomendasi</li>
+            <li>Setiap <b>akhir bulan</b> diberikan data <b>&gt;180 hari</b> untuk pemilihan data rekomendasi WO — ada kolom rekomendasi di data tersebut</li>
+            <li><b>Tidak semua</b> data yang direkomendasikan akan di-WO — tergantung keputusan pusat (<b>Audit → AS Support</b>)</li>
+          </ul>
+        </div>
+        <div class="info-card" style="grid-column:1/-1">
+          <h4>🏷️ Jenis Kasus ASR — PAC Motor</h4>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:.8rem;font-size:.82rem">
+            <div style="background:#fff0f0;border-radius:8px;padding:.8rem">
+              <div style="font-weight:700;color:#c00;margin-bottom:.4rem">🔴 Bad Debt — Bucket PAC (Sulit Ditagih)</div>
+              <ul style="margin:0 0 0 1rem;line-height:1.9">
+                <li><b>1A:</b> Unit kecelakaan karena begal (tidak bisa klaim asuransi); nasabah meninggal karena penyakit bawaan (tidak bisa klaim asuransi jiwa)
+                  <div style="font-size:.78rem;color:#666;margin-top:.2rem">
+                    🔑 Asuransi jiwa khusus <b>KSM</b> → source order dari BCA<br>
+                    🔑 Asuransi kerusakan &amp; kehilangan khusus <b>KPM</b> → source order dari dealer
+                  </div>
+                </li>
+                <li><b>1B:</b> Sudah dikunjungi tapi rumah kontrak → mayoritas nasabah kontrak + penghuni baru tidak tahu apapun</li>
+                <li><b>1C:</b> Masih ada yang bisa ditemui dan punya informasi mengenai nasabah</li>
+              </ul>
+              <div style="background:#fdecea;border-radius:5px;padding:.3rem .5rem;font-size:.78rem;border-left:3px solid #c62828;margin-top:.5rem">
+                ⚠️ Kategori 1 = sulit tagih. Semua 4 alamat harus dikunjungi dulu — jika tetap tidak ada info → masuk kategori 1
+              </div>
+            </div>
+            <div style="background:#fff8ee;border-radius:8px;padding:.8rem">
+              <div style="font-weight:700;color:#c96000;margin-bottom:.4rem">🟠 Potential Bad Debt — Bucket FAC 2 (Masih Ada Harapan)</div>
+              <div style="color:#666;font-size:.77rem;margin-bottom:.4rem">Rata-rata unit sudah tidak di nasabah</div>
+              <ul style="margin:0 0 0 1rem;line-height:1.9">
+                <li><b>2A:</b> Pindah tangan / digadaikan pihak ketiga — ada uang diterima konsumen, ada hitam di atas putih</li>
+                <li><b>2B:</b> Pindah tangan / digadaikan keluarga (biasanya ke saudara)</li>
+                <li><b>2C:</b> Over alih — tidak terima uang</li>
+                <li><b>2D:</b> Terkena kasus hukum — nasabah ditahan / unit jadi barang bukti → ditangani oleh <b>Legal</b> supaya unit bisa ditebus</li>
+                <li><b>2E:</b> Di-backup ormas / LSM / tokoh masyarakat → nasabah lempar penanganan ke LSM</li>
+                <li><b>2F:</b> Pinjam nama keluarga — dari awal atas nama keluarga tapi pisah KK &amp; rumah</li>
+                <li><b>2G:</b> Pinjam nama dealer / pihak ketiga</li>
+                <li><b>2H:</b> Perusahaan bangkrut</li>
+              </ul>
+            </div>
+            <div style="background:#f0f8f0;border-radius:8px;padding:.8rem">
+              <div style="font-weight:700;color:#1a7a3c;margin-bottom:.4rem">🟢 Administration — Bucket FAC 1 (Low-Medium)</div>
+              <ul style="margin:0 0 0 1rem;line-height:1.9">
+                <li><b>3A:</b> Belum dikunjungi</li>
+                <li><b>3B:</b> Tanggal jatuh tempo dan tanggal gajian berbeda</li>
+                <li><b>3C:</b> Penghasilan tidak tetap / menurun</li>
+                <li><b>3D:</b> PHK / konsumen keluar dari pekerjaan</li>
+                <li><b>3E:</b> Unit sudah ditarik tapi masih masuk aging → di motor <b>penebusan diberikan waktu 3 hari</b></li>
+                <li><b>3F:</b> Kesalahan program → salah input OTR / angsuran</li>
+                <li><b>3G:</b> Unit dan konsumen terkena bencana alam / force major</li>
+              </ul>
+              <div style="background:#e8f5e9;border-radius:5px;padding:.3rem .5rem;font-size:.78rem;border-left:3px solid #2e7d32;margin-top:.5rem">
+                🔑 KPM: radius penjualan dibatasi <b>30 km</b> (jika lebih → memo deviasi)<br>
+                🔑 KSM: berdasarkan nasabah BCA, lokasi bisa di mana saja → berdasarkan <b>kanwil</b>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="info-card">
+          <h4>🔧 Penarikan &amp; SP/SPT — PAC Motor</h4>
+          <ul style="font-size:.85rem;line-height:1.85">
+            <li><b>Penarikan unit</b> = hak PAC dan Recovery; kalau motor <b>tidak ada STNK</b> → tetap ditarik; sudah risiko harga jatuh saat lelang</li>
+            <li>RKH yang sudah diinput <b>tidak dapat didelete</b> → harus dikunjungi semua</li>
+            <li><b>Bahan Prediksi:</b> Akun dengan OVD mendekati 90 hari → diprediksi masuk PAC akhir bulan → PAC lakukan kunjungan lebih awal untuk mencegah</li>
+            <li><b>SP dan SPT — KPM vs KSM:</b>
+              <ul style="margin-top:.2rem">
+                <li><b>KPM:</b> SP dikirim OVD ke-<b>16</b>; SPT dikirim <b>10 hari</b> setelah SP</li>
+                <li><b>KSM:</b> SP dikirim hari ke-<b>32</b> (setelah masuk FAC, penanganan KSM dibedakan dari KPM)</li>
+              </ul>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -2425,6 +2649,10 @@ Besar harapan kami Bapak/Ibu dapat memenuhi hal-hal dimaksud. Namun apabila Bapa
             <li>Memo Pengeluaran BPKB + Bukti Bayar</li>
             <li>Lampiran Memo Kotak + Bukti Close di ABC</li>
           </ul>
+          <div style="margin-top:.5rem;padding:.4rem .6rem;background:#f0f5ff;border-radius:6px;font-size:.81rem;border-left:3px solid #1a4fa0">
+            📅 <b>Proses pembersihan SLIK:</b> Setelah konsumen pelunasan dan mendapat SKL, nama di SLIK baru akan <b>bersih setelah ±1 bulan / 30 hari kerja</b> sejak pelunasan utang dilaporkan oleh kreditur/bank ke OJK.<br>
+            🔑 <b>Pengambilan BPKB:</b> Hanya bisa oleh <b>atas nama</b>; kecuali atas nama sudah janjian dengan PU → wajib sertakan <b>surat kuasa + KTP asli</b>
+          </div>
         </div>
         <div class="info-card">
           <h4>Kewenangan Biaya &amp; Waive Denda Recovery</h4>
@@ -2527,6 +2755,8 @@ Besar harapan kami Bapak/Ibu dapat memenuhi hal-hal dimaksud. Namun apabila Bapa
             <li><b>OLX Autos tidak berlaku untuk akun WO</b> — harga kendaraan sudah jatuh, kondisi potensi tidak baik, pajak kendaraan biasanya kacau</li>
             <li><b>Penebusan oleh orang lain:</b> bisa dilakukan di luar atas nama → wajib sertakan <b>surat kuasa dari atas nama + KTP asli atas nama</b></li>
             <li><b>Inputan Matel:</b> Matel kirim nopol, nosin, noka, tipe, leasing, no kontrak, OVD, CP untuk request penanganan SK — melalui WA</li>
+            <li><b>ST dan SK Recovery Mobil</b> dicetak melalui aplikasi <b>ABC</b> (bukan Financore) — karena akun WO sudah hilang dari Financore; ARO/ARC cetak langsung dari ABC</li>
+            <li>Jika mobil <b>tidak ada STNK</b> → tetap ditarik; sudah risiko harga lelang turun — lebih baik amankan unit dulu daripada habiskan waktu mencari STNK</li>
           </ul>
         </div>
         <div class="info-card">
@@ -2767,14 +2997,312 @@ Besar harapan kami Bapak/Ibu dapat memenuhi hal-hal dimaksud. Namun apabila Bapa
             <div class="flow-step"><div class="num">5</div><p>Output: Pelunasan atau Pengamanan Unit → proses lelang</p></div>
           </div>
         </div>
+        <!-- KPI & Insentif ARC Motor — updated from recovery1.pdf -->
         <div class="info-card">
-          <h4>KPI Motorcycle Area Recovery Consultant (ARC Motor)</h4>
+          <h4>📈 KPI &amp; Insentif ARC Motor Recovery</h4>
+          <div style="margin-bottom:.5rem">
+            <b style="color:#1a4fa0">📊 Parameter KPI (2 parameter):</b>
+            <ul style="margin-top:.3rem">
+              <li>💰 Penyelesaian WO: <b>≥ Rp 50 juta</b> — bobot <b>70%</b></li>
+              <li>⚡ Denda terbayar: <b>≥ Rp 4 juta</b> — bobot <b>30%</b></li>
+            </ul>
+          </div>
+          <div style="margin-bottom:.5rem">
+            <b style="color:#e65100">🏆 Parameter Insentif (3 parameter):</b>
+            <ul style="margin-top:.3rem">
+              <li>💰 Penyelesaian WO: <b>≥ Rp 50 juta</b> — bobot <b>40%</b></li>
+              <li>⚡ Denda terbayar: <b>≥ Rp 5 juta</b> — bobot <b>20%</b></li>
+              <li>📋 Unit Account: <b>≥ 5 kontrak</b> — bobot <b>40%</b></li>
+            </ul>
+          </div>
+          <b style="color:#1a4fa0">📈 Tiering Insentif:</b>
+          <table style="width:100%;border-collapse:collapse;font-size:.8rem;margin-top:.3rem">
+            <tr style="background:#e8f0fe">
+              <th style="padding:.3rem .5rem;text-align:left;border:1px solid #c5cae9">Pencapaian</th>
+              <th style="padding:.3rem .5rem;text-align:left;border:1px solid #c5cae9">Insentif</th>
+            </tr>
+            <tr><td style="padding:.25rem .5rem;border:1px solid #e0e0e0">70.01% – 80%</td><td style="padding:.25rem .5rem;border:1px solid #e0e0e0">Rp 300.000</td></tr>
+            <tr style="background:#f5f5f5"><td style="padding:.25rem .5rem;border:1px solid #e0e0e0">80.01% – 90%</td><td style="padding:.25rem .5rem;border:1px solid #e0e0e0">Rp 1.000.000</td></tr>
+            <tr><td style="padding:.25rem .5rem;border:1px solid #e0e0e0">90.01% – 100%</td><td style="padding:.25rem .5rem;border:1px solid #e0e0e0">Rp 1.500.000</td></tr>
+            <tr style="background:#f5f5f5"><td style="padding:.25rem .5rem;border:1px solid #e0e0e0">100.01% – 110%</td><td style="padding:.25rem .5rem;border:1px solid #e0e0e0">Rp 2.000.000</td></tr>
+            <tr><td style="padding:.25rem .5rem;border:1px solid #e0e0e0">110.01% – 120%</td><td style="padding:.25rem .5rem;border:1px solid #e0e0e0">Rp 2.500.000</td></tr>
+          </table>
+          <div style="margin-top:.5rem;font-size:.8rem;color:#555">
+            <b>Contoh Target:</b> Mar = Rp 124jt &nbsp;|&nbsp; Feb = Rp 295jt (dari Rp 50jt/wilayah × 5 wilayah)<br>
+            <b>Achieve:</b> Jakarta = 51% &nbsp;|&nbsp; Pontianak = 28.67%
+          </div>
+          <p style="font-size:.8rem;color:var(--gray-text);margin-top:.4rem">Monitoring dilakukan oleh Motorcycle Recovery Dept Head (Bu Anita).</p>
+        </div>
+
+        <!-- Info Bu Anita & Cakupan Wilayah -->
+        <div class="info-card">
+          <h4>👤 Area Head &amp; Cakupan Wilayah Recovery Motor</h4>
           <ul>
-            <li>💰 Ospok penyelesaian: <span class="sk-ref" onclick="gotoDoc('kewenangan-motorcycle-area-recovery')"><b>&gt; Rp 50 juta</b></span></li>
-            <li>⚡ Denda penyelesaian: <span class="sk-ref" onclick="gotoDoc('kewenangan-motorcycle-area-recovery')"><b>&gt; Rp 5 juta</b></span></li>
-            <li>📊 Account penyelesaian: <span class="sk-ref" onclick="gotoDoc('kewenangan-motorcycle-area-recovery')"><b>&gt; 4 akun/bulan</b></span></li>
+            <li>👩‍💼 <b>Area Head Recovery Motor:</b> Bu Anita</li>
+            <li>🗺️ <b>Wilayah:</b> DKI 1, DKI 2, DKI 3, Sumbagsel, Kalimantan (5 wilayah)</li>
+            <li>👥 <b>Total ARC/ARO:</b> 13 orang</li>
+            <li>📊 <b>Total ACC WO (2011–2026):</b> ±253.467 account</li>
+            <li>💰 <b>Total OS WO (2011–2026):</b> ±Rp 2 Triliun</li>
           </ul>
-          <p style="font-size:.8rem;color:var(--gray-text);margin-top:.5rem">Target KPI ARC Motor sama dengan ARO Mobil. Monitoring dilakukan oleh Motorcycle Recovery Dept Head.</p>
+          <div style="margin-top:.4rem;font-size:.8rem;color:#555">Proses lapangan sama dengan FAC/PAC: RKH → Kunjungan → Input MAS</div>
+        </div>
+
+        <!-- Status Account di FAST -->
+        <div class="info-card">
+          <h4>📊 Status Account di FAST — Recovery Motor</h4>
+          <table style="width:100%;border-collapse:collapse;font-size:.83rem">
+            <tr style="background:#e8f0fe">
+              <th style="padding:.3rem .6rem;border:1px solid #c5cae9;text-align:left">Kode</th>
+              <th style="padding:.3rem .6rem;border:1px solid #c5cae9;text-align:left">Status</th>
+              <th style="padding:.3rem .6rem;border:1px solid #c5cae9;text-align:left">Keterangan</th>
+            </tr>
+            <tr><td style="padding:.28rem .6rem;border:1px solid #e0e0e0"><b>WO</b></td><td style="padding:.28rem .6rem;border:1px solid #e0e0e0">Write Off</td><td style="padding:.28rem .6rem;border:1px solid #e0e0e0">Akun sudah dihapusbukukan</td></tr>
+            <tr style="background:#f5f5f5"><td style="padding:.28rem .6rem;border:1px solid #e0e0e0"><b>PP</b></td><td style="padding:.28rem .6rem;border:1px solid #e0e0e0">Proses Pre-term</td><td style="padding:.28rem .6rem;border:1px solid #e0e0e0">Sudah bayar + ajukan potongan denda, belum di-approve</td></tr>
+            <tr><td style="padding:.28rem .6rem;border:1px solid #e0e0e0"><b>PT</b></td><td style="padding:.28rem .6rem;border:1px solid #e0e0e0">Pre-term</td><td style="padding:.28rem .6rem;border:1px solid #e0e0e0">Sudah di-approve</td></tr>
+            <tr style="background:#f5f5f5"><td style="padding:.28rem .6rem;border:1px solid #e0e0e0"><b>RP</b></td><td style="padding:.28rem .6rem;border:1px solid #e0e0e0">Reposses</td><td style="padding:.28rem .6rem;border:1px solid #e0e0e0">Motor sudah ditarik, masuk pool</td></tr>
+            <tr><td style="padding:.28rem .6rem;border:1px solid #e0e0e0"><b>CL</b></td><td style="padding:.28rem .6rem;border:1px solid #e0e0e0">Close</td><td style="padding:.28rem .6rem;border:1px solid #e0e0e0">Unit sudah diambil + dijual lelang</td></tr>
+          </table>
+          <div style="margin-top:.4rem;font-size:.79rem;color:#555">Pembayaran tidak langsung masuk sistem → harus buat <b>Pre Term di FAST</b> terlebih dahulu sebelum dihitung sebagai pelunasan.</div>
+        </div>
+
+        <!-- Syarat WO Motor -->
+        <div class="info-card">
+          <h4>📋 Syarat WO Motor</h4>
+          <ul>
+            <li>⏱️ Akun overdue <b>180 hari</b></li>
+            <li>📧 Didaftarkan <b>CKPN</b> tiap bulan by email</li>
+            <li>❌ <b>Tidak bayar 3 bulan terakhir</b></li>
+            <li>🏢 Rekomendasi <b>cabang</b></li>
+            <li>🔍 Rekomendasi <b>audit</b></li>
+            <li>🛡️ <b>Tidak</b> dalam proses <b>klaim asuransi</b></li>
+            <li>📊 Delinquency kategori <b>1 dan 2</b></li>
+            <li>💬 <b>Tidak</b> dalam proses <b>nego denda</b></li>
+          </ul>
+        </div>
+
+        <!-- Pembayaran Recovery Motor -->
+        <div class="info-card">
+          <h4>💵 Pembayaran Recovery Motor</h4>
+          <ul>
+            <li>✅ Via <b>transfer</b> dan <b>autodebet</b></li>
+            <li>❌ <b>Tidak bisa VA</b> — account sudah dihapus</li>
+            <li>Autodebet <b>dimatikan saat PAC</b> (OVD tertentu) → <b>dinyalakan kembali</b> saat masuk Recovery</li>
+            <li>Pembayaran <b>tidak langsung masuk sistem</b> → harus buat <b>Pre Term di FAST</b> dulu</li>
+            <li>Dana autodebet masuk ke FAST menu <b>Inactive History (Deposit WO)</b> → setelah lunas semua baru di-Pre Term</li>
+            <li>Pengajuan Pre Term: approval sesuai <b>limit denda</b></li>
+            <li>Bisa pelunasan <b>tanpa denda (nego 100%)</b> tapi tidak dapat insentif/KPI; disarankan minimal bayar denda <b>Rp 500rb–1jt</b></li>
+          </ul>
+        </div>
+
+        <!-- ARC/ARO & RKH Motor -->
+        <div class="info-card">
+          <h4>🏍️ ARC/ARO &amp; RKH Recovery Motor</h4>
+          <ul>
+            <li>📋 Minimal <b>6 RKH/hari</b>; di lapangan bisa 10–13</li>
+            <li>🎯 Prioritas: sisa tenor/angsuran <b>1–6</b> atau <b>1–10 kali</b> (kemungkinan bayar lebih besar)</li>
+            <li>👩‍💼 Assign RKH dilakukan oleh <b>AR Head</b></li>
+          </ul>
+          <div style="margin-top:.4rem;padding:.4rem .6rem;background:#fff3e0;border-radius:6px;font-size:.82rem;border-left:3px solid #e65100">
+            <b style="color:#e65100">⚠️ Data &lt; 2021 tidak muncul di MAS:</b>
+            <ul style="margin-top:.2rem">
+              <li>Manual: print <b>Aging</b> (PDF berisi no. kontrak, nama, alamat, tunggakan)</li>
+              <li>Report via <b>WA ke AR Head</b></li>
+              <li>Data yang dikasih biasanya 2019 ke atas, sisa tenor 1–9</li>
+              <li>Bisa request RKH atau kunjungi manual jika searah</li>
+            </ul>
+          </div>
+          <div style="margin-top:.4rem;font-size:.8rem;color:#555">Recovery juga menggunakan <b>ABR (Aging Bucket Report)</b> dari Fast Web Report untuk seluruh data konsumen recovery.</div>
+        </div>
+
+        <!-- Somasi Recovery Motor -->
+        <div class="info-card">
+          <h4>📮 Somasi Recovery Motor</h4>
+          <ul>
+            <li>🎯 Untuk akun sisa tenor/angsuran <b>1–6</b> (kemungkinan bayar tinggi)</li>
+            <li>📅 Jeda antar somasi: <b>14 hari</b> (Somasi 1 → 14 hari → Somasi 2 → 14 hari → Somasi 3)</li>
+            <li>🔄 Meski sudah somasi di FAC/PAC, <b>Recovery tetap somasi ulang</b> (berbeda dengan PAC Motor yang tidak somasi ulang)</li>
+            <li>⚖️ Untuk keperluan <b>LP</b> (meski tidak di-LP, tetap dikirim)</li>
+            <li>📦 Via <b>ekspedisi</b> (JNE dll), bukti pengiriman = <b>no. resi</b></li>
+            <li>📊 Efektivitas: <b>50/50</b> — ada yang langsung bayar, ada yang tidak ketemu/pindah/raib/fiktif</li>
+          </ul>
+        </div>
+
+        <!-- Syarat LP & Pelacakan Unit -->
+        <div class="info-card">
+          <h4>🚔 Syarat LP &amp; Pelacakan Unit — Recovery Motor</h4>
+          <div style="margin-bottom:.5rem">
+            <b style="color:#c62828">🚨 Syarat Laporan Polisi (LP):</b>
+            <ul style="margin-top:.3rem">
+              <li>Nasabah <b>ada / dapat ditemui</b></li>
+              <li>Pengajuan unit banyak → analisa <b>biaya LP vs worth it</b></li>
+            </ul>
+          </div>
+          <div>
+            <b style="color:#1a4fa0">🔍 Pelacakan Unit (tidak ada BHJP/eksternal):</b>
+            <ul style="margin-top:.3rem">
+              <li>Tanya <b>RT/RW</b> setempat</li>
+              <li>Cek <b>lingkungan</b> sekitar</li>
+              <li>Telepon/WA <b>reminder tiap bulan</b></li>
+              <li>Tanya <b>tetangga</b> / orang sekitar</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Cicilan WO (Bayar Parsial) -->
+        <div class="info-card">
+          <h4>💳 Cicilan WO (Bayar Parsial) — Recovery Motor</h4>
+          <ul>
+            <li>Maksimal: <b>6× angsuran</b>; yang diusulkan ke konsumen: <b>3× angsuran</b></li>
+            <li>Ospok <b>Rp 5–10 juta</b> → cicilan <b>3×</b></li>
+            <li>Ospok <b>&gt; Rp 10 juta</b> → cicilan <b>6×</b></li>
+            <li>Kebijakan BCAMF dulu — <b>tidak ada</b> di BCAF / Recovery Mobil</li>
+            <li>Selama cicilan berlangsung: <b>TIDAK masuk KPI/insentif</b> (pencapaian dihitung hanya saat pelunasan)</li>
+            <li>Pembayaran cicilan via <b>transfer</b> (bukan autodebet)</li>
+          </ul>
+          <div style="margin-top:.4rem;padding:.4rem .6rem;background:#f0f5ff;border-radius:6px;font-size:.82rem;border-left:3px solid #1a4fa0">
+            <b style="color:#1a4fa0">📝 Alur Cicilan WO:</b>
+            <div class="flow-steps" style="margin-top:.3rem">
+              <div class="flow-step"><div class="num" style="min-width:20px;height:20px;font-size:.7rem">1</div><p>AR Head buat <b>Memo RV</b> setiap cicilan masuk (berapapun nominalnya)</p></div>
+              <div class="flow-step"><div class="num" style="min-width:20px;height:20px;font-size:.7rem">2</div><p>Memo RV di-approval oleh <b>Bu Lin + Bu Anita</b></p></div>
+              <div class="flow-step"><div class="num" style="min-width:20px;height:20px;font-size:.7rem">3</div><p>Memo RV dicek <b>Finance</b> → diposting ke FAST oleh <b>FSM</b> (H+1)</p></div>
+              <div class="flow-step"><div class="num" style="min-width:20px;height:20px;font-size:.7rem">4</div><p>Jika sudah lunas semua → <b>Pre Term</b> oleh AR Head (masuk alur pelunasan)</p></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Penarikan Unit Recovery Motor -->
+        <div class="info-card">
+          <h4>🔧 Penarikan Unit — Recovery Motor</h4>
+          <div style="margin-bottom:.4rem">
+            <b style="color:#1a4fa0">📄 Syarat Penarikan:</b>
+            <ul style="margin-top:.2rem;font-size:.85rem">
+              <li>STP, BAST BJ, SPPI, ID Card, Kartu Identitas</li>
+              <li>BAST BJ bisa dari <b>keluarga / orang rumah</b></li>
+              <li>ST dan SK Recovery Motor dicetak melalui aplikasi <b>ABC</b> (bukan Financore — akun WO sudah hilang dari Financore)</li>
+            </ul>
+          </div>
+          <div style="margin-bottom:.4rem">
+            <b style="color:#e65100">📍 Lokasi Penarikan:</b>
+            <ul style="margin-top:.2rem;font-size:.85rem">
+              <li>Di <b>kantor konsumen</b> (STP + BAST BJ di kantor)</li>
+              <li>Di <b>rumah konsumen</b></li>
+            </ul>
+          </div>
+          <div style="margin-bottom:.4rem">
+            <b style="color:#2e7d32">💡 Opsi saat unit ditarik:</b>
+            <ul style="margin-top:.2rem;font-size:.85rem">
+              <li>Ditebus: <b>pelancaran + 2× angsuran</b></li>
+              <li>Pelunasan langsung</li>
+            </ul>
+          </div>
+          <div style="padding:.4rem .6rem;background:#fff3e0;border-radius:6px;font-size:.82rem;border-left:3px solid #e65100">
+            ⏳ Di pool: <b>3 hari</b> sebelum lelang — bisa tunda lelang (contoh kasus LP)<br>
+            ⚠️ Unit diparkir tapi konsumen tidak ditemukan → <b>tidak bisa langsung ditarik</b> (dianggap perampasan)<br>
+            ⚠️ Jika motor <b>tidak ada STNK</b> → tetap ditarik; sudah risiko harga jatuh saat lelang
+          </div>
+        </div>
+
+        <!-- Pelunasan & Nego Denda — full-width -->
+        <div class="info-card" style="grid-column:1/-1">
+          <h4>📋 Pelunasan &amp; Nego Denda Recovery Motor</h4>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+            <div>
+              <b style="color:#1a4fa0">💰 Komponen Pelunasan:</b>
+              <ul style="margin-top:.3rem">
+                <li>OS Pokok</li>
+                <li>Bunga</li>
+                <li>Denda</li>
+              </ul>
+              <div style="margin-top:.5rem">
+                <b style="color:#1a4fa0">📜 Ketentuan SKL (Surat Keterangan Lunas):</b>
+                <ul style="margin-top:.3rem;font-size:.85rem">
+                  <li>Tergantung <b>negosiasi dan analisa</b> (bisa sampai direksi)</li>
+                  <li>Analisa: apakah konsumen mampu / pemilik perusahaan / menengah ke bawah</li>
+                  <li>Minimal bayar denda <b>Rp 700.000</b> untuk bisa dapat SKL</li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <b style="color:#e65100">📝 Alur Pelunasan (termasuk nego denda):</b>
+              <div class="flow-steps" style="margin-top:.3rem">
+                <div class="flow-step"><div class="num" style="min-width:22px;height:22px;font-size:.72rem">1</div><p>Memo nego denda → <b>Setuju</b></p></div>
+                <div class="flow-step"><div class="num" style="min-width:22px;height:22px;font-size:.72rem">2</div><p>Memo untuk SKL (Direksi) → <b>Setuju</b></p></div>
+                <div class="flow-step"><div class="num" style="min-width:22px;height:22px;font-size:.72rem">3</div><p>Konsumen bayar — bisa dicicil (memo RV) atau langsung lunas</p></div>
+                <div class="flow-step"><div class="num" style="min-width:22px;height:22px;font-size:.72rem">4</div><p>Proses <b>Pre Term</b>, approval sesuai tiering tanda tangan memo denda</p></div>
+              </div>
+            </div>
+          </div>
+          <div style="margin-top:.8rem">
+            <b style="color:#2e7d32">⚖️ Tiering Approval Memo Nego Denda:</b>
+            <table style="width:100%;border-collapse:collapse;font-size:.82rem;margin-top:.4rem">
+              <tr style="background:#e8f5e9">
+                <th style="padding:.3rem .6rem;text-align:left;border:1px solid #c8e6c9">Nominal Denda</th>
+                <th style="padding:.3rem .6rem;text-align:left;border:1px solid #c8e6c9">Approval</th>
+              </tr>
+              <tr><td style="padding:.28rem .6rem;border:1px solid #e0e0e0">&lt; Rp 10 juta</td><td style="padding:.28rem .6rem;border:1px solid #e0e0e0">Bu Anita (AR Head)</td></tr>
+              <tr style="background:#f5f5f5"><td style="padding:.28rem .6rem;border:1px solid #e0e0e0">Rp 10 – 40 juta</td><td style="padding:.28rem .6rem;border:1px solid #e0e0e0">Bu Lin</td></tr>
+              <tr><td style="padding:.28rem .6rem;border:1px solid #e0e0e0">Rp 40 – 180 juta</td><td style="padding:.28rem .6rem;border:1px solid #e0e0e0">Pak Tommy (DD)</td></tr>
+              <tr style="background:#f5f5f5"><td style="padding:.28rem .6rem;border:1px solid #e0e0e0">&gt; Rp 180 juta</td><td style="padding:.28rem .6rem;border:1px solid #e0e0e0">Pak Tommy + Memo ke Direksi (pendampingan direksi)</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- Info Tambahan Recovery Motor — full-width -->
+        <div class="info-card" style="grid-column:1/-1">
+          <h4>ℹ️ Info Tambahan Recovery Motor</h4>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+            <div>
+              <b style="color:#1a4fa0">📊 Pencapaian Ospok (Perbedaan Mobil vs Motor):</b>
+              <ul style="margin-top:.3rem;font-size:.85rem">
+                <li><b>Recovery Mobil:</b> Unit masuk pool (belum lelang) = <b>sudah pencapaian Ospo</b></li>
+                <li><b>Recovery Motor:</b> Unit masuk pool (repo) = <b>BELUM</b> pencapaian Ospo; tunggu lelang dulu; harga lelang = pencapaian Ospo</li>
+                <li><b>FAC/PAC (active) motor &amp; mobil:</b> Penarikan masuk pool = pencapaian Ospo</li>
+              </ul>
+              <div style="margin-top:.5rem">
+                <b style="color:#1a4fa0">🔑 Pengambilan BPKB:</b>
+                <ul style="margin-top:.3rem;font-size:.85rem">
+                  <li>Atas nama orang lain: <b>surat kuasa + KTP asli + video call</b> ke atas nama (direkam)</li>
+                  <li>Atas nama <b>meninggal:</b> surat kematian + ahli waris</li>
+                  <li>Atas nama <b>bercerai:</b> surat kuasa + KTP + video call</li>
+                  <li>Pelunasan: konsep sama dengan pengambilan BPKB</li>
+                </ul>
+              </div>
+              <div style="margin-top:.5rem">
+                <b style="color:#c62828">⚠️ Kasus Khusus Unit:</b>
+                <ul style="margin-top:.3rem;font-size:.85rem">
+                  <li>Unit ketahan di polisi → tanya biaya penebusan + analisa worth it</li>
+                  <li>Unit diparkir, konsumen tidak ditemukan → <b>tidak bisa langsung ditarik</b> (dianggap perampasan)</li>
+                  <li>Kasus gadai ke pihak ketiga: B minta kompensasi → tidak bisa; dipertimbangkan jika biaya tebus <b>≤ Rp 2 juta</b></li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <b style="color:#2e7d32">📋 Operasional &amp; Data:</b>
+              <ul style="margin-top:.3rem;font-size:.85rem">
+                <li>Denda <b>terus berjalan</b> sampai pelunasan</li>
+                <li><b>Tidak ada limit</b> biaya koordinasi</li>
+                <li>Data MAS hanya <b>5 tahun mundur</b> → buat ticket ke IT untuk tembak data, atau RKH manual; di ABR ada tapi di MAS tidak ada</li>
+                <li>FC Recovery bisa minta data ke marketing (foto rumah saat survey) → proses lama</li>
+                <li>AR Head minta data ke AR Support via WA (Excel) → AR Head kelola &amp; buat monitoring sendiri</li>
+              </ul>
+              <div style="margin-top:.5rem">
+                <b style="color:#e65100">📦 Penarikan Luar Jangkauan Cabang:</b>
+                <ul style="margin-top:.3rem;font-size:.85rem">
+                  <li>Buat <b>memo bantuan cabang</b></li>
+                  <li><b>Insentif</b> untuk yang menarik (bisa dari FAC/PAC)</li>
+                  <li>Setelah merger: jarang penarikan karena rata-rata mau pelunasan</li>
+                </ul>
+              </div>
+              <div style="margin-top:.5rem">
+                <b style="color:#1a4fa0">🔄 Lain-lain:</b>
+                <ul style="margin-top:.3rem;font-size:.85rem">
+                  <li>Sedang digodok: proyek <b>deskcoll recovery</b> dengan pihak eksternal</li>
+                  <li>Produk Ex MF masuk ABR mobil dan MCS mobil (dipisah motor); setelah merger hanya motor yang ditangani</li>
+                  <li>Recovery gunakan <b>ABR</b> dari Fast Web Report untuk seluruh data konsumen</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -3153,7 +3681,18 @@ Besar harapan kami Bapak/Ibu dapat memenuhi hal-hal dimaksud. Namun apabila Bapa
         <li>Mengeluarkan daftar debitur layak SK &amp; distribusi SK (Mapping SK)</li>
         <li>Evaluasi dan rekomendasi terkait penanganan konsumen oleh BHJP</li>
         <li>Komplain handling (Media Sosial, Halo BCA, Cabang)</li>
+        <li>⚠️ <b>BHJP Management tidak mencetak SK</b> — SK tetap dicetak oleh masing-masing cabang; BHJP Management hanya merekomendasikan BHJP yang tepat</li>
       </ul>
+      <div style="margin-top:.5rem;padding:.45rem .7rem;background:#f3e5f5;border-radius:6px;font-size:.82rem;border-left:3px solid #7b1fa2">
+        <b style="color:#7b1fa2">🗺️ Cakupan Area Saat Ini (per Apr 2026):</b>
+        <ul style="margin:.3rem 0 .2rem 1rem;line-height:1.75">
+          <li>Jabo 1 (Reg 1 &amp; 3)</li>
+          <li>Jabo 2 (Jaktim)</li>
+          <li>Jateng 1 &amp; 2</li>
+          <li>Sumbagut 1 &amp; 2</li>
+        </ul>
+        → Direncanakan berlaku <b>nasional pada bulan Mei 2026</b> (project ini masih baru)
+      </div>
     </div>
 
     <div class="ov-card">
@@ -3279,6 +3818,15 @@ Besar harapan kami Bapak/Ibu dapat memenuhi hal-hal dimaksud. Namun apabila Bapa
         <li><strong>Profil debitur</strong> — exposure besar / lebih dari 1 akun</li>
         <li><strong>Request khusus</strong> — permintaan dari manajemen (artis, orang penting, dll)</li>
       </ul>
+      <div style="margin-top:.5rem;padding:.4rem .7rem;background:#fff3e0;border-radius:6px;font-size:.82rem;border-left:3px solid #e65100">
+        <b style="color:#e65100">💡 Info Tambahan Unit Mewah:</b>
+        <ul style="margin:.3rem 0 .2rem 1rem;line-height:1.75">
+          <li>Jika konsumen <b>bayar</b> → pencapaian masuk ke <b>unit mewah</b>, bukan ke pencapaian cabang; cabang hanya berkurang beban osponya. Catatan: ada info bahwa pencapaian bisa masuk ke cabang sekaligus ke unit mewah</li>
+          <li>Akun yang masuk bucket unit mewah → <b>data tetap ada di MAS</b></li>
+          <li>Alasan ada unit mewah: menambah tenaga penanganan → lebih banyak yang tangani → lebih cepat selesai; karena ospok besar. Akun ini <b>tetap ditangani FAC dan PAC juga</b> secara bersamaan</li>
+          <li>Selama data memenuhi kriteria bucket unit mewah → <b>tetap masuk penanganan unit mewah</b></li>
+        </ul>
+      </div>
     </div>
 
     <div class="ov-card">
