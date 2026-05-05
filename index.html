@@ -332,6 +332,8 @@
     <li><a href="#collsupport">Collection Support &amp; Admin</a></li>
     <li><a href="#skse">SK/SE</a></li>
     <li><a href="#pojk">POJK</a></li>
+    <li><a href="#credit-settlement">Credit Settlement</a></li>
+    <li><a href="#legal">Legal</a></li>
   </ul>
 </nav>
 
@@ -749,6 +751,18 @@
       <p>Bukti serah terima kendaraan saat pengamanan unit. Masa berlaku <b>1 hari</b> (mempertimbangkan jarak lokasi pengamanan ke pool). Jika &gt;1 hari → wajib buat <b>memo penyimpangan kronologis pool</b>.</p>
     </div>
     <div class="ov-card">
+      <div class="icon">🔢</div>
+      <h4>Kenapa Cukup 4 Bucket?</h4>
+      <ul>
+        <li><b>Bucket 1:</b> kontak telepon — cukup untuk mengingatkan</li>
+        <li><b>Bucket 2:</b> kunjungan lapangan untuk penagihan</li>
+        <li><b>Bucket 3:</b> kasus kompleks — lacak unit atau solusi lebih tegas</li>
+        <li><b>Bucket 4:</b> akun WO (write-off)</li>
+        <li>Bucket ke-5 setelah WO tidak berbeda signifikan dari bucket 4 → lebih efisien dibagi ke sub-layer</li>
+        <li>Setiap bucket punya <b>karakteristik konsumen</b> dan <b>strategi penanganan</b> berbeda</li>
+      </ul>
+    </div>
+    <div class="ov-card">
       <div class="icon">🪣</div>
       <h4>Kenapa Ada Bucket Penanganan?</h4>
       <ul>
@@ -976,6 +990,8 @@
                 <li><b>Step 2</b>: Setelah angsuran → autodebet <b>denda</b> (sesuai nominal yang bisa didebet)</li>
                 <li><b>Step 3</b>: Retry autodebet denda terus-menerus s.d. <b>H-5 jatuh tempo berikutnya</b></li>
                 <li>Setelah H-5 JT → autodebet denda <b>di-stop</b>, ulang ke Step 1</li>
+                <li style="color:#555;margin-top:.3rem">📅 <b>Jadwal Autodebet Mobil:</b> pukul <b>10:00, 02:00, 04:00, 05:30</b></li>
+                <li style="color:#555">📅 <b>Jadwal Manual Debet Mobil:</b> pukul <b>09:00, 11:00, 13:00, 14:00, 16:00</b></li>
               </ul>
             </div>
 
@@ -1265,7 +1281,8 @@
             <div style="background:#f0f7ff;border-radius:7px;padding:.6rem .8rem;border-top:3px solid #2176FF">
               <div style="font-weight:700;color:#2176FF;margin-bottom:.3rem">🔄 Autodebet</div>
               <ul style="margin:0 0 0 1rem;line-height:1.7">
-                <li><b>5x</b> sehari — pukul <b>09:00, 11:00, 13:00, 14:00, 16:00</b></li>
+                <li><b>Manual Debet Motor:</b> pukul <b>09:00, 11:00, 13:00, 14:00, 16:00</b></li>
+                <li><b>Autodebet Motor:</b> pukul <b>00:30, 09:00, 13:00, 17:00</b></li>
                 <li>Meliputi <b>angsuran + denda</b></li>
                 <li>Mostly produk <b>KSM</b> (nasabah BCA)</li>
               </ul>
@@ -1425,6 +1442,37 @@
             <tr style="background:#E8F0FE;font-weight:700"><td colspan="2" style="padding:.3rem .5rem">TOTAL</td><td></td><td style="text-align:center">100%</td></tr>
           </table>
           <p style="font-size:.78rem;color:var(--gray-text);margin-top:.4rem">📎 Detail lengkap lihat: <a href="pdfs/kalibrasi-qa-das-motor-feb2026.pdf" target="_blank" style="color:var(--blue-mid)">Kalibrasi Februari 2026 Fix.pdf</a> &amp; <a href="pdfs/c5-asr-ketentuan-quality-monitoring-das-2025.pdf" target="_blank" style="color:var(--blue-mid)">SK C5-ASR DIV-XII-2025</a></p>
+        </div>
+
+        <!-- KPI Comparison Card -->
+        <div class="info-card" style="grid-column:1/-1">
+          <h4>📊 Perbandingan KPI Deskcoll Motor vs Mobil</h4>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:.8rem;font-size:.83rem;margin-top:.5rem">
+            <div style="background:#e3f2fd;border-radius:7px;padding:.6rem .8rem;border-top:3px solid #2176FF">
+              <div style="font-weight:700;color:#2176FF;margin-bottom:.3rem">🏍️ KPI Deskcoll Motor</div>
+              <ul style="margin:0 0 0 1rem;line-height:1.8">
+                <li><b>Success Rate</b></li>
+                <li><b>Success Call</b></li>
+                <li><b>Bucket Current</b> (current rate)</li>
+                <li><b>Produktivitas</b></li>
+                <li><b>Attendance</b></li>
+                <li><b>Flow Rate</b></li>
+                <li style="color:#555">Reminder KPI: semua kecuali flow rate diganti <b>payment success</b></li>
+              </ul>
+            </div>
+            <div style="background:#fff3e0;border-radius:7px;padding:.6rem .8rem;border-top:3px solid #F57C00">
+              <div style="font-weight:700;color:#E65100;margin-bottom:.3rem">🚗 KPI Deskcoll Mobil</div>
+              <ul style="margin:0 0 0 1rem;line-height:1.8">
+                <li><b>Paid Rate</b></li>
+                <li><b>Success Call</b></li>
+                <li style="color:#555;margin-top:.3rem">💡 Lebih sederhana karena deskcoll mobil baru bergabung tahun ini — integrasi aplikasi &amp; KPI masih dalam proses penyesuaian</li>
+                <li style="color:#555">Belum ada <b>reminder agent</b> di deskcoll mobil karena proses belum terstandar</li>
+              </ul>
+            </div>
+          </div>
+          <div style="background:#e8f5e9;border-radius:6px;padding:.45rem .7rem;font-size:.8rem;margin-top:.5rem;border-left:3px solid #2DC653">
+            💡 Deskcoll mobil: QA → supervisor sebelum ke agent. Deskcoll motor: langsung supervisor → agent (struktur motor lebih matang karena tidak berasal dari setup vendor).
+          </div>
         </div>
 
       </div>
@@ -2588,6 +2636,9 @@ Besar harapan kami Bapak/Ibu dapat memenuhi hal-hal dimaksud. Namun apabila Bapa
               </div>
             </div>
             <div class="flow-step"><div class="num">5</div><p>Output: <b>Pelunasan via rekening BCAF</b> → memo kotak → BPKB keluar &nbsp;|&nbsp; atau <b>Pengamanan Unit</b> → pool → lelang (Credit Settlement)</p></div>
+            <div style="background:#fce4ec;border-radius:6px;padding:.45rem .7rem;font-size:.79rem;margin-top:.4rem;border-left:3px solid #C62828">
+              ⚖️ <b>Kenapa unit tarikan harus dilelang (bukan dijual langsung)?</b> Regulasi OJK mewajibkan penjualan melalui <b>balai lelang resmi</b> — untuk mencegah fraud (misal unit dijual 750 juta tapi dilaporkan 500 juta ke OJK). <b>Risalah Lelang</b> menjadi bukti resmi diakui negara. Unit tidak dijual via OLX — hanya via lelang.
+            </div>
           </div>
           <div style="margin-top:.7rem;background:#f0f7ff;border-radius:7px;padding:.6rem .9rem;font-size:.8rem">
             <b style="color:#1a4fa0">📌 Catatan:</b>
@@ -2715,6 +2766,17 @@ Besar harapan kami Bapak/Ibu dapat memenuhi hal-hal dimaksud. Namun apabila Bapa
             <div class="flow-step"><div class="num">4</div><p>QWO diberikan ke <b>Pak Acil (Dept Head)</b> → diberikan ke <b>admin</b> → Diteruskan ke cabang (<b>ARH masing-masing</b>) → Eksekusi QWO oleh <b>Recovery</b></p></div>
           </div>
           <p style="font-size:.79rem;color:#555;margin-top:.5rem">📌 <b>Data WO</b> = bahan WO &nbsp;|&nbsp; <b>WO Recovery</b> = data WO yang berhasil di-recovery &nbsp;|&nbsp; Pembayaran melalui <b>rekening</b> karena akun WO sudah hapus account (tidak bisa autodebet atau VA)</p>
+          <div style="background:#fafafa;border-radius:7px;padding:.6rem .9rem;font-size:.8rem;margin-top:.5rem;border-left:3px solid #546E7A">
+            <b>🔄 Alur Proses WO per Bulan:</b>
+            <ol style="margin:.3rem 0 0 1rem;line-height:1.9">
+              <li>Tgl <b>16/17</b> tiap bulan: AS Support kirim data akun OVD &gt;150 hari ke <b>Audit</b> untuk verifikasi → output: <b>rekomendasi WO</b></li>
+              <li>Bersamaan: <b>Riskman</b> kirim data WO ke AS Support → pilih akun sesuai <b>budget WO</b> (±Rp 142 miliar/bulan) yang ditetapkan manajemen</li>
+              <li>Awal bulan berikutnya: cross-check — mana yang ada rekomendasi audit, mana yang tidak</li>
+              <li>Yang ada rekomendasi audit → minta <b>persetujuan BOD</b></li>
+              <li>Yang tidak ada rekomendasi audit → buat catatan <b>"tanpa rekomendasi Audit"</b></li>
+              <li>Setelah BOD approve → AS Support input data WO ke sistem → cabang tahu akun mana yang sudah di-WO</li>
+            </ol>
+          </div>
           <div style="margin-top:.6rem;background:#f0f5ff;border-radius:6px;padding:.5rem .8rem;font-size:.8rem;border-left:3px solid #1a4fa0">
             <b style="color:#1a4fa0">📝 Catatan Alur Data WO:</b>
             <ul style="margin:.3rem 0;padding-left:1.1rem;line-height:1.75">
@@ -3560,6 +3622,9 @@ Besar harapan kami Bapak/Ibu dapat memenuhi hal-hal dimaksud. Namun apabila Bapa
       <div class="ov-icon">👥</div>
       <h3>Tim Task Force ASR</h3>
       <p style="font-size:.83rem;color:#555;margin:.3rem 0 .5rem">Unit Task Force terbagi menjadi tiga sub-unit:</p>
+      <div style="background:#e8f4fd;border-radius:6px;padding:.45rem .7rem;font-size:.8rem;margin-bottom:.5rem;border-left:3px solid #1565C0">
+        💡 <b>Evolusi Task Force:</b> Awalnya hanya sebagai <b>unit cadangan (backup)</b> cabang yang kekurangan SDM. Seiring waktu berkembang mencakup BHJP Management, Unit Mewah, QA/QC, PAC, FAC, dan ARO. Fungsi sekarang: memberikan <b>solusi</b> bagi cabang dan memperbaiki <b>proses</b> di cabang.
+      </div>
       <p><strong>Tim QA / QC</strong></p>
       <ul style="font-size:.85rem;margin:.4rem 0 .8rem;padding-left:1.2rem">
         <li>Monitoring 80 cabang per bulan</li>
@@ -3682,6 +3747,10 @@ Besar harapan kami Bapak/Ibu dapat memenuhi hal-hal dimaksud. Namun apabila Bapa
         <li>Evaluasi dan rekomendasi terkait penanganan konsumen oleh BHJP</li>
         <li>Komplain handling (Media Sosial, Halo BCA, Cabang)</li>
         <li>⚠️ <b>BHJP Management tidak mencetak SK</b> — SK tetap dicetak oleh masing-masing cabang; BHJP Management hanya merekomendasikan BHJP yang tepat</li>
+        <li>📋 <b>Latar belakang:</b> Sebelumnya tidak ada monitoring/kontrol distribusi SK ke BHJP → distribusi tidak merata → NPF naik karena akun tidak tertangani dengan baik</li>
+        <li>🎯 <b>Tujuan:</b> rekomendasi BHJP yang tepat + alokasi SK adil — prinsip: semakin banyak MPP di BHJP, semakin banyak alokasi SK</li>
+        <li>🔄 <b>Pencegahan fraud profcoll:</b> rolling kode pos; monitor input hasil di MAS; cek BAST sebelum penarikan dan setelah unit tiba di pool</li>
+        <li>📱 <b>QLicksensed:</b> akun layak SK diupload oleh analyst → cabang akses QLicksensed untuk cetak SK sesuai data. Rolling management perlu approval Dept Head &amp; BHJP Management</li>
       </ul>
       <div style="margin-top:.5rem;padding:.45rem .7rem;background:#f3e5f5;border-radius:6px;font-size:.82rem;border-left:3px solid #7b1fa2">
         <b style="color:#7b1fa2">🗺️ Cakupan Area Saat Ini (per Apr 2026):</b>
@@ -3825,12 +3894,31 @@ Besar harapan kami Bapak/Ibu dapat memenuhi hal-hal dimaksud. Namun apabila Bapa
           <li>Akun yang masuk bucket unit mewah → <b>data tetap ada di MAS</b></li>
           <li>Alasan ada unit mewah: menambah tenaga penanganan → lebih banyak yang tangani → lebih cepat selesai; karena ospok besar. Akun ini <b>tetap ditangani FAC dan PAC juga</b> secara bersamaan</li>
           <li>Selama data memenuhi kriteria bucket unit mewah → <b>tetap masuk penanganan unit mewah</b></li>
+          <li><b>KPI Unit Mewah:</b> achieve <b>66%</b> dari total kasus per bulan (benchmark ~60% dari rata-rata bulan sebelumnya)</li>
+          <li><b>Data</b> bersumber dari <b>DCO</b> di awal bulan — analyst menandai akun yang memenuhi kriteria</li>
+          <li><b>Latar belakang:</b> arahan BOD — tidak ada penanganan berbeda antara debitur biasa vs unit bernilai tinggi; pemilik unit mewah biasanya KKB berstatus solitaire/priority → perlu unit khusus yang bisa eskalasi deviasi ke level direktur</li>
         </ul>
       </div>
     </div>
 
     <div class="ov-card">
       <div class="ov-icon">🗺️</div>
+      <h3>Penanganan Unit Mewah per Bucket</h3>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.7rem;font-size:.82rem;margin-bottom:1rem">
+        <div style="background:#e3f2fd;border-radius:7px;padding:.6rem .8rem;border-left:3px solid #1565C0">
+          <b style="color:#1565C0">📞 10–30 Hari OVD</b><br>Follow up via <b>telepon</b> saja
+        </div>
+        <div style="background:#fff3e0;border-radius:7px;padding:.6rem .8rem;border-left:3px solid #F57C00">
+          <b style="color:#E65100">🤝 31–90 Hari OVD</b><br>Koordinasi dengan <b>ASR cabang</b>, <b>marketing</b>, <b>AO BCA</b> (KKB), dan debitur langsung
+        </div>
+        <div style="background:#fce4ec;border-radius:7px;padding:.6rem .8rem;border-left:3px solid #C62828">
+          <b style="color:#C62828">⚖️ &gt; 90 Hari OVD</b><br>Bisa ke <b>litigasi</b> jika ada perkara hukum; atau solusi deviasi khusus sampai level <b>direktur</b>
+        </div>
+        <div style="background:#f3e5f5;border-radius:7px;padding:.6rem .8rem;border-left:3px solid #6A1B9A">
+          <b style="color:#6A1B9A">🗺️ Non-Jabodebek</b><br>Hanya <b>persuasi</b> ke debitur + koordinasi dengan cabang &amp; AO BCA
+        </div>
+      </div>
+
       <h3>Alur penanganan Unit Mewah</h3>
       <div style="font-size:.83rem;margin:.4rem 0">
         <div style="background:#fff3e0;border-left:3px solid #e65100;padding:.5rem .7rem;border-radius:0 6px 6px 0;margin-bottom:.4rem">
@@ -3872,7 +3960,15 @@ Besar harapan kami Bapak/Ibu dapat memenuhi hal-hal dimaksud. Namun apabila Bapa
 
     <div class="ov-card">
       <div class="ov-icon">🤝</div>
-      <h3>Sharing Loss — Latar Belakang &amp; Tujuan</h3>
+      <h3>Sharing Loss — Syarat Minimal &amp; Latar Belakang</h3>
+      <div style="background:#fff3e0;border-radius:7px;padding:.6rem .8rem;font-size:.82rem;margin-bottom:.5rem;border-left:3px solid #F5A623">
+        <b>📌 Syarat Pengajuan Sharing Loss:</b>
+        <ul style="margin:.3rem 0 0 1rem;line-height:1.8">
+          <li><b>Tidak ada kuota</b> (no quota limit)</li>
+          <li><b>OVD &lt; 30 hari:</b> minimal <b>2 kunjungan</b> + ST sudah lebih dari <b>3 hari</b></li>
+          <li><b>OVD &gt; 30 hari:</b> minimal <b>3 kunjungan</b> + sudah ada ST</li>
+        </ul>
+      </div>
       <div style="background:#fff8e1;border-radius:8px;padding:.7rem .9rem;margin:.5rem 0;font-size:.85rem;line-height:1.7">
         Sharing loss adalah upaya terakhir yang diajukan oleh cabang agar konsumen mau menyerahkan mobil — karena tidak bisa menarik mobil kalau konsumen tidak sukarela.
       </div>
@@ -4217,6 +4313,391 @@ Besar harapan kami Bapak/Ibu dapat memenuhi hal-hal dimaksud. Namun apabila Bapa
 </div>
 
 
+
+<!-- CREDIT SETTLEMENT SECTION -->
+<div id="credit-settlement" class="section-alt">
+<div class="section">
+  <div class="st">
+    <h2>🏷️ Credit Settlement</h2>
+    <p>Penyelesaian agunan unit tarikan — taxasi, lelang, asuransi, dan pasca lelang untuk meminimalisir kerugian</p>
+  </div>
+
+  <div class="ov-grid" style="margin-bottom:1.5rem">
+    <div class="ov-card">
+      <div class="icon">👥</div>
+      <h4>Struktur Tim</h4>
+      <ul>
+        <li><b>UH:</b> Pak Ishak, Pak Raha</li>
+        <li><b>DD:</b> Pak Herry</li>
+        <li><b>BOD:</b> Pak Gito &amp; Pak Petrus</li>
+      </ul>
+      <ul style="margin-top:.4rem">
+        <li>Tim Taxasi: <b>4 orang</b></li>
+        <li>Data Support: <b>2 orang</b></li>
+        <li>Spesialis: <b>1 orang</b></li>
+        <li>Unit Head: <b>2 orang</b></li>
+        <li>Total MPP: <b>9 orang</b></li>
+      </ul>
+    </div>
+    <div class="ov-card gold">
+      <div class="icon">🎯</div>
+      <h4>KPI Credit Settlement</h4>
+      <ul>
+        <li><b>Kualitas:</b> ketepatan menentukan harga limit</li>
+        <li><b>Gap harga:</b> selisih harga jual vs harga limit (dibatasi max — toleransi kesalahan analisa)</li>
+        <li><b>CS Day Turnover:</b> kecepatan jual — <b>max 19 hari</b></li>
+        <li>Proses perbaikan All Risk dikecualikan dari CS Day Turnover (menunggu part inden)</li>
+        <li><b>KPI Taxasi Motor:</b> selisih antara harga jual dan harga limit (gap harus minimal)</li>
+      </ul>
+    </div>
+    <div class="ov-card">
+      <div class="icon">📋</div>
+      <h4>Tentang Credit Settlement</h4>
+      <ul>
+        <li>Berfungsi melakukan <b>penyelesaian agunan</b> konsumen yang ditangani ASR</li>
+        <li>Tujuan: <b>meminimalisir kerugian</b> via lelang atau klaim asuransi</li>
+        <li>Dibagi 2: <b>Taxasi</b> (pra-lelang) dan <b>Data Support</b> (pasca-lelang)</li>
+        <li>Aplikasi BCAF: <b>CSIS</b> (analisa kondisi unit) dan <b>Aplikasi Lelang</b> (harga limit + mobilisasi — baru 2024)</li>
+        <li>BCAMF masih manual, belum pakai aplikasi</li>
+      </ul>
+    </div>
+    <div class="ov-card green">
+      <div class="icon">📐</div>
+      <h4>ROCS (Return On Credit Settlement)</h4>
+      <div style="background:#f0fdf4;border-radius:6px;padding:.4rem .6rem;margin:.3rem 0;font-size:.8rem;font-weight:700">
+        Harga Terbentuk − OSPO − Biaya Lelang + Refund Asuransi + Wan Prestasi
+      </div>
+      <ul style="margin-top:.3rem">
+        <li>Biaya lelang sudah dipotong langsung oleh balai lelang</li>
+        <li><b>Wan Prestasi:</b> bidder tidak bayar 5 hari → 50% deposit (BCAF: 5jt → 2,5jt; BCAMF: 1jt → 500rb)</li>
+        <li>Unit <b>diutamakan lelang</b> — lelang masuk KPI</li>
+        <li><b>8 balai lelang</b> nasional; tidak dijual via OLX</li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="background:var(--white);border-radius:var(--r);padding:1.5rem;box-shadow:var(--shadow);margin-bottom:1.5rem">
+    <h3 style="color:var(--blue-dark);margin-bottom:1rem">🔄 Flow General Credit Settlement</h3>
+    <div class="flow-steps">
+      <div class="flow-step"><div class="num">1</div><p>Unit ditarik ASR → masuk <b>Pool</b>. Batas waktu: <b>12 hari</b> (Active) / <b>21 hari</b> (WO)</p></div>
+      <div class="flow-step"><div class="num">2</div><p>Setelah batas hari → masuk bucket <b>Credit Settlement</b></p></div>
+      <div class="flow-step"><div class="num">3</div><p>Tim <b>Taxasi</b> cek kondisi → tentukan: layak lelang atau klaim asuransi</p></div>
+      <div class="flow-step"><div class="num">4</div><p>Layak lelang: mobilisasi ke balai lelang → inspeksi → harga limit (4-level approval) → lelang</p></div>
+      <div class="flow-step"><div class="num">5</div><p>Laku: BCAF kirim VA → bidder bayar → serah terima BPKB → Data Support buat <b>BAP</b> → close account</p></div>
+      <div class="flow-step"><div class="num">6</div><p>Data Support kirim <b>SPHL</b> ke konsumen via email; Corplan update website</p></div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:.8rem;font-size:.82rem;margin-top:1rem">
+      <div style="background:#fce4ec;border-radius:7px;padding:.6rem .8rem;border-left:3px solid #C62828">
+        <b style="color:#C62828">⛔ Tidak Layak → Klaim Asuransi</b>
+        <ul style="margin:.3rem 0 0 1rem;line-height:1.8">
+          <li><b>TLO:</b> diasuransikan sesuai harga pasar (syarat: ≥75% kerusakan)</li>
+          <li><b>All Risk:</b> diperbaiki di bengkel rekanan → dikirim ke BCAF → harga jual meningkat</li>
+          <li>Ditolak → lelang apa adanya; harga limit mengikuti harga tolakan asuransi</li>
+          <li>Motor: tidak ada All Risk, hanya TLO. Motor hilang: tidak bisa klaim; terbakar: tetap dicoba</li>
+        </ul>
+      </div>
+      <div style="background:#e8f5e9;border-radius:7px;padding:.6rem .8rem;border-left:3px solid #2DC653">
+        <b style="color:#1b5e20">✅ Layak Lelang</b>
+        <ul style="margin:.3rem 0 0 1rem;line-height:1.8">
+          <li>Mobilisasi (drive/towing) + surat tugas + identitas driver</li>
+          <li>Tidak laku → review harga limit → max <b>5×</b> di satu balai lelang → ganti balai lain</li>
+          <li>Pajak mati ditanggung pemenang lelang</li>
+          <li>Pool titipan = unit di pool balai lelang; tetap perlu mobilisasi sistem di CSIS</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem">
+    <div class="info-card">
+      <h4>🚗 Taxasi Mobil</h4>
+      <ul style="font-size:.83rem;line-height:1.8">
+        <li><b>3 komponen:</b> Analisa unit → Mobilisasi → Menentukan LIMIT harga</li>
+        <li><b>MPKT</b> = Memo Pengeluaran Kendaraan Tarikan — dibuat GS sebelum mobilisasi</li>
+        <li>Data CSIS diambil tiap pagi → dimasukkan ke Data Master (Excel)</li>
+        <li>Unit lama kejual: ban patah, noka/nosin botak (ada standar balai lelang)</li>
+      </ul>
+      <div style="background:#f0f7ff;border-radius:6px;padding:.5rem .7rem;font-size:.8rem;margin-top:.5rem;border-left:3px solid #2176FF">
+        <b>📐 Cara Menentukan Harga Limit:</b>
+        <ul style="margin:.3rem 0 0 1rem;line-height:1.7">
+          <li>Cek harga pasar: OLX, CarMudi, Mobil Garansi</li>
+          <li>Tabel history (Excel) — unit serupa pernah laku berapa</li>
+          <li>Kondisi fisik &amp; kelengkapan dokumen (STNK, pajak)</li>
+          <li>Warna/no pol ganti, STNK tidak ada → lelang apa adanya (dicatat)</li>
+        </ul>
+      </div>
+      <div style="background:#fce4ec;border-radius:6px;padding:.5rem .7rem;font-size:.8rem;margin-top:.4rem;border-left:3px solid #C62828">
+        <b>📋 Approval Harga Limit (via CSIS):</b><br>
+        UH → DD (Pak Herry) → BOD 1 (Pak Gito) → <b>BOD 2 Pak Petrus</b> (final)<br>
+        Ditolak → input ulang dari awal sesuai arahan revisi
+      </div>
+    </div>
+    <div class="info-card">
+      <h4>🏍️ Taxasi Motor</h4>
+      <ul style="font-size:.83rem;line-height:1.8">
+        <li>Alur sama tapi <b>masih manual</b> — belum ada CSIS &amp; Aplikasi Lelang</li>
+        <li>Bikin <b>MPK</b> → TTD CS Head, Admin Pool, BOH → scan &amp; kirim ke cabang</li>
+        <li>Cek kondisi: foto dari cabang via email/WA atau <b>JogetDX by ID</b></li>
+        <li><b>3 balai lelang motor:</b> JBA, Ottoling, IBID</li>
+        <li>Harga pasar dari OLX; tertinggi di <b>Surabaya</b></li>
+        <li>Motor <b>4 hari</b> di pool → jadi Asset; SLA lelang <b>28 hari</b></li>
+        <li>Kebanyakan motor disimpan di <b>cabang</b> — balai lelang ambil dari cabang</li>
+        <li>Tidak ada STNK → max kurang <b>Rp 1 juta</b> dari harga normal</li>
+      </ul>
+      <div style="background:#fff8e1;border-radius:6px;padding:.45rem .7rem;font-size:.79rem;margin-top:.4rem;border-left:3px solid #F5A623">
+        <b>Memo Harga Limit Motor (Excel):</b> cabang, no kontrak, no pol, STNK, merek, tahun, fee lelang, rekomendasi harga, harga OTR, nilai PH tertunggak, harga lama, harga limit, ROCS, harga pasar, grading. Approval via <b>Privy</b> (UH → DD → 2 BOD).
+      </div>
+    </div>
+  </div>
+
+  <div style="background:var(--white);border-radius:var(--r);padding:1.5rem;box-shadow:var(--shadow);margin-bottom:1.5rem">
+    <h3 style="color:var(--blue-dark);margin-bottom:1rem">📊 Data Support — Pasca Lelang</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;font-size:.83rem">
+      <div>
+        <b style="color:#1a4fa0">📅 Task Harian:</b>
+        <ul style="margin:.3rem 0 .6rem 1rem;line-height:1.8">
+          <li>H+1: balai lelang kirim hasil lelang (BCAF &amp; BCAMF)</li>
+          <li>Update data bulanan — rate terjual per balai lelang</li>
+          <li>Buat <b>memo kirim BPKB</b> → approval sampai DD Operation (BCAF) / Dept Head Op (BCAMF)</li>
+          <li>BPKB BCAF: Senin–Rabu. BCAMF: Senin–Jumat</li>
+          <li>H+5: balai lelang kirim <b>kalkulasi lelang</b> (fee, mobilisasi, jumlah bayar ke BCAF)</li>
+          <li>H+7: balai lelang bayar ke BCAF via VA — telat kena denda <b>1 per mill</b></li>
+          <li>Buat <b>BAP</b> → kirim ke Accounting (jurnal tgl 10&amp;25) &amp; FSM (close account)</li>
+          <li>Kirim <b>SPHL</b> ke konsumen via aplikasi gabungan; Corplan update website</li>
+        </ul>
+      </div>
+      <div>
+        <b style="color:#1a4fa0">📅 Task Mingguan:</b>
+        <ul style="margin:.3rem 0 .6rem 1rem;line-height:1.8">
+          <li>List order BPKB setiap <b>Senin</b> → siap ambil <b>Jumat &amp; Selasa minggu depan</b></li>
+          <li>Kamis: cek yang sudah bayar → undang datang Jumat jam 12 siang (tidak datang → reschedule)</li>
+          <li>Pengambilan BPKB: surat kuasa → konfirmasi ke CS (lantai 6) → baru ke lantai 2</li>
+        </ul>
+        <b style="color:#1a4fa0">📅 Task Bulanan:</b>
+        <ul style="margin:.3rem 0 0 1rem;line-height:1.8">
+          <li>Tarik laporan CSIS → update master data (Inventory Plus); sold/unsold (butuhan FSM)</li>
+          <li>Laporan <b>PMK 41</b> — pajak agunan <b>1,1%</b> dari harga terbentuk</li>
+          <li>Kirim list unit sold ke <b>Bisdev</b> → refund CPR (asuransi mesin)</li>
+          <li>Report unit unsold &amp; STNK bodong ke manajemen</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="info-card">
+    <h4>📌 Catatan Penting Credit Settlement</h4>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.7rem;font-size:.82rem">
+      <div>
+        <b style="color:#C62828">🔄 Batal &amp; Tunda Aset:</b>
+        <ul style="margin:.3rem 0 0 1rem;line-height:1.8">
+          <li>ASR info via email (Mba Yude - Admin KP) ada pelunasan atau unit di-LP</li>
+          <li>Sudah mobilisasi: unit stay di balai lelang sampai lunas → lama → car-in ke pool via CSIS</li>
+        </ul>
+        <b style="color:#1a4fa0;margin-top:.4rem;display:block">🔁 Buyback:</b>
+        <ul style="margin:.3rem 0 0 1rem;line-height:1.8">
+          <li>Unit laku tapi bidder minta refund (unit diblokir polisi, tidak bisa perpanjang STNK)</li>
+          <li>Dana di BCAF → return ke balai lelang → dikembalikan ke bidder</li>
+        </ul>
+      </div>
+      <div>
+        <b style="color:#2DC653">📄 Dokumen Pemenang Lelang:</b>
+        <ul style="margin:.3rem 0 0 1rem;line-height:1.8">
+          <li>Yang diambil: unit, kunci, STNK, copy BPKB (soft copy dari API ke balai lelang)</li>
+          <li>BPKB asli: PIC balai lelang. Konsumen mobil butuh surat kuasa dari balai lelang; motor harus balai lelang sendiri</li>
+          <li><b>Risalah Lelang</b> = dokumentasi resmi pejabat lelang (no pol, tahun, jenis, tipe, nominal). SLA: <b>40 hari kerja</b></li>
+        </ul>
+      </div>
+      <div>
+        <b style="color:#F57C00">💰 Biaya &amp; Pajak:</b>
+        <ul style="margin:.3rem 0 0 1rem;line-height:1.8">
+          <li>Success fee: <b>1,2%–3%</b> dari harga jual</li>
+          <li>Biaya administrasi dari bidder: <b>Rp 3 juta</b></li>
+          <li>Denda telat bayar: <b>1/1000 × total harga × hari telat</b></li>
+          <li>Pajak balai lelang: <b>0,6%</b>; PMK 41: <b>1,1%</b></li>
+          <li>BCAMF: tambah <b>Rp 5.000/event</b></li>
+          <li>Biaya parkir pool: <b>Rp 25.000/hari</b></li>
+          <li>Bukti potong pajak &amp; beban lelang: SLA <b>15 hari kerja</b></li>
+        </ul>
+      </div>
+      <div>
+        <b style="color:#6A1B9A">📝 Unit Non-API (Lelang Manual):</b>
+        <ul style="margin:.3rem 0 0 1rem;line-height:1.8">
+          <li>UMK3 (BM resign), Unit GS, aset CS sebelum Feb 2025</li>
+          <li>Bikin MPK → ke cabang → mobilisasi manual (Excel) → email ke cabang &amp; balai lelang</li>
+          <li>Harga limit manual (Excel) → approval via Privy</li>
+        </ul>
+      </div>
+    </div>
+    <div style="background:#fff8e1;border-radius:6px;padding:.5rem .7rem;font-size:.8rem;margin-top:.6rem;border-left:3px solid #F5A623">
+      ⚠️ <b>SPHL ASR</b> = Surat Pemberitahuan Hutang &amp; Lelang (kasih tahu ada hutang, unit akan dilelang). <b>SPHL Credit Settlement</b> = Surat Pemberitahuan <b>Hasil</b> Lelang (setelah lelang selesai). &nbsp;|&nbsp; <b>Sisa dana:</b> unit laku 100jt, ospok 90jt → belum tentu ada sisa — biaya tarik, denda, parkir bisa lebih dari selisihnya. &nbsp;|&nbsp; Konsumen boleh ikut lelang — hanya SLIK yang nyangkut. &nbsp;|&nbsp; Konsumen mau lunas setelah unit di balai lelang → bisa, biaya mobilisasi jadi tanggungan konsumen.
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- LEGAL SECTION -->
+<div id="legal" class="section">
+<div class="section">
+  <div class="st">
+    <h2>⚖️ Legal</h2>
+    <p>Perlindungan hukum, monitoring regulasi, dan pendampingan kasus — 3 fungsi utama tim Legal BCAF</p>
+  </div>
+
+  <div class="ov-grid" style="margin-bottom:1.5rem">
+    <div class="ov-card">
+      <div class="icon">👥</div>
+      <h4>Struktur Tim Legal</h4>
+      <ul>
+        <li><b>Direktur:</b> Lim Handoyo</li>
+        <li><b>Dept Head:</b> Bu Cicil</li>
+        <li><b>Sub-unit:</b> Legal Corporate, Legal Service, Litigasi</li>
+      </ul>
+    </div>
+    <div class="ov-card gold">
+      <div class="icon">🏛️</div>
+      <h4>3 Fungsi Utama Legal</h4>
+      <ul>
+        <li><b>Fungsi Depan:</b> membuat PKS yang memberikan perlindungan hukum bagi BCAF</li>
+        <li><b>Fungsi Tengah:</b> monitoring — saat kebijakan pemerintah/OJK berubah, PKS atau P2K diperbarui</li>
+        <li><b>Fungsi Belakang:</b> pendampingan kasus hukum — tujuan menang di pengadilan atau minimalisir kerugian</li>
+      </ul>
+    </div>
+    <div class="ov-card">
+      <div class="icon">⚖️</div>
+      <h4>Perdata vs Pidana</h4>
+      <ul>
+        <li><b>Default konsumen</b> = perkara <b>perdata</b></li>
+        <li><b>Pidana:</b> intervensi negara — pembunuhan, perampokan, kekerasan</li>
+        <li><b>Perdata:</b> ruang lingkup privat — perceraian, waris, utang piutang</li>
+        <li>Pidana berlaku hanya jika konsumen melakukan tindak pidana</li>
+      </ul>
+    </div>
+    <div class="ov-card green">
+      <div class="icon">📜</div>
+      <h4>Dasar Hukum</h4>
+      <ul>
+        <li><b>Fidusia POJK No. 42/1999:</b> BPKB atas nama debitur tapi kepemilikan BCAF sampai lunas. Tanpa fidusia → penarikan bisa dianggap penggelapan</li>
+        <li><b>POJK No. 35/2018:</b> prosedur penanganan konsumen wanprestasi &amp; penarikan unit</li>
+        <li><b>MK 18/2019:</b> (1) wanprestasi harus disepakati kedua pihak; (2) penarikan harus sukarela → BAST sebagai bukti. Pasal 10 ditambahkan ke kontrak konsumen</li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem">
+    <div class="info-card">
+      <h4>🏛️ Litigasi</h4>
+      <ul style="font-size:.83rem;line-height:1.8">
+        <li><b>Prinsip:</b> menyelesaikan permasalahan hukum <b>sebelum dan sesudah</b> kegiatan ASR</li>
+        <li>Sebelum operasi: konsultasi hukum; sesudah: tangani kasus yang muncul di lapangan</li>
+        <li>Di BCAF selalu ada pertimbangan <b>Hukum</b> vs <b>Bisnis</b> — kadang sejalan, kadang tidak</li>
+        <li>Cabang yang perlu LP harus dapat SK dari Dept Head terlebih dahulu</li>
+        <li>BCAF tidak pakai pengacara eksternal — tim Litigasi sendiri adalah legal counsel</li>
+      </ul>
+      <div style="background:#e3f2fd;border-radius:6px;padding:.5rem .7rem;font-size:.8rem;margin-top:.5rem;border-left:3px solid #2176FF">
+        <b>🚔 Alur LP dengan Bantuan Litigasi:</b><br>
+        ARO/cabang info via WA/Email → Litigasi minta kronologi → surat kuasa untuk LP → <b>1 LP = 1 kasus</b>
+      </div>
+      <div style="background:#f3e5f5;border-radius:6px;padding:.5rem .7rem;font-size:.8rem;margin-top:.4rem;border-left:3px solid #6A1B9A">
+        <b>🚗 Unit Disita Negara (Narkoba/Korupsi):</b><br>
+        BCAF kirim surat ke jaksa minta jadi saksi → buktikan unit milik BCAF → berhasil: unit kembali; gagal: gugat jaksa (batas waktu = selesainya kasus utama)
+      </div>
+    </div>
+    <div class="info-card">
+      <h4>📨 SP &amp; SPT</h4>
+      <ul style="font-size:.83rem;line-height:1.8">
+        <li>SP &amp; SPT = implementasi <b>somasi berbasis sistem</b> — statusnya masih diperdebatkan secara hukum</li>
+        <li>SP + SPT → syarat somasi; Somasi → syarat LP</li>
+        <li>Meski LP belum perlu, SP &amp; SPT tetap dikirim agar bisa diproses cepat</li>
+        <li>SP &amp; SPT bisa dikirim lebih dari sekali</li>
+      </ul>
+      <div style="background:#fff3e0;border-radius:6px;padding:.5rem .7rem;font-size:.8rem;margin-top:.5rem;border-left:3px solid #F57C00">
+        <b>📅 Jadwal SP &amp; SPT:</b>
+        <table style="width:100%;border-collapse:collapse;margin-top:.4rem;font-size:.79rem">
+          <tr style="background:var(--blue-pale)"><th style="padding:.2rem .4rem;text-align:left">Kendaraan</th><th style="padding:.2rem .4rem">SP</th><th style="padding:.2rem .4rem">SPT</th></tr>
+          <tr><td style="padding:.2rem .4rem"><b>Motor (KPM)</b></td><td style="padding:.2rem .4rem">OVD hari ke-<b>16</b></td><td style="padding:.2rem .4rem"><b>10 hari</b> setelah SP</td></tr>
+          <tr style="background:#f9f9f9"><td style="padding:.2rem .4rem"><b>Mobil</b></td><td style="padding:.2rem .4rem">OVD hari ke-<b>11</b></td><td style="padding:.2rem .4rem">Hari ke-<b>17</b></td></tr>
+          <tr><td style="padding:.2rem .4rem"><b>KSM (motor)</b></td><td style="padding:.2rem .4rem">Hari ke-<b>32</b></td><td style="padding:.2rem .4rem">Menyusul</td></tr>
+        </table>
+        <div style="margin-top:.4rem;color:#555;font-size:.78rem">💡 SP Mobil lebih cepat (OVD 11) vs motor (OVD 16) karena hutang mobil lebih besar → BCAF ingin eskalasi lebih cepat</div>
+      </div>
+      <div style="background:#fce4ec;border-radius:6px;padding:.45rem .7rem;font-size:.8rem;margin-top:.4rem;border-left:3px solid #C62828">
+        ⚠️ <b>BAST TTD Bukan Atas Nama:</b> Secara hukum tidak boleh, tapi diterima dari sisi bisnis. Jika konsumen atas nama komplain → BCAF bisa balik gugat menggunakan fidusia &amp; P2K pengalihan unit tanpa izin.
+      </div>
+    </div>
+  </div>
+
+  <div style="background:var(--white);border-radius:var(--r);padding:1.5rem;box-shadow:var(--shadow);margin-bottom:1.5rem">
+    <h3 style="color:var(--blue-dark);margin-bottom:1rem">📝 Proses PKS (via JogetDX)</h3>
+    <div class="flow-steps">
+      <div class="flow-step"><div class="num">1</div><p>User upload dokumen di <b>JogetDX</b></p></div>
+      <div class="flow-step"><div class="num">2</div><p>Legal cek kelengkapan → minta revisi jika tidak lengkap; buat <b>resume PKS</b> jika lengkap</p></div>
+      <div class="flow-step"><div class="num">3</div><p>Legal upload <b>draft PKS</b> → user review &amp; edit → upload ulang → iterasi sampai disetujui</p></div>
+      <div class="flow-step"><div class="num">4</div><p>Setelah disetujui: cetak → approval <b>Data Protection</b> (jika ada pemrosesan data) + <b>Vendor</b> + <b>BOD 2</b></p></div>
+      <div class="flow-step"><div class="num">5</div><p>Simpan: fisik di brankas + soft copy di arsip. PKS stempel vendor → BCAF simpan; PKS stempel BCAF → Vendor simpan</p></div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.7rem;font-size:.82rem;margin-top:1rem">
+      <div style="background:#e3f2fd;border-radius:6px;padding:.5rem .7rem;border-left:3px solid #2176FF">
+        <b>⏱️ SLA: 2 hari</b> setelah dokumen lengkap<br>PKS bersifat <b>ongoing</b> kecuali sepakat diakhiri<br><b>Addendum:</b> masih manual via email (belum di JogetDX)
+      </div>
+      <div style="background:#e8f5e9;border-radius:6px;padding:.5rem .7rem;border-left:3px solid #2DC653">
+        <b>📋 Legal Service:</b> PKS Operasional — lift, air minum, satpam, cleaning service
+      </div>
+      <div style="background:#fff3e0;border-radius:6px;padding:.5rem .7rem;border-left:3px solid #F57C00">
+        <b>🏢 Legal Corpo:</b> PKS Korporat — BHJP, showroom, balai lelang, travel, fidusia, notaris, biro jasa, IT vendor, GS
+      </div>
+    </div>
+  </div>
+
+  <div class="info-card">
+    <h4>📋 PKS BHJP — Ketentuan &amp; Dokumen</h4>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.8rem;font-size:.82rem">
+      <div>
+        <b style="color:#6A1B9A">📄 Isi PKS BHJP:</b>
+        <ul style="margin:.3rem 0 .5rem 1rem;line-height:1.8">
+          <li><b>Pasal 1:</b> Jangka Waktu &amp; Pengakhiran Perjanjian</li>
+          <li><b>Pasal 2:</b> Pola Kerja Sama</li>
+          <li>Evaluasi PKS BHJP setiap <b>2 tahun</b></li>
+          <li>Seleksi: syarat utama <b>legalitas</b>; saat TTD dilakukan brief interview pengetahuan direktur BHJP</li>
+        </ul>
+        <b style="color:#6A1B9A">📎 Dokumen BHJP saat Penarikan:</b>
+        <ul style="margin:.3rem 0 .5rem 1rem;line-height:1.8">
+          <li>SK + Sertifikat Fidusia</li>
+          <li>Data Konsumen + Data Pinjaman &amp; Riwayat Pembayaran</li>
+          <li>BAST Kendaraan</li>
+        </ul>
+        <div style="background:#fce4ec;border-radius:5px;padding:.35rem .55rem;font-size:.79rem;border-left:3px solid #C62828">
+          ⚠️ BHJP berhasil jika: (1) unit diamankan &amp; diserahkan ke BCAF, ATAU (2) konsumen diarahkan ke kantor BCAF untuk bayar. <b>BHJP tidak boleh terima uang/barang dari konsumen.</b>
+        </div>
+      </div>
+      <div>
+        <b style="color:#1a4fa0">📁 Dokumen PKS — PT:</b>
+        <ol style="margin:.3rem 0 .5rem 1rem;line-height:1.7;font-size:.8rem">
+          <li>Form Pengajuan Kerjasama + Form Penilaian PDP</li>
+          <li>NIB RBA + NPWP</li>
+          <li>Akta Anggaran Dasar (UU PT No. 40/2007) + SK Kemenkumham</li>
+          <li>Akta Perubahan Pengurus Terbaru</li>
+          <li>KTP Signer + Surat Kuasa (jika dikuasakan) + Surat Keterangan Transfer</li>
+        </ol>
+        <b style="color:#1a4fa0">📁 Dokumen PKS — CV:</b>
+        <ol style="margin:.3rem 0 .5rem 1rem;line-height:1.7;font-size:.8rem">
+          <li>Form Pengajuan + Form Penilaian PDP + NIB RBA + NPWP</li>
+          <li>Akta Anggaran Dasar/Pendirian CV + SK Kemenkumham</li>
+          <li>Akta Perubahan Pengurus (jika ada)</li>
+          <li>KTP Signer + Surat Kuasa + Surat Keterangan Transfer</li>
+        </ol>
+        <b style="color:#1a4fa0">📁 Dokumen PKS — Perorangan:</b>
+        <ol style="margin:.3rem 0 0 1rem;line-height:1.7;font-size:.8rem">
+          <li>Form Pengajuan + Form Penilaian PDP + NIB RBA + NPWP</li>
+          <li>KTP Signer + Surat Kuasa + Surat Keterangan Transfer</li>
+        </ol>
+      </div>
+    </div>
+    <div style="background:#e8f4fd;border-radius:6px;padding:.5rem .7rem;font-size:.8rem;margin-top:.5rem;border-left:3px solid #1565C0">
+      💡 <b>Legal Admin:</b> distribusikan pekerjaan ke PIC &amp; distribusikan legal opinion. Cabang kirim pertanyaan hukum via email → Legal Admin teruskan ke PIC → PIC diskusikan dengan cabang. Pendampingan langsung (kasus besar/mendesak) atau tidak langsung (via WA).
+    </div>
+  </div>
+</div>
+</div>
 
 <!-- FOOTER -->
 <footer>
